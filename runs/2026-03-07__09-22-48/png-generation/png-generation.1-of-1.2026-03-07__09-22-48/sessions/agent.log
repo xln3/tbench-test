@@ -1,0 +1,17 @@
+[?2004hroot@fcb24c62aea6:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@fcb24c62aea6:/app# clear
+[?2004l[H[J[3J[?2004hroot@fcb24c62aea6:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@fcb24c62aea6:/app# panda --prompt 'I want you to yield an PNG that says "Hello world!". I will check whether your PNG 
+[?2004l[?2004h> is correct using easyocr. Save it to /app/hello_world.png. Do the same for a JPEG file but make it say "ScienceNews" 
+[?2004l[?2004h> and save it to /app/hello_world.jpeg.
+[?2004l[?2004h> Make sure all generated files'"'"' sizes does not exceed 20MB.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+Error: OpenAI API error: 503 Service Unavailable
+upstream connect error or disconnect/reset before headers. reset reason: connection termination
+[?2004hroot@fcb24c62aea6:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@fcb24c62aea6:/app# 

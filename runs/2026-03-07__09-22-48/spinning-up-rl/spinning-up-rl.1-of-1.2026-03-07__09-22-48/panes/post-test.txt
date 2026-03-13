@@ -1,0 +1,232 @@
+root@4c575145ef63:/app# bash /tests/run-tests.sh; tmux wait -S done
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+Fetched 4435 kB in 5s (832 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 5 packages in 651ms
+Prepared 5 packages in 201ms
+Installed 5 packages in 22ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 7 items
+
+../tests/test_outputs.py FFFFFFF                                                                                                                         [100%]
+
+=========================================================================== FAILURES ===========================================================================
+____________________________________________________________________ test_spinup_available _____________________________________________________________________
+
+    def test_spinup_available():
+        """Test that spinup is available and can be run with --help"""
+        result = subprocess.run(
+            ["/app/spinningup/.venv/bin/python", "-m", "spinup.run", "--help"],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            cwd="/app/spinningup",
+        )
+>       assert result.returncode == 0, f"spinup.run --help failed: {result.stderr}"
+E       AssertionError: spinup.run --help failed: Traceback (most recent call last):
+E           File "<frozen runpy>", line 189, in _run_module_as_main
+E           File "<frozen runpy>", line 112, in _get_module_details
+E           File "/app/spinningup/spinup/__init__.py", line 3, in <module>
+E             import tensorflow as tf
+E         ModuleNotFoundError: No module named 'tensorflow'
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-m', 'spinup.run', '--help'], returncode=1, stdout='', std...__init__.py", lin
+e 3, in <module>\n    import tensorflow as tf\nModuleNotFoundError: No module named \'tensorflow\'\n').returncode
+
+/tests/test_outputs.py:20: AssertionError
+_______________________________________________________________ test_output_directory_structure ________________________________________________________________
+
+    def test_output_directory_structure():
+        """Test that expected output directory and files are created at precise path"""
+        # Check for the exact output path as specified in the task
+        expected_dir = Path("/app/spinningup/data/installtest/installtest_s0")
+
+>       assert expected_dir.exists(), f"Expected output directory {expected_dir} not found"
+E       AssertionError: Expected output directory /app/spinningup/data/installtest/installtest_s0 not found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/spinningup/data/installtest/installtest_s0').exists
+
+/tests/test_outputs.py:31: AssertionError
+____________________________________________________________ test_spinup_module_properly_installed _____________________________________________________________
+
+    def test_spinup_module_properly_installed():
+        """Test that spinup module is properly installed with required dependencies"""
+        result = subprocess.run(
+            [
+                "/app/spinningup/.venv/bin/python",
+                "-c",
+                "import spinup; import spinup.algos.pytorch.ppo; import gym; "
+                "print('All imports successful')",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            cwd="/app/spinningup",
+        )
+>       assert result.returncode == 0, (
+            f"Failed to import required spinup modules: {result.stderr}"
+        )
+E       AssertionError: Failed to import required spinup modules: Traceback (most recent call last):
+E           File "<string>", line 1, in <module>
+E           File "/app/spinningup/spinup/__init__.py", line 3, in <module>
+E             import tensorflow as tf
+E         ModuleNotFoundError: No module named 'tensorflow'
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-c', "import spinup; import spinup.algos.pytorch.ppo; impo...__init__.py", lin
+e 3, in <module>\n    import tensorflow as tf\nModuleNotFoundError: No module named \'tensorflow\'\n').returncode
+
+/tests/test_outputs.py:82: AssertionError
+________________________________________________________________ test_hyperparameters_in_config ________________________________________________________________
+
+    def test_hyperparameters_in_config():
+        """Test that the experiment was configured with the correct hyperparameters"""
+        import json
+
+        config_path = Path("/app/spinningup/data/installtest/installtest_s0/config.json")
+>       assert config_path.exists(), f"Config file {config_path} not found"
+E       AssertionError: Config file /app/spinningup/data/installtest/installtest_s0/config.json not found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/spinningup/data/installtest/installtest_s0/config.json').exists
+
+/tests/test_outputs.py:95: AssertionError
+________________________________________________________________ test_spinup_training_execution ________________________________________________________________
+
+    def test_spinup_training_execution():
+        """Test that full training command runs and creates expected output structure"""
+        try:
+            result = subprocess.run(
+                [
+                    "/app/spinningup/.venv/bin/python",
+                    "-m",
+                    "spinup.run",
+                    "ppo",
+                    "--hid",
+                    "[32,32]",
+                    "--env",
+                    "LunarLander-v2",
+                    "--exp_name",
+                    "installrepro",
+                    "--gamma",
+                    "0.999",
+                    "--epochs",
+                    "2",
+                ],
+                capture_output=True,
+                text=True,
+                timeout=600,  # 10 minutes timeout for training
+                cwd="/app/spinningup",
+            )
+>           assert result.returncode == 0, f"Training command failed: {result.stderr}"
+E           AssertionError: Training command failed: Traceback (most recent call last):
+E               File "<frozen runpy>", line 189, in _run_module_as_main
+E               File "<frozen runpy>", line 112, in _get_module_details
+E               File "/app/spinningup/spinup/__init__.py", line 3, in <module>
+E                 import tensorflow as tf
+E             ModuleNotFoundError: No module named 'tensorflow'
+E
+E           assert 1 == 0
+E            +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-m', 'spinup.run', 'ppo', '--hid', '[32,32]', '--env', 'Lu...__init__.py",
+ line 3, in <module>\n    import tensorflow as tf\nModuleNotFoundError: No module named \'tensorflow\'\n').returncode
+
+/tests/test_outputs.py:150: AssertionError
+______________________________________________________________________ test_venv_location ______________________________________________________________________
+
+    def test_venv_location():
+        """Test that virtual environment is created at the specified location
+        /app/spinningup/.venv"""
+        venv_path = Path("/app/spinningup/.venv")
+        assert venv_path.exists(), f"Virtual environment not found at {venv_path}"
+        assert venv_path.is_dir(), f"Expected {venv_path} to be a directory"
+
+        # Check for typical venv structure
+        python_bin = venv_path / "bin" / "python"
+        assert python_bin.exists(), f"Python binary not found at {python_bin}"
+
+        # Verify it's actually a virtual environment by checking it has spinup installed
+        try:
+            result = subprocess.run(
+                [str(python_bin), "-c", "import spinup; print('spinup found')"],
+                capture_output=True,
+                text=True,
+                timeout=60,
+            )
+>           assert result.returncode == 0, f"spinup not found in venv at {venv_path}"
+E           AssertionError: spinup not found in venv at /app/spinningup/.venv
+E           assert 1 == 0
+E            +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-c', "import spinup; print('spinup found')"], returncode=1...k (most recen
+t call last):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'spinup\'\n').returncode
+
+/tests/test_outputs.py:176: AssertionError
+_____________________________________________________________________ test_spinup_version ______________________________________________________________________
+
+    def test_spinup_version():
+        """Test that spinup version 0.2.0 is installed"""
+        result = subprocess.run(
+            [
+                "/app/spinningup/.venv/bin/python",
+                "-c",
+                "import spinup; print(spinup.__version__)",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+>       assert result.returncode == 0, f"Failed to get spinup version: {result.stderr}"
+E       AssertionError: Failed to get spinup version: Traceback (most recent call last):
+E           File "<string>", line 1, in <module>
+E         ModuleNotFoundError: No module named 'spinup'
+E
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-c', 'import spinup; print(spinup.__version__)'], returnco...k (most recent ca
+ll last):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'spinup\'\n').returncode
+
+/tests/test_outputs.py:196: AssertionError
+=================================================================== short test summary info ====================================================================
+FAILED ../tests/test_outputs.py::test_spinup_available - AssertionError: spinup.run --help failed: Traceback (most recent call last):
+FAILED ../tests/test_outputs.py::test_output_directory_structure - AssertionError: Expected output directory /app/spinningup/data/installtest/installtest_s0 not
+ found
+FAILED ../tests/test_outputs.py::test_spinup_module_properly_installed - AssertionError: Failed to import required spinup modules: Traceback (most recent call l
+ast):
+FAILED ../tests/test_outputs.py::test_hyperparameters_in_config - AssertionError: Config file /app/spinningup/data/installtest/installtest_s0/config.json not fo
+und
+FAILED ../tests/test_outputs.py::test_spinup_training_execution - AssertionError: Training command failed: Traceback (most recent call last):
+FAILED ../tests/test_outputs.py::test_venv_location - AssertionError: spinup not found in venv at /app/spinningup/.venv
+FAILED ../tests/test_outputs.py::test_spinup_version - AssertionError: Failed to get spinup version: Traceback (most recent call last):
+====================================================================== 7 failed in 0.31s =======================================================================
+root@4c575145ef63:/app#

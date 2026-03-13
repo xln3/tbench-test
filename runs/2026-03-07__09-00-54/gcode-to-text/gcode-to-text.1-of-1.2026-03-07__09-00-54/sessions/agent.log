@@ -1,0 +1,24 @@
+[?2004hroot@89a3d523ddcf:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@89a3d523ddcf:/app# clear
+[?2004l[H[J[3J[?2004hroot@89a3d523ddcf:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@89a3d523ddcf:/app# panda --prompt 'I have provided a file called text.gcode. This is a gcode file for a Prusa MK4s. I'"'"'m trying to print some text onto an existing object. When I run the print, what will the text show? Write the output to /app/out.txt'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Write]
+The text that will be printed is:
+
+**"Embossed text"**
+
+This is specified in the gcode file on line 26:
+```
+M486 AEmbossed text
+```
+
+The M486 command is a Prusa-specific annotation command that labels objects or layers, and in this case, it indicates that the printer will create embossed text with the content "Embossed text" on the existing object.
+[?2004hroot@89a3d523ddcf:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@89a3d523ddcf:/app# 

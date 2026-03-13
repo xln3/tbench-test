@@ -1,0 +1,580 @@
+[?2004hroot@44194d0e89a2:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@44194d0e89a2:/app# clear
+[?2004l[H[J[3J[?2004hroot@44194d0e89a2:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0% [Waiting for headers] [1 InRelease 11.3 kB/126 kB 9%]                                                        Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+0% [2 InRelease 14.2 kB/256 kB 6%] [1 InRelease 14.2 kB/126 kB 11%]                                                                   0% [2 InRelease 77.9 kB/256 kB 30%]                                   0% [2 InRelease 104 kB/256 kB 41%]                                  0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Get:3 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB]
+0% [Waiting for headers] [3 Packages 5551 B/3300 kB 0%]                                                       Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [4 InRelease 5484 B/126 kB 4%] [3 Packages 46.1 kB/3300 kB 1%]0% [4 InRelease 66.3 kB/126 kB 53%] [3 Packages 201 kB/3300 kB 6%]                                                                  0% [3 Packages 530 kB/3300 kB 16%]0% [Waiting for headers] [3 Packages 689 kB/3300 kB 21%]                                                        Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+0% [5 InRelease 1140 B/126 kB 1%] [3 Packages 2925 kB/3300 kB 89%]                                                                  0% [5 InRelease 14.2 kB/126 kB 11%]0% [3 Packages store 0 B] [5 InRelease 14.2 kB/126 kB 11%]                                                          0% [5 InRelease 31.5 kB/126 kB 25%] [Waiting for headers]                                                         Get:6 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB]
+0% [5 InRelease 69.2 kB/126 kB 55%] [6 Packages 14.2 kB/1260 kB 1%]                                                                   0% [6 Packages 22.9 kB/1260 kB 2%]21% [Waiting for headers] [6 Packages 40.3 kB/1260 kB 3%]                                                         Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+22% [7 Packages 9893 B/19.3 MB 0%] [6 Packages 194 kB/1260 kB 15%]                                                                  24% [7 Packages 63.5 kB/19.3 MB 0%]24% [6 Packages store 0 B] [7 Packages 63.5 kB/19.3 MB 0%] [Waiting for headers]                                                                                25% [7 Packages 83.7 kB/19.3 MB 0%] [Waiting for headers]                                                         Get:8 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB]
+25% [7 Packages 265 kB/19.3 MB 1%] [8 Packages 14.2 kB/34.8 kB 41%]                                                                   26% [7 Packages 583 kB/19.3 MB 3%]26% [8 Packages store 0 B] [7 Packages 583 kB/19.3 MB 3%] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                            27% [7 Packages 583 kB/19.3 MB 3%] [Waiting for headers]                                                        Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB]
+31% [7 Packages 2540 kB/19.3 MB 13%] [9 Packages 12.3 kB/1895 kB 1%]48% [7 Packages 10.2 MB/19.3 MB 53%] [9 Packages 103 kB/1895 kB 5%]                                                                                2558 kB/s 8s61% [7 Packages 15.7 MB/19.3 MB 81%] [9 Packages 714 kB/1895 kB 38%]                                                                               2558 kB/s 5s66% [7 Packages 16.7 MB/19.3 MB 87%]                                                                                                               2558 kB/s 4s66% [9 Packages store 0 B] [7 Packages 16.7 MB/19.3 MB 87%]                                                                                        2558 kB/s 4s69% [7 Packages 17.8 MB/19.3 MB 92%]                                                                                                               2558 kB/s 4s72% [Working]                                                                                                                                      2558 kB/s 3s72% [7 Packages store 0 B] [Waiting for headers]                                                                                                   2558 kB/s 3s72% [7 Packages store 0 B] [Waiting for headers]                                                                                                   2558 kB/s 3s                                                                                                                                                               Get:10 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+72% [7 Packages store 0 B] [10 Packages 0 B/331 kB 0%]                                                                                             2558 kB/s 3s72% [7 Packages store 0 B] [10 Packages 78.0 kB/331 kB 24%]                                                                                        2558 kB/s 3s73% [10 Packages 116 kB/331 kB 35%]                                                                                                                2558 kB/s 3s73% [Working]                                                                                                                                      2558 kB/s 3s73% [10 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2558 kB/s 3s74% [Waiting for headers]                                                                                                                          2558 kB/s 3s                                                                                                                                                               Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+74% [11 Packages 14.2 kB/1808 kB 1%]                                                                                                               2558 kB/s 3s74% [11 Packages 78.0 kB/1808 kB 4%]                                                                                                               2558 kB/s 3s75% [11 Packages 450 kB/1808 kB 25%]                                                                                                               2558 kB/s 3s78% [Working]                                                                                                                                      2558 kB/s 3s78% [11 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2558 kB/s 3s79% [Waiting for headers]                                                                                                                          2558 kB/s 3s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+79% [12 Packages 7001 B/117 kB 6%]                                                                                                                 2558 kB/s 3s79% [12 Packages 80.8 kB/117 kB 69%]                                                                                                               2558 kB/s 3s79% [Working]                                                                                                                                      2558 kB/s 3s79% [12 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2558 kB/s 3s79% [Waiting for headers]                                                                                                                          2558 kB/s 3s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB]
+79% [13 Packages 4096 B/38.1 kB 11%]                                                                                                               2558 kB/s 3s79% [Working]                                                                                                                                      2187 kB/s 3s79% [13 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2187 kB/s 3s80% [Waiting for headers]                                                                                                                          2187 kB/s 3s                                                                                                                                                               Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+80% [14 Packages 2655 B/2284 kB 0%]                                                                                                                2187 kB/s 3s80% [14 Packages 78.0 kB/2284 kB 3%]                                                                                                               2187 kB/s 3s81% [14 Packages 466 kB/2284 kB 20%]                                                                                                               2187 kB/s 3s85% [Working]                                                                                                                                      2187 kB/s 2s85% [14 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2187 kB/s 2s86% [Waiting for headers]                                                                                                                          2187 kB/s 2s                                                                                                                                                               Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+86% [15 Packages 0 B/2025 kB 0%]                                                                                                                   2187 kB/s 2s86% [15 Packages 75.1 kB/2025 kB 4%]                                                                                                               2187 kB/s 2s86% [15 Packages 188 kB/2025 kB 9%]                                                                                                                2187 kB/s 2s90% [Working]                                                                                                                                      2187 kB/s 1s90% [15 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2187 kB/s 1s91% [Waiting for headers]                                                                                                                          2187 kB/s 1s                                                                                                                                                               Get:16 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB]
+91% [16 Packages 14.2 kB/3486 kB 0%]                                                                                                               2187 kB/s 1s91% [16 Packages 75.1 kB/3486 kB 2%]                                                                                                               2187 kB/s 1s91% [16 Packages 402 kB/3486 kB 12%]                                                                                                               2187 kB/s 1s96% [16 Packages 2347 kB/3486 kB 67%]                                                                                                              2187 kB/s 0s98% [Working]                                                                                                                                      2187 kB/s 0s98% [16 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2187 kB/s 0s99% [Waiting for headers]                                                                                                                          1269 kB/s 0s                                                                                                                                                               Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB]
+99% [17 Packages 14.2 kB/34.6 kB 41%]                                                                                                              1269 kB/s 0s99% [Working]                                                                                                                                      1269 kB/s 0s99% [17 Packages store 0 B] [Waiting for headers]                                                                                                  1269 kB/s 0s99% [Waiting for headers]                                                                                                                          1269 kB/s 0s                                                                                                                                                               Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB]
+99% [18 Packages 14.2 kB/49.5 kB 29%]                                                                                                              1269 kB/s 0s99% [Working]                                                                                                                                      1269 kB/s 0s99% [18 Packages store 0 B]                                                                                                                        1269 kB/s 0s100% [Working]                                                                                                                                     1269 kB/s 0s                                                                                                                                                               Fetched 36.6 MB in 20s (1864 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 43%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 38%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  krb5-locales libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libnghttp2-14 libpsl5t64 librtmp1 libssh-4 publicsuffix
+Suggested packages:
+  krb5-doc krb5-user
+The following NEW packages will be installed:
+  curl krb5-locales libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libnghttp2-14 libpsl5t64 librtmp1 libssh-4 publicsuffix
+0 upgraded, 13 newly installed, 0 to remove and 24 not upgraded.
+Need to get 1706 kB of archives.
+After this operation, 4850 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.6 [14.8 kB]
+0% [1 krb5-locales 2606 B/14.8 kB 18%]                                      2% [Working]            Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.6 [34.4 kB]
+3% [2 libkrb5support0 14.2 kB/34.4 kB 41%]                                          5% [Working]            Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.6 [82.0 kB]
+6% [3 libk5crypto3 14.2 kB/82.0 kB 17%]9% [3 libk5crypto3 80.8 kB/82.0 kB 99%]                                       11% [Working]             Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+11% [4 libkeyutils1 9490 B/9490 B 100%]                                       13% [Working]             Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.6 [348 kB]
+13% [5 libkrb5-3 14.2 kB/348 kB 4%]16% [5 libkrb5-3 73.6 kB/348 kB 21%]                                    21% [5 libkrb5-3 172 kB/348 kB 49%]                                   31% [Working]             Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.6 [143 kB]
+31% [6 libgssapi-krb5-2 2604 B/143 kB 2%]34% [6 libgssapi-krb5-2 75.0 kB/143 kB 52%]                                           39% [Working]             Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.2 [74.3 kB]
+39% [7 libnghttp2-14 14.2 kB/74.3 kB 19%]44% [Working]                                                                                                                                       110 kB/s 9s                                                                                                                                                               Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+44% [8 libpsl5t64 12.3 kB/57.1 kB 22%]                                                                                                              110 kB/s 8s48% [Working]                                                                                                                                       110 kB/s 8s                                                                                                                                                               Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 publicsuffix all 20231001.0357-0.1 [129 kB]
+48% [9 publicsuffix 3804 B/129 kB 3%]                                                                                                               110 kB/s 8s51% [9 publicsuffix 72.1 kB/129 kB 56%]                                                                                                             110 kB/s 7s56% [Working]                                                                                                                                       110 kB/s 7s                                                                                                                                                               Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+56% [10 librtmp1 14.2 kB/56.3 kB 25%]                                                                                                               110 kB/s 7s60% [Working]                                                                                                                                       110 kB/s 6s                                                                                                                                                               Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.3 [190 kB]
+60% [11 libssh-4 6948 B/190 kB 4%]                                                                                                                  110 kB/s 6s64% [11 libssh-4 80.8 kB/190 kB 43%]                                                                                                                110 kB/s 6s70% [Working]                                                                                                                                       110 kB/s 5s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+71% [12 libcurl4t64 14.2 kB/342 kB 4%]                                                                                                              110 kB/s 5s74% [12 libcurl4t64 80.8 kB/342 kB 24%]                                                                                                             110 kB/s 4s88% [Working]                                                                                                                                       110 kB/s 2s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+89% [13 curl 14.2 kB/227 kB 6%]                                                                                                                     110 kB/s 1s92% [13 curl 83.7 kB/227 kB 37%]                                                                                                                    133 kB/s 1s100% [Working]                                                                                                                                      133 kB/s 0s                                                                                                                                                               Fetched 1706 kB in 13s (130 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package krb5-locales.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 17217 files and directories currently installed.)
+Preparing to unpack .../00-krb5-locales_1.20.1-6ubuntu2.6_all.deb ...
+Unpacking krb5-locales (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../01-libkrb5support0_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../02-libk5crypto3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../03-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../04-libkrb5-3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../05-libgssapi-krb5-2_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../06-libnghttp2-14_1.59.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../07-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../08-publicsuffix_20231001.0357-0.1_all.deb ...
+Unpacking publicsuffix (20231001.0357-0.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../09-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../10-libssh-4_0.10.6-2ubuntu0.3_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../11-libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../12-curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.6) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up publicsuffix (20231001.0357-0.1) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠸[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mnumpy==2.3.3                                                                                                                                                  [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠴[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠴[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠴[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠴[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠴[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m6 packages[0m [2min 837ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 75.03 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m----------------------------[2m--[0m[0m 67.44 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 75.03 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m----------------------------[2m--[0m[0m 67.44 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 75.03 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m----------------------------[2m--[0m[0m 67.44 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 75.03 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m----------------------------[2m--[0m[0m 67.44 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 75.03 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 91.03 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 91.03 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 91.03 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 76.13 KiB/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 139.03 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpytest              [0m [32m--------------[2m----------------[0m[0m 156.13 KiB/356.91 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 235.03 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpytest              [0m [32m----------------------[2m--------[0m[0m 252.13 KiB/356.91 KiB
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 367.03 KiB/1.17 MiB
+[2mnumpy               [0m [32m[2m------------------------------[0m[0m     0 B/15.87 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 495.03 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 142.04 KiB/15.87 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 511.03 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 165.14 KiB/15.87 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpygments            [0m [32m--------------------[2m----------[0m[0m 767.03 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 414.04 KiB/15.87 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mpygments            [0m [32m-----------------------------[2m-[0m[0m 1.11 MiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 846.04 KiB/15.87 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.11 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 1.86 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m-----[2m-------------------------[0m[0m 2.45 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-------[2m-----------------------[0m[0m 3.19 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.00 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m---------[2m---------------------[0m[0m 4.73 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m----------[2m--------------------[0m[0m 5.23 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m------------[2m------------------[0m[0m 6.03 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-------------[2m-----------------[0m[0m 6.76 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m---------------[2m---------------[0m[0m 7.50 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m----------------[2m--------------[0m[0m 8.17 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.88 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-------------------[2m-----------[0m[0m 9.64 MiB/15.87 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m--------------------[2m----------[0m[0m 10.33 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m---------------------[2m---------[0m[0m 11.05 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------------[2m-------[0m[0m 11.67 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m------------------------[2m------[0m[0m 12.55 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-------------------------[2m-----[0m[0m 13.10 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m---------------------------[2m---[0m[0m 13.84 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m----------------------------[2m--[0m[0m 14.65 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------------------[2m-[0m[0m 15.30 MiB/15.87 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (5/6)                                                                                                                                   [2K[2mPrepared [1m6 packages[0m [2min 1.68s[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2mpackaging==26.0                                                                                                                      [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2mpackaging==26.0                                                                                                                      [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████████░░░░░░░░░░ [3/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████████░░░░░░░░░░ [3/6] [2mpytest==8.4.1                                                                                                                        [0m[2K█████████████░░░░░░░ [4/6] [2mpytest==8.4.1                                                                                                                        [0m[2K█████████████░░░░░░░ [4/6] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████░░░░ [5/6] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████░░░░ [5/6] [2mnumpy==2.3.3                                                                                                                         [0m[2K████████████████████ [6/6] [2mnumpy==2.3.3                                                                                                                         [0m[2K[2mInstalled [1m6 packages[0m [2min 43ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mnumpy[0m[2m==2.3.3[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 15 items                                                                                                                                             [0m
+
+../tests/test_outputs.py [32m.[0m[31mF[0m[31mF[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31m                                                                                                                 [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_____________________________________________________________________ test_path_tsv_format _____________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_path_tsv_format[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test path.tsv has correct format with required headers and valid tile numbers"""[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m os.path.exists([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m), [33m"[39;49;00m[33mpath.tsv not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            reader = csv.DictReader(f, delimiter=[33m'[39;49;00m[33m\t[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            required_headers = {[33m'[39;49;00m[33mstep[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mtile[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mstate_key[39;49;00m[33m'[39;49;00m}[90m[39;49;00m
+            [94massert[39;49;00m reader.fieldnames [95mand[39;49;00m [96mset[39;49;00m(reader.fieldnames) == required_headers, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mMissing required headers in: [39;49;00m[33m{[39;49;00mreader.fieldnames[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+            rows = [96mlist[39;49;00m(reader)[90m[39;49;00m
+            [90m# Empty path is valid if start == goal[39;49;00m[90m[39;49;00m
+            [94mfor[39;49;00m i, row [95min[39;49;00m [96menumerate[39;49;00m(rows):[90m[39;49;00m
+                [94massert[39;49;00m [96mint[39;49;00m(row[[33m'[39;49;00m[33mstep[39;49;00m[33m'[39;49;00m]) == i, [33mf[39;49;00m[33m"[39;49;00m[33mStep [39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m has wrong number: [39;49;00m[33m{[39;49;00mrow[[33m'[39;49;00m[33mstep[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>               [94massert[39;49;00m [94m1[39;49;00m <= [96mint[39;49;00m(row[[33m'[39;49;00m[33mtile[39;49;00m[33m'[39;49;00m]) <= [94m8[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mInvalid tile number: [39;49;00m[33m{[39;49;00mrow[[33m'[39;49;00m[33mtile[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE               AssertionError: Invalid tile number: -1[0m
+[1m[31mE               assert 1 <= -1[0m
+[1m[31mE                +  where -1 = int('-1')[0m
+
+[1m[31m/tests/test_outputs.py[0m:28: AssertionError
+[31m[1m______________________________________________________________________ test_move_legality ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_move_legality[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that each move in path.tsv is legal (tile was adjacent to blank)"""[39;49;00m[90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mread_puzzle_as_state[39;49;00m(filename):[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(filename), [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mfilename[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            tiles = [][90m[39;49;00m
+            [94mwith[39;49;00m [96mopen[39;49;00m(filename, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                [94mfor[39;49;00m line [95min[39;49;00m f:[90m[39;49;00m
+                    tiles.extend([[96mint[39;49;00m(x) [94mfor[39;49;00m x [95min[39;49;00m line.split()])[90m[39;49;00m
+            [94mreturn[39;49;00m [33m'[39;49;00m[33m'[39;49;00m.join([33mf[39;49;00m[33m'[39;49;00m[33m{[39;49;00mt[33m:[39;49;00m[33m02d[39;49;00m[33m}[39;49;00m[33m'[39;49;00m [94mfor[39;49;00m t [95min[39;49;00m tiles)[90m[39;49;00m
+    [90m[39;49;00m
+        [94massert[39;49;00m os.path.exists([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m), [33m"[39;49;00m[33mpath.tsv not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            reader = csv.DictReader(f, delimiter=[33m'[39;49;00m[33m\t[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            rows = [96mlist[39;49;00m(reader)[90m[39;49;00m
+            [94mif[39;49;00m [95mnot[39;49;00m rows:[90m[39;49;00m
+                [90m# Empty path is only valid if start == goal, must verify here too[39;49;00m[90m[39;49;00m
+                start_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/start.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+                goal_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/goal.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+                [94massert[39;49;00m start_state == goal_state, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mEmpty path but start [39;49;00m[33m{[39;49;00mstart_state[33m}[39;49;00m[33m != goal [39;49;00m[33m{[39;49;00mgoal_state[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+                [94mreturn[39;49;00m[90m[39;49;00m
+            prev_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/start.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            [94mfor[39;49;00m i, row [95min[39;49;00m [96menumerate[39;49;00m(rows):[90m[39;49;00m
+                curr_state = row[[33m'[39;49;00m[33mstate_key[39;49;00m[33m'[39;49;00m][90m[39;49;00m
+                moved_tile = [96mint[39;49;00m(row[[33m'[39;49;00m[33mtile[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+                prev_tiles = [[96mint[39;49;00m(prev_state[j:j+[94m2[39;49;00m]) [94mfor[39;49;00m j [95min[39;49;00m [96mrange[39;49;00m([94m0[39;49;00m, [94m18[39;49;00m, [94m2[39;49;00m)][90m[39;49;00m
+                curr_tiles = [[96mint[39;49;00m(curr_state[j:j+[94m2[39;49;00m]) [94mfor[39;49;00m j [95min[39;49;00m [96mrange[39;49;00m([94m0[39;49;00m, [94m18[39;49;00m, [94m2[39;49;00m)][90m[39;49;00m
+                prev_blank = prev_tiles.index([94m0[39;49;00m)[90m[39;49;00m
+                pr, pc = [96mdivmod[39;49;00m(prev_blank, [94m3[39;49;00m)[90m[39;49;00m
+>               tile_pos = prev_tiles.index(moved_tile)[90m[39;49;00m
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE               ValueError: -1 is not in list[0m
+
+[1m[31m/tests/test_outputs.py[0m:68: ValueError
+[31m[1m_________________________________________________________________ test_path_starts_from_start __________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_path_starts_from_start[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the path starts from the start state"""[39;49;00m[90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mread_puzzle_as_state[39;49;00m(filename):[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(filename), [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mfilename[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            tiles = [][90m[39;49;00m
+            [94mwith[39;49;00m [96mopen[39;49;00m(filename, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                [94mfor[39;49;00m line [95min[39;49;00m f:[90m[39;49;00m
+                    tiles.extend([[96mint[39;49;00m(x) [94mfor[39;49;00m x [95min[39;49;00m line.split()])[90m[39;49;00m
+            [94mreturn[39;49;00m [33m'[39;49;00m[33m'[39;49;00m.join([33mf[39;49;00m[33m'[39;49;00m[33m{[39;49;00mt[33m:[39;49;00m[33m02d[39;49;00m[33m}[39;49;00m[33m'[39;49;00m [94mfor[39;49;00m t [95min[39;49;00m tiles)[90m[39;49;00m
+    [90m[39;49;00m
+        start_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/start.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        goal_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/goal.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94massert[39;49;00m os.path.exists([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m), [33m"[39;49;00m[33mpath.tsv not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            reader = csv.DictReader(f, delimiter=[33m'[39;49;00m[33m\t[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            rows = [96mlist[39;49;00m(reader)[90m[39;49;00m
+    [90m[39;49;00m
+            [94mif[39;49;00m [96mlen[39;49;00m(rows) == [94m0[39;49;00m:[90m[39;49;00m
+                [90m# Empty path is only valid if start == goal[39;49;00m[90m[39;49;00m
+                [94massert[39;49;00m start_state == goal_state, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mEmpty path but start [39;49;00m[33m{[39;49;00mstart_state[33m}[39;49;00m[33m != goal [39;49;00m[33m{[39;49;00mgoal_state[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                [90m# Non-empty path must start from start state[39;49;00m[90m[39;49;00m
+                [90m# Validate that first move creates valid transition from start state[39;49;00m[90m[39;49;00m
+                first_move_tile = [96mint[39;49;00m(rows[[94m0[39;49;00m][[33m'[39;49;00m[33mtile[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+                first_move_state = rows[[94m0[39;49;00m][[33m'[39;49;00m[33mstate_key[39;49;00m[33m'[39;49;00m][90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Convert start state to tiles array for validation[39;49;00m[90m[39;49;00m
+                start_tiles = [[96mint[39;49;00m(start_state[i:i+[94m2[39;49;00m]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([94m0[39;49;00m, [94m18[39;49;00m, [94m2[39;49;00m)][90m[39;49;00m
+                first_tiles = [[96mint[39;49;00m(first_move_state[i:i+[94m2[39;49;00m]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([94m0[39;49;00m, [94m18[39;49;00m, [94m2[39;49;00m)][90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Find blank position in start state[39;49;00m[90m[39;49;00m
+                blank_pos = start_tiles.index([94m0[39;49;00m)[90m[39;49;00m
+                blank_row, blank_col = [96mdivmod[39;49;00m(blank_pos, [94m3[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Find tile that moved in start state[39;49;00m[90m[39;49;00m
+                [94mtry[39;49;00m:[90m[39;49;00m
+>                   tile_pos = start_tiles.index(first_move_tile)[90m[39;49;00m
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE                   ValueError: -1 is not in list[0m
+
+[1m[31m/tests/test_outputs.py[0m:151: ValueError
+
+[33mDuring handling of the above exception, another exception occurred:[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_path_starts_from_start[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the path starts from the start state"""[39;49;00m[90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mread_puzzle_as_state[39;49;00m(filename):[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(filename), [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mfilename[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            tiles = [][90m[39;49;00m
+            [94mwith[39;49;00m [96mopen[39;49;00m(filename, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                [94mfor[39;49;00m line [95min[39;49;00m f:[90m[39;49;00m
+                    tiles.extend([[96mint[39;49;00m(x) [94mfor[39;49;00m x [95min[39;49;00m line.split()])[90m[39;49;00m
+            [94mreturn[39;49;00m [33m'[39;49;00m[33m'[39;49;00m.join([33mf[39;49;00m[33m'[39;49;00m[33m{[39;49;00mt[33m:[39;49;00m[33m02d[39;49;00m[33m}[39;49;00m[33m'[39;49;00m [94mfor[39;49;00m t [95min[39;49;00m tiles)[90m[39;49;00m
+    [90m[39;49;00m
+        start_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/start.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        goal_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/goal.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94massert[39;49;00m os.path.exists([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m), [33m"[39;49;00m[33mpath.tsv not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            reader = csv.DictReader(f, delimiter=[33m'[39;49;00m[33m\t[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            rows = [96mlist[39;49;00m(reader)[90m[39;49;00m
+    [90m[39;49;00m
+            [94mif[39;49;00m [96mlen[39;49;00m(rows) == [94m0[39;49;00m:[90m[39;49;00m
+                [90m# Empty path is only valid if start == goal[39;49;00m[90m[39;49;00m
+                [94massert[39;49;00m start_state == goal_state, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mEmpty path but start [39;49;00m[33m{[39;49;00mstart_state[33m}[39;49;00m[33m != goal [39;49;00m[33m{[39;49;00mgoal_state[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                [90m# Non-empty path must start from start state[39;49;00m[90m[39;49;00m
+                [90m# Validate that first move creates valid transition from start state[39;49;00m[90m[39;49;00m
+                first_move_tile = [96mint[39;49;00m(rows[[94m0[39;49;00m][[33m'[39;49;00m[33mtile[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+                first_move_state = rows[[94m0[39;49;00m][[33m'[39;49;00m[33mstate_key[39;49;00m[33m'[39;49;00m][90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Convert start state to tiles array for validation[39;49;00m[90m[39;49;00m
+                start_tiles = [[96mint[39;49;00m(start_state[i:i+[94m2[39;49;00m]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([94m0[39;49;00m, [94m18[39;49;00m, [94m2[39;49;00m)][90m[39;49;00m
+                first_tiles = [[96mint[39;49;00m(first_move_state[i:i+[94m2[39;49;00m]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([94m0[39;49;00m, [94m18[39;49;00m, [94m2[39;49;00m)][90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Find blank position in start state[39;49;00m[90m[39;49;00m
+                blank_pos = start_tiles.index([94m0[39;49;00m)[90m[39;49;00m
+                blank_row, blank_col = [96mdivmod[39;49;00m(blank_pos, [94m3[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Find tile that moved in start state[39;49;00m[90m[39;49;00m
+                [94mtry[39;49;00m:[90m[39;49;00m
+                    tile_pos = start_tiles.index(first_move_tile)[90m[39;49;00m
+                [94mexcept[39;49;00m [96mValueError[39;49;00m:[90m[39;49;00m
+>                   [94massert[39;49;00m [94mFalse[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mTile [39;49;00m[33m{[39;49;00mfirst_move_tile[33m}[39;49;00m[33m not found in start state[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE                   AssertionError: Tile -1 not found in start state[0m
+[1m[31mE                   assert False[0m
+
+[1m[31m/tests/test_outputs.py[0m:153: AssertionError
+[31m[1m_________________________________________________________________ test_path_sequence_connected _________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_path_sequence_connected[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that each move in path creates a connected sequence from start to goal"""[39;49;00m[90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mread_puzzle_as_state[39;49;00m(filename):[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(filename), [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mfilename[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            tiles = [][90m[39;49;00m
+            [94mwith[39;49;00m [96mopen[39;49;00m(filename, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                [94mfor[39;49;00m line [95min[39;49;00m f:[90m[39;49;00m
+                    tiles.extend([[96mint[39;49;00m(x) [94mfor[39;49;00m x [95min[39;49;00m line.split()])[90m[39;49;00m
+            [94mreturn[39;49;00m [33m'[39;49;00m[33m'[39;49;00m.join([33mf[39;49;00m[33m'[39;49;00m[33m{[39;49;00mt[33m:[39;49;00m[33m02d[39;49;00m[33m}[39;49;00m[33m'[39;49;00m [94mfor[39;49;00m t [95min[39;49;00m tiles)[90m[39;49;00m
+    [90m[39;49;00m
+        start_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/start.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        goal_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/goal.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        [94massert[39;49;00m os.path.exists([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m), [33m"[39;49;00m[33mpath.tsv not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            reader = csv.DictReader(f, delimiter=[33m'[39;49;00m[33m\t[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            rows = [96mlist[39;49;00m(reader)[90m[39;49;00m
+    [90m[39;49;00m
+            [94mif[39;49;00m [96mlen[39;49;00m(rows) == [94m0[39;49;00m:[90m[39;49;00m
+                [90m# Empty path is only valid if start == goal[39;49;00m[90m[39;49;00m
+                [94massert[39;49;00m start_state == goal_state, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mEmpty path but start [39;49;00m[33m{[39;49;00mstart_state[33m}[39;49;00m[33m != goal [39;49;00m[33m{[39;49;00mgoal_state[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+                [94mreturn[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Validate sequence connectivity: start -> path[0] -> path[1] -> ... -> goal[39;49;00m[90m[39;49;00m
+            current_state = start_state[90m[39;49;00m
+            visited_states = {start_state}  [90m# Track visited states to detect cycles[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [94mfor[39;49;00m i, row [95min[39;49;00m [96menumerate[39;49;00m(rows):[90m[39;49;00m
+                next_state = row[[33m'[39;49;00m[33mstate_key[39;49;00m[33m'[39;49;00m][90m[39;49;00m
+                moved_tile = [96mint[39;49;00m(row[[33m'[39;49;00m[33mtile[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Check for cycle - optimal BFS path should never revisit states[39;49;00m[90m[39;49;00m
+>               [94massert[39;49;00m next_state [95mnot[39;49;00m [95min[39;49;00m visited_states, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mStep [39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m: revisiting state [39;49;00m[33m{[39;49;00mnext_state[33m}[39;49;00m[33m (cycle detected)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+[1m[31mE               AssertionError: Step 0: revisiting state 010203040506070008 (cycle detected)[0m
+[1m[31mE               assert '010203040506070008' not in {'010203040506070008'}[0m
+
+[1m[31m/tests/test_outputs.py[0m:206: AssertionError
+[31m[1m___________________________________________________________________ test_optimal_path_length ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_optimal_path_length[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that path length matches BFS depth where goal appears"""[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m os.path.exists([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m), [33m"[39;49;00m[33mpath.tsv not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/path.tsv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            reader = csv.DictReader(f, delimiter=[33m'[39;49;00m[33m\t[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            path_length = [96mlen[39;49;00m([96mlist[39;49;00m(reader))[90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mread_puzzle_as_state[39;49;00m(filename):[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(filename), [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mfilename[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            tiles = [][90m[39;49;00m
+            [94mwith[39;49;00m [96mopen[39;49;00m(filename, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                [94mfor[39;49;00m line [95min[39;49;00m f:[90m[39;49;00m
+                    tiles.extend([[96mint[39;49;00m(x) [94mfor[39;49;00m x [95min[39;49;00m line.split()])[90m[39;49;00m
+            [94mreturn[39;49;00m [33m'[39;49;00m[33m'[39;49;00m.join([33mf[39;49;00m[33m'[39;49;00m[33m{[39;49;00mt[33m:[39;49;00m[33m02d[39;49;00m[33m}[39;49;00m[33m'[39;49;00m [94mfor[39;49;00m t [95min[39;49;00m tiles)[90m[39;49;00m
+        goal_state = read_puzzle_as_state([33m'[39;49;00m[33m/app/goal.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        goal_depth = [94mNone[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m os.path.exists([33m'[39;49;00m[33m/app/layers.csv[39;49;00m[33m'[39;49;00m), [33m"[39;49;00m[33mlayers.csv not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/layers.csv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            reader = csv.DictReader(f)[90m[39;49;00m
+            [94mfor[39;49;00m row [95min[39;49;00m reader:[90m[39;49;00m
+                depth = [96mint[39;49;00m(row[[33m'[39;49;00m[33mdepth[39;49;00m[33m'[39;49;00m])[90m[39;49;00m
+                layer_file = [33mf[39;49;00m[33m"[39;49;00m[33m/app/L[39;49;00m[33m{[39;49;00mdepth[33m}[39;49;00m[33m.txt[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [94massert[39;49;00m os.path.exists(layer_file), [33mf[39;49;00m[33m"[39;49;00m[33mLayer file [39;49;00m[33m{[39;49;00mlayer_file[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [94mwith[39;49;00m [96mopen[39;49;00m(layer_file, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m lf:[90m[39;49;00m
+                    lines = [s [94mfor[39;49;00m s [95min[39;49;00m lf.read().split([33m'[39;49;00m[33m\n[39;49;00m[33m'[39;49;00m) [94mif[39;49;00m s][90m[39;49;00m
+                    states = [][90m[39;49;00m
+                    [94mfor[39;49;00m line [95min[39;49;00m lines:[90m[39;49;00m
+                        [94massert[39;49;00m line == line.strip(), [33mf[39;49;00m[33m"[39;49;00m[33mState line has whitespace: [39;49;00m[33m'[39;49;00m[33m{[39;49;00mline[33m}[39;49;00m[33m'[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                        states.append(line)[90m[39;49;00m
+                    [94mif[39;49;00m goal_state [95min[39;49;00m states:[90m[39;49;00m
+                        goal_depth = depth[90m[39;49;00m
+                        [94mbreak[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m goal_depth [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m, [33m"[39;49;00m[33mGoal state not found in any layer[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m path_length == goal_depth, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mPath length [39;49;00m[33m{[39;49;00mpath_length[33m}[39;49;00m[33m doesn[39;49;00m[33m'[39;49;00m[33mt match goal depth [39;49;00m[33m{[39;49;00mgoal_depth[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: Path length 31 doesn't match goal depth 30[0m
+[1m[31mE       assert 31 == 30[0m
+
+[1m[31m/tests/test_outputs.py[0m:354: AssertionError
+[31m[1m_____________________________________________________________ test_layers_are_exact_bfs_frontiers ______________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_layers_are_exact_bfs_frontiers[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Compute BFS up to max depth in layers.csv[39;49;00m
+    [33m    and require each L{d}.txt equals the exact frontier at depth d."""[39;49;00m[90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mread_grid[39;49;00m(filename):[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(filename), [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mfilename[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            tiles = [][90m[39;49;00m
+            [94mwith[39;49;00m [96mopen[39;49;00m(filename, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                [94mfor[39;49;00m line [95min[39;49;00m f:[90m[39;49;00m
+                    tiles.extend([[96mint[39;49;00m(x) [94mfor[39;49;00m x [95min[39;49;00m line.split()])[90m[39;49;00m
+            [94mreturn[39;49;00m tiles[90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mkey[39;49;00m(tiles):[90m[39;49;00m
+            [94mreturn[39;49;00m [33m'[39;49;00m[33m'[39;49;00m.join([33mf[39;49;00m[33m'[39;49;00m[33m{[39;49;00mt[33m:[39;49;00m[33m02d[39;49;00m[33m}[39;49;00m[33m'[39;49;00m [94mfor[39;49;00m t [95min[39;49;00m tiles)[90m[39;49;00m
+        MOVES = [(-[94m1[39;49;00m,[94m0[39;49;00m),([94m1[39;49;00m,[94m0[39;49;00m),([94m0[39;49;00m,-[94m1[39;49;00m),([94m0[39;49;00m,[94m1[39;49;00m)][90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92mneighbors[39;49;00m(tiles):[90m[39;49;00m
+            b = tiles.index([94m0[39;49;00m)[90m[39;49;00m
+            r, c = [96mdivmod[39;49;00m(b, [94m3[39;49;00m)[90m[39;49;00m
+            [94mfor[39;49;00m dr, dc [95min[39;49;00m MOVES:[90m[39;49;00m
+                nr, nc = r+dr, c+dc[90m[39;49;00m
+                [94mif[39;49;00m [94m0[39;49;00m <= nr < [94m3[39;49;00m [95mand[39;49;00m [94m0[39;49;00m <= nc < [94m3[39;49;00m:[90m[39;49;00m
+                    np = nr*[94m3[39;49;00m + nc[90m[39;49;00m
+                    nt = tiles[:][90m[39;49;00m
+                    nt[b], nt[np] = nt[np], nt[b][90m[39;49;00m
+                    [94myield[39;49;00m nt[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# collect depths from CSV[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m'[39;49;00m[33m/app/layers.csv[39;49;00m[33m'[39;49;00m, [33m'[39;49;00m[33mr[39;49;00m[33m'[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            rows = [96mlist[39;49;00m(csv.DictReader(f))[90m[39;49;00m
+        [94massert[39;49;00m [96mlen[39;49;00m(rows) > [94m0[39;49;00m, [33m"[39;49;00m[33mlayers.csv has no data rows[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        depths = [96msorted[39;49;00m([96mint[39;49;00m(r[[33m'[39;49;00m[33mdepth[39;49;00m[33m'[39;49;00m]) [94mfor[39;49;00m r [95min[39;49;00m rows)[90m[39;49;00m
+        [90m# depths is guaranteed non-empty due to assertion above, but add defensive check[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m [96mlen[39;49;00m(depths) > [94m0[39;49;00m, [33m"[39;49;00m[33mNo valid depths found in layers.csv[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        max_d = [96mmax[39;49;00m(depths)[90m[39;49;00m
+    [90m[39;49;00m
+        start = read_grid([33m'[39;49;00m[33m/app/start.txt[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        start_k = key(start)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# BFS to exact frontier sets up to max_d[39;49;00m[90m[39;49;00m
+        frontier = {start_k: start}[90m[39;49;00m
+        seen = {start_k}[90m[39;49;00m
+        depth_sets = {[94m0[39;49;00m: {start_k}}[90m[39;49;00m
+        [94mfor[39;49;00m d [95min[39;49;00m [96mrange[39;49;00m([94m1[39;49;00m, max_d+[94m1[39;49;00m):[90m[39;49;00m
+            next_frontier = {}[90m[39;49;00m
+            [94mfor[39;49;00m tiles [95min[39;49;00m frontier.values():[90m[39;49;00m
+                [94mfor[39;49;00m nt [95min[39;49;00m neighbors(tiles):[90m[39;49;00m
+                    nk = key(nt)[90m[39;49;00m
+                    [94mif[39;49;00m nk [95mnot[39;49;00m [95min[39;49;00m seen:[90m[39;49;00m
+                        seen.add(nk)[90m[39;49;00m
+                        next_frontier[nk] = nt[90m[39;49;00m
+            [94mif[39;49;00m [95mnot[39;49;00m next_frontier:[90m[39;49;00m
+                [90m# No more reachable states - BFS exploration is complete[39;49;00m[90m[39;49;00m
+                [94mbreak[39;49;00m[90m[39;49;00m
+            depth_sets[d] = [96mset[39;49;00m(next_frontier.keys())[90m[39;49;00m
+            frontier = next_frontier[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Compare every layer file to computed frontier set[39;49;00m[90m[39;49;00m
+        [94mfor[39;49;00m d [95min[39;49;00m depths:[90m[39;49;00m
+            layer_file = [33mf[39;49;00m[33m"[39;49;00m[33m/app/L[39;49;00m[33m{[39;49;00md[33m}[39;49;00m[33m.txt[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(layer_file), [33mf[39;49;00m[33m"[39;49;00m[33mLayer file [39;49;00m[33m{[39;49;00mlayer_file[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [94mwith[39;49;00m [96mopen[39;49;00m(layer_file, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                lines = [s [94mfor[39;49;00m s [95min[39;49;00m f.read().splitlines() [94mif[39;49;00m s][90m[39;49;00m
+                file_states = [][90m[39;49;00m
+                [94mfor[39;49;00m line [95min[39;49;00m lines:[90m[39;49;00m
+                    [94massert[39;49;00m line == line.strip(), [33mf[39;49;00m[33m"[39;49;00m[33mState line has whitespace: [39;49;00m[33m'[39;49;00m[33m{[39;49;00mline[33m}[39;49;00m[33m'[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                    file_states.append(line)[90m[39;49;00m
+                file_set = [96mset[39;49;00m(file_states)[90m[39;49;00m
+>           [94massert[39;49;00m file_set == depth_sets[d], ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mLayer [39;49;00m[33m{[39;49;00md[33m}[39;49;00m[33m mismatch: file has [39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(file_set)[33m}[39;49;00m[33m, [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mBFS has [39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(depth_sets[d])[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: Layer 30 mismatch: file has 91, BFS has 126[0m
+[1m[31mE           assert {'01000702050...7060805', ...} == {'01000702050...4030807', ...}[0m
+[1m[31mE             [0m
+[1m[31mE             Extra items in the right set:[0m
+[1m[31mE             [0m[33m'[39;49;00m[33m030507060200080401[39;49;00m[33m'[39;49;00m[90m[39;49;00m[0m
+[1m[31mE             [0m[33m'[39;49;00m[33m080207040600030501[39;49;00m[33m'[39;49;00m[90m[39;49;00m[0m
+[1m[31mE             [0m[33m'[39;49;00m[33m080507000604030201[39;49;00m[33m'[39;49;00m[90m[39;49;00m[0m
+[1m[31mE             [0m[33m'[39;49;00m[33m010507020400030608[39;49;00m[33m'[39;49;00m[90m[39;49;00m[0m
+[1m[31mE             [0m[33m'[39;49;00m[33m030007060405080201[39;49;00m[33m'[39;49;00m[90m[39;49;00m...[0m
+[1m[31mE             [0m
+[1m[31mE             ...Full output truncated (31 lines hidden), use '-vv' to show[0m
+
+[1m[31m/tests/test_outputs.py[0m:582: AssertionError
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_path_tsv_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_path_reaches_goal[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_layers_csv_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_layer_files_exist[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_parity_check[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_layer_counts_sum_correctly[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_deterministic_canonical_representation[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_states_unique_across_layers[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_input_files_integrity[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_path_tsv_format[0m - AssertionError: Invalid tile number: -1
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_move_legality[0m - ValueError: -1 is not in list
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_path_starts_from_start[0m - AssertionError: Tile -1 not found in start state
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_path_sequence_connected[0m - AssertionError: Step 0: revisiting state 010203040506070008 (cycle detected)
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_optimal_path_length[0m - AssertionError: Path length 31 doesn't match goal depth 30
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_layers_are_exact_bfs_frontiers[0m - AssertionError: Layer 30 mismatch: file has 91, BFS has 126
+[31m================================================================= [31m[1m6 failed[0m, [32m9 passed[0m[31m in 3.77s[0m[31m ==================================================================[0m
+[?2004hroot@44194d0e89a2:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@44194d0e89a2:/app# 

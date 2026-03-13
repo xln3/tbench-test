@@ -1,0 +1,20 @@
+{
+    "id": "288014dd-5cc2-4550-94df-8ff1d7a009a6",
+    "trial_name": "feal-differential-cryptanalysis.1-of-1.2026-03-07__09-22-48",
+    "task_id": "feal-differential-cryptanalysis",
+    "instruction": "The file /app/feal.py implements a FEAL-like encryption function. Implement a chosen plaintext attack that recovers the value of key[5].\n\nYour attack should be implemented in /app/attack.py, and should implement a function called attack(encrypt_fn) and it should return the uint32 value of key[5]. Your attack should run in less than 30 seconds.\n(Each of the 6 round keys is derived from a 16 bit seed.\nYou still can't brute force the entire keyspace but this should\nmake it easier for you to do a differential attack that recovers the round key.)",
+    "is_resolved": true,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_feal_differential_cryptanalysis_attack": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/feal-differential-cryptanalysis/feal-differential-cryptanalysis.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T09:55:05.232269+00:00",
+    "trial_ended_at": "2026-03-07T10:31:37.452647+00:00",
+    "agent_started_at": "2026-03-07T09:55:11.376684+00:00",
+    "agent_ended_at": "2026-03-07T10:30:11.579470+00:00",
+    "test_started_at": "2026-03-07T10:30:15.075906+00:00",
+    "test_ended_at": "2026-03-07T10:31:24.493866+00:00"
+}

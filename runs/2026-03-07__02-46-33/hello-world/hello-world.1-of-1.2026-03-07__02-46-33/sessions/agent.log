@@ -1,0 +1,16 @@
+[?2004hroot@01e51c31654d:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@01e51c31654d:/app# clear
+[?2004l[H[J[3J[?2004hroot@01e51c31654d:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@01e51c31654d:/app# panda --prompt 'Create a file called /app/hello.txt. Write "Hello, world!" to it.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Write]
+Done! I've created `/app/hello.txt` with the content "Hello, world!".
+[Read]
+Done! I've created `/app/hello.txt` and verified its contents. The file contains exactly "Hello, world!" as requested.
+[?2004hroot@01e51c31654d:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@01e51c31654d:/app# 

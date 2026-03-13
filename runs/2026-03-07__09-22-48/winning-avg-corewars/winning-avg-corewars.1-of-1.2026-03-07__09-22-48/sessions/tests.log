@@ -1,0 +1,206 @@
+[?2004hroot@08d3e2e8c6df:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@08d3e2e8c6df:/app# clear
+[?2004l[H[J[3J[?2004hroot@08d3e2e8c6df:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://deb.debian.org/debian stable InRelease
+0% [Waiting for headers]0% [Waiting for headers]                        Hit:2 http://deb.debian.org/debian trixie InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:3 http://deb.debian.org/debian trixie-updates InRelease
+0% [Connecting to 10.0.0.1 (10.0.0.1)]                                      0% [Waiting for headers]                        Hit:4 http://deb.debian.org/debian-security trixie-security InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 79%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 90%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (8.14.1-2+deb13u2).
+curl set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 9 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.5 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.13.5 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠴[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠴[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠴[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠴[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠴[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 838ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 91.83 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m-----------[2m-------------------[0m[0m 125.14 KiB/356.91 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 463.83 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m----------------------[2m--------[0m[0m 847.83 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m--------------------------[2m----[0m[0m 1007.83 KiB/1.17 MiB                                                                                        [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 212ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 53ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.5, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 3 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[31mF[0m[31m                                                                                                                             [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m___________________________________________________________________ test_warrior_performance ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_warrior_performance[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that my_warrior meets win rate thresholds against all opponents."""[39;49;00m[90m[39;49;00m
+        warriors_and_thresholds = {[90m[39;49;00m
+            [33m"[39;49;00m[33mstone.red[39;49;00m[33m"[39;49;00m: [94m75[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mvampire.red[39;49;00m[33m"[39;49;00m: [94m75[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mpaper.red[39;49;00m[33m"[39;49;00m: [94m75[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33msnake.red[39;49;00m[33m"[39;49;00m: [94m33[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mg2-clear.red[39;49;00m[33m"[39;49;00m: [94m33[39;49;00m,[90m[39;49;00m
+        }[90m[39;49;00m
+    [90m[39;49;00m
+        results = {}[90m[39;49;00m
+        total_passes = [94m0[39;49;00m[90m[39;49;00m
+        total_tests = [96mlen[39;49;00m(warriors_and_thresholds)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mfor[39;49;00m warrior, min_win_rate [95min[39;49;00m warriors_and_thresholds.items():[90m[39;49;00m
+            result = subprocess.run([90m[39;49;00m
+                [[90m[39;49;00m
+                    [33m"[39;49;00m[33mpmars[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-b[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-r[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m100[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-f[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m/app/my_warrior.red[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33m/app/warriors/[39;49;00m[33m{[39;49;00mwarrior[33m}[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                ],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+            [94massert[39;49;00m result.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mpmars failed against [39;49;00m[33m{[39;49;00mwarrior[33m}[39;49;00m[33m: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+            wins = [96mint[39;49;00m(result.stdout.strip().split([33m"[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m)[-[94m1[39;49;00m].split()[[94m1[39;49;00m])[90m[39;49;00m
+            win_rate = wins[90m[39;49;00m
+            results[warrior] = win_rate[90m[39;49;00m
+    [90m[39;49;00m
+            status = [33m"[39;49;00m[33mPASS[39;49;00m[33m"[39;49;00m [94mif[39;49;00m win_rate >= min_win_rate [94melse[39;49;00m [33m"[39;49;00m[33mFAIL[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [94mif[39;49;00m status == [33m"[39;49;00m[33mPASS[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+                total_passes += [94m1[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [96mprint[39;49;00m([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mvs [39;49;00m[33m{[39;49;00mwarrior[33m:[39;49;00m[33m<12[39;49;00m[33m}[39;49;00m[33m: [39;49;00m[33m{[39;49;00mwins[33m:[39;49;00m[33m>3[39;49;00m[33m}[39;49;00m[33m/100 wins ([39;49;00m[33m{[39;49;00mwin_rate[33m:[39;49;00m[33m>3[39;49;00m[33m}[39;49;00m[33m%) - [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00mstatus[33m}[39;49;00m[33m (need [39;49;00m[33m{[39;49;00mmin_win_rate[33m}[39;49;00m[33m%+)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Print summary before individual assertions[39;49;00m[90m[39;49;00m
+        passed_opponents = [[90m[39;49;00m
+            w [94mfor[39;49;00m w, rate [95min[39;49;00m results.items() [94mif[39;49;00m rate >= warriors_and_thresholds[w][90m[39;49;00m
+        ][90m[39;49;00m
+        failed_opponents = [[90m[39;49;00m
+            w [94mfor[39;49;00m w, rate [95min[39;49;00m results.items() [94mif[39;49;00m rate < warriors_and_thresholds[w][90m[39;49;00m
+        ][90m[39;49;00m
+    [90m[39;49;00m
+        passed_list = [33m"[39;49;00m[33m, [39;49;00m[33m"[39;49;00m.join(passed_opponents) [94mif[39;49;00m passed_opponents [94melse[39;49;00m [33m"[39;49;00m[33mNone[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        failed_list = [33m"[39;49;00m[33m, [39;49;00m[33m"[39;49;00m.join(failed_opponents) [94mif[39;49;00m failed_opponents [94melse[39;49;00m [33m"[39;49;00m[33mNone[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [96mprint[39;49;00m([33mf[39;49;00m[33m"[39;49;00m[33mPASSED ([39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(passed_opponents)[33m}[39;49;00m[33m/[39;49;00m[33m{[39;49;00mtotal_tests[33m}[39;49;00m[33m): [39;49;00m[33m{[39;49;00mpassed_list[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        [96mprint[39;49;00m([33mf[39;49;00m[33m"[39;49;00m[33mFAILED ([39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(failed_opponents)[33m}[39;49;00m[33m/[39;49;00m[33m{[39;49;00mtotal_tests[33m}[39;49;00m[33m): [39;49;00m[33m{[39;49;00mfailed_list[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mfor[39;49;00m warrior, min_win_rate [95min[39;49;00m warriors_and_thresholds.items():[90m[39;49;00m
+            win_rate = results[warrior][90m[39;49;00m
+>           [94massert[39;49;00m win_rate >= min_win_rate, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mOnly achieved [39;49;00m[33m{[39;49;00mwin_rate[33m}[39;49;00m[33m% win rate vs [39;49;00m[33m{[39;49;00mwarrior[33m}[39;49;00m[33m (need [39;49;00m[33m{[39;49;00mmin_win_rate[33m}[39;49;00m[33m%+)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: Only achieved 56% win rate vs stone.red (need 75%+)[0m
+[1m[31mE           assert 56 >= 75[0m
+
+[1m[31m/tests/test_outputs.py[0m:106: AssertionError
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+vs stone.red   :  56/100 wins ( 56%) - FAIL (need 75%+)
+vs vampire.red :  80/100 wins ( 80%) - PASS (need 75%+)
+vs paper.red   :  76/100 wins ( 76%) - PASS (need 75%+)
+vs snake.red   :  20/100 wins ( 20%) - FAIL (need 33%+)
+vs g2-clear.red:  38/100 wins ( 38%) - PASS (need 33%+)
+PASSED (3/5): vampire.red, paper.red, g2-clear.red
+FAILED (2/5): stone.red, snake.red
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_opponents_integrity[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_warrior_exists[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_warrior_performance[0m - AssertionError: Only achieved 56% win rate vs stone.red (need 75%+)
+[31m================================================================= [31m[1m1 failed[0m, [32m2 passed[0m[31m in 1.26s[0m[31m ==================================================================[0m
+[?2004hroot@08d3e2e8c6df:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@08d3e2e8c6df:/app# 

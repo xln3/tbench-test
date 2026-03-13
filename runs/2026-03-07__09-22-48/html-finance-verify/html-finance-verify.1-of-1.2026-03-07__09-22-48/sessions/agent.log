@@ -1,0 +1,33 @@
+[?2004hroot@9ca00f1019e4:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@9ca00f1019e4:/app# clear
+[?2004l[H[J[3J[?2004hroot@9ca00f1019e4:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@9ca00f1019e4:/app# panda --prompt 'You are given an html file of an earnings report of a company. However, exactly one financial metric in the html file is incorrect. 
+[?2004l[?2004h> 
+[?2004l[?2004h> Can you find that metric and output it in /app/value.txt. 
+[?2004l[?2004h> 
+[?2004l[?2004h> Output two numbers separated by a comma:
+[?2004l[?2004h> 1. The line number on which the incorrect metric is located
+[?2004l[?2004h> 2. The value of the incorrect metric (just output the number, do not include units)
+[?2004l[?2004h> 
+[?2004l[?2004h> Example output: 1,17'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Glob]
+[Bash]
+[Read]
+[Read]
+[Read]
+[Read]
+[Read]
+[Bash]
+[Grep]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Read]
+[Read]
+[Bash]
+[Bash]
+[Bash]

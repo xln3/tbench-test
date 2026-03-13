@@ -1,0 +1,37 @@
+[?2004hroot@52b15d4e3d2f:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@52b15d4e3d2f:/app# clear
+[?2004l[H[J[3J[?2004hroot@52b15d4e3d2f:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004lCollecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-timeout==2.3.1
+  Downloading pytest_timeout-2.3.1-py3-none-any.whl.metadata (20 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (26.0)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (2.19.2)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pytest_timeout-2.3.1-py3-none-any.whl (14 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Installing collected packages: pluggy, iniconfig, pytest, pytest-timeout
+Successfully installed iniconfig-2.3.0 pluggy-1.6.0 pytest-8.4.1 pytest-timeout-2.3.1
+[33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.[0m[33m
+[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.3.1[0m[39;49m -> [0m[32;49m26.0.1[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: timeout-2.3.1, anyio-4.12.1
+[1mcollecting ... [0m[1mcollected 11 items                                                                                                                                             [0m
+
+../tests/test_outputs.py::test_stable_kmeans_file_exists [32mPASSED[0m[32m                                                                                          [  9%][0m
+../tests/test_outputs.py::test_test_implementation_file_exists [32mPASSED[0m[32m                                                                                    [ 18%][0m
+../tests/test_outputs.py::test_stable_kmeans_has_required_classes [32mPASSED[0m[32m                                                                                 [ 27%][0m
+../tests/test_outputs.py::test_fit_parallel_api_exists [32mPASSED[0m[32m                                                                                            [ 36%][0m
+../tests/test_outputs.py::test_parallel_processing_occurs 

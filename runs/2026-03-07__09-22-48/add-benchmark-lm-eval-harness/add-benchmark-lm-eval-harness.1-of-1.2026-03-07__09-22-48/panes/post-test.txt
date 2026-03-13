@@ -1,0 +1,48 @@
+root@8cc3d7fe6b06:/app# bash /tests/run-tests.sh; tmux wait -S done
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (26.0)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (2.19.2)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Installing collected packages: pluggy, iniconfig, pytest
+Successfully installed iniconfig-2.3.0 pluggy-1.6.0 pytest-8.4.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your syst
+em unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you a
+re doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.2 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: anyio-4.12.1
+collected 0 items / 1 error
+
+============================================================================ ERRORS ============================================================================
+_______________________________________________________________ ERROR collecting test_outputs.py _______________________________________________________________
+/tests/test_outputs.py:13: in <module>
+    from lm_eval.evaluator import simple_evaluate
+lm-evaluation-harness/lm_eval/evaluator.py:16: in <module>
+    import lm_eval.models
+lm-evaluation-harness/lm_eval/models/__init__.py:1: in <module>
+    from . import (
+lm-evaluation-harness/lm_eval/models/hf_vlms.py:32: in <module>
+    class HFMultimodalLM(HFLM):
+lm-evaluation-harness/lm_eval/models/hf_vlms.py:37: in HFMultimodalLM
+    AUTO_MODEL_CLASS = transformers.AutoModelForVision2Seq
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/local/lib/python3.13/site-packages/transformers/utils/import_utils.py:2281: in __getattr__
+    raise AttributeError(f"module {self.__name__} has no attribute {name}")
+E   AttributeError: module transformers has no attribute AutoModelForVision2Seq
+=================================================================== short test summary info ====================================================================
+ERROR ../tests/test_outputs.py - AttributeError: module transformers has no attribute AutoModelForVision2Seq
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+====================================================================== 1 error in 10.66s =======================================================================
+root@8cc3d7fe6b06:/app#

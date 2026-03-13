@@ -1,0 +1,18 @@
+{
+    "id": "f9954522-df17-41ed-bfbf-b73b0d2652a0",
+    "trial_name": "broken-networking.1-of-1.2026-03-07__09-22-48",
+    "task_id": "broken-networking",
+    "instruction": "The networking on this machine is broken, and doesn't work. Fix it so I can curl example.com.",
+    "is_resolved": null,
+    "failure_mode": "parse_error",
+    "parser_results": null,
+    "recording_path": "2026-03-07__09-22-48/broken-networking/broken-networking.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T16:51:57.514440+00:00",
+    "trial_ended_at": "2026-03-07T17:16:27.778848+00:00",
+    "agent_started_at": "2026-03-07T16:53:11.183777+00:00",
+    "agent_ended_at": "2026-03-07T17:13:11.386921+00:00",
+    "test_started_at": "2026-03-07T17:13:14.894671+00:00",
+    "test_ended_at": "2026-03-07T17:16:15.074305+00:00"
+}

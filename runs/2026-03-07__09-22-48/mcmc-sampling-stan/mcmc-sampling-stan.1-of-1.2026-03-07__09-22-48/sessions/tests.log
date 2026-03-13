@@ -1,0 +1,170 @@
+[?2004hroot@fbdf25f8c618:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@fbdf25f8c618:/app# clear
+[?2004l[H[J[3J[?2004hroot@fbdf25f8c618:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+                        0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 45%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 45%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mpytest==8.3.4                                                                                                                                                 [0m[2K[37m⠹[0m [2mpytest==8.3.4                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.3.4                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠸[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠸[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠸[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m4 packages[0m [2min 596ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/335.04 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/335.04 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/335.04 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/335.04 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/335.04 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/335.04 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/335.04 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m------[2m------------------------[0m[0m 61.82 KiB/335.04 KiB                                                                                        [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[2mPrepared [1m4 packages[0m [2min 119ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/4] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/4] [2miniconfig==2.3.0                                                                                                                     [0m[2K█████░░░░░░░░░░░░░░░ [1/4] [2miniconfig==2.3.0                                                                                                                     [0m[2K█████░░░░░░░░░░░░░░░ [1/4] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████████░░░░░░░░░░ [2/4] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████████░░░░░░░░░░ [2/4] [2mpackaging==26.0                                                                                                                      [0m[2K███████████████░░░░░ [3/4] [2mpackaging==26.0                                                                                                                      [0m[2K███████████████░░░░░ [3/4] [2mpytest==8.3.4                                                                                                                        [0m[2K████████████████████ [4/4] [2mpytest==8.3.4                                                                                                                        [0m[2K[2mInstalled [1m4 packages[0m [2min 14ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpytest[0m[2m==8.3.4[0m
+Test dependencies installed successfully
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 6 items                                                                                                                                              [0m
+
+test_outputs.py [31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[31mF[0m[31m                                                                                                                                   [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_________________________________________________________________ test_rstan_package_installed _________________________________________________________________[0m
+
+    def test_rstan_package_installed():
+        """Test that RStan package is properly installed."""
+        try:
+            result = subprocess.run(
+                ["R", "--slave", "-e", "library(rstan); packageVersion('rstan')"],
+                capture_output=True,
+                text=True,
+                timeout=60,
+            )
+    
+>           assert result.returncode == 0, (
+                f"RStan package is not properly installed. Return code: "
+                f"{result.returncode}, stderr: {result.stderr}"
+            )
+[1m[31mE           AssertionError: RStan package is not properly installed. Return code: 1, stderr: Error in library(rstan) : there is no package called ‘rstan’[0m
+[1m[31mE             Execution halted[0m
+[1m[31mE             [0m
+[1m[31mE           assert 1 == 0[0m
+[1m[31mE            +  where 1 = CompletedProcess(args=['R', '--slave', '-e', "library(rstan); packageVersion('rstan')"], returncode=1, stdout='', stderr='Error in library(rstan) : there is no package called ‘rstan’\nExecution halted\n').returncode[0m
+
+[1m[31mtest_outputs.py[0m:18: AssertionError
+[31m[1m_____________________________________________________________ test_hierarchical_model_implemented ______________________________________________________________[0m
+
+    def test_hierarchical_model_implemented():
+        """Test that hierarchical Bayesian model structure is implemented"""
+        stan_model_path = "/app/hierarchical_model.stan"
+>       assert os.path.exists(stan_model_path), (
+            f"Stan model file not found at {stan_model_path}"
+        )
+[1m[31mE       AssertionError: Stan model file not found at /app/hierarchical_model.stan[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = <function exists at 0x7f84665a7600>('/app/hierarchical_model.stan')[0m
+[1m[31mE        +    where <function exists at 0x7f84665a7600> = <module 'posixpath' (frozen)>.exists[0m
+[1m[31mE        +      where <module 'posixpath' (frozen)> = os.path[0m
+
+[1m[31mtest_outputs.py[0m:32: AssertionError
+[31m[1m_____________________________________________________________ test_r_script_created_and_used_rstan _____________________________________________________________[0m
+
+    def test_r_script_created_and_used_rstan():
+        """Test that R script 'analysis.R' was created and uses RStan"""
+        r_script_path = "/app/analysis.R"
+>       assert os.path.exists(r_script_path), (
+            f"R analysis script not found at {r_script_path}"
+        )
+[1m[31mE       AssertionError: R analysis script not found at /app/analysis.R[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = <function exists at 0x7f84665a7600>('/app/analysis.R')[0m
+[1m[31mE        +    where <function exists at 0x7f84665a7600> = <module 'posixpath' (frozen)>.exists[0m
+[1m[31mE        +      where <module 'posixpath' (frozen)> = os.path[0m
+
+[1m[31mtest_outputs.py[0m:60: AssertionError
+[31m[1m___________________________________________________________________ test_stan_model_sampling ___________________________________________________________________[0m
+
+    def test_stan_model_sampling():
+        """Test that MCMC sampling runs successfully."""
+        # Run analysis.R and capture all output to check
+        # if the stan model sampling runs successfully
+        r_script_path = "/app/analysis.R"
+        if not os.path.exists(r_script_path):
+>           assert False, f"R analysis script not found at {r_script_path}"
+[1m[31mE           AssertionError: R analysis script not found at /app/analysis.R[0m
+[1m[31mE           assert False[0m
+
+[1m[31mtest_outputs.py[0m:147: AssertionError
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m test_outputs.py::[1mtest_posterior_alpha_estimation[0m
+[32mPASSED[0m test_outputs.py::[1mtest_posterior_beta_estimation[0m
+[31mFAILED[0m test_outputs.py::[1mtest_rstan_package_installed[0m - AssertionError: RStan package is not properly installed. Return code: 1, stderr: Error in library(rstan) : there is no package called ‘rstan’
+[31mFAILED[0m test_outputs.py::[1mtest_hierarchical_model_implemented[0m - AssertionError: Stan model file not found at /app/hierarchical_model.stan
+[31mFAILED[0m test_outputs.py::[1mtest_r_script_created_and_used_rstan[0m - AssertionError: R analysis script not found at /app/analysis.R
+[31mFAILED[0m test_outputs.py::[1mtest_stan_model_sampling[0m - AssertionError: R analysis script not found at /app/analysis.R
+[31m================================================================= [31m[1m4 failed[0m, [32m2 passed[0m[31m in 0.29s[0m[31m ==================================================================[0m
+[?2004hroot@fbdf25f8c618:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@fbdf25f8c618:/app# 

@@ -1,0 +1,194 @@
+[?2004hroot@10cf23e4101b:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@10cf23e4101b:/app# clear
+[?2004l[H[J[3J[?2004hroot@10cf23e4101b:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://deb.debian.org/debian bookworm InRelease
+0% [Working]            Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 70%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcurl4
+The following NEW packages will be installed:
+  curl libcurl4
+0 upgraded, 2 newly installed, 0 to remove and 43 not upgraded.
+Need to get 707 kB of archives.
+After this operation, 1361 kB of additional disk space will be used.
+0% [Working]            Get:1 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+2% [1 libcurl4 13.5 kB/392 kB 3%]                                 54% [Working]             Get:2 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+54% [2 curl 0 B/316 kB 0%]                          100% [Working]              Fetched 707 kB in 0s (2126 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcurl4:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11333 files and directories currently installed.)
+Preparing to unpack .../libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u14) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up curl (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u8) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.11.9 interpreter at: [36m/usr/local/bin/python[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.11.9 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 706ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 397.01 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m-----------[2m-------------------[0m[0m 413.01 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 199ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████░░░░░░░░░░░░ [2/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 19ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.11.9, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 2 items                                                                                                                                              [0m
+
+test_outputs.py [32m.[0m[31mF[0m[31m                                                                                                                                       [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m__________________________________________________________________ test_result_jsonl_content ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_result_jsonl_content[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test if /app/result.jsonl content matches the expected output."""[39;49;00m[90m[39;49;00m
+        expected_data = [[90m[39;49;00m
+            {[33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m1[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/thu-ml/STAIR[39;49;00m[33m"[39;49;00m},[90m[39;49;00m
+            {[90m[39;49;00m
+                [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m2[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/facebookresearch/locate-3d/[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            },[90m[39;49;00m
+            {[90m[39;49;00m
+                [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m3[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/Hhhhhhao/continuous_tokenizer[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            },[90m[39;49;00m
+            {[33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m4[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/lumalabs/imm[39;49;00m[33m"[39;49;00m},[90m[39;49;00m
+            {[90m[39;49;00m
+                [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m5[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/KJha02/crossEnvCooperation[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            },[90m[39;49;00m
+            {[90m[39;49;00m
+                [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m6[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/KaimingHe/deep-residual-networks[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            },[90m[39;49;00m
+            {[90m[39;49;00m
+                [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m7[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/facebookresearch/PurpleLlama/tree/main/Llama-Guard[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            },[90m[39;49;00m
+            {[90m[39;49;00m
+                [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m8[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/facebookresearch/deepcluster[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            },[90m[39;49;00m
+            {[90m[39;49;00m
+                [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m9[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/GaozhengPei/FreqPure[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            },[90m[39;49;00m
+            {[33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m10[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mhttps://github.com/genlm/genlm-bytes[39;49;00m[33m"[39;49;00m},[90m[39;49;00m
+        ][90m[39;49;00m
+    [90m[39;49;00m
+        result_path = Path([33m"[39;49;00m[33m/app/result.jsonl[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m(result_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            lines = [line.strip() [94mfor[39;49;00m line [95min[39;49;00m f [94mif[39;49;00m line.strip()][90m[39;49;00m
+    [90m[39;49;00m
+        result_data = [][90m[39;49;00m
+        [94mfor[39;49;00m line [95min[39;49;00m lines:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                obj = json.loads(line)[90m[39;49;00m
+            [94mexcept[39;49;00m [96mException[39;49;00m:[90m[39;49;00m
+                [94massert[39;49;00m [94mFalse[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mInvalid JSON: [39;49;00m[33m{[39;49;00mline[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [94massert[39;49;00m [33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m [95min[39;49;00m obj, [33mf[39;49;00m[33m"[39;49;00m[33mMissing [39;49;00m[33m'[39;49;00m[33mpaper_id[39;49;00m[33m'[39;49;00m[33m: [39;49;00m[33m{[39;49;00mline[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [94massert[39;49;00m [33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m [95min[39;49;00m obj, [33mf[39;49;00m[33m"[39;49;00m[33mMissing [39;49;00m[33m'[39;49;00m[33mofficial_code_url[39;49;00m[33m'[39;49;00m[33m: [39;49;00m[33m{[39;49;00mline[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Append the result object to result_data[39;49;00m[90m[39;49;00m
+            result_data.append(obj)[90m[39;49;00m
+    [90m[39;49;00m
+        [94massert[39;49;00m [96mlen[39;49;00m(result_data) == [94m10[39;49;00m, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mExpected 10 items in result.jsonl, found [39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(result_data)[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Sort both result_data and expected_data by 'paper_id'[39;49;00m[90m[39;49;00m
+        result_data_sorted = [96msorted[39;49;00m(result_data, key=[94mlambda[39;49;00m x: x[[33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+        expected_data_sorted = [96msorted[39;49;00m(expected_data, key=[94mlambda[39;49;00m x: x[[33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [90m[39;49;00m
+        [94mfor[39;49;00m i, (res, exp) [95min[39;49;00m [96menumerate[39;49;00m([96mzip[39;49;00m(result_data_sorted, expected_data_sorted)):[90m[39;49;00m
+            [94massert[39;49;00m res[[33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m] == exp[[33m"[39;49;00m[33mpaper_id[39;49;00m[33m"[39;49;00m], ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mItem [39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m'[39;49;00m[33ms paper_id mismatch: [39;49;00m[33m{[39;49;00mres[[33m'[39;49;00m[33mpaper_id[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m != [39;49;00m[33m{[39;49;00mexp[[33m'[39;49;00m[33mpaper_id[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+>           [94massert[39;49;00m compare_urls(res[[33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m], exp[[33m"[39;49;00m[33mofficial_code_url[39;49;00m[33m"[39;49;00m]), ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mItem [39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m'[39;49;00m[33ms official_code_url mismatch: [39;49;00m[33m\[39;49;00m
+    [33m                [39;49;00m[33m{[39;49;00mres[[33m'[39;49;00m[33mofficial_code_url[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m != [39;49;00m[33m{[39;49;00mexp[[33m'[39;49;00m[33mofficial_code_url[39;49;00m[33m'[39;49;00m][33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: Item 0's official_code_url mismatch:                 https://github.com/meta-llama/llama-recipes != https://github.com/thu-ml/STAIR[0m
+[1m[31mE           assert False[0m
+[1m[31mE            +  where False = compare_urls('https://github.com/meta-llama/llama-recipes', 'https://github.com/thu-ml/STAIR')[0m
+
+[1m[31mtest_outputs.py[0m:103: AssertionError
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m test_outputs.py::[1mtest_result_json_exists[0m
+[31mFAILED[0m test_outputs.py::[1mtest_result_jsonl_content[0m - AssertionError: Item 0's official_code_url mismatch:                 https://github.com/meta-llama/llama-recipes != https://github.com/thu-ml/STAIR
+[31m================================================================= [31m[1m1 failed[0m, [32m1 passed[0m[31m in 0.07s[0m[31m ==================================================================[0m
+[?2004hroot@10cf23e4101b:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@10cf23e4101b:/app# 

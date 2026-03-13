@@ -1,0 +1,18 @@
+[?2004hroot@94b2c7600085:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@94b2c7600085:/app# clear
+[?2004l[H[J[?2004hroot@94b2c7600085:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004lE: Could not connect to archive.ubuntu.com
+E: Could not connect to archive.ubuntu.com
+sh: 1: Syntax error: word unexpected (expecting ")")
+/tests/run-tests.sh: line 12: /root/.local/bin/env: No such file or directory
+/tests/run-tests.sh: line 20: uv: command not found
+/tests/run-tests.sh: line 22: .tbench-testing/bin/activate: No such file or directory
+/tests/run-tests.sh: line 23: uv: command not found
+/tests/run-tests.sh: line 27: uv: command not found
+[?2004hroot@94b2c7600085:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@94b2c7600085:/app# 

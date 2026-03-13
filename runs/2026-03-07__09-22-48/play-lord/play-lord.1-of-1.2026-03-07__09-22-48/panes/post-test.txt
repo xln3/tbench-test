@@ -1,0 +1,75 @@
+root@f881285f4f4e:/app# bash /tests/run-tests.sh; tmux wait -S done
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 6 packages in 708ms
+Prepared 6 packages in 771ms
+Installed 6 packages in 16ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + psycopg2-binary==2.9.9
+ + pygments==2.19.2
+ + pytest==8.4.1
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /app/.tbench-testing/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+collected 4 items
+
+../tests/test_outputs.py::test_postgresql_is_running PASSED                                                                                              [ 25%]
+../tests/test_outputs.py::test_database_proves_gameplay FAILED                                                                                           [ 50%]
+../tests/test_outputs.py::test_no_cheating_via_direct_insert FAILED                                                                                      [ 75%]
+../tests/test_outputs.py::test_lord_rust_binary_was_executed FAILED                                                                                      [100%]
+
+=========================================================================== FAILURES ===========================================================================
+________________________________________________________________ test_database_proves_gameplay _________________________________________________________________
+/tests/test_outputs.py:37: in test_database_proves_gameplay
+    cur.execute("SELECT COUNT(*) FROM players")
+E   psycopg2.errors.UndefinedTable: relation "players" does not exist
+E   LINE 1: SELECT COUNT(*) FROM players
+E                                ^
+______________________________________________________________ test_no_cheating_via_direct_insert ______________________________________________________________
+/tests/test_outputs.py:158: in test_no_cheating_via_direct_insert
+    cur.execute("SELECT value FROM game_state WHERE key = 'last_reset'")
+E   psycopg2.errors.UndefinedTable: relation "game_state" does not exist
+E   LINE 1: SELECT value FROM game_state WHERE key = 'last_reset'
+E                             ^
+
+During handling of the above exception, another exception occurred:
+/tests/test_outputs.py:164: in test_no_cheating_via_direct_insert
+    pytest.fail("game_state table doesn't exist - game was never run")
+E   Failed: game_state table doesn't exist - game was never run
+______________________________________________________________ test_lord_rust_binary_was_executed ______________________________________________________________
+/tests/test_outputs.py:208: in test_lord_rust_binary_was_executed
+    assert table in tables, (
+E   AssertionError: Required table 'players' not found - game never initialized
+E   assert 'players' in []
+=================================================================== short test summary info ====================================================================
+FAILED ../tests/test_outputs.py::test_database_proves_gameplay - psycopg2.errors.UndefinedTable: relation "players" does not exist
+FAILED ../tests/test_outputs.py::test_no_cheating_via_direct_insert - Failed: game_state table doesn't exist - game was never run
+FAILED ../tests/test_outputs.py::test_lord_rust_binary_was_executed - AssertionError: Required table 'players' not found - game never initialized
+================================================================= 3 failed, 1 passed in 0.24s ==================================================================
+root@f881285f4f4e:/app#

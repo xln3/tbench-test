@@ -1,0 +1,20 @@
+{
+    "id": "7dcb021f-bf47-46a8-9d45-ad2dfcdddf36",
+    "trial_name": "oom.1-of-1.2026-03-07__09-22-48",
+    "task_id": "oom",
+    "instruction": "I want you to cache the `albert/albert-base-v2` model and tokenizer from huggingface so that I can use it offline via cache when I'm on my next flight.\ntransformers==4.52.4 and torch==2.7.1 have been installed system-wide, please do not uninstall them.",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_offline_model_load": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/oom/oom.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T16:51:27.951962+00:00",
+    "trial_ended_at": "2026-03-07T17:00:43.180166+00:00",
+    "agent_started_at": "2026-03-07T16:59:51.994839+00:00",
+    "agent_ended_at": "2026-03-07T16:59:58.668246+00:00",
+    "test_started_at": "2026-03-07T17:00:02.169039+00:00",
+    "test_ended_at": "2026-03-07T17:00:18.338553+00:00"
+}

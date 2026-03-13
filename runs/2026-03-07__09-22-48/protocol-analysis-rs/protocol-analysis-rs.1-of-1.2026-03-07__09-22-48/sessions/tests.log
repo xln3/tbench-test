@@ -1,0 +1,284 @@
+[?2004hroot@5a833f4adcb5:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@5a833f4adcb5:/app# clear
+[?2004l[H[J[3J[?2004hroot@5a833f4adcb5:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://deb.debian.org/debian bookworm InRelease
+0% [Working]            Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+0% [2 InRelease 1444 B/55.4 kB 3%]0% [2 InRelease 1444 B/55.4 kB 3%]                                  0% [Working]0% [Waiting for headers]                        Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+                        0% [Working]100% [Working]              Fetched 55.4 kB in 1s (70.1 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 78%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcurl4
+The following NEW packages will be installed:
+  curl libcurl4
+0 upgraded, 2 newly installed, 0 to remove and 32 not upgraded.
+Need to get 707 kB of archives.
+After this operation, 1361 kB of additional disk space will be used.
+0% [Working]            Get:1 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+1% [1 libcurl4 6299 B/392 kB 2%]                                54% [Working]             Get:2 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+54% [2 curl 0 B/316 kB 0%]                          100% [Working]              Fetched 707 kB in 1s (1126 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcurl4:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 59353 files and directories currently installed.)
+Preparing to unpack .../libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u14) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up curl (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: [36m/usr/local/bin/python[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.13.1 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 745ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 93.51 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 141.51 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 349.51 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 365.51 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)
+[2mpygments            [0m [32m------------------------------[2m[0m[0m 1.15 MiB/1.17 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 251ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 19ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 1 item                                                                                                                                               [0m
+
+../tests/test_outputs.py [31mF[0m[31m                                                                                                                               [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m__________________________________________________________________ test_login_makes_username ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_login_makes_username[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Check that the player is able to login.[39;49;00m
+    [33m    The best way to do this is verify that a save file has been created[39;49;00m
+    [33m    for the player, which only happens after a successful login.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [96mprint[39;49;00m([33m"[39;49;00m[33mTesting[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        server_id = [96mstr[39;49;00m(uuid.uuid4())[:[94m8[39;49;00m][90m[39;49;00m
+        username = [96mstr[39;49;00m(uuid.uuid4())[:[94m8[39;49;00m][90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Kill any existing bun processes[39;49;00m[90m[39;49;00m
+        subprocess.run([[33m"[39;49;00m[33mpkill[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-9[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mbun[39;49;00m[33m"[39;49;00m], capture_output=[94mTrue[39;49;00m, check=[94mFalse[39;49;00m)[90m[39;49;00m
+        time.sleep([94m10[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Remove existing directory[39;49;00m[90m[39;49;00m
+        subprocess.run([[33m"[39;49;00m[33mrm[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-rf[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/app/Server[39;49;00m[33m"[39;49;00m], capture_output=[94mTrue[39;49;00m, check=[94mFalse[39;49;00m)[90m[39;49;00m
+        time.sleep([94m1[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        subprocess.run([[33m"[39;49;00m[33mmkdir[39;49;00m[33m"[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33m/app/[39;49;00m[33m{[39;49;00mserver_id[33m}[39;49;00m[33m"[39;49;00m], capture_output=[94mTrue[39;49;00m, check=[94mFalse[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Clone repository fresh so that they can't have cheated with a new server[39;49;00m[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mgit[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mclone[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mhttps://github.com/LostCityRS/Server[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            cwd=[33mf[39;49;00m[33m"[39;49;00m[33m/app/[39;49;00m[33m{[39;49;00mserver_id[33m}[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            check=[94mTrue[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+        [96mprint[39;49;00m([33m"[39;49;00m[33mclone[39;49;00m[33m"[39;49;00m, result.stdout)[90m[39;49;00m
+        time.sleep([94m2[39;49;00m)[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mgit[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mreset[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m--hard[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m969f5b252d59ca4ae2bfddcdd96215cebdfb4edc[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            cwd=[33mf[39;49;00m[33m"[39;49;00m[33m/app/[39;49;00m[33m{[39;49;00mserver_id[33m}[39;49;00m[33m/Server[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            check=[94mTrue[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+        time.sleep([94m2[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Move start.ts file[39;49;00m[90m[39;49;00m
+        subprocess.run([[33m"[39;49;00m[33mmv[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/tests/start.ts[39;49;00m[33m"[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33m/app/[39;49;00m[33m{[39;49;00mserver_id[33m}[39;49;00m[33m/Server[39;49;00m[33m"[39;49;00m], check=[94mTrue[39;49;00m)[90m[39;49;00m
+        time.sleep([94m2[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [96mprint[39;49;00m([33m"[39;49;00m[33mStart server[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        [90m# Start server in background (using Popen for background process)[39;49;00m[90m[39;49;00m
+        server_process = subprocess.Popen([90m[39;49;00m
+            [[33m"[39;49;00m[33mbash[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-c[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mecho [39;49;00m[33m'[39;49;00m[33m'[39;49;00m[33m | bash start.sh[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            cwd=[33mf[39;49;00m[33m"[39;49;00m[33m/app/[39;49;00m[33m{[39;49;00mserver_id[33m}[39;49;00m[33m/Server[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            stdout=subprocess.PIPE,[90m[39;49;00m
+            stderr=subprocess.PIPE,[90m[39;49;00m
+        )[90m[39;49;00m
+        time.sleep([94m300[39;49;00m)[90m[39;49;00m
+        [96mprint[39;49;00m([33m"[39;49;00m[33mDone server waiting[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Run login script[39;49;00m[90m[39;49;00m
+>       result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33m/usr/local/bin/python[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/app/login.py[39;49;00m[33m"[39;49;00m, username],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            check=[94mTrue[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = (['/usr/local/bin/python', '/app/login.py', '683ce47a'],)
+kwargs = {'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 2 args: ['/usr/local/bin/python', '/app/login.py', '683c...>, stdout = ''
+stderr = "/usr/local/bin/python: can't open file '/app/login.py': [Errno 2] No such file or directory\n", retcode = 2
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command '['/usr/local/bin/python', '/app/login.py', '683ce47a']' returned non-zero exit status 2.[0m
+
+[1m[31m/usr/local/lib/python3.13/subprocess.py[0m:577: CalledProcessError
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Testing
+clone 
+Start server
+Done server waiting
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_login_makes_username[0m - subprocess.CalledProcessError: Command '['/usr/local/bin/python', '/app/login.py', '683ce47a']' returned non-zero exit status 2.
+[31m================================================================ [31m[1m1 failed[0m[31m in 319.25s (0:05:19)[0m[31m =================================================================[0m
+[?2004hroot@5a833f4adcb5:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@5a833f4adcb5:/app# 

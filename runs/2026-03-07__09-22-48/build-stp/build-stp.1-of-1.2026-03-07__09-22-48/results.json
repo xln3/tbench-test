@@ -1,0 +1,26 @@
+{
+    "id": "8d329f87-06ca-4ebe-9193-09f86ad89104",
+    "trial_name": "build-stp.1-of-1.2026-03-07__09-22-48",
+    "task_id": "build-stp",
+    "instruction": "Build simple theorem prover (STP) from /app/stp.\nAfter the installation, make sure you can directly execute `stp` as a shell command.",
+    "is_resolved": true,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_stp_sat_query": "passed",
+        "test_stp_unsat_query": "passed",
+        "test_stp_bitvector_arithmetic": "passed",
+        "test_stp_multiple_constraints": "passed",
+        "test_stp_bit_operations": "passed",
+        "test_stp_unsat_arithmetic": "passed",
+        "test_stp_unsat_bit_constraints": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/build-stp/build-stp.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T17:00:43.205201+00:00",
+    "trial_ended_at": "2026-03-07T17:22:13.116436+00:00",
+    "agent_started_at": "2026-03-07T17:02:29.187361+00:00",
+    "agent_ended_at": "2026-03-07T17:21:35.817991+00:00",
+    "test_started_at": "2026-03-07T17:21:39.408781+00:00",
+    "test_ended_at": "2026-03-07T17:21:58.774595+00:00"
+}

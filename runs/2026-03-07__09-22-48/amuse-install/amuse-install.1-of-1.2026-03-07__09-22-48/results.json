@@ -1,0 +1,22 @@
+{
+    "id": "c31202de-5db2-4f75-8289-bb2a91291bab",
+    "trial_name": "amuse-install.1-of-1.2026-03-07__09-22-48",
+    "task_id": "amuse-install",
+    "instruction": "You are given a repository called amuse in /app. This repository contains the AMUSE framework's codebase.\n\nYou need to:\n- Create a Python virtual environment in the AMUSE repository directory at /app/amuse/.venv\n- Understand and run the test_script.py example from /app/test_script.py\n  \nRequirements:\n- Create a virtual environment at `/app/amuse/.venv` for the AMUSE installation and install it such that the test_script.py example runs successfully.\n- Do not modify /app/test_script.py",
+    "is_resolved": true,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_virtual_environment_created": "passed",
+        "test_test_script_unchanged": "passed",
+        "test_test_script_executes": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/amuse-install/amuse-install.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T20:01:22.167576+00:00",
+    "trial_ended_at": "2026-03-07T20:09:28.442839+00:00",
+    "agent_started_at": "2026-03-07T20:02:04.657987+00:00",
+    "agent_ended_at": "2026-03-07T20:09:02.736641+00:00",
+    "test_started_at": "2026-03-07T20:09:06.180084+00:00",
+    "test_ended_at": "2026-03-07T20:09:14.867274+00:00"
+}

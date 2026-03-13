@@ -1,0 +1,110 @@
+root@68fc9f7623a1:/app# bash /tests/run-tests.sh; tmux wait -S done
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcurl4 libnghttp2-14 libpsl5 librtmp1 libssh2-1 publicsuffix
+The following NEW packages will be installed:
+  curl libcurl4 libnghttp2-14 libpsl5 librtmp1 libssh2-1 publicsuffix
+0 upgraded, 7 newly installed, 0 to remove and 36 not upgraded.
+Need to get 1205 kB of archives.
+After this operation, 2547 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+Get:5 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+Get:6 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+Get:7 http://deb.debian.org/debian bookworm/main amd64 publicsuffix all 20230209.2326-1 [126 kB]
+Fetched 1205 kB in 1s (1605 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libnghttp2-14:amd64.
+(Reading database ... 17302 files and directories currently installed.)
+Preparing to unpack .../0-libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../1-libpsl5_0.21.2-1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.2-1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../2-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../3-libssh2-1_1.10.0-3+b1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../4-libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../5-curl_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u14) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../6-publicsuffix_20230209.2326-1_all.deb ...
+Unpacking publicsuffix (20230209.2326-1) ...
+Setting up libpsl5:amd64 (0.21.2-1) ...
+Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+Setting up publicsuffix (20230209.2326-1) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up curl (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 5 packages in 591ms
+Prepared 5 packages in 198ms
+Installed 5 packages in 17ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 2 items
+
+../tests/test_outputs.py ..                                                                                                                              [100%]
+
+============================================================================ PASSES ============================================================================
+___________________________________________________________________ test_answer_correctness ____________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Read answer from output.txt:  hknudsaclag
+--------------------------------------------------------------------- Captured stderr call ---------------------------------------------------------------------
+/tests/main.c: In function ‘main’:
+/tests/main.c:21:24: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+   21 |    for (int i = 0; i < strlen(argv[1]); i++) {
+      |                        ^~~~~~
+/tests/main.c:4:1: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+    3 | #include <ctype.h>
+  +++ |+#include <string.h>
+    4 |
+/tests/main.c:21:24: warning: incompatible implicit declaration of built-in function ‘strlen’ [-Wbuiltin-declaration-mismatch]
+   21 |    for (int i = 0; i < strlen(argv[1]); i++) {
+      |                        ^~~~~~
+/tests/main.c:21:24: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+/tests/validate.s: Assembler messages:
+/tests/validate.s: Warning: end of file not at end of a line; newline inserted
+/usr/bin/ld: warning: /tmp/ccXJ25Hu.o: missing .note.GNU-stack section implies executable stack
+/usr/bin/ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_answer_generated
+PASSED ../tests/test_outputs.py::test_answer_correctness
+====================================================================== 2 passed in 0.12s =======================================================================
+root@68fc9f7623a1:/app#

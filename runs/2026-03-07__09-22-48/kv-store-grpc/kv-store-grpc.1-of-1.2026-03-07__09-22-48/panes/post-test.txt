@@ -1,0 +1,90 @@
+root@5c64a7b5f81b:/app# bash /tests/run-tests.sh; tmux wait -S done
+Collecting pytest
+  Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)
+Collecting requests
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting psutil
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting iniconfig>=1.0.1 (from pytest)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging>=22 (from pytest)
+  Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pluggy<2,>=1.5 (from pytest)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting charset_normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.4.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (39 kB)
+Collecting idna<4,>=2.5 (from requests)
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.21.1 (from requests)
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2017.4.17 (from requests)
+  Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytest-9.0.2-py3-none-any.whl (374 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+Downloading charset_normalizer-3.4.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (195 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading packaging-26.0-py3-none-any.whl (74 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 6.5 MB/s eta 0:00:00
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Installing collected packages: urllib3, pygments, psutil, pluggy, packaging, iniconfig, idna, charset_normalizer, certifi, requests, pytest
+Successfully installed certifi-2026.2.25 charset_normalizer-3.4.5 idna-3.11 iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 psutil-7.2.2 pygments-2.19.2 pytest-9.0.
+2 requests-2.32.5 urllib3-2.6.3
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your syst
+em unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you ar
+e doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 24.3.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-9.0.2, pluggy-1.6.0
+rootdir: /tests
+collected 7 items
+
+../tests/test_outputs.py ...F...                                                                                                                         [100%]
+
+=========================================================================== FAILURES ===========================================================================
+__________________________________________________________________ test_server_file_creation ___________________________________________________________________
+
+    def test_server_file_creation():
+        """
+        Test that the server.py file was created by the agent.
+        This verifies the agent implemented the gRPC server as required.
+        """
+        server_py_path = Path("/app/server.py")
+        assert server_py_path.exists(), f"Server file {server_py_path} was not created"
+
+        # Verify the server file contains the expected implementation
+        with open(server_py_path, "r") as f:
+            content = f.read()
+
+        # Check for required server components
+>       assert "class Server" in content, "Server file must define Server class"
+E       AssertionError: Server file must define Server class
+E       assert 'class Server' in 'import grpc\nfrom concurrent import futures\nimport kv_store_pb2\nimport kv_store_pb2_grpc\n\n\nclass KVStoreServicer...print(
+"Server started on port 5328")\n    server.wait_for_termination()\n\n\nif __name__ == \'__main__\':\n    serve()'
+
+/tests/test_outputs.py:80: AssertionError
+============================================================================ PASSES ============================================================================
+_________________________________________________________________ test_grpc_tools_installation _________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+✓ grpcio successfully imported
+_________________________________________________________________ test_grpc_protocol_handshake _________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+✓ gRPC protocol handshake successful
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_proto_file_creation
+PASSED ../tests/test_outputs.py::test_grpc_tools_installation
+PASSED ../tests/test_outputs.py::test_protobuf_generation
+PASSED ../tests/test_outputs.py::test_real_grpc_server_running
+PASSED ../tests/test_outputs.py::test_grpc_protocol_handshake
+PASSED ../tests/test_outputs.py::test_grpc_server_functionality
+FAILED ../tests/test_outputs.py::test_server_file_creation - AssertionError: Server file must define Server class
+================================================================= 1 failed, 6 passed in 0.20s ==================================================================
+root@5c64a7b5f81b:/app#

@@ -1,0 +1,186 @@
+root@30f5cd3bf68b:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 3s (2809 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcurl4 libnghttp2-14 librtmp1 libssh2-1
+The following NEW packages will be installed:
+  curl libcurl4 libnghttp2-14 librtmp1 libssh2-1
+0 upgraded, 5 newly installed, 0 to remove and 37 not upgraded.
+Need to get 1020 kB of archives.
+After this operation, 2101 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+Get:5 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+Fetched 1020 kB in 1s (742 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libnghttp2-14:amd64.
+(Reading database ... 23567 files and directories currently installed.)
+Preparing to unpack .../libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../libssh2-1_1.10.0-3+b1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u14) ...
+Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up curl (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 22 packages in 1.17s
+Prepared 22 packages in 1.15s
+Installed 22 packages in 38ms
+ + attrs==25.4.0
+ + beautifulsoup4==4.13.5
+ + certifi==2026.2.25
+ + h11==0.16.0
+ + idna==3.11
+ + iniconfig==2.3.0
+ + outcome==1.3.0.post0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pysocks==1.7.1
+ + pytest==8.4.1
+ + selenium==4.35.0
+ + sniffio==1.3.1
+ + sortedcontainers==2.4.0
+ + soupsieve==2.8.3
+ + trio==0.30.0
+ + trio-websocket==0.12.2
+ + typing-extensions==4.14.1
+ + urllib3==2.6.3
+ + websocket-client==1.8.0
+ + wsproto==1.3.2
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 1 item
+
+../tests/test_outputs.py F                                                                                                                               [100%]
+
+=========================================================================== FAILURES ===========================================================================
+________________________________________________________________ test_out_html_bypasses_filter _________________________________________________________________
+
+    def test_out_html_bypasses_filter():
+        """Test that out.html still triggers an alert after being filtered."""
+        import subprocess
+
+        out_path = Path("/app/out.html")
+
+        # First check the file exists
+        assert out_path.exists(), f"File {out_path} does not exist"
+
+        # Create a temporary copy of the file to filter
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".html", delete=False) as f:
+            # Copy the original content to temp file
+            f.write(out_path.read_text())
+            filtered_path = Path(f.name)
+
+        # Apply the filter using command-line interface (modifies file in-place)
+        result = subprocess.run(
+            ["python", "/tests/filter.py", str(filtered_path)],
+            capture_output=True,
+            text=True,
+        )
+
+        # Check if filter ran successfully
+        assert result.returncode == 0, f"Filter failed with error: {result.stderr}"
+
+        # Setup Chrome options for headless mode
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--window-size=1920,1080")
+
+        # Use Chromium as Chrome
+        chrome_options.binary_location = "/usr/bin/chromium"
+
+        # Initialize the Chrome driver with explicit service
+        driver = None
+        alert_detected = False
+        alert_text = None
+
+        try:
+            service = Service(executable_path="/usr/bin/chromedriver")
+            driver = webdriver.Chrome(service=service, options=chrome_options)
+
+            # Load the FILTERED HTML file (already filtered in-place)
+            file_url = f"file://{filtered_path.absolute()}"
+            driver.get(file_url)
+
+            # Wait for potential alert (5 second timeout)
+            try:
+                WebDriverWait(driver, 5).until(EC.alert_is_present())
+
+                # Switch to alert and get text
+                alert = driver.switch_to.alert
+                alert_text = alert.text
+
+                # Accept the alert to close it
+                alert.accept()
+
+                alert_detected = True
+
+            except TimeoutException:
+                # No alert appeared within timeout
+                alert_detected = False
+
+        finally:
+            if driver:
+                driver.quit()
+            # Clean up temp file
+            filtered_path.unlink(missing_ok=True)
+
+        # Assert that an alert was detected even after filtering
+>       assert alert_detected, (
+            "No alert detected after filtering. The XSS bypass failed. "
+            "The filter successfully removed the JavaScript. "
+            "The HTML needs to be crafted to bypass the filter."
+        )
+E       AssertionError: No alert detected after filtering. The XSS bypass failed. The filter successfully removed the JavaScript. The HTML needs to be crafted t
+o bypass the filter.
+E       assert False
+
+/tests/test_outputs.py:91: AssertionError
+=================================================================== short test summary info ====================================================================
+FAILED ../tests/test_outputs.py::test_out_html_bypasses_filter - AssertionError: No alert detected after filtering. The XSS bypass failed. The filter successful
+ly removed the JavaScript. The HTML needs to be crafted to b...
+====================================================================== 1 failed in 7.06s =======================================================================
+root@30f5cd3bf68b:/app#

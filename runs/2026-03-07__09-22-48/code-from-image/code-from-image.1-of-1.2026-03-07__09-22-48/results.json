@@ -1,0 +1,21 @@
+{
+    "id": "a2e4d1bf-6091-4750-b27b-1b0a1decf1b5",
+    "trial_name": "code-from-image.1-of-1.2026-03-07__09-22-48",
+    "task_id": "code-from-image",
+    "instruction": "You're given an image of a pseudocode snippet at `/app/code.png`. Implement the intended logic of that snippet in any language and produce the same final value it would print. Write the result to `/app/output.txt`.\n - Hint:\n   - For helping you make sure your solution is correct, the correct answer starts with `bee26a`\n",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_output_file_exists": "failed",
+        "test_output_is_correct": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/code-from-image/code-from-image.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T11:53:50.779224+00:00",
+    "trial_ended_at": "2026-03-07T12:20:11.248813+00:00",
+    "agent_started_at": "2026-03-07T11:53:57.099587+00:00",
+    "agent_ended_at": "2026-03-07T12:18:57.299257+00:00",
+    "test_started_at": "2026-03-07T12:19:00.806009+00:00",
+    "test_ended_at": "2026-03-07T12:19:58.125723+00:00"
+}

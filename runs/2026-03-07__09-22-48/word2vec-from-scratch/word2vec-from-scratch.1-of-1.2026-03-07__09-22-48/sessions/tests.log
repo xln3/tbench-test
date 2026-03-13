@@ -1,0 +1,182 @@
+[?2004hroot@722e13eaad9f:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@722e13eaad9f:/app# clear
+[?2004l[H[J[3J[?2004hroot@722e13eaad9f:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004lSetting up test environment for word2vec-from-scratch task...
+Test environment ready.
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.1, pytest-8.3.4, pluggy-1.6.0
+rootdir: /tests
+plugins: anyio-4.12.1
+[1mcollecting ... [0m[1mcollecting 8 items                                                                                                                                             [0m[1mcollected 8 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                        [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m__________________________________________________________________ test_required_files_exist ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_required_files_exist[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the two required output files are created"""[39;49;00m[90m[39;49;00m
+        required_files = [[90m[39;49;00m
+            [33m"[39;49;00m[33m/app/model.pt[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33m/app/vocab.pkl[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        ][90m[39;49;00m
+    [90m[39;49;00m
+        [94mfor[39;49;00m file_path [95min[39;49;00m required_files:[90m[39;49;00m
+>           [94massert[39;49;00m os.path.exists(file_path), [33mf[39;49;00m[33m"[39;49;00m[33mRequired file [39;49;00m[33m{[39;49;00mfile_path[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE           AssertionError: Required file /app/model.pt not found[0m
+[1m[31mE           assert False[0m
+[1m[31mE            +  where False = <function exists at 0x7fe4168bea20>('/app/model.pt')[0m
+[1m[31mE            +    where <function exists at 0x7fe4168bea20> = <module 'posixpath' (frozen)>.exists[0m
+[1m[31mE            +      where <module 'posixpath' (frozen)> = os.path[0m
+
+[1m[31m/tests/test_outputs.py[0m:52: AssertionError
+[31m[1m___________________________________________________________________ test_model_file_validity ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_model_file_validity[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the model file can be loaded and has correct structure"""[39;49;00m[90m[39;49;00m
+        model_path = [33m"[39;49;00m[33m/app/model.pt[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m os.path.exists(model_path), [33m"[39;49;00m[33mModel file not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Model file not found[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = <function exists at 0x7fe4168bea20>('/app/model.pt')[0m
+[1m[31mE        +    where <function exists at 0x7fe4168bea20> = <module 'posixpath' (frozen)>.exists[0m
+[1m[31mE        +      where <module 'posixpath' (frozen)> = os.path[0m
+
+[1m[31m/tests/test_outputs.py[0m:58: AssertionError
+[31m[1m___________________________________________________________________ test_vocabulary_validity ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_vocabulary_validity[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the vocabulary file is valid and has correct structure"""[39;49;00m[90m[39;49;00m
+        vocab_path = [33m"[39;49;00m[33m/app/vocab.pkl[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m os.path.exists(vocab_path), [33m"[39;49;00m[33mVocabulary file not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Vocabulary file not found[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = <function exists at 0x7fe4168bea20>('/app/vocab.pkl')[0m
+[1m[31mE        +    where <function exists at 0x7fe4168bea20> = <module 'posixpath' (frozen)>.exists[0m
+[1m[31mE        +      where <module 'posixpath' (frozen)> = os.path[0m
+
+[1m[31m/tests/test_outputs.py[0m:81: AssertionError
+[31m[1m______________________________________________________________ test_model_vocabulary_consistency _______________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_model_vocabulary_consistency[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that model and vocabulary dimensions are consistent"""[39;49;00m[90m[39;49;00m
+        [90m# Load model and vocabulary[39;49;00m[90m[39;49;00m
+>       model_data = torch.load([33m"[39;49;00m[33m/app/model.pt[39;49;00m[33m"[39;49;00m, map_location=[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/usr/local/lib/python3.13/site-packages/torch/serialization.py[0m:1425: in load
+    [0m[94mwith[39;49;00m _open_file_like(f, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m opened_file:[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.13/site-packages/torch/serialization.py[0m:751: in _open_file_like
+    [0m[94mreturn[39;49;00m _open_file(name_or_buffer, mode)[90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.serialization._open_file object at 0x7fe4154181a0>, name = '/app/model.pt', mode = 'rb'
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92m__init__[39;49;00m([96mself[39;49;00m, name, mode):[90m[39;49;00m
+>       [96msuper[39;49;00m().[92m__init__[39;49;00m([96mopen[39;49;00m(name, mode))[90m[39;49;00m
+[1m[31mE       FileNotFoundError: [Errno 2] No such file or directory: '/app/model.pt'[0m
+
+[1m[31m/usr/local/lib/python3.13/site-packages/torch/serialization.py[0m:732: FileNotFoundError
+[31m[1m___________________________________________________________ test_vocabulary_contains_required_terms ____________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_vocabulary_contains_required_terms[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that vocabulary contains all specifically required terms[39;49;00m
+    [33m    from task instructions"""[39;49;00m[90m[39;49;00m
+>       vocab = load_vocab([33m"[39;49;00m[33m/app/vocab.pkl[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:140: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+vocab_path = '/app/vocab.pkl'
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mload_vocab[39;49;00m(vocab_path):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Load vocabulary with custom unpickler fallback"""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            [90m# Try normal loading first[39;49;00m[90m[39;49;00m
+>           [94mwith[39;49;00m [96mopen[39;49;00m(vocab_path, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+[1m[31mE           FileNotFoundError: [Errno 2] No such file or directory: '/app/vocab.pkl'[0m
+
+[1m[31m/tests/test_outputs.py[0m:35: FileNotFoundError
+[31m[1m__________________________________________________________________ test_model_size_reasonable __________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_model_size_reasonable[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that model file size is reasonable"""[39;49;00m[90m[39;49;00m
+        model_path = [33m"[39;49;00m[33m/app/model.pt[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       file_size = os.path.getsize(model_path)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+filename = '/app/model.pt'
+
+>   [0m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/model.pt'[0m
+
+[1m[31m<frozen genericpath>[0m:86: FileNotFoundError
+[31m[1m________________________________________________________________________ test_analogies ________________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_analogies[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test family analogies and pass if at least one succeeds:[39;49;00m
+    [33m    - son - man + woman ≈ daughter[39;49;00m
+    [33m    - father - man + woman ≈ mother[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+>       embeddings_norm, vocab = load_model()[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:180: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/evaluate.py[0m:47: in load_model
+    [0mvocab = load_vocab_with_fallback([33m"[39;49;00m[33m/app/vocab.pkl[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+vocab_path = '/app/vocab.pkl'
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mload_vocab_with_fallback[39;49;00m(vocab_path):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Load vocabulary with custom unpickler fallback"""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            [90m# Try normal loading first[39;49;00m[90m[39;49;00m
+>           [94mwith[39;49;00m [96mopen[39;49;00m(vocab_path, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+[1m[31mE           FileNotFoundError: [Errno 2] No such file or directory: '/app/vocab.pkl'[0m
+
+[1m[31m/tests/evaluate.py[0m:35: FileNotFoundError
+[31m[1m_________________________________________________________________ test_semantic_relationships __________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_semantic_relationships[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that embeddings capture semantic relationships[39;49;00m
+    [33m    using proven evaluation code"""[39;49;00m[90m[39;49;00m
+        [90m# Use the tested load_model function[39;49;00m[90m[39;49;00m
+>       embeddings_norm, vocab = load_model()[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:227: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/evaluate.py[0m:47: in load_model
+    [0mvocab = load_vocab_with_fallback([33m"[39;49;00m[33m/app/vocab.pkl[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+vocab_path = '/app/vocab.pkl'
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mload_vocab_with_fallback[39;49;00m(vocab_path):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Load vocabulary with custom unpickler fallback"""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            [90m# Try normal loading first[39;49;00m[90m[39;49;00m
+>           [94mwith[39;49;00m [96mopen[39;49;00m(vocab_path, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+[1m[31mE           FileNotFoundError: [Errno 2] No such file or directory: '/app/vocab.pkl'[0m
+
+[1m[31m/tests/evaluate.py[0m:35: FileNotFoundError
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_required_files_exist[0m - AssertionError: Required file /app/model.pt not found
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_model_file_validity[0m - AssertionError: Model file not found
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_vocabulary_validity[0m - AssertionError: Vocabulary file not found
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_model_vocabulary_consistency[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/model.pt'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_vocabulary_contains_required_terms[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/vocab.pkl'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_model_size_reasonable[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/model.pt'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_analogies[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/vocab.pkl'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_semantic_relationships[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/vocab.pkl'
+[31m====================================================================== [31m[1m8 failed[0m[31m in 3.22s[0m[31m =======================================================================[0m
+[?2004hroot@722e13eaad9f:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@722e13eaad9f:/app# 

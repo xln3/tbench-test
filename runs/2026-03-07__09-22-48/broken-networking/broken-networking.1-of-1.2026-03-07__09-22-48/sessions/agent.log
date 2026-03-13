@@ -1,0 +1,419 @@
+[?2004hroot@94b2c7600085:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@94b2c7600085:/app# clear
+[?2004l[H[J[?2004hroot@94b2c7600085:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@94b2c7600085:/app# panda --prompt 'The networking on this machine is broken, and doesn'"'"'t work. Fix it so I can curl example.com.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check if example.com resolves via getent][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠋[39m [33m[Bash: Find all curl executables on system][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Find all curl executables on system][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Find all curl executables on system][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠸[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Try to use Python to fetch from example.com IP][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠸[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Try raw socket connection to example.com][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]

@@ -1,0 +1,40 @@
+root@05c3416220fa:/app# bash /tests/run-tests.sh; tmux wait -S done
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+Reading package lists... Done
+E: dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem.
+/tests/run-tests.sh: line 13: curl: command not found
+/tests/run-tests.sh: line 15: /root/.local/bin/env: No such file or directory
+/tests/run-tests.sh: line 23: uv: command not found
+/tests/run-tests.sh: line 25: .tbench-testing/bin/activate: No such file or directory
+/tests/run-tests.sh: line 26: uv: command not found
+/tests/run-tests.sh: line 31: uv: command not found
+root@05c3416220fa:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

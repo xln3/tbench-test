@@ -1,0 +1,87 @@
+[?2004hroot@41633fcfe145:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@41633fcfe145:/app# clear
+[?2004l[H[J[?2004hroot@41633fcfe145:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://deb.debian.org/debian bullseye InRelease
+0% [Working]            Hit:2 http://deb.debian.org/debian-security bullseye-security InRelease
+0% [Working]0% [Waiting for headers]                        Hit:3 http://deb.debian.org/debian bullseye-updates InRelease
+                        0% [Working]0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 93%Reading package lists... 93%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 93%Reading package lists... 93%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 70%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcurl4 libldap-2.4-2 libldap-common libnghttp2-14 librtmp1 libssh2-1
+The following NEW packages will be installed:
+  curl libcurl4 libldap-2.4-2 libldap-common libnghttp2-14 librtmp1 libssh2-1
+0 upgraded, 7 newly installed, 0 to remove and 2 not upgraded.
+Need to get 1240 kB of archives.
+After this operation, 2555 kB of additional disk space will be used.
+0% [Working]            Get:1 http://deb.debian.org/debian bullseye/main amd64 libldap-2.4-2 amd64 2.4.57+dfsg-3+deb11u1 [232 kB]
+0% [1 libldap-2.4-2 7220 B/232 kB 3%]                                     18% [Working]18% [Waiting for headers]                         Get:2 http://deb.debian.org/debian-security bullseye-security/main amd64 libnghttp2-14 amd64 1.43.0-1+deb11u2 [77.0 kB]
+19% [2 libnghttp2-14 15.4 kB/77.0 kB 20%]                                         26% [Working]             Get:3 http://deb.debian.org/debian bullseye/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+27% [3 librtmp1 20.5 kB/60.8 kB 34%]                                    32% [Working]             Get:4 http://deb.debian.org/debian bullseye/main amd64 libssh2-1 amd64 1.9.0-2+deb11u1 [156 kB]
+35% [4 libssh2-1 32.8 kB/156 kB 21%]                                    45% [Working]             Get:5 http://deb.debian.org/debian-security bullseye-security/main amd64 libcurl4 amd64 7.74.0-1.3+deb11u16 [347 kB]
+46% [5 libcurl4 14.7 kB/347 kB 4%]                                  71% [Working]             Get:6 http://deb.debian.org/debian-security bullseye-security/main amd64 curl amd64 7.74.0-1.3+deb11u16 [272 kB]
+71% [6 curl 4971 B/272 kB 2%]                             91% [Working]             Get:7 http://deb.debian.org/debian bullseye/main amd64 libldap-common all 2.4.57+dfsg-3+deb11u1 [95.8 kB]
+91% [7 libldap-common 4096 B/95.8 kB 4%]                                        100% [Working]              Fetched 1240 kB in 3s (427 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libldap-2.4-2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22345 files and directories currently installed.)
+Preparing to unpack .../0-libldap-2.4-2_2.4.57+dfsg-3+deb11u1_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.57+dfsg-3+deb11u1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../1-libnghttp2-14_1.43.0-1+deb11u2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1+deb11u2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../2-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../3-libssh2-1_1.9.0-2+deb11u1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.9.0-2+deb11u1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../4-libcurl4_7.74.0-1.3+deb11u16_amd64.deb ...
+Unpacking libcurl4:amd64 (7.74.0-1.3+deb11u16) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../5-curl_7.74.0-1.3+deb11u16_amd64.deb ...
+Unpacking curl (7.74.0-1.3+deb11u16) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../6-libldap-common_2.4.57+dfsg-3+deb11u1_all.deb ...
+Unpacking libldap-common (2.4.57+dfsg-3+deb11u1) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1+deb11u2) ...
+Setting up libldap-2.4-2:amd64 (2.4.57+dfsg-3+deb11u1) ...
+Setting up libldap-common (2.4.57+dfsg-3+deb11u1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up libssh2-1:amd64 (1.9.0-2+deb11u1) ...
+Setting up libcurl4:amd64 (7.74.0-1.3+deb11u16) ...
+Setting up curl (7.74.0-1.3+deb11u16) ...
+Processing triggers for libc-bin (2.31-13+deb11u13) ...
+curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+/tests/run-tests.sh: line 12: /root/.local/bin/env: No such file or directory
+/tests/run-tests.sh: line 20: uv: command not found
+/tests/run-tests.sh: line 22: .tbench-testing/bin/activate: No such file or directory
+/tests/run-tests.sh: line 23: uv: command not found
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 93%Reading package lists... 93%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 90%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following NEW packages will be installed:
+  sshpass
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 13.0 kB of archives.
+After this operation, 38.9 kB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://deb.debian.org/debian bullseye/main amd64 sshpass amd64 1.09-1+b1 [13.0 kB]
+[33m0% [1 sshpass 0 B/13.0 kB 0%][0m[33m                             100% [Working][0m              Fetched 13.0 kB in 0s (110 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;39r8[1ASelecting previously unselected package sshpass.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22400 files and directories currently installed.)
+Preparing to unpack .../sshpass_1.09-1+b1_amd64.deb ...
+7[40;0f[42m[30mProgress: [  0%][49m[39m [..........................................................................................................................................] 87[40;0f[42m[30mProgress: [ 20%][49m[39m [###########################...............................................................................................................] 8Unpacking sshpass (1.09-1+b1) ...
+7[40;0f[42m[30mProgress: [ 40%][49m[39m [#######################################################...................................................................................] 8Setting up sshpass (1.09-1+b1) ...
+7[40;0f[42m[30mProgress: [ 60%][49m[39m [##################################################################################........................................................] 87[40;0f[42m[30mProgress: [ 80%][49m[39m [##############################################################################################################............................] 8
+7[0;40r8[1A[J/tests/run-tests.sh: line 28: uv: command not found
+[?2004hroot@41633fcfe145:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@41633fcfe145:/app# 

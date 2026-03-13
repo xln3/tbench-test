@@ -1,0 +1,2219 @@
+[?2004hroot@6067ba53d305:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@6067ba53d305:/app# clear
+[?2004l[H[J[3J[?2004hroot@6067ba53d305:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@6067ba53d305:/app# panda --prompt 'Given the query "terminal-bench" retrieve the document with the 5th highest cosine similarity among the texts at /app/data.txt, where each line is a separate document, using the bge-small-zh-v1.5 embedding model at revision 7999e1d3359715c523056ef9478215996d62a620. Write the resulting line to /app/result.txt. You have the mteb package at version 1.36.8 installed.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Write]
+[Bash]
+[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:16 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:15 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:14 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:13 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:12 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:11 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:10 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:09 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:08 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:07 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2mWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:06 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:05 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:04 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:03 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:02 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:01 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m[22m
+[2m[3mNotes:[22m
+[2m- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Run similarity computation script][39m [2m(0:00 remaining)[22m
+[2m... (59 more lines above)[22m
+[2mDocument: LiveBench: Monthly high-school math, coding, logic puzzle benchmark[22m
+[2m[22m
+[2mResult written to /app/result.txt[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Read]
+The task has been completed successfully. The document with the 5th highest cosine similarity to the query "terminal-bench" is:
+
+**"LiveBench: Monthly high-school math, coding, logic puzzle benchmark"**
+
+This result has been written to `/app/result.txt`. 
+
+The similarity computation showed that documents most similar to "terminal-bench" were primarily terminal/agent-related benchmarks, with LiveBench ranking 5th with a cosine similarity of 0.5653.
+[?2004hroot@6067ba53d305:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@6067ba53d305:/app# 

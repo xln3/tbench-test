@@ -1,0 +1,22 @@
+{
+    "id": "3366012b-5d6d-41ae-933f-8ae6a99d9254",
+    "trial_name": "make-doom-for-mips.1-of-1.2026-03-07__09-22-48",
+    "task_id": "make-doom-for-mips",
+    "instruction": "I have provided /app/doomgeneric/, the source code to doom. I've also wrote a special doomgeneric_img.c that I want you to use which will write each drawn frame to /tmp/frame.bmp. I've finally provided vm.js that will expect a file called doomgeneric_mips and will run it. Please figure out the rest and build the doomgeneric_mips ELF for me, so that I can run `node vm.js`. After running `node vm.js` I expect that stdout will be printed appropriately, and frames will be written to the file system.",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_vm_execution": "failed",
+        "test_frame_bmp_exists": "failed",
+        "test_frame_bmp_similar_to_reference": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/make-doom-for-mips/make-doom-for-mips.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T15:09:27.179109+00:00",
+    "trial_ended_at": "2026-03-07T15:22:01.921399+00:00",
+    "agent_started_at": "2026-03-07T15:11:23.417553+00:00",
+    "agent_ended_at": "2026-03-07T15:20:23.292230+00:00",
+    "test_started_at": "2026-03-07T15:20:26.741482+00:00",
+    "test_ended_at": "2026-03-07T15:21:48.377943+00:00"
+}

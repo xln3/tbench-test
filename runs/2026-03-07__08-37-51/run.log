@@ -1,0 +1,33 @@
+Processing tasks in duration order (longest first):
++-----+------------------+------------+------------+
+|   # | Task Name        | Duration   | Source     |
++=====+==================+============+============+
+|   1 | fibonacci-server | 9m 0s      | calculated |
++-----+------------------+------------+------------+
+Total tasks: 1
+Starting harness run
+Run ID: 2026-03-07__08-37-51
+Running task: fibonacci-server
+Running docker compose command: docker compose -p fibonacci-server-1-of-1-2026-03-07__08-37-51 -f /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/fibonacci-server/docker-compose.yaml build
+Running docker compose command: docker compose -p fibonacci-server-1-of-1-2026-03-07__08-37-51 -f /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/fibonacci-server/docker-compose.yaml up -d
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent.cast', 'Enter'] min_timeout_sec: 3.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Sending keys: ['source /installed-agent/setup-env.sh', '; tmux wait -S done', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: inf
+Blocking command completed in 0.12s.
+Sending keys: ['panda --prompt \'Create and run a server on port 3000 that has a single GET endpoint: /fib.\n\nIt should expect a query param /fib?n={some number} and return the nth Fibonacci number as a JSON object with a key \'"\'"\'result\'"\'"\'.\n\nIf the query param is not provided, it should return a 400 Bad Request error.\nIf the query param is not an integer, it should return a 400 Bad Request error.\nIf the query param is a negative integer, it should return a 400 Bad Request error.\'', '; tmux wait -S done', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: inf
+Agent timed out after 900.0s for task fibonacci-server.
+Agent failed with mode FailureMode.AGENT_TIMEOUT, continuing with test execution
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/tests.cast', 'Enter'] min_timeout_sec: 3.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Sending keys: ['bash ', '/tests/run-tests.sh', '; tmux wait -S done', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Blocking command completed in 1231.03s.
+Blocking command completed in 28.46s.
+Stopping recording.
+Sending keys: ['C-d'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Stopping recording.
+Sending keys: ['C-d'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Running docker compose command: docker compose -p fibonacci-server-1-of-1-2026-03-07__08-37-51 -f /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/fibonacci-server/docker-compose.yaml down
+Running docker compose command: docker compose -p fibonacci-server-1-of-1-2026-03-07__08-37-51 -f /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/fibonacci-server/docker-compose.yaml down --rmi all --volumes
+Resolved task fibonacci-server

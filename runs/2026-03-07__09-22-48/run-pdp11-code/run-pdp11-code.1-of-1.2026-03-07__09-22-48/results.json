@@ -1,0 +1,21 @@
+{
+    "id": "1ee7f076-0c9e-4012-9330-7a2cf98321d7",
+    "trial_name": "run-pdp11-code.1-of-1.2026-03-07__09-22-48",
+    "task_id": "run-pdp11-code",
+    "instruction": "In /app/data.hex is the output of hexdump on a binary file. Figure out what kind of file it is, then figure out how to run it, and tell me what the output of that program is by writing the result to /app/out.txt",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_out_file_exists": "failed",
+        "test_out_file_content": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/run-pdp11-code/run-pdp11-code.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T13:28:04.970459+00:00",
+    "trial_ended_at": "2026-03-07T13:50:24.632034+00:00",
+    "agent_started_at": "2026-03-07T13:28:11.380338+00:00",
+    "agent_ended_at": "2026-03-07T13:49:51.579764+00:00",
+    "test_started_at": "2026-03-07T13:49:55.143080+00:00",
+    "test_ended_at": "2026-03-07T13:50:11.282143+00:00"
+}

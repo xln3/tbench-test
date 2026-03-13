@@ -1,0 +1,22 @@
+{
+    "id": "c9d67f99-fd9f-4d45-91f9-99aa8a14aab0",
+    "trial_name": "make-mips-interpreter.1-of-1.2026-03-07__09-22-48",
+    "task_id": "make-mips-interpreter",
+    "instruction": "I have provided /app/doomgeneric_mips, a MIPS elf file, along with doomgeneric/, the corresponding source code. Please implement a MIPS interpreter complete with handling system calls called vm.js so that I can run `node vm.js` and this should run the MIPS file and read/write any files as necessary. Running this file should result in saving the frames as they are rendered, one at a time. I will check that you booted doom correctly, and check that the first frame is correctly created and saved.",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_vm_execution": "failed",
+        "test_frame_bmp_exists": "failed",
+        "test_frame_bmp_similar_to_reference": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/make-mips-interpreter/make-mips-interpreter.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T09:51:18.540393+00:00",
+    "trial_ended_at": "2026-03-07T10:27:34.656550+00:00",
+    "agent_started_at": "2026-03-07T09:53:53.291762+00:00",
+    "agent_ended_at": "2026-03-07T10:26:18.991856+00:00",
+    "test_started_at": "2026-03-07T10:26:22.444515+00:00",
+    "test_ended_at": "2026-03-07T10:27:17.386108+00:00"
+}

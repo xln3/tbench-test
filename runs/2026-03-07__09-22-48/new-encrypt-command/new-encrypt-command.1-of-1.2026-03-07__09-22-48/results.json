@@ -1,0 +1,20 @@
+{
+    "id": "f587c136-85bf-408d-a29b-828efeea333c",
+    "trial_name": "new-encrypt-command.1-of-1.2026-03-07__09-22-48",
+    "task_id": "new-encrypt-command",
+    "instruction": "Please help me encrypt all the files I have in the /app/data/ folder using rencrypt which i've just installed.\n\nI want to use the most secure encryption that it provides and the output should go into a /app/encrypted_data/ directory where the basenames are the same.",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_success": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/new-encrypt-command/new-encrypt-command.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T14:48:23.675222+00:00",
+    "trial_ended_at": "2026-03-07T14:54:29.899476+00:00",
+    "agent_started_at": "2026-03-07T14:48:42.063266+00:00",
+    "agent_ended_at": "2026-03-07T14:53:57.541078+00:00",
+    "test_started_at": "2026-03-07T14:54:01.025262+00:00",
+    "test_ended_at": "2026-03-07T14:54:16.886736+00:00"
+}

@@ -1,0 +1,470 @@
+[?2004hroot@17b4a503eae2:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@17b4a503eae2:/app# clear
+[?2004l[H[J[3J[?2004hroot@17b4a503eae2:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+Note, selecting 'python3-pil' instead of 'python3-pillow'
+The following additional packages will be installed:
+  bzip2 file libfribidi0 libglib2.0-0 libglib2.0-data libgraphite2-3 libharfbuzz0b libimagequant0 liblcms2-2 liblzma5 libmagic-mgc libmagic1 libopenjp2-7
+  libraqm0 libwebpdemux2 libwebpmux3 mailcap mime-support python3-olefile shared-mime-info xdg-user-dirs xz-utils
+Suggested packages:
+  bzip2-doc low-memory-monitor liblcms2-utils python-pil-doc
+The following NEW packages will be installed:
+  bzip2 file libfribidi0 libglib2.0-0 libglib2.0-data libgraphite2-3 libharfbuzz0b libimagequant0 liblcms2-2 libmagic-mgc libmagic1 libopenjp2-7 libraqm0
+  libwebpdemux2 libwebpmux3 mailcap mime-support python3-olefile python3-pil shared-mime-info xdg-user-dirs xz-utils
+The following packages will be upgraded:
+  liblzma5
+1 upgraded, 22 newly installed, 0 to remove and 35 not upgraded.
+Need to get 7810 kB of archives.
+After this operation, 35.8 MB of additional disk space will be used.
+0% [Working]            Get:1 http://deb.debian.org/debian bookworm/main amd64 liblzma5 amd64 5.4.1-1 [205 kB]
+0% [1 liblzma5 21.7 kB/205 kB 11%]                                  3% [Working]            Get:2 http://deb.debian.org/debian bookworm/main amd64 bzip2 amd64 1.0.8-5+b1 [49.8 kB]
+3% [2 bzip2 4096 B/49.8 kB 8%]                              4% [Working]            Get:3 http://deb.debian.org/debian bookworm/main amd64 libmagic-mgc amd64 1:5.44-3 [305 kB]
+4% [3 libmagic-mgc 2888 B/305 kB 1%]                                    8% [Working]            Get:4 http://deb.debian.org/debian bookworm/main amd64 libmagic1 amd64 1:5.44-3 [104 kB]
+8% [4 libmagic1 3226 B/104 kB 3%]                                 10% [Working]             Get:5 http://deb.debian.org/debian bookworm/main amd64 file amd64 1:5.44-3 [42.5 kB]
+10% [5 file 16.4 kB/42.5 kB 39%]                                12% [Working]             Get:6 http://deb.debian.org/debian bookworm/main amd64 mailcap all 3.70+nmu1 [32.0 kB]
+12% [6 mailcap 28.7 kB/32.0 kB 90%]                                   13% [Working]             Get:7 http://deb.debian.org/debian bookworm/main amd64 mime-support all 3.66 [10.9 kB]
+13% [7 mime-support 10.9 kB/10.9 kB 100%]                                         14% [Working]             Get:8 http://deb.debian.org/debian bookworm/main amd64 xz-utils amd64 5.4.1-1 [471 kB]
+14% [8 xz-utils 5776 B/471 kB 1%]                                 19% [Working]             Get:9 http://deb.debian.org/debian bookworm/main amd64 libfribidi0 amd64 1.0.8-2.1 [65.0 kB]
+20% [9 libfribidi0 20.5 kB/65.0 kB 32%]                                       21% [Working]             Get:10 http://deb.debian.org/debian bookworm/main amd64 libglib2.0-0 amd64 2.74.6-2+deb12u8 [1402 kB]
+21% [10 libglib2.0-0 0 B/1402 kB 0%]                                    36% [Working]             Get:11 http://deb.debian.org/debian bookworm/main amd64 libglib2.0-data all 2.74.6-2+deb12u8 [1210 kB]
+36% [11 libglib2.0-data 14.4 kB/1210 kB 1%]                                           49% [Working]             Get:12 http://deb.debian.org/debian bookworm/main amd64 libgraphite2-3 amd64 1.3.14-1 [81.2 kB]
+50% [12 libgraphite2-3 15.6 kB/81.2 kB 19%]                                           51% [Working]             Get:13 http://deb.debian.org/debian bookworm/main amd64 libharfbuzz0b amd64 6.0.0+dfsg-3 [1945 kB]
+51% [13 libharfbuzz0b 3186 B/1945 kB 0%]                                        72% [Working]             Get:14 http://deb.debian.org/debian bookworm/main amd64 libimagequant0 amd64 2.17.0-1 [32.5 kB]
+72% [14 libimagequant0 23.9 kB/32.5 kB 73%]                                           73% [Working]             Get:15 http://deb.debian.org/debian bookworm/main amd64 liblcms2-2 amd64 2.14-2 [154 kB]
+73% [15 liblcms2-2 14.4 kB/154 kB 9%]                                     76% [Working]             Get:16 http://deb.debian.org/debian bookworm/main amd64 libopenjp2-7 amd64 2.5.0-2+deb12u2 [189 kB]
+76% [16 libopenjp2-7 14.4 kB/189 kB 8%]                                       78% [Working]             Get:17 http://deb.debian.org/debian bookworm/main amd64 libraqm0 amd64 0.7.0-4.1 [10.6 kB]
+79% [17 libraqm0 8192 B/10.6 kB 77%]                                    79% [Working]             Get:18 http://deb.debian.org/debian bookworm/main amd64 libwebpdemux2 amd64 1.2.4-0.2+deb12u1 [99.4 kB]
+79% [18 libwebpdemux2 3181 B/99.4 kB 3%]                                        81% [Working]             Get:19 http://deb.debian.org/debian bookworm/main amd64 libwebpmux3 amd64 1.2.4-0.2+deb12u1 [109 kB]
+81% [19 libwebpmux3 7220 B/109 kB 7%]                                     83% [Working]             Get:20 http://deb.debian.org/debian bookworm/main amd64 python3-olefile all 0.46-3 [36.1 kB]
+84% [20 python3-olefile 23.9 kB/36.1 kB 66%]                                            85% [Working]             Get:21 http://deb.debian.org/debian bookworm/main amd64 python3-pil amd64 9.4.0-1.1+deb12u1 [472 kB]
+85% [21 python3-pil 21.7 kB/472 kB 5%]                                      90% [Working]             Get:22 http://deb.debian.org/debian bookworm/main amd64 shared-mime-info amd64 2.2-1 [729 kB]
+90% [22 shared-mime-info 3408 B/729 kB 0%]                                          99% [Working]             Get:23 http://deb.debian.org/debian bookworm/main amd64 xdg-user-dirs amd64 0.18-1 [54.4 kB]
+99% [23 xdg-user-dirs 36.9 kB/54.4 kB 68%]                                          100% [Working]              Fetched 7810 kB in 3s (2529 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 25577 files and directories currently installed.)
+Preparing to unpack .../liblzma5_5.4.1-1_amd64.deb ...
+Unpacking liblzma5:amd64 (5.4.1-1) over (5.4.1-0.2) ...
+Setting up liblzma5:amd64 (5.4.1-1) ...
+Selecting previously unselected package bzip2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 25577 files and directories currently installed.)
+Preparing to unpack .../00-bzip2_1.0.8-5+b1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5+b1) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../01-libmagic-mgc_1%3a5.44-3_amd64.deb ...
+Unpacking libmagic-mgc (1:5.44-3) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../02-libmagic1_1%3a5.44-3_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.44-3) ...
+Selecting previously unselected package file.
+Preparing to unpack .../03-file_1%3a5.44-3_amd64.deb ...
+Unpacking file (1:5.44-3) ...
+Selecting previously unselected package mailcap.
+Preparing to unpack .../04-mailcap_3.70+nmu1_all.deb ...
+Unpacking mailcap (3.70+nmu1) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../05-mime-support_3.66_all.deb ...
+Unpacking mime-support (3.66) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../06-xz-utils_5.4.1-1_amd64.deb ...
+Unpacking xz-utils (5.4.1-1) ...
+Selecting previously unselected package libfribidi0:amd64.
+Preparing to unpack .../07-libfribidi0_1.0.8-2.1_amd64.deb ...
+Unpacking libfribidi0:amd64 (1.0.8-2.1) ...
+Selecting previously unselected package libglib2.0-0:amd64.
+Preparing to unpack .../08-libglib2.0-0_2.74.6-2+deb12u8_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.74.6-2+deb12u8) ...
+Selecting previously unselected package libglib2.0-data.
+Preparing to unpack .../09-libglib2.0-data_2.74.6-2+deb12u8_all.deb ...
+Unpacking libglib2.0-data (2.74.6-2+deb12u8) ...
+Selecting previously unselected package libgraphite2-3:amd64.
+Preparing to unpack .../10-libgraphite2-3_1.3.14-1_amd64.deb ...
+Unpacking libgraphite2-3:amd64 (1.3.14-1) ...
+Selecting previously unselected package libharfbuzz0b:amd64.
+Preparing to unpack .../11-libharfbuzz0b_6.0.0+dfsg-3_amd64.deb ...
+Unpacking libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+Selecting previously unselected package libimagequant0:amd64.
+Preparing to unpack .../12-libimagequant0_2.17.0-1_amd64.deb ...
+Unpacking libimagequant0:amd64 (2.17.0-1) ...
+Selecting previously unselected package liblcms2-2:amd64.
+Preparing to unpack .../13-liblcms2-2_2.14-2_amd64.deb ...
+Unpacking liblcms2-2:amd64 (2.14-2) ...
+Selecting previously unselected package libopenjp2-7:amd64.
+Preparing to unpack .../14-libopenjp2-7_2.5.0-2+deb12u2_amd64.deb ...
+Unpacking libopenjp2-7:amd64 (2.5.0-2+deb12u2) ...
+Selecting previously unselected package libraqm0:amd64.
+Preparing to unpack .../15-libraqm0_0.7.0-4.1_amd64.deb ...
+Unpacking libraqm0:amd64 (0.7.0-4.1) ...
+Selecting previously unselected package libwebpdemux2:amd64.
+Preparing to unpack .../16-libwebpdemux2_1.2.4-0.2+deb12u1_amd64.deb ...
+Unpacking libwebpdemux2:amd64 (1.2.4-0.2+deb12u1) ...
+Selecting previously unselected package libwebpmux3:amd64.
+Preparing to unpack .../17-libwebpmux3_1.2.4-0.2+deb12u1_amd64.deb ...
+Unpacking libwebpmux3:amd64 (1.2.4-0.2+deb12u1) ...
+Selecting previously unselected package python3-olefile.
+Preparing to unpack .../18-python3-olefile_0.46-3_all.deb ...
+Unpacking python3-olefile (0.46-3) ...
+Selecting previously unselected package python3-pil:amd64.
+Preparing to unpack .../19-python3-pil_9.4.0-1.1+deb12u1_amd64.deb ...
+Unpacking python3-pil:amd64 (9.4.0-1.1+deb12u1) ...
+Selecting previously unselected package shared-mime-info.
+Preparing to unpack .../20-shared-mime-info_2.2-1_amd64.deb ...
+Unpacking shared-mime-info (2.2-1) ...
+Selecting previously unselected package xdg-user-dirs.
+Preparing to unpack .../21-xdg-user-dirs_0.18-1_amd64.deb ...
+Unpacking xdg-user-dirs (0.18-1) ...
+Setting up libgraphite2-3:amd64 (1.3.14-1) ...
+Setting up liblcms2-2:amd64 (2.14-2) ...
+Setting up xdg-user-dirs (0.18-1) ...
+Setting up libmagic-mgc (1:5.44-3) ...
+Setting up libglib2.0-0:amd64 (2.74.6-2+deb12u8) ...
+No schema files found: doing nothing.
+Setting up python3-olefile (0.46-3) ...
+Setting up libwebpdemux2:amd64 (1.2.4-0.2+deb12u1) ...
+Setting up libmagic1:amd64 (1:5.44-3) ...
+Setting up file (1:5.44-3) ...
+Setting up bzip2 (1.0.8-5+b1) ...
+Setting up libglib2.0-data (2.74.6-2+deb12u8) ...
+Setting up xz-utils (5.4.1-1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+Setting up libfribidi0:amd64 (1.0.8-2.1) ...
+Setting up shared-mime-info (2.2-1) ...
+Setting up libimagequant0:amd64 (2.17.0-1) ...
+Setting up libopenjp2-7:amd64 (2.5.0-2+deb12u2) ...
+Setting up libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+Setting up libwebpmux3:amd64 (1.2.4-0.2+deb12u1) ...
+Setting up mailcap (3.70+nmu1) ...
+Setting up mime-support (3.66) ...
+Setting up libraqm0:amd64 (0.7.0-4.1) ...
+Setting up python3-pil:amd64 (9.4.0-1.1+deb12u1) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+0% [Working]            Hit:1 http://deb.debian.org/debian bookworm InRelease
+0% [Working]            Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 38%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u14).
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: [36m/usr/local/bin/python[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.13.1 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠸[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠸[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠸[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠸[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 572ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/356.91 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 92.72 KiB/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 92.78 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 252.78 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m--------------[2m----------------[0m[0m 524.78 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 197ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 20ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[2mUsing Python 3.13.1 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠸[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠼[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠼[0m [2mnumpy==2.3.1                                                                                                                                                  [0m[2K[37m⠴[0m [2mnumpy==2.3.1                                                                                                                                                  [0m[2K[37m⠴[0m [2mpillow==11.2.1                                                                                                                                                [0m[2K[37m⠴[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m2 packages[0m [2min 851ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/2)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/2)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m[2m------------------------------[0m[0m     0 B/15.86 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 30.91 KiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 46.91 KiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m[2m------------------------------[0m[0m     0 B/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/15.86 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/15.86 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 78.91 KiB/15.86 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 94.91 KiB/15.86 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 110.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 126.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 142.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 30.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 142.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 30.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 158.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 46.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 158.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 46.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 174.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 174.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/4.40 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 190.91 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m----[2m--------------------------[0m[0m 538.92 KiB/4.40 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 637.27 KiB/15.86 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-------[2m-----------------------[0m[0m 986.92 KiB/4.40 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 1.04 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m----------[2m--------------------[0m[0m 1.43 MiB/4.40 MiB
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.54 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-------------[2m-----------------[0m[0m 1.82 MiB/4.40 MiB
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 2.00 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m---------------[2m---------------[0m[0m 2.17 MiB/4.40 MiB
+[2mnumpy               [0m [32m------[2m------------------------[0m[0m 2.67 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-------------------[2m-----------[0m[0m 2.66 MiB/4.40 MiB
+[2mnumpy               [0m [32m------[2m------------------------[0m[0m 3.11 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m---------------------[2m---------[0m[0m 3.02 MiB/4.40 MiB
+[2mnumpy               [0m [32m-------[2m-----------------------[0m[0m 3.34 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m-----------------------[2m-------[0m[0m 3.33 MiB/4.40 MiB
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 3.97 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m----------------------------[2m--[0m[0m 4.00 MiB/4.40 MiB
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.09 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m----------------------------[2m--[0m[0m 4.00 MiB/4.40 MiB
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.11 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (0/2)
+[2mpillow              [0m [32m------------------------------[2m[0m[0m 4.25 MiB/4.40 MiB
+[2mnumpy               [0m [32m---------[2m---------------------[0m[0m 4.68 MiB/15.86 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m---------[2m---------------------[0m[0m 4.68 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m----------[2m--------------------[0m[0m 4.83 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m----------[2m--------------------[0m[0m 5.26 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (0/2)
+[2mnumpy               [0m [32m-----------[2m-------------------[0m[0m 5.69 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m-------------[2m-----------------[0m[0m 6.45 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m--------------[2m----------------[0m[0m 7.22 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m----------------[2m--------------[0m[0m 8.06 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.73 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m------------------[2m------------[0m[0m 9.44 MiB/15.86 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m--------------------[2m----------[0m[0m 10.33 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m---------------------[2m---------[0m[0m 10.92 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m-----------------------[2m-------[0m[0m 11.79 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m------------------------[2m------[0m[0m 12.48 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m------------------------[2m------[0m[0m 12.49 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m------------------------[2m------[0m[0m 12.51 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m-------------------------[2m-----[0m[0m 12.95 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m---------------------------[2m---[0m[0m 13.87 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m----------------------------[2m--[0m[0m 14.55 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (1/2)
+[2mnumpy               [0m [32m------------------------------[2m[0m[0m 15.44 MiB/15.86 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (1/2)                                                                                                                                   [2K[2mPrepared [1m2 packages[0m [2min 1.58s[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/2] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/2] [2mpillow==11.2.1                                                                                                                       [0m[2K██████████░░░░░░░░░░ [1/2] [2mpillow==11.2.1                                                                                                                       [0m[2K██████████░░░░░░░░░░ [1/2] [2mnumpy==2.3.1                                                                                                                         [0m[2K████████████████████ [2/2] [2mnumpy==2.3.1                                                                                                                         [0m[2K[2mInstalled [1m2 packages[0m [2min 30ms[0m[0m
+ [32m+[39m [1mnumpy[0m[2m==2.3.1[0m
+ [32m+[39m [1mpillow[0m[2m==11.2.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 3 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                             [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m______________________________________________________________________ test_vm_execution _______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_vm_execution[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that vm.js starts and displays the DOOM initialization text."""[39;49;00m[90m[39;49;00m
+        [90m# Create a temporary file to capture stdout[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m tempfile.NamedTemporaryFile(mode=[33m"[39;49;00m[33mw+[39;49;00m[33m"[39;49;00m, delete=[94mFalse[39;49;00m) [94mas[39;49;00m tmp_stdout:[90m[39;49;00m
+            [90m# Start vm.js in a subprocess[39;49;00m[90m[39;49;00m
+            process = subprocess.Popen([90m[39;49;00m
+                [[33m"[39;49;00m[33mnode[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/app/vm.js[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+                stdout=tmp_stdout,[90m[39;49;00m
+                stderr=subprocess.STDOUT,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Wait for the frame.bmp file to be created[39;49;00m[90m[39;49;00m
+            frame_path = Path([33m"[39;49;00m[33m/tmp/frame.bmp[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+            timeout = [94m30[39;49;00m  [90m# 30 seconds timeout[39;49;00m[90m[39;49;00m
+            start_time = time.time()[90m[39;49;00m
+    [90m[39;49;00m
+            [94mwhile[39;49;00m [95mnot[39;49;00m frame_path.exists():[90m[39;49;00m
+                [94mif[39;49;00m time.time() - start_time > timeout:[90m[39;49;00m
+                    process.kill()[90m[39;49;00m
+>                   [94mraise[39;49;00m [96mTimeoutError[39;49;00m([33m"[39;49;00m[33mTimeout waiting for frame.bmp to be created[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE                   TimeoutError: Timeout waiting for frame.bmp to be created[0m
+
+[1m[31m/tests/test_outputs.py[0m:32: TimeoutError
+[31m[1m____________________________________________________________________ test_frame_bmp_exists _____________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_frame_bmp_exists[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that frame.bmp file was created."""[39;49;00m[90m[39;49;00m
+        frame_path = Path([33m"[39;49;00m[33m/tmp/frame.bmp[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+>       [94massert[39;49;00m frame_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mFile [39;49;00m[33m{[39;49;00mframe_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: File /tmp/frame.bmp does not exist[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = exists()[0m
+[1m[31mE        +    where exists = PosixPath('/tmp/frame.bmp').exists[0m
+
+[1m[31m/tests/test_outputs.py[0m:64: AssertionError
+[31m[1m_____________________________________________________________ test_frame_bmp_similar_to_reference ______________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_frame_bmp_similar_to_reference[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that frame.bmp is similar to the reference.jpg file using L2 similarity."""[39;49;00m[90m[39;49;00m
+        frame_path = Path([33m"[39;49;00m[33m/tmp/frame.bmp[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        reference_path = Path([33m"[39;49;00m[33m/tests/reference.jpg[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94massert[39;49;00m reference_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mReference file [39;49;00m[33m{[39;49;00mreference_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Load images[39;49;00m[90m[39;49;00m
+>       frame_img = Image.open(frame_path).convert([33m"[39;49;00m[33mRGB[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+                    ^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fp = PosixPath('/tmp/frame.bmp'), mode = 'r', formats = []
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mopen[39;49;00m([90m[39;49;00m
+        fp: StrOrBytesPath | IO[[96mbytes[39;49;00m],[90m[39;49;00m
+        mode: Literal[[33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m] = [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        formats: [96mlist[39;49;00m[[96mstr[39;49;00m] | [96mtuple[39;49;00m[[96mstr[39;49;00m, ...] | [94mNone[39;49;00m = [94mNone[39;49;00m,[90m[39;49;00m
+    ) -> ImageFile.ImageFile:[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Opens and identifies the given image file.[39;49;00m
+    [33m[39;49;00m
+    [33m    This is a lazy operation; this function identifies the file, but[39;49;00m
+    [33m    the file remains open and the actual image data is not read from[39;49;00m
+    [33m    the file until you try to process the data (or call the[39;49;00m
+    [33m    :py:meth:`~PIL.Image.Image.load` method).  See[39;49;00m
+    [33m    :py:func:`~PIL.Image.new`. See :ref:`file-handling`.[39;49;00m
+    [33m[39;49;00m
+    [33m    :param fp: A filename (string), os.PathLike object or a file object.[39;49;00m
+    [33m       The file object must implement ``file.read``,[39;49;00m
+    [33m       ``file.seek``, and ``file.tell`` methods,[39;49;00m
+    [33m       and be opened in binary mode. The file object will also seek to zero[39;49;00m
+    [33m       before reading.[39;49;00m
+    [33m    :param mode: The mode.  If given, this argument must be "r".[39;49;00m
+    [33m    :param formats: A list or tuple of formats to attempt to load the file in.[39;49;00m
+    [33m       This can be used to restrict the set of formats checked.[39;49;00m
+    [33m       Pass ``None`` to try all supported formats. You can print the set of[39;49;00m
+    [33m       available formats by running ``python3 -m PIL`` or using[39;49;00m
+    [33m       the :py:func:`PIL.features.pilinfo` function.[39;49;00m
+    [33m    :returns: An :py:class:`~PIL.Image.Image` object.[39;49;00m
+    [33m    :exception FileNotFoundError: If the file cannot be found.[39;49;00m
+    [33m    :exception PIL.UnidentifiedImageError: If the image cannot be opened and[39;49;00m
+    [33m       identified.[39;49;00m
+    [33m    :exception ValueError: If the ``mode`` is not "r", or if a ``StringIO``[39;49;00m
+    [33m       instance is used for ``fp``.[39;49;00m
+    [33m    :exception TypeError: If ``formats`` is not ``None``, a list or a tuple.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m mode != [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            msg = [33mf[39;49;00m[33m"[39;49;00m[33mbad mode [39;49;00m[33m{[39;49;00m[96mrepr[39;49;00m(mode)[33m}[39;49;00m[33m"[39;49;00m  [90m# type: ignore[unreachable][39;49;00m[90m[39;49;00m
+            [94mraise[39;49;00m [96mValueError[39;49;00m(msg)[90m[39;49;00m
+        [94melif[39;49;00m [96misinstance[39;49;00m(fp, io.StringIO):[90m[39;49;00m
+            msg = (  [90m# type: ignore[unreachable][39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33mStringIO cannot be used to open an image. [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33mBinary data must be used instead.[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+            [94mraise[39;49;00m [96mValueError[39;49;00m(msg)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m formats [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            formats = ID[90m[39;49;00m
+        [94melif[39;49;00m [95mnot[39;49;00m [96misinstance[39;49;00m(formats, ([96mlist[39;49;00m, [96mtuple[39;49;00m)):[90m[39;49;00m
+            msg = [33m"[39;49;00m[33mformats must be a list or tuple[39;49;00m[33m"[39;49;00m  [90m# type: ignore[unreachable][39;49;00m[90m[39;49;00m
+            [94mraise[39;49;00m [96mTypeError[39;49;00m(msg)[90m[39;49;00m
+    [90m[39;49;00m
+        exclusive_fp = [94mFalse[39;49;00m[90m[39;49;00m
+        filename: [96mstr[39;49;00m | [96mbytes[39;49;00m = [33m"[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m is_path(fp):[90m[39;49;00m
+            filename = os.fspath(fp)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m filename:[90m[39;49;00m
+>           fp = builtins.open(filename, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE           FileNotFoundError: [Errno 2] No such file or directory: '/tmp/frame.bmp'[0m
+
+[1m[31m.tbench-testing/lib/python3.13/site-packages/PIL/Image.py[0m:3505: FileNotFoundError
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_vm_execution[0m - TimeoutError: Timeout waiting for frame.bmp to be created
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_frame_bmp_exists[0m - AssertionError: File /tmp/frame.bmp does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_frame_bmp_similar_to_reference[0m - FileNotFoundError: [Errno 2] No such file or directory: '/tmp/frame.bmp'
+[31m====================================================================== [31m[1m3 failed[0m[31m in 30.27s[0m[31m ======================================================================[0m
+[?2004hroot@17b4a503eae2:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@17b4a503eae2:/app# 

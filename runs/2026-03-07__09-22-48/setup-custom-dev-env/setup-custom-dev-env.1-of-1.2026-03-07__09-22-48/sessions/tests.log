@@ -1,0 +1,76 @@
+asciinema rec --stdin /logs/tests.cast
+[?2004h(terminal-bench) root@0ce811fe1c38:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004h(terminal-bench) root@0ce811fe1c38:/app# clear
+[?2004l[H[J[3J[?2004h(terminal-bench) root@0ce811fe1c38:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004lCollecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting exceptiongroup>=1 (from pytest==8.4.1)
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=20 in /root/miniconda3/envs/terminal-bench/lib/python3.10/site-packages (from pytest==8.4.1) (25.0)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest==8.4.1)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting tomli>=1 (from pytest==8.4.1)
+  Downloading tomli-2.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1->pytest==8.4.1)
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+[?25l   [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.2/1.2 MB[0m [31m14.0 MB/s[0m  [33m0:00:00[0m
+[?25hDownloading tomli-2.4.0-py3-none-any.whl (14 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Installing collected packages: typing-extensions, tomli, pygments, pluggy, iniconfig, exceptiongroup, pytest
+[?25l[2K   [38;5;197m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2/7[0m [pygments][2K   [38;5;197m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2/7[0m [pygments][2K   [38;5;197m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2/7[0m [pygments][2K   [38;5;197m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2/7[0m [pygments][2K   [38;5;197m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2/7[0m [pygments][2K   [38;5;197m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2/7[0m [pygments][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m6/7[0m [pytest][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m6/7[0m [pytest][2K   [38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7/7[0m [pytest]
+[?25h[1A[2KSuccessfully installed exceptiongroup-1.3.1 iniconfig-2.3.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.1 tomli-2.4.0 typing-extensions-4.15.0
+[33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.[0m[33m
+[0m[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.10.19, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 7 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                                                                         [100%][0m
+
+============================================================================ PASSES ============================================================================
+[32m[1m__________________________________________________________________ test_zsh_is_default_shell ___________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] getent passwd root result: root:x:0:0:root:/root:/usr/bin/zsh
+[32m[1m__________________________________________________________________ test_ohmyzsh_is_installed ___________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] omz version result: master (1e3abc1)
+[32m[1m______________________________________________________________________ test_ohmyzsh_theme ______________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] ZSH_THEME result: apple
+[32m[1m________________________________________________________________ test_ohmyzsh_installed_plugins ________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] plugins result: git z zsh-autosuggestions zsh-syntax-highlighting
+[32m[1m______________________________________________________________________ test_conda_in_zsh _______________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] conda command result: conda 4.12.0
+[DEBUG] python command result: /root/miniconda3/envs/terminal-bench/bin/python
+[DEBUG] python command result: Python 3.10.19
+[32m[1m______________________________________________________________________ test_conda_in_bash ______________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] conda command result: conda 4.12.0
+[DEBUG] python command result: /root/miniconda3/envs/terminal-bench/bin/python
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_zsh_is_installed[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_zsh_is_default_shell[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_ohmyzsh_is_installed[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_ohmyzsh_theme[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_ohmyzsh_installed_plugins[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_conda_in_zsh[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_conda_in_bash[0m
+[32m====================================================================== [32m[1m7 passed[0m[32m in 9.79s[0m[32m =======================================================================[0m
+[?2004h(terminal-bench) root@0ce811fe1c38:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004h(terminal-bench) root@0ce811fe1c38:/app# 

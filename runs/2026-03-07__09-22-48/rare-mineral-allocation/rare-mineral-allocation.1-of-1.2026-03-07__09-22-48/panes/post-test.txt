@@ -1,0 +1,300 @@
+root@e572eebf29a6:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9670 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [108 kB]
+Fetched 10.0 MB in 3s (3639 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bash-completion libcurl4t64
+The following NEW packages will be installed:
+  bash-completion curl libcurl4t64
+0 upgraded, 3 newly installed, 0 to remove and 3 not upgraded.
+Need to get 980 kB of archives.
+After this operation, 3541 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 bash-completion all 1:2.16.0-7 [319 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2+deb13u2 [391 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 curl amd64 8.14.1-2+deb13u2 [270 kB]
+Fetched 980 kB in 0s (2783 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDI
+N> line 3.)
+debconf: falling back to frontend: Readline
+Selecting previously unselected package bash-completion.
+(Reading database ... 19550 files and directories currently installed.)
+Preparing to unpack .../bash-completion_1%3a2.16.0-7_all.deb ...
+Unpacking bash-completion (1:2.16.0-7) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../libcurl4t64_8.14.1-2+deb13u2_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_8.14.1-2+deb13u2_amd64.deb ...
+Unpacking curl (8.14.1-2+deb13u2) ...
+Setting up libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+Setting up bash-completion (1:2.16.0-7) ...
+Setting up curl (8.14.1-2+deb13u2) ...
+Processing triggers for libc-bin (2.41-12+deb13u1) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.11.14 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.11.14 environment at: .tbench-testing
+Resolved 6 packages in 543ms
+Prepared 6 packages in 1.18s
+Installed 6 packages in 41ms
+ + iniconfig==2.3.0
+ + numpy==2.4.2
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+/tests/run-tests.sh: line 29: copy: command not found
+/tests/run-tests.sh: line 30: copy: command not found
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.11.14, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 3 items
+
+../tests/test_outputs.py FFF                                                                                                                             [100%]
+
+=========================================================================== FAILURES ===========================================================================
+____________________________________________________________________ test_gradient_two_norm ____________________________________________________________________
+
+    def test_gradient_two_norm():
+        """
+        Checks to see if the L2 Gradient of the optimal vector is less than 1e-4
+        """
+>       x = np.loadtxt("/app/solution.txt")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:18:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py:1384: in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py:1011: in _read
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_datasource.py:192: in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <numpy.lib.npyio.DataSource object at 0x7f4e03c79a10>, path = '/app/solution.txt', mode = 'rt', encoding = None, newline = None
+
+    def open(self, path, mode='r', encoding=None, newline=None):
+        """
+        Open and return file-like object.
+
+        If `path` is an URL, it will be downloaded, stored in the
+        `DataSource` directory and opened from there.
+
+        Parameters
+        ----------
+        path : str or pathlib.Path
+            Local file path or URL to open.
+        mode : {'r', 'w', 'a'}, optional
+            Mode to open `path`.  Mode 'r' for reading, 'w' for writing,
+            'a' to append. Available modes depend on the type of object
+            specified by `path`. Default is 'r'.
+        encoding : {None, str}, optional
+            Open text file with given encoding. The default encoding will be
+            what `open` uses.
+        newline : {None, str}, optional
+            Newline to use when reading text file.
+
+        Returns
+        -------
+        out : file object
+            File object.
+
+        """
+
+        # TODO: There is no support for opening a file for writing which
+        #       doesn't exist yet (creating a file).  Should there be?
+
+        # TODO: Add a ``subdir`` parameter for specifying the subdirectory
+        #       used to store URLs in self._destpath.
+
+        if self._isurl(path) and self._iswritemode(mode):
+            raise ValueError("URLs are not writeable")
+
+        # NOTE: _findfile will fail on a new file opened for writing.
+        found = self._findfile(path)
+        if found:
+            _fname, ext = self._splitzipext(found)
+            if ext == 'bz2':
+                mode.replace("+", "")
+            return _file_openers[ext](found, mode=mode,
+                                      encoding=encoding, newline=newline)
+        else:
+>           raise FileNotFoundError(f"{path} not found.")
+E           FileNotFoundError: /app/solution.txt not found.
+
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_datasource.py:529: FileNotFoundError
+____________________________________________________________________ test_sum_five_hundred _____________________________________________________________________
+
+    def test_sum_five_hundred():
+        """
+        Checks to see that the variables in the result vector sum to 500
+        """
+>       x = np.loadtxt("/app/solution.txt")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:45:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py:1384: in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py:1011: in _read
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_datasource.py:192: in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <numpy.lib.npyio.DataSource object at 0x7f4d9c7e1750>, path = '/app/solution.txt', mode = 'rt', encoding = None, newline = None
+
+    def open(self, path, mode='r', encoding=None, newline=None):
+        """
+        Open and return file-like object.
+
+        If `path` is an URL, it will be downloaded, stored in the
+        `DataSource` directory and opened from there.
+
+        Parameters
+        ----------
+        path : str or pathlib.Path
+            Local file path or URL to open.
+        mode : {'r', 'w', 'a'}, optional
+            Mode to open `path`.  Mode 'r' for reading, 'w' for writing,
+            'a' to append. Available modes depend on the type of object
+            specified by `path`. Default is 'r'.
+        encoding : {None, str}, optional
+            Open text file with given encoding. The default encoding will be
+            what `open` uses.
+        newline : {None, str}, optional
+            Newline to use when reading text file.
+
+        Returns
+        -------
+        out : file object
+            File object.
+
+        """
+
+        # TODO: There is no support for opening a file for writing which
+        #       doesn't exist yet (creating a file).  Should there be?
+
+        # TODO: Add a ``subdir`` parameter for specifying the subdirectory
+        #       used to store URLs in self._destpath.
+
+        if self._isurl(path) and self._iswritemode(mode):
+            raise ValueError("URLs are not writeable")
+
+        # NOTE: _findfile will fail on a new file opened for writing.
+        found = self._findfile(path)
+        if found:
+            _fname, ext = self._splitzipext(found)
+            if ext == 'bz2':
+                mode.replace("+", "")
+            return _file_openers[ext](found, mode=mode,
+                                      encoding=encoding, newline=newline)
+        else:
+>           raise FileNotFoundError(f"{path} not found.")
+E           FileNotFoundError: /app/solution.txt not found.
+
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_datasource.py:529: FileNotFoundError
+________________________________________________________________________ test_variance _________________________________________________________________________
+
+    def test_variance():
+        """
+        Checks to see that the variables are between 0 and 10 inclusive in the result vector
+        """
+>       x = np.loadtxt("/app/solution.txt")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:55:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py:1384: in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py:1011: in _read
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_datasource.py:192: in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <numpy.lib.npyio.DataSource object at 0x7f4d9c8f09d0>, path = '/app/solution.txt', mode = 'rt', encoding = None, newline = None
+
+    def open(self, path, mode='r', encoding=None, newline=None):
+        """
+        Open and return file-like object.
+
+        If `path` is an URL, it will be downloaded, stored in the
+        `DataSource` directory and opened from there.
+
+        Parameters
+        ----------
+        path : str or pathlib.Path
+            Local file path or URL to open.
+        mode : {'r', 'w', 'a'}, optional
+            Mode to open `path`.  Mode 'r' for reading, 'w' for writing,
+            'a' to append. Available modes depend on the type of object
+            specified by `path`. Default is 'r'.
+        encoding : {None, str}, optional
+            Open text file with given encoding. The default encoding will be
+            what `open` uses.
+        newline : {None, str}, optional
+            Newline to use when reading text file.
+
+        Returns
+        -------
+        out : file object
+            File object.
+
+        """
+
+        # TODO: There is no support for opening a file for writing which
+        #       doesn't exist yet (creating a file).  Should there be?
+
+        # TODO: Add a ``subdir`` parameter for specifying the subdirectory
+        #       used to store URLs in self._destpath.
+
+        if self._isurl(path) and self._iswritemode(mode):
+            raise ValueError("URLs are not writeable")
+
+        # NOTE: _findfile will fail on a new file opened for writing.
+        found = self._findfile(path)
+        if found:
+            _fname, ext = self._splitzipext(found)
+            if ext == 'bz2':
+                mode.replace("+", "")
+            return _file_openers[ext](found, mode=mode,
+                                      encoding=encoding, newline=newline)
+        else:
+>           raise FileNotFoundError(f"{path} not found.")
+E           FileNotFoundError: /app/solution.txt not found.
+
+.tbench-testing/lib/python3.11/site-packages/numpy/lib/_datasource.py:529: FileNotFoundError
+=================================================================== short test summary info ====================================================================
+FAILED ../tests/test_outputs.py::test_gradient_two_norm - FileNotFoundError: /app/solution.txt not found.
+FAILED ../tests/test_outputs.py::test_sum_five_hundred - FileNotFoundError: /app/solution.txt not found.
+FAILED ../tests/test_outputs.py::test_variance - FileNotFoundError: /app/solution.txt not found.
+====================================================================== 3 failed in 0.60s =======================================================================
+root@e572eebf29a6:/app#

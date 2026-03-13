@@ -1,0 +1,531 @@
+[?2004hroot@2d28df303c62:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@2d28df303c62:/app# clear
+[?2004l[H[J[3J[?2004hroot@2d28df303c62:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@2d28df303c62:/app# panda --prompt 'There'"'"'s something wrong with my system-wide python installation - I can'"'"'t seem to install packages with pip.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Check pip version][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠹[39m [33m[Bash: Check ensurepip availability][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check ensurepip availability][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check ensurepip availability][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠴[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpi8amsdra[22m
+[2mRequirement already satisfied: pip in /usr/local/lib/python3.13/site-packages (24.3.1)[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pip using ensurepip][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpi8amsdra[22m
+[2mRequirement already satisfied: pip in /usr/local/lib/python3.13/site-packages (24.3.1)[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠼[39m [33m[Bash: Force reinstall pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠴[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pip installation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pip installation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pip installation][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pip installation][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pip installation][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pip installation][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pip installation][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmp8h_xpmv4[22m
+[2mRequirement already satisfied: pip in /usr/local/lib/python3.13/site-packages (24.3.1)[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pip installation][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmp8h_xpmv4[22m
+[2mRequirement already satisfied: pip in /usr/local/lib/python3.13/site-packages (24.3.1)[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠋[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pip with default pip script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pip with default pip script][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pip with default pip script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pip with default pip script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pip with default pip script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pip with default pip script][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pip with default pip script][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpiwptdbx2[22m
+[2mRequirement already satisfied: pip in /usr/local/lib/python3.13/site-packages (24.3.1)[22m
+[2mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[36m⠼[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:27 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:26 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:25 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:25 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:25 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:25 remaining)[22m
+[2mLooking in links: /tmp/tmpwr24ipfr[22m
+[2mProcessing /tmp/tmpwr24ipfr/pip-24.3.1-py3-none-any.whl[22m
+[2mInstalling collected packages: pip[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Remove broken pip installation and reinstall][39m [2m(0:25 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mInstalling collected packages: pip[22m
+[2mSuccessfully installed pip-24.3.1[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[36m⠇[39m [33m[Bash: Final test of pip3][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Final test of pip3][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Final test of pip3][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Final test of pip3][39m [2m(0:29 remaining)[22m
+[2mpip 24.3.1 from /usr/local/lib/python3.13/site-packages/pip (python 3.13)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[Bash]
+[36m⠹[39m [33m[Bash: Verify pip is working properly][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify pip is working properly][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify pip is working properly][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠴[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Test pip install functionality][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Test pip install functionality][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Test pip install functionality][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Test pip install functionality][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Test pip install functionality][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[22m
+[2m[notice] To update, run: pip install --upgrade pip[22m
+[2mERROR: You must give at least one requirement to install (see "pip help install")[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Test pip install functionality][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[22m
+[2m[notice] To update, run: pip install --upgrade pip[22m
+[2mERROR: You must give at least one requirement to install (see "pip help install")[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠏[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Test installing a package with pip][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Test installing a package with pip][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Test installing a package with pip][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Test installing a package with pip][39m [2m(0:26 remaining)[22m
+[2m... (1 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Test installing a package with pip][39m [2m(0:25 remaining)[22m
+[2m... (1 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Test installing a package with pip][39m [2m(0:25 remaining)[22m
+[2m... (1 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Test installing a package with pip][39m [2m(0:25 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2mrequests version: 2.32.5[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠙[39m [33m[Bash: Final verification of installed packages][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Final verification of installed packages][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Final verification of installed packages][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K✅ **Fixed!** Your pip installation is now working properly.
+[?2004hroot@2d28df303c62:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@2d28df303c62:/app# 

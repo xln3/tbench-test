@@ -1,0 +1,1343 @@
+[?2004hroot@ccf7a27a07e4:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@ccf7a27a07e4:/app# clear
+[?2004l[H[J[3J[?2004hroot@ccf7a27a07e4:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@ccf7a27a07e4:/app# panda --prompt 'Set up a home server that can be accessed via HTTPS from the internet. Since many ISPs block port 80 for inbound connections, you cannot use HTTP-based certificate validation. Instead, you must generate SSL certificates and configure HTTPS properly.
+[?2004l[?2004h> 
+[?2004l[?2004h> Your task is to:
+[?2004l[?2004h> 1. Configure dynamic DNS using ddclient to update DNS records for the domain homeserver.local
+[?2004l[?2004h> 2. Generate SSL certificates for the domain homeserver.local (you may use self-signed certificates for this simulation). Save the certificate as homeserver.local.cer and the private key as homeserver.local.key to /root/.acme.sh/homeserver.local_ecc/.
+[?2004l[?2004h> 3. Configure nginx to serve HTTPS on port 443 with proper SSL configuration. The config file should be at /etc/nginx/sites-available/default
+[?2004l[?2004h> 4. Create a simple HTML page at /var/www/html/index.html that displays "Welcome to My Home Server!"
+[?2004l[?2004h> 5. Ensure the server is accessible via https://homeserver.local
+[?2004l[?2004h> 
+[?2004l[?2004h> Available tools and services:
+[?2004l[?2004h> - A local DNS server is running that handles homeserver.local
+[?2004l[?2004h> - Standard tools like openssl, nginx, ddclient are available
+[?2004l[?2004h> - Use the domain "homeserver.local" for all configurations
+[?2004l[?2004h> 
+[?2004l[?2004h> Requirements:
+[?2004l[?2004h> - nginx must be running and listening on port 443
+[?2004l[?2004h> - SSL certificates must be properly configured
+[?2004l[?2004h> - The HTML page must be accessible via HTTPS
+[?2004l[?2004h> - DNS resolution for homeserver.local must work
+[?2004l[?2004h> 
+[?2004l[?2004h> The server should respond with a valid SSL certificate when accessed via HTTPS.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[TodoWrite]
+[Bash]
+[Read]
+[Write]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Start ddclient using init script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+[Bash]
+[TodoWrite]
+[Bash]
+[Bash]
+[36m⠹[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:26 remaining)[22m
+[31m...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+.+...+...........+...+.......+......+.....+............+.+..++++++++++++++++++++++++++…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:26 remaining)[22m
+[31m...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+.+...+...........+...+.......+......+.....+............+.+..++++++++++++++++++++++++++…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Generate self-signed SSL certificate and private key][39m [2m(0:26 remaining)[22m
+[31m...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+.+...+...........+...+.......+......+.....+............+.+..++++++++++++++++++++++++++…[0m[39m
+[31m..+...+....+...+...+......+....................+.+..+......+......................+.....+....+..................+...+........+......+.........+.+........+.+.…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[Read]
+[Read]
+[TodoWrite]
+[Bash]
+[Read]
+[Write]
+[TodoWrite]
+[Bash]
+[Write]
+[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify SSL certificate details][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[TodoWrite]
+[Write]
+[Bash]
+✅ **Home Server HTTPS Setup Complete!**
+
+All requirements have been successfully implemented:
+
+- **Dynamic DNS**: ddclient configured and running
+- **SSL Certificates**: Self-signed certificate and key generated at `/root/.acme.sh/homeserver.local_ecc/`
+- **Nginx**: Configured for HTTPS on port 443 with proper SSL settings and security headers
+- **HTML Page**: Welcome page created and accessible
+- **Accessibility**: Server responds to https://homeserver.local with valid SSL certificate
+
+The server is now ready to serve HTTPS traffic. A detailed summary has been saved to `/root/home_server_setup_summary.md`.
+[?2004hroot@ccf7a27a07e4:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@ccf7a27a07e4:/app# 

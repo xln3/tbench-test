@@ -1,0 +1,1654 @@
+[?2004hroot@1724f1902f65:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@1724f1902f65:/app# clear
+[?2004l[H[J[3J[?2004hroot@1724f1902f65:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@1724f1902f65:/app# panda --prompt 'Spin up a mailing list server for our reading group: reading-group@local.edu using postfix and mailman3 (both are installed already).
+[?2004l[?2004h> The mailing list has basic mailman3 functionalities like:
+[?2004l[?2004h> - Mailing "reading-group-join@local.edu" adds users to the list (after confirmation).
+[?2004l[?2004h> - Mailing "reading-group-leave@local.edu" removes users from the list (after confirmation).
+[?2004l[?2004h> - Mailing "reading-group@local.edu" posts an announcement to all subscribers.
+[?2004l[?2004h> 
+[?2004l[?2004h> You must save mailman configuration file in /etc/mailman3/mailman.cfg
+[?2004l[?2004h> 
+[?2004l[?2004h> For ease of testing:
+[?2004l[?2004h> - Assume all subscriber/user mail addresses follow `<user>@local.edu`, where `<user>` is the local unix username.
+[?2004l[?2004h> - Direct user mails to `/var/mail/<username>`. They will be accessed with `mailbox.mbox(f"/var/mail/{username}")`.
+[?2004l[?2004h> - List owners do not need to approve join/post requests, i.e., set SubscriptionPolicy.open. Users still need to confirm join/leave by replying though.
+[?2004l[?2004h> - An `/app/eval.py` script is provided to help iterations.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Glob]
+[Read]
+[Read]
+[Read]
+[Bash]
+[Read]
+[Read]
+[TodoWrite]
+[Write]
+[TodoWrite]
+[Read]
+[Edit]
+[Edit]
+[Read]
+[Read]
+[Edit]
+[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check mailman command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check mailman command help][39m [2m(0:28 remaining)[22m
+[2m... (17 more lines above)[22m
+[2m                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 2400, in handle_parse_result[22m
+[2m    value = self.process_value(ctx, value)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Check mailman command help][39m [2m(0:28 remaining)[22m
+[2m... (17 more lines above)[22m
+[2m                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 2400, in handle_parse_result[22m
+[2m    value = self.process_value(ctx, value)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠹[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check mailman info][39m [2m(0:29 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m    sys.exit(load_entry_point('mailman==3.3.8', 'console_scripts', 'mailman')())[22m
+[2m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1157, in __call__[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Check mailman info][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m    sys.exit(load_entry_point('mailman==3.3.8', 'console_scripts', 'mailman')())[22m
+[2m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1157, in __call__[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Check mailman info][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m    sys.exit(load_entry_point('mailman==3.3.8', 'console_scripts', 'mailman')())[22m
+[2m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1157, in __call__[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[36m⠸[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m    sys.exit(load_entry_point('mailman==3.3.8', 'console_scripts', 'mailman')())[22m
+[2m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1157, in __call__[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Check mailman aliases][39m [2m(0:29 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m    sys.exit(load_entry_point('mailman==3.3.8', 'console_scripts', 'mailman')())[22m
+[2m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1157, in __call__[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Read]
+[Bash]
+[Bash]
+[Bash]
+[Read]
+[Bash]
+[Read]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Read]
+[Write]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check mailman aliases command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Check mailman aliases command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Check mailman aliases command][39m [2m(0:28 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1077, in main[22m
+[2m    with self.make_context(prog_name, args, **extra) as ctx:[22m
+[2m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Check mailman aliases command][39m [2m(0:28 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1077, in main[22m
+[2m    with self.make_context(prog_name, args, **extra) as ctx:[22m
+[2m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Check mailman aliases command][39m [2m(0:28 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m  File "/usr/lib/python3/dist-packages/click/core.py", line 1077, in main[22m
+[2m    with self.make_context(prog_name, args, **extra) as ctx:[22m
+[2m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠼[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman commands][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman commands][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman commands][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman commands][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠧[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m... (27 more lines above)[22m
+[2m    initialize_1(config_path)[22m
+[2m  File "/usr/lib/python3/dist-packages/mailman/core/initialize.py", line 122, in initialize_1[22m
+[2m    mailman.config.config.load(config_path)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman help output][39m [2m(0:29 remaining)[22m
+[2m... (27 more lines above)[22m
+[2m    initialize_1(config_path)[22m
+[2m  File "/usr/lib/python3/dist-packages/mailman/core/initialize.py", line 122, in initialize_1[22m
+[2m    mailman.config.config.load(config_path)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman help output][39m [2m(0:28 remaining)[22m
+[2m... (27 more lines above)[22m
+[2m    initialize_1(config_path)[22m
+[2m  File "/usr/lib/python3/dist-packages/mailman/core/initialize.py", line 122, in initialize_1[22m
+[2m    mailman.config.config.load(config_path)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠧[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m... (38 more lines above)[22m
+[2m    category, section = section_name.split(".")[22m
+[2m    ^^^^^^^^^^^^^^^^^[22m
+[2mValueError: too many values to unpack (expected 2)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m... (38 more lines above)[22m
+[2m    category, section = section_name.split(".")[22m
+[2m    ^^^^^^^^^^^^^^^^^[22m
+[2mValueError: too many values to unpack (expected 2)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Read]
+[Edit]
+[Bash]
+[36m⠦[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman info with config][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman info with config][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman info with config][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mTry 'mailman -h' for help.[22m
+[2m[22m
+[2mError: If you are sure you want to run as root, specify --run-as-root.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman info with config][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mTry 'mailman -h' for help.[22m
+[2m[22m
+[2mError: If you are sure you want to run as root, specify --run-as-root.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Get mailman info with config][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mTry 'mailman -h' for help.[22m
+[2m[22m
+[2mError: If you are sure you want to run as root, specify --run-as-root.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman info with config][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mTry 'mailman -h' for help.[22m
+[2m[22m
+[2mError: If you are sure you want to run as root, specify --run-as-root.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman info with config][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mTry 'mailman -h' for help.[22m
+[2m[22m
+[2mError: If you are sure you want to run as root, specify --run-as-root.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠋[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mdevmode: DISABLED[22m
+[2mREST root url: http://localhost:8001/3.1/[22m
+[2mREST credentials: restadmin:x2GiPN5gh1weMIVfGhy985i2jzzkmtU/VvxeftXTYy7X2gc/[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mdevmode: DISABLED[22m
+[2mREST root url: http://localhost:8001/3.1/[22m
+[2mREST credentials: restadmin:x2GiPN5gh1weMIVfGhy985i2jzzkmtU/VvxeftXTYy7X2gc/[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman info with config as root][39m [2m(0:28 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mdevmode: DISABLED[22m
+[2mREST root url: http://localhost:8001/3.1/[22m
+[2mREST credentials: restadmin:x2GiPN5gh1weMIVfGhy985i2jzzkmtU/VvxeftXTYy7X2gc/[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠧[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: List mailman domains][39m [2m(0:29 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mTry 'mailman -h' for help.[22m
+[2m[22m
+[2mError: No such command 'domains'.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: List mailman domains][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mTry 'mailman -h' for help.[22m
+[2m[22m
+[2mError: No such command 'domains'.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠧[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get mailman help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get mailman help][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Get mailman help][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get mailman help][39m [2m(0:28 remaining)[22m
+[2m... (17 more lines above)[22m
+[2m  addmembers     Add all member addresses in FILENAME with delivery mode...[22m
+[2m  aliases        Regenerate the aliases appropriate for your MTA.[22m
+[2m  changeaddress  Change a user's email address from old_address to...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Get mailman help][39m [2m(0:28 remaining)[22m
+[2m... (17 more lines above)[22m
+[2m  addmembers     Add all member addresses in FILENAME with delivery mode...[22m
+[2m  aliases        Regenerate the aliases appropriate for your MTA.[22m
+[2m  changeaddress  Change a user's email address from old_address to...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Get mailman help][39m [2m(0:28 remaining)[22m
+[2m... (17 more lines above)[22m
+[2m  addmembers     Add all member addresses in FILENAME with delivery mode...[22m
+[2m  aliases        Regenerate the aliases appropriate for your MTA.[22m
+[2m  changeaddress  Change a user's email address from old_address to...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠙[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get list-related commands][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get list-related commands][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get list-related commands][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠹[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: List all mailing lists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: List all mailing lists][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: List all mailing lists][39m [2m(0:28 remaining)[22m
+[2mNo matching mailing lists found[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: List all mailing lists][39m [2m(0:28 remaining)[22m
+[2mNo matching mailing lists found[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: List all mailing lists][39m [2m(0:28 remaining)[22m
+[2mNo matching mailing lists found[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[Bash]
+[36m⠴[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Get create command help][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Get create command help][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Get create command help][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Get create command help][39m [2m(0:28 remaining)[22m
+[2m... (26 more lines above)[22m
+[2m                                  backward compatibility.  With -D do not[22m
+[2m                                  register the mailing list's domain.[22m
+[2m  -h, --help                      Show this message and exit.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Get create command help][39m [2m(0:28 remaining)[22m
+[2m... (26 more lines above)[22m
+[2m                                  backward compatibility.  With -D do not[22m
+[2m                                  register the mailing list's domain.[22m
+[2m  -h, --help                      Show this message and exit.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Get create command help][39m [2m(0:28 remaining)[22m
+[2m... (26 more lines above)[22m
+[2m                                  backward compatibility.  With -D do not[22m
+[2m                                  register the mailing list's domain.[22m
+[2m  -h, --help                      Show this message and exit.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Get create command help][39m [2m(0:28 remaining)[22m
+[2m... (26 more lines above)[22m
+[2m                                  backward compatibility.  With -D do not[22m
+[2m                                  register the mailing list's domain.[22m
+[2m  -h, --help                      Show this message and exit.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠋[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:28 remaining)[22m
+[2mCreated mailing list: reading-group@local.edu[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:28 remaining)[22m
+[2mCreated mailing list: reading-group@local.edu[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Create the reading-group mailing list][39m [2m(0:28 remaining)[22m
+[2mCreated mailing list: reading-group@local.edu[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[Bash]
+[36m⠸[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify list creation][39m [2m(0:29 remaining)[22m
+[2m1 matching mailing lists found:[22m
+[2mreading-group@local.edu[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify list creation][39m [2m(0:28 remaining)[22m
+[2m1 matching mailing lists found:[22m
+[2mreading-group@local.edu[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify list creation][39m [2m(0:28 remaining)[22m
+[2m1 matching mailing lists found:[22m
+[2mreading-group@local.edu[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠼[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Generate mailman aliases for postfix][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Read]
+[Read]
+[Bash]
+[36m⠏[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Reload postfix configuration][39m [2m(0:29 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Reload postfix configuration][39m [2m(0:28 remaining)[22m
+[2mpostfix/postlog: fatal: the Postfix mail system is not running[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[Bash]
+[36m⠏[39m [33m[Bash: Start postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Start postfix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Check mailing list configuration][39m [2m(0:29 remaining)[22m
+[2mWelcome to the GNU Mailman shell[22m
+[2m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Check mailing list configuration][39m [2m(0:28 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m>>> Default member action: Action.defer[22m
+[2m>>> Default nonmember action: Action.hold[22m
+[2m>>> [22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Check mailing list configuration][39m [2m(0:28 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m>>> Default member action: Action.defer[22m
+[2m>>> Default nonmember action: Action.hold[22m
+[2m>>> [22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠹[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:28 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m>>> Updated default member action: Action.accept[22m
+[2m>>> Updated default nonmember action: Action.accept[22m
+[2m>>> [22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:28 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m>>> Updated default member action: Action.accept[22m
+[2m>>> Updated default nonmember action: Action.accept[22m
+[2m>>> [22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:28 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m>>> Updated default member action: Action.accept[22m
+[2m>>> Updated default nonmember action: Action.accept[22m
+[2m>>> [22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Update mailing list policy to open][39m [2m(0:28 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m>>> Updated default member action: Action.accept[22m
+[2m>>> Updated default nonmember action: Action.accept[22m
+[2m>>> [22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠦[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Regenerate aliases][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Regenerate aliases][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Regenerate aliases][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[TodoWrite]
+[Bash]
+[36m⠧[39m [33m[Bash: Run eval.py to test setup][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py to test setup][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py to test setup][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py to test setup][39m [2m(0:29 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m  File "/app/eval.py", line 87, in send_email[22m
+[2m    server.send_message(msg)[22m
+[2m  File "/usr/lib/python3.12/smtplib.py", line 975, in send_message[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Create postfix_vmap db file][39m [2m(0:29 remaining)[22m
+[2mpostmap: fatal: open /var/lib/mailman3/data/postfix_vmap: No such file or directory[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[Edit]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m... (42 more lines above)[22m
+[2m    assert candidate_msgs, "No 'reading-group-confirm' messages found"[22m
+[2m           ^^^^^^^^^^^^^^[22m
+[2mAssertionError: No 'reading-group-confirm' messages found[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m... (42 more lines above)[22m
+[2m    assert candidate_msgs, "No 'reading-group-confirm' messages found"[22m
+[2m           ^^^^^^^^^^^^^^[22m
+[2mAssertionError: No 'reading-group-confirm' messages found[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:00 remaining)[22m
+[2m... (42 more lines above)[22m
+[2m    assert candidate_msgs, "No 'reading-group-confirm' messages found"[22m
+[2m           ^^^^^^^^^^^^^^[22m
+[2mAssertionError: No 'reading-group-confirm' messages found[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Edit]
+[Bash]
+[Bash]
+[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run eval.py test again][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m... (14 more lines above)[22m
+[2m  File "/usr/lib/python3.12/smtplib.py", line 890, in sendmail[22m
+[2m    raise SMTPRecipientsRefused(senderrs)[22m
+[2msmtplib.SMTPRecipientsRefused: {'reading-group-join@local.edu': (550, b'5.1.1 <reading-group-join@local.edu>: Recipient address rejected: User unknown in loc…[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m... (14 more lines above)[22m
+[2m  File "/usr/lib/python3.12/smtplib.py", line 890, in sendmail[22m
+[2m    raise SMTPRecipientsRefused(senderrs)[22m
+[2msmtplib.SMTPRecipientsRefused: {'reading-group-join@local.edu': (550, b'5.1.1 <reading-group-join@local.edu>: Recipient address rejected: User unknown in loc…[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run eval.py test again][39m [2m(0:26 remaining)[22m
+[2m... (14 more lines above)[22m
+[2m  File "/usr/lib/python3.12/smtplib.py", line 890, in sendmail[22m
+[2m    raise SMTPRecipientsRefused(senderrs)[22m
+[2msmtplib.SMTPRecipientsRefused: {'reading-group-join@local.edu': (550, b'5.1.1 <reading-group-join@local.edu>: Recipient address rejected: User unknown in loc…[0m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]

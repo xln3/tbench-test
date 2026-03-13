@@ -1,0 +1,21 @@
+{
+    "id": "4ce0732f-091b-4b5b-b2f1-1e88fb0a9b71",
+    "trial_name": "mixed-integer-programming.1-of-1.2026-03-07__09-22-48",
+    "task_id": "mixed-integer-programming",
+    "instruction": "\nThe mixed integer programming problem is located at /app/question.mps.\n\nSolve the problem, extract the integer part of the objective value, and save it to /app/answer.txt.\n\nFor example, if the objective value is 1, run: echo -n \"1\" > /app/answer.txt\n\nPlease note that if you intend to use any tools, the agent's time limit is 600 seconds, and tool execution can be time-consuming.\n",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_solution_file_exists": "failed",
+        "test_solution_file_content": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/mixed-integer-programming/mixed-integer-programming.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T20:00:11.629024+00:00",
+    "trial_ended_at": "2026-03-07T20:20:57.129191+00:00",
+    "agent_started_at": "2026-03-07T20:00:26.228865+00:00",
+    "agent_ended_at": "2026-03-07T20:20:26.431367+00:00",
+    "test_started_at": "2026-03-07T20:20:29.892981+00:00",
+    "test_ended_at": "2026-03-07T20:20:43.984097+00:00"
+}

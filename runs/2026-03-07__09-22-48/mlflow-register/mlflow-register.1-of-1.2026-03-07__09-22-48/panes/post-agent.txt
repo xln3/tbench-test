@@ -1,0 +1,40 @@
+root@f7fc3ef5a760:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@f7fc3ef5a760:/app# panda --prompt 'Start a local mlflow tracking server in the background on localhost:8080.
+> Randomly initialize a linear regression model using sklearn and register it is as gpt-5. Train it on a random dataset that has 3 features.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+Error: OpenAI API error: 503 Service Unavailable
+upstream connect error or disconnect/reset before headers. reset reason: connection termination
+root@f7fc3ef5a760:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

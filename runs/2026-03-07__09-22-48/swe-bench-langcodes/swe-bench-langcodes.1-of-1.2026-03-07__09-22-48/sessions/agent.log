@@ -1,0 +1,108 @@
+[?2004hroot@f2848b35feb7:/app/langcodes# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@f2848b35feb7:/app/langcodes# clear
+[?2004l[H[J[3J[?2004hroot@f2848b35feb7:/app/langcodes# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@f2848b35feb7:/app/langcodes# panda --prompt 'Language.__hash__ is broken
+[?2004l[?2004h> Currently, the [`Language.__hash__`](https://github.com/georgkrause/langcodes/blob/060e7d8482c6d36975f0343b3ad770dc794a6fdd/langcodes/__init__.py#L1503-L1504) method is broken because if we create the same `Language` object twice, it will produce completely different hash values.
+[?2004l[?2004h> 
+[?2004l[?2004h> Example:
+[?2004l[?2004h> ```python
+[?2004l[?2004h> from langcodes import Language
+[?2004l[?2004h> 
+[?2004l[?2004h> print(hash(Language.get("en")))
+[?2004l[?2004h> print(hash(Language.get("en")))
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> As far as I know, if two objects are created in the same process and are equal, they should have the same hash value.
+[?2004l[?2004h> Example:
+[?2004l[?2004h> ```python
+[?2004l[?2004h> print(hash("test"))  # Produces -4338981029525304944
+[?2004l[?2004h> print(hash("test"))  # Produces -4338981029525304944
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> To ensure consistency with `__eq__`, we could replace the current implementation with:
+[?2004l[?2004h> ```python
+[?2004l[?2004h> def __hash__(self) -> int:
+[?2004l[?2004h>     return hash(self._str_tag)
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> For more details, see the [`__hash__`](https://docs.python.org/3/reference/datamodel.html#object.__hash__) documentation.
+[?2004l[?2004h> 
+[?2004l[?2004h> Edit:
+[?2004l[?2004h> This issue doesn'"'"'t always happen because the Language is cached, so if we call ``Language.get("en")``, it will actually return the same object twice (same id), BUT I discovered the problem when I saved the object with pickle.
+[?2004l[?2004h> ```py
+[?2004l[?2004h> import pickle
+[?2004l[?2004h> from langcodes import Language
+[?2004l[?2004h> 
+[?2004l[?2004h> print(id(Language.get("en")) == id(Language.get("en"))) # print True
+[?2004l[?2004h> print(hash(Language.get("en")) == hash(Language.get("en"))) # print True
+[?2004l[?2004h> 
+[?2004l[?2004h> with open("test_file", "wb") as file:
+[?2004l[?2004h>     pickle.dump(Language.get("en"), file)
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> with open("test_file", "rb") as file:
+[?2004l[?2004h>     file_content = pickle.load(file)
+[?2004l[?2004h> 
+[?2004l[?2004h> print(id(file_content) == id(Language.get("en"))) # print False. This is the right behaviour.
+[?2004l[?2004h> print(hash(file_content) == hash(Language.get("en"))) # print False. It should return True
+[?2004l[?2004h> ```'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Read]
+[TodoWrite]
+[Edit]
+[TodoWrite]
+[Bash]
+[36m⠙[39m [33m[Bash: Test the __hash__ fix with pickle scenario][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Test the __hash__ fix with pickle scenario][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[TodoWrite]
+[Bash]
+[Read]
+[Bash]
+[Bash]
+[Glob]
+[Bash]
+[Read]
+[Bash]
+[36m⠼[39m [33m[Bash: Run comprehensive hash tests][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Grep]
+[Bash]
+[Read]
+[Write]
+[Bash]
+[Bash]
+[36m⠴[39m [33m[Bash: Run the new hash tests manually][39m [2m(0:29 remaining)[22m
+[2m... (19 more lines above)[22m
+[2m✓ Passed[22m
+[2m[22m
+[2m=== All tests passed! ===[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[36m⠦[39m [33m[Bash: Demonstrate the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Read]
+[Bash]
+[Bash]
+[36m⠧[39m [33m[Bash: Final comprehensive verification][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠇[39m [33m[Bash: Run demonstration with PYTHONPATH][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+Perfect! Let me create one final verification showing the exact scenario from the issue:
+[?2004hroot@f2848b35feb7:/app/langcodes# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@f2848b35feb7:/app/langcodes# 

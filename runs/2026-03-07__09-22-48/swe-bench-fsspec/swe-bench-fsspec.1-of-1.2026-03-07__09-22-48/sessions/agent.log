@@ -1,0 +1,774 @@
+[?2004hroot@09358fadc2f2:/app/filesystem_spec# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@09358fadc2f2:/app/filesystem_spec# clear
+[?2004l[H[J[3J[?2004hroot@09358fadc2f2:/app/filesystem_spec# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@09358fadc2f2:/app/filesystem_spec# panda --prompt 'DirFileSystem missing `open_async()` method for proper async operation
+[?2004l[?2004h> 
+[?2004l[?2004h> ```python
+[?2004l[?2004h> import asyncio
+[?2004l[?2004h> import fsspec
+[?2004l[?2004h> 
+[?2004l[?2004h> async def async_test():
+[?2004l[?2004h>     dirfs = fsspec.filesystem('"'"'dir'"'"', path='"'"'/tmp'"'"', asynchrnous=True)
+[?2004l[?2004h>     file = await dirfs.open_async('"'"'hello'"'"', '"'"'wb'"'"')
+[?2004l[?2004h>     await file.close()
+[?2004l[?2004h> 
+[?2004l[?2004h> asyncio.run(async_test())
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> results in:
+[?2004l[?2004h> ```bash
+[?2004l[?2004h> $ poetry run python3 d.py
+[?2004l[?2004h> Traceback (most recent call last):
+[?2004l[?2004h>   File "/Users/orenl/dirfs_async.py", line 9, in <module>
+[?2004l[?2004h>     asyncio.run(async_test())
+[?2004l[?2004h>   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+[?2004l[?2004h>     return runner.run(main)
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+[?2004l[?2004h>     return self._loop.run_until_complete(task)
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+[?2004l[?2004h>     return future.result()
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Users/orenl/dirfs_async.py", line 6, in async_test
+[?2004l[?2004h>     file = await dirfs.open_async('"'"'hello'"'"', '"'"'wb'"'"')
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Users/orenl/Library/Caches/pypoetry/virtualenvs/app-FHy2xRiz-py3.12/lib/python3.12/site-packages/fsspec/asyn.py", line 910, in open_async
+[?2004l[?2004h>     raise NotImplementedError
+[?2004l[?2004h> NotImplementedError
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> Looks like the the `open_async()` method is missing despite other async methods implemented as stubs.
+[?2004l[?2004h> Will send a PR that add this function simply calling the `open_async()` of the underlying filesystem.
+[?2004l[?2004h> DirFileSystem missing `open_async()` method for proper async operation
+[?2004l[?2004h> 
+[?2004l[?2004h> ```python
+[?2004l[?2004h> import asyncio
+[?2004l[?2004h> import fsspec
+[?2004l[?2004h> 
+[?2004l[?2004h> async def async_test():
+[?2004l[?2004h>     dirfs = fsspec.filesystem('"'"'dir'"'"', path='"'"'/tmp'"'"', asynchrnous=True)
+[?2004l[?2004h>     file = await dirfs.open_async('"'"'hello'"'"', '"'"'wb'"'"')
+[?2004l[?2004h>     await file.close()
+[?2004l[?2004h> 
+[?2004l[?2004h> asyncio.run(async_test())
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> results in:
+[?2004l[?2004h> ```bash
+[?2004l[?2004h> $ poetry run python3 d.py
+[?2004l[?2004h> Traceback (most recent call last):
+[?2004l[?2004h>   File "/Users/orenl/dirfs_async.py", line 9, in <module>
+[?2004l[?2004h>     asyncio.run(async_test())
+[?2004l[?2004h>   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+[?2004l[?2004h>     return runner.run(main)
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+[?2004l[?2004h>     return self._loop.run_until_complete(task)
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+[?2004l[?2004h>     return future.result()
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Users/orenl/dirfs_async.py", line 6, in async_test
+[?2004l[?2004h>     file = await dirfs.open_async('"'"'hello'"'"', '"'"'wb'"'"')
+[?2004l[?2004h>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[?2004l[?2004h>   File "/Users/orenl/Library/Caches/pypoetry/virtualenvs/app-FHy2xRiz-py3.12/lib/python3.12/site-packages/fsspec/asyn.py", line 910, in open_async
+[?2004l[?2004h>     raise NotImplementedError
+[?2004l[?2004h> NotImplementedError
+[?2004l[?2004h> ```
+[?2004l[?2004h> 
+[?2004l[?2004h> Looks like the the `open_async()` method is missing despite other async methods implemented as stubs.
+[?2004l[?2004h> Will send a PR that add this function simply calling the `open_async()` of the underlying filesystem.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Glob]
+[Grep]
+[Read]
+[Grep]
+[Read]
+[Grep]
+[Read]
+[Grep]
+[Read]
+[Read]
+[Read]
+[Edit]
+[Read]
+[TodoWrite]
+[TodoWrite]
+[Write]
+[Bash]
+[36m⠙[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Glob]
+[Glob]
+[Read]
+[Bash]
+[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install fsspec in editable mode][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠧[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Run the async test script for DirFileSystem][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Grep]
+[Grep]
+[Grep]
+[Read]
+[Glob]
+[Read]
+[Grep]
+[TodoWrite]
+[Write]
+[Bash]
+[36m⠏[39m [33m[Bash: Run the async test script for DirFileSystem open_async][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run the async test script for DirFileSystem open_async][39m [2m(0:29 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m✓ open_async() delegation test passed![22m
+[2m[22m
+[2m✓✓✓ All async tests passed successfully![22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Write]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pytest and pytest-asyncio][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠇[39m [33m[Bash: Run pytest on the new open_async tests][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Run pytest on the new open_async tests][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run pytest on the new open_async tests][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run pytest on the new open_async tests][39m [2m(0:29 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mconfigfile: pyproject.toml[22m
+[2mplugins: asyncio-1.2.0[22m
+[2masyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run pytest on the new open_async tests][39m [2m(0:29 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mfsspec/implementations/tests/test_dirfs_open_async.py::test_open_async_with_kwargs PASSED [100%][22m
+[2m[22m
+[2m============================== 3 passed in 0.06s ===============================[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠸[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mconfigfile: pyproject.toml[22m
+[2mplugins: asyncio-1.2.0[22m
+[2masyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mcollecting ... collected 133 items / 1 deselected / 132 selected[22m
+[2m[22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_dirfs[sync] ERROR       [  0%][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m... (42 more lines above)[22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_async_pipe ERROR        [ 25%][22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_pipe[sync] ERROR        [ 26%][22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_pipe[async] ERROR       [ 27%][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m... (73 more lines above)[22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_isfile[async] ERROR     [ 49%][22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_async_isdir ERROR       [ 50%][22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_isdir[sync] ERROR       [ 50%][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m... (97 more lines above)[22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_async_du ERROR          [ 71%][22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_du[sync] ERROR          [ 72%][22m
+[2mfsspec/implementations/tests/test_dirfs.py::test_du[async] ERROR         [ 73%][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:29 remaining)[22m
+[2m... (97 more lines above)[22m
+[2m>       available fixtures: _class_scoped_runner, _function_scoped_runner, _module_scoped_runner, _package_scoped_runner, _session_scoped_runner, adirfs, asy…[0m[22m
+[2m>       use 'pytest --fixtures [testpath]' for help on them.[22m
+[2m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Run existing DirFileSystem tests to ensure we didn't break anything][39m [2m(0:28 remaining)[22m
+[2m... (97 more lines above)[22m
+[2mERROR fsspec/implementations/tests/test_dirfs.py::test_open[sync][22m
+[2mERROR fsspec/implementations/tests/test_dirfs.py::test_open[async][22m
+[2m====================== 1 deselected, 132 errors in 0.60s =======================[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠸[39m [33m[Bash: Run our new open_async tests][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run our new open_async tests][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run our new open_async tests][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run our new open_async tests][39m [2m(0:29 remaining)[22m
+[2m... (6 more lines above)[22m
+[2masyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function[22m
+[2mcollecting ... collected 3 items[22m
+[2m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Run our new open_async tests][39m [2m(0:29 remaining)[22m
+[2m... (8 more lines above)[22m
+[2m[22m
+[2mfsspec/implementations/tests/test_dirfs_open_async.py::test_open_async_delegation PASSED [ 33%][22m
+[2mfsspec/implementations/tests/test_dirfs_open_async.py::test_open_async_with_write_mode PASSED [ 66%][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Run our new open_async tests][39m [2m(0:29 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mfsspec/implementations/tests/test_dirfs_open_async.py::test_open_async_with_kwargs PASSED [100%][22m
+[2m[22m
+[2m============================== 3 passed in 0.08s ===============================[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Read]
+[Write]
+[TodoWrite]

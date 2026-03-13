@@ -1,0 +1,70 @@
+{
+    "lockfile_version": "1.0",
+    "created_at": "2026-03-07T02:20:25.844029+08:00",
+    "invocation": {
+        "command": "tb",
+        "args": [
+            "run",
+            "--agent-import-path",
+            "panda_agent:PandaAgent",
+            "--task-id",
+            "fix-permissions",
+            "--task-id",
+            "grid-pattern-transform",
+            "--task-id",
+            "fibonacci-server",
+            "--task-id",
+            "gcode-to-text",
+            "--model",
+            "qwen3-max",
+            "--dataset-path",
+            "/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks",
+            "--output-path",
+            "runs",
+            "--no-upload-results"
+        ]
+    },
+    "harness": {
+        "package": "terminal-bench",
+        "version": "0.2.18",
+        "is_editable_installation": true
+    },
+    "agent": {
+        "name": "panda",
+        "import_path": "panda_agent:PandaAgent",
+        "model_name": "qwen3-max",
+        "extra_kwargs": {
+            "no_rebuild": false,
+            "model_name": "qwen3-max"
+        }
+    },
+    "run_config": {
+        "log_level": "info",
+        "livestream": false,
+        "n_concurrent_trials": 4,
+        "n_attempts": 1,
+        "no_rebuild": false,
+        "cleanup": true,
+        "global_timeout_multiplier": 1.0,
+        "global_agent_timeout_sec": null,
+        "global_test_timeout_sec": null
+    },
+    "dataset": {
+        "name": null,
+        "version": null,
+        "local_path": "/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks",
+        "task_ids": [
+            "fibonacci-server",
+            "grid-pattern-transform",
+            "fix-permissions",
+            "gcode-to-text"
+        ],
+        "registry_url": null,
+        "local_registry_path": null
+    },
+    "local_config": {
+        "output_path": "runs",
+        "run_id": "2026-03-07__02-20-25",
+        "upload_results": false
+    }
+}

@@ -1,0 +1,536 @@
+[?2004hroot@d02d6c101a95:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@d02d6c101a95:/app# clear
+[?2004l[H[J[3J[?2004hroot@d02d6c101a95:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+0% [Waiting for headers]0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 35%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 76%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 46%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 56%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  krb5-locales libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libnghttp2-14 libpsl5t64 librtmp1 libssh-4 publicsuffix
+Suggested packages:
+  krb5-doc krb5-user
+The following NEW packages will be installed:
+  curl krb5-locales libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libnghttp2-14 libpsl5t64 librtmp1 libssh-4 publicsuffix
+0 upgraded, 13 newly installed, 0 to remove and 24 not upgraded.
+Need to get 1706 kB of archives.
+After this operation, 4850 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.6 [14.8 kB]
+1% [1 krb5-locales 14.2 kB/14.8 kB 96%]                                       2% [Working]            Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.6 [34.4 kB]
+3% [2 libkrb5support0 14.2 kB/34.4 kB 41%]                                          5% [Working]5% [Waiting for headers]                        Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.6 [82.0 kB]
+6% [3 libk5crypto3 14.2 kB/82.0 kB 17%]9% [3 libk5crypto3 75.0 kB/82.0 kB 92%]                                       11% [Working]             Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+11% [4 libkeyutils1 5503 B/9490 B 58%]                                      13% [Working]             Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.6 [348 kB]
+13% [5 libkrb5-3 5500 B/348 kB 2%]16% [5 libkrb5-3 77.9 kB/348 kB 22%]                                    31% [Working]             Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.6 [143 kB]
+31% [6 libgssapi-krb5-2 8396 B/143 kB 6%]34% [6 libgssapi-krb5-2 80.8 kB/143 kB 57%]                                           39% [Working]             Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.2 [74.3 kB]
+39% [7 libnghttp2-14 14.2 kB/74.3 kB 19%]44% [Working]                                                                                                                                       111 kB/s 8s                                                                                                                                                               Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+44% [8 libpsl5t64 3806 B/57.1 kB 7%]                                                                                                                111 kB/s 8s48% [Working]                                                                                                                                       111 kB/s 8s                                                                                                                                                               Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 publicsuffix all 20231001.0357-0.1 [129 kB]
+49% [9 publicsuffix 14.2 kB/129 kB 11%]                                                                                                             111 kB/s 8s52% [9 publicsuffix 77.9 kB/129 kB 60%]                                                                                                             111 kB/s 7s56% [Working]                                                                                                                                       111 kB/s 7s                                                                                                                                                               Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+56% [10 librtmp1 2606 B/56.3 kB 5%]                                                                                                                 111 kB/s 7s60% [Working]                                                                                                                                       111 kB/s 6s                                                                                                                                                               Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.3 [190 kB]
+60% [11 libssh-4 4096 B/190 kB 2%]                                                                                                                  111 kB/s 6s64% [11 libssh-4 79.3 kB/190 kB 42%]                                                                                                                111 kB/s 6s70% [Working]                                                                                                                                       111 kB/s 5s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+71% [12 libcurl4t64 14.2 kB/342 kB 4%]                                                                                                              111 kB/s 4s74% [12 libcurl4t64 80.8 kB/342 kB 24%]                                                                                                             111 kB/s 4s88% [Working]                                                                                                                                       111 kB/s 2s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+88% [13 curl 2604 B/227 kB 1%]                                                                                                                      111 kB/s 2s92% [13 curl 80.8 kB/227 kB 36%]                                                                                                                    133 kB/s 1s100% [Working]                                                                                                                                      133 kB/s 0s                                                                                                                                                               Fetched 1706 kB in 13s (131 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package krb5-locales.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19923 files and directories currently installed.)
+Preparing to unpack .../00-krb5-locales_1.20.1-6ubuntu2.6_all.deb ...
+Unpacking krb5-locales (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../01-libkrb5support0_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../02-libk5crypto3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../03-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../04-libkrb5-3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../05-libgssapi-krb5-2_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../06-libnghttp2-14_1.59.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../07-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../08-publicsuffix_20231001.0357-0.1_all.deb ...
+Unpacking publicsuffix (20231001.0357-0.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../09-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../10-libssh-4_0.10.6-2ubuntu0.3_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../11-libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../12-curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.6) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up publicsuffix (20231001.0357-0.1) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mnumpy==2.3.3                                                                                                                                                  [0m[2K[37m⠸[0m [2mscipy==1.16.2                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m7 packages[0m [2min 640ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/7)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/7)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/7)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mscipy               [0m [32m[2m------------------------------[0m[0m     0 B/34.02 MiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/34.02 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 124.48 KiB/1.17 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 126.91 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m------[2m------------------------[0m[0m 60.10 KiB/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 140.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m[2m------------------------------[0m[0m     0 B/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 205.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 76.10 KiB/356.91 KiB
+[2mpygments            [0m [32m-----[2m-------------------------[0m[0m 172.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 32.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 221.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m----------[2m--------------------[0m[0m 108.10 KiB/356.91 KiB
+[2mpygments            [0m [32m-----[2m-------------------------[0m[0m 188.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 64.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 253.82 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m-----------[2m-------------------[0m[0m 124.10 KiB/356.91 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 220.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 80.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 269.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m-----------[2m-------------------[0m[0m 124.10 KiB/356.91 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 220.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 96.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 269.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m--------------[2m----------------[0m[0m 156.10 KiB/356.91 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 284.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 159.89 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 317.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠼[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m---------------[2m---------------[0m[0m 172.10 KiB/356.91 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 300.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 175.89 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 333.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠼[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m-----------------------[2m-------[0m[0m 268.10 KiB/356.91 KiB
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 396.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 256.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 429.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠼[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m--------------------------[2m----[0m[0m 300.10 KiB/356.91 KiB
+[2mpygments            [0m [32m-----------[2m-------------------[0m[0m 427.93 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 256.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 461.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠴[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m---------------------------[2m---[0m[0m 316.10 KiB/356.91 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 444.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 319.33 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 461.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠴[0m [2mPreparing packages...[0m (3/7)
+[2mpytest              [0m [32m---------------------------[2m---[0m[0m 316.10 KiB/356.91 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 444.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 320.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 461.93 KiB/34.02 MiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠴[0m [2mPreparing packages...[0m (3/7)
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 476.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 320.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 509.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠴[0m [2mPreparing packages...[0m (3/7)
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 508.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 384.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 525.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠴[0m [2mPreparing packages...[0m (3/7)
+[2mpygments            [0m [32m---------------[2m---------------[0m[0m 588.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 480.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 605.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠴[0m [2mPreparing packages...[0m (3/7)
+[2mpygments            [0m [32m----------------[2m--------------[0m[0m 620.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 512.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 653.82 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠦[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m------------------[2m------------[0m[0m 684.38 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 576.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 701.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠦[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m------------------[2m------------[0m[0m 700.38 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 576.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 701.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠦[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m------------------[2m------------[0m[0m 700.38 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 576.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 717.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠦[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m-------------------[2m-----------[0m[0m 748.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 639.89 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 781.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠧[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m---------------------[2m---------[0m[0m 812.38 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 688.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 829.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠧[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m----------------------[2m--------[0m[0m 844.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 736.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 861.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠧[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m----------------------[2m--------[0m[0m 844.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 752.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 861.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠧[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m----------------------[2m--------[0m[0m 844.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 752.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 877.93 KiB/34.02 MiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠧[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m--------------------------[2m----[0m[0m 1020.48 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 896.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 1.03 MiB/34.02 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠇[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m----------------------------[2m--[0m[0m 1.07 MiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 976.00 KiB/15.87 MiB
+[2mscipy               [0m [32m-[2m-----------------------------[0m[0m 1.11 MiB/34.02 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠇[0m [2mPreparing packages...[0m (4/7)
+[2mpygments            [0m [32m------------------------------[2m[0m[0m 1.13 MiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 1.00 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.14 MiB/34.02 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠇[0m [2mPreparing packages...[0m (4/7)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.06 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.21 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (4/7)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.06 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.22 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.25 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.39 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.25 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.41 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.38 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.60 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.45 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.64 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.52 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.75 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 1.73 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.94 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 1.75 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 1.94 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 2.00 MiB/15.87 MiB
+[2mscipy               [0m [32m--[2m----------------------------[0m[0m 2.26 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 2.00 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 2.28 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 2.00 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 2.29 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 2.03 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 2.65 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----[2m-------------------------[0m[0m 2.20 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 2.82 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----[2m-------------------------[0m[0m 2.28 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 2.94 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----[2m-------------------------[0m[0m 2.48 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 3.00 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------[2m------------------------[0m[0m 2.67 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 3.08 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------[2m------------------------[0m[0m 2.69 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 3.35 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------[2m------------------------[0m[0m 2.92 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 3.35 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------[2m------------------------[0m[0m 2.94 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 3.35 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------[2m------------------------[0m[0m 2.95 MiB/15.87 MiB
+[2mscipy               [0m [32m---[2m---------------------------[0m[0m 3.35 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------[2m-----------------------[0m[0m 3.34 MiB/15.87 MiB
+[2mscipy               [0m [32m----[2m--------------------------[0m[0m 3.76 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------[2m-----------------------[0m[0m 3.34 MiB/15.87 MiB
+[2mscipy               [0m [32m----[2m--------------------------[0m[0m 3.78 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------[2m-----------------------[0m[0m 3.34 MiB/15.87 MiB
+[2mscipy               [0m [32m----[2m--------------------------[0m[0m 3.95 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------[2m-----------------------[0m[0m 3.60 MiB/15.87 MiB
+[2mscipy               [0m [32m----[2m--------------------------[0m[0m 4.02 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.02 MiB/15.87 MiB
+[2mscipy               [0m [32m----[2m--------------------------[0m[0m 4.36 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.02 MiB/15.87 MiB
+[2mscipy               [0m [32m----[2m--------------------------[0m[0m 4.45 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.02 MiB/15.87 MiB
+[2mscipy               [0m [32m----[2m--------------------------[0m[0m 4.47 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.09 MiB/15.87 MiB
+[2mscipy               [0m [32m-----[2m-------------------------[0m[0m 4.71 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------[2m---------------------[0m[0m 4.45 MiB/15.87 MiB
+[2mscipy               [0m [32m-----[2m-------------------------[0m[0m 4.71 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------[2m---------------------[0m[0m 4.69 MiB/15.87 MiB
+[2mscipy               [0m [32m-----[2m-------------------------[0m[0m 4.92 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------[2m---------------------[0m[0m 4.70 MiB/15.87 MiB
+[2mscipy               [0m [32m-----[2m-------------------------[0m[0m 5.38 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------[2m---------------------[0m[0m 4.72 MiB/15.87 MiB
+[2mscipy               [0m [32m-----[2m-------------------------[0m[0m 5.38 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------[2m--------------------[0m[0m 5.18 MiB/15.87 MiB
+[2mscipy               [0m [32m-----[2m-------------------------[0m[0m 5.38 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------[2m-------------------[0m[0m 5.37 MiB/15.87 MiB
+[2mscipy               [0m [32m-----[2m-------------------------[0m[0m 5.42 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------[2m-------------------[0m[0m 5.37 MiB/15.87 MiB
+[2mscipy               [0m [32m------[2m------------------------[0m[0m 5.87 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------[2m-------------------[0m[0m 5.37 MiB/15.87 MiB
+[2mscipy               [0m [32m------[2m------------------------[0m[0m 5.89 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------[2m-------------------[0m[0m 5.37 MiB/15.87 MiB
+[2mscipy               [0m [32m------[2m------------------------[0m[0m 5.90 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------[2m-------------------[0m[0m 5.48 MiB/15.87 MiB
+[2mscipy               [0m [32m------[2m------------------------[0m[0m 6.05 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------[2m------------------[0m[0m 6.05 MiB/15.87 MiB
+[2mscipy               [0m [32m------[2m------------------------[0m[0m 6.37 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------------[2m-----------------[0m[0m 6.56 MiB/15.87 MiB
+[2mscipy               [0m [32m------[2m------------------------[0m[0m 6.72 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------------[2m-----------------[0m[0m 6.72 MiB/15.87 MiB
+[2mscipy               [0m [32m-------[2m-----------------------[0m[0m 7.31 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------[2m----------------[0m[0m 6.90 MiB/15.87 MiB
+[2mscipy               [0m [32m-------[2m-----------------------[0m[0m 7.40 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------[2m----------------[0m[0m 6.92 MiB/15.87 MiB
+[2mscipy               [0m [32m-------[2m-----------------------[0m[0m 7.40 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------[2m----------------[0m[0m 7.20 MiB/15.87 MiB
+[2mscipy               [0m [32m-------[2m-----------------------[0m[0m 7.40 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------[2m----------------[0m[0m 7.40 MiB/15.87 MiB
+[2mscipy               [0m [32m--------[2m----------------------[0m[0m 8.00 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------[2m----------------[0m[0m 7.40 MiB/15.87 MiB
+[2mscipy               [0m [32m--------[2m----------------------[0m[0m 8.08 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------------[2m---------------[0m[0m 7.64 MiB/15.87 MiB
+[2mscipy               [0m [32m--------[2m----------------------[0m[0m 8.08 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------[2m--------------[0m[0m 8.06 MiB/15.87 MiB
+[2mscipy               [0m [32m--------[2m----------------------[0m[0m 8.08 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------[2m--------------[0m[0m 8.25 MiB/15.87 MiB
+[2mscipy               [0m [32m--------[2m----------------------[0m[0m 8.75 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------[2m--------------[0m[0m 8.32 MiB/15.87 MiB
+[2mscipy               [0m [32m--------[2m----------------------[0m[0m 8.75 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------[2m--------------[0m[0m 8.43 MiB/15.87 MiB
+[2mscipy               [0m [32m--------[2m----------------------[0m[0m 8.75 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.76 MiB/15.87 MiB
+[2mscipy               [0m [32m---------[2m---------------------[0m[0m 9.17 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.79 MiB/15.87 MiB
+[2mscipy               [0m [32m---------[2m---------------------[0m[0m 9.43 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------------[2m------------[0m[0m 9.44 MiB/15.87 MiB
+[2mscipy               [0m [32m---------[2m---------------------[0m[0m 9.45 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------------[2m------------[0m[0m 9.44 MiB/15.87 MiB
+[2mscipy               [0m [32m---------[2m---------------------[0m[0m 9.48 MiB/34.02 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------------[2m------------[0m[0m 9.44 MiB/15.87 MiB
+[2mscipy               [0m [32m---------[2m---------------------[0m[0m 10.03 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------------------[2m-----------[0m[0m 9.87 MiB/15.87 MiB
+[2mscipy               [0m [32m---------[2m---------------------[0m[0m 10.11 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------------[2m----------[0m[0m 10.11 MiB/15.87 MiB
+[2mscipy               [0m [32m----------[2m--------------------[0m[0m 10.37 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------------[2m----------[0m[0m 10.28 MiB/15.87 MiB
+[2mscipy               [0m [32m----------[2m--------------------[0m[0m 10.80 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------------[2m----------[0m[0m 10.37 MiB/15.87 MiB
+[2mscipy               [0m [32m----------[2m--------------------[0m[0m 10.80 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------------------[2m---------[0m[0m 10.78 MiB/15.87 MiB
+[2mscipy               [0m [32m----------[2m--------------------[0m[0m 10.87 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------------------[2m---------[0m[0m 10.79 MiB/15.87 MiB
+[2mscipy               [0m [32m-----------[2m-------------------[0m[0m 11.44 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------------------[2m---------[0m[0m 11.09 MiB/15.87 MiB
+[2mscipy               [0m [32m-----------[2m-------------------[0m[0m 11.47 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------------[2m--------[0m[0m 11.45 MiB/15.87 MiB
+[2mscipy               [0m [32m-----------[2m-------------------[0m[0m 12.00 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------------[2m--------[0m[0m 11.47 MiB/15.87 MiB
+[2mscipy               [0m [32m-----------[2m-------------------[0m[0m 12.14 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------------------[2m-------[0m[0m 11.95 MiB/15.87 MiB
+[2mscipy               [0m [32m-----------[2m-------------------[0m[0m 12.14 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------------------[2m-------[0m[0m 12.14 MiB/15.87 MiB
+[2mscipy               [0m [32m------------[2m------------------[0m[0m 12.81 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------------------------[2m-----[0m[0m 12.81 MiB/15.87 MiB
+[2mscipy               [0m [32m------------[2m------------------[0m[0m 12.83 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------------------------[2m-----[0m[0m 12.81 MiB/15.87 MiB
+[2mscipy               [0m [32m------------[2m------------------[0m[0m 12.87 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-------------------------[2m-----[0m[0m 12.81 MiB/15.87 MiB
+[2mscipy               [0m [32m------------[2m------------------[0m[0m 13.45 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------------------[2m----[0m[0m 13.33 MiB/15.87 MiB
+[2mscipy               [0m [32m------------[2m------------------[0m[0m 13.50 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------------------[2m----[0m[0m 13.48 MiB/15.87 MiB
+[2mscipy               [0m [32m-------------[2m-----------------[0m[0m 13.93 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m--------------------------[2m----[0m[0m 13.61 MiB/15.87 MiB
+[2mscipy               [0m [32m-------------[2m-----------------[0m[0m 14.17 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m---------------------------[2m---[0m[0m 14.15 MiB/15.87 MiB
+[2mscipy               [0m [32m-------------[2m-----------------[0m[0m 14.30 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------------------[2m--[0m[0m 14.39 MiB/15.87 MiB
+[2mscipy               [0m [32m--------------[2m----------------[0m[0m 14.84 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m----------------------------[2m--[0m[0m 14.70 MiB/15.87 MiB
+[2mscipy               [0m [32m--------------[2m----------------[0m[0m 14.84 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------------------------[2m-[0m[0m 14.85 MiB/15.87 MiB
+[2mscipy               [0m [32m--------------[2m----------------[0m[0m 15.20 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m-----------------------------[2m-[0m[0m 15.29 MiB/15.87 MiB
+[2mscipy               [0m [32m--------------[2m----------------[0m[0m 15.51 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------------------------[2m[0m[0m 15.53 MiB/15.87 MiB
+[2mscipy               [0m [32m--------------[2m----------------[0m[0m 15.59 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------------------------[2m[0m[0m 15.53 MiB/15.87 MiB
+[2mscipy               [0m [32m--------------[2m----------------[0m[0m 15.61 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------------------------[2m[0m[0m 15.53 MiB/15.87 MiB
+[2mscipy               [0m [32m--------------[2m----------------[0m[0m 15.62 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (5/7)
+[2mnumpy               [0m [32m------------------------------[2m[0m[0m 15.73 MiB/15.87 MiB
+[2mscipy               [0m [32m---------------[2m---------------[0m[0m 16.19 MiB/34.02 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mscipy               [0m [32m---------------[2m---------------[0m[0m 16.20 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mscipy               [0m [32m----------------[2m--------------[0m[0m 17.09 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (5/7)
+[2mscipy               [0m [32m----------------[2m--------------[0m[0m 17.59 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m----------------[2m--------------[0m[0m 17.82 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m----------------[2m--------------[0m[0m 17.83 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------[2m-------------[0m[0m 18.25 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------[2m-------------[0m[0m 19.04 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------[2m------------[0m[0m 19.51 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------[2m------------[0m[0m 19.90 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------[2m------------[0m[0m 19.92 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------[2m------------[0m[0m 20.33 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-------------------[2m-----------[0m[0m 21.15 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------[2m----------[0m[0m 21.67 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------[2m----------[0m[0m 22.47 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------[2m----------[0m[0m 22.48 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------[2m----------[0m[0m 22.50 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m---------------------[2m---------[0m[0m 23.16 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m----------------------[2m--------[0m[0m 24.14 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m----------------------[2m--------[0m[0m 24.61 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------------[2m-------[0m[0m 25.06 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------------[2m-------[0m[0m 25.08 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------------[2m-------[0m[0m 25.34 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------------[2m-------[0m[0m 26.00 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------------[2m------[0m[0m 26.58 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------------[2m------[0m[0m 26.59 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------------[2m------[0m[0m 26.61 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-------------------------[2m-----[0m[0m 27.31 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-------------------------[2m-----[0m[0m 28.02 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------------[2m----[0m[0m 28.64 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------------[2m----[0m[0m 28.65 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------------[2m----[0m[0m 28.73 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m--------------------------[2m----[0m[0m 29.34 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m---------------------------[2m---[0m[0m 30.25 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m---------------------------[2m---[0m[0m 30.50 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m----------------------------[2m--[0m[0m 30.73 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m----------------------------[2m--[0m[0m 30.75 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m----------------------------[2m--[0m[0m 31.42 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------------------[2m-[0m[0m 32.22 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m-----------------------------[2m-[0m[0m 32.42 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------------------[2m[0m[0m 33.25 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (6/7)
+[2mscipy               [0m [32m------------------------------[2m[0m[0m 33.90 MiB/34.02 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (6/7)                                                                                                                                   [2K[2mPrepared [1m7 packages[0m [2min 7.61s[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/7] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/7] [2mpluggy==1.6.0                                                                                                                        [0m[2K██░░░░░░░░░░░░░░░░░░ [1/7] [2mpluggy==1.6.0                                                                                                                        [0m[2K██░░░░░░░░░░░░░░░░░░ [1/7] [2miniconfig==2.3.0                                                                                                                     [0m[2K█████░░░░░░░░░░░░░░░ [2/7] [2miniconfig==2.3.0                                                                                                                     [0m[2K█████░░░░░░░░░░░░░░░ [2/7] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [3/7] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [3/7] [2mpytest==8.4.1                                                                                                                        [0m[2K███████████░░░░░░░░░ [4/7] [2mpytest==8.4.1                                                                                                                        [0m[2K███████████░░░░░░░░░ [4/7] [2mpygments==2.19.2                                                                                                                     [0m[2K██████████████░░░░░░ [5/7] [2mpygments==2.19.2                                                                                                                     [0m[2K██████████████░░░░░░ [5/7] [2mnumpy==2.3.3                                                                                                                         [0m[2K█████████████████░░░ [6/7] [2mnumpy==2.3.3                                                                                                                         [0m[2K█████████████████░░░ [6/7] [2mscipy==1.16.2                                                                                                                        [0m[2K████████████████████ [7/7] [2mscipy==1.16.2                                                                                                                        [0m[2K[2mInstalled [1m7 packages[0m [2min 54ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mnumpy[0m[2m==2.3.3[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+ [32m+[39m [1mscipy[0m[2m==1.16.2[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollecting 13 items                                                                                                                                            [0m[1mcollected 13 items                                                                                                                                             [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m                                                                                                                   [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_______________________________________________________________ test_mag_csv_matches_scipy_stft ________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_mag_csv_matches_scipy_stft[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""mag.csv equals STFT (Hann, hop=256, n_fft=1024, center=False) using scipy."""[39;49;00m[90m[39;49;00m
+        [90m# load wav as float32[39;49;00m[90m[39;49;00m
+        sr, data = wavfile.read(Path([33m"[39;49;00m[33m/app/data/clip.wav[39;49;00m[33m"[39;49;00m))[90m[39;49;00m
+        x = data.astype(np.float32) / [94m32767.0[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        mag_csv = _load_mag_csv_array()[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Compute STFT using scipy[39;49;00m[90m[39;49;00m
+        [94mfrom[39;49;00m[90m [39;49;00m[04m[96mscipy[39;49;00m[04m[96m.[39;49;00m[04m[96msignal[39;49;00m[90m [39;49;00m[94mimport[39;49;00m stft [94mas[39;49;00m sp_stft[90m[39;49;00m
+    [90m[39;49;00m
+        f, t, Zxx = sp_stft([90m[39;49;00m
+            x,[90m[39;49;00m
+            fs=sr,[90m[39;49;00m
+            window=[33m"[39;49;00m[33mhann[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            nperseg=[94m1024[39;49;00m,[90m[39;49;00m
+            noverlap=[94m1024[39;49;00m - [94m256[39;49;00m,[90m[39;49;00m
+            nfft=[94m1024[39;49;00m,[90m[39;49;00m
+            boundary=[94mNone[39;49;00m,[90m[39;49;00m
+            padded=[94mFalse[39;49;00m,[90m[39;49;00m
+            return_onesided=[94mTrue[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+        mag_ref = np.abs(Zxx)  [90m# [513, 184][39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94massert[39;49;00m mag_csv.shape == mag_ref.shape == ([94m513[39;49;00m, [94m184[39;49;00m)[90m[39;49;00m
+        [90m# allow tiny CSV float round trip; should be extremely close[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m np.allclose(mag_csv, mag_ref, rtol=[94m1e-5[39;49;00m, atol=[94m1e-6[39;49;00m), ([90m[39;49;00m
+            [33m"[39;49;00m[33mmag.csv does not match Hann STFT magnitude.[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: mag.csv does not match Hann STFT magnitude.[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = <function allclose at 0x7f6eae966430>(array([[2.62021490e-06, 4.07687537e-08, 1.43536886e-06, ...,\n        1.23983818e-06, 2.95692939e-06, 5.30064926e-06],\n..., 4.24848565e-08, ...,\n        1.15654366e-07, 7.46368123e-09, 6.52495515e-08]],\n      shape=(513, 184), dtype=float32), array([[2.35802281e-06, 1.91357685e-08, 1.53700603e-06, ...,\n        2.18486275e-06, 2.66470124e-06, 4.92645813e-06],\n..., 1.95901521e-07, ...,\n        4.84087650e-08, 1.49466359e-08, 1.83335942e-08]],\n      shape=(513, 184), dtype=float32), rtol=1e-05, atol=1e-06)[0m
+[1m[31mE        +    where <function allclose at 0x7f6eae966430> = np.allclose[0m
+
+[1m[31m/tests/test_outputs.py[0m:208: AssertionError
+============================================================================ PASSES ============================================================================
+[32m[1m_____________________________________________________________ test_audioproc_outputs_without_peaks _____________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Generated /app/data/clip.wav (RMS=0.200000)
+Generated /app/data/mag.csv (184 frames, 513 bins)
+[32m[1m_______________________________________________________________ test_audioproc_calls_scipy_stft ________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Generated /app/data/clip.wav (RMS=0.200000)
+Generated /app/data/mag.csv (184 frames, 513 bins)
+[32m[1m___________________________________________________________ test_cli_pipeline_enforces_awk_for_peaks ___________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+PEAKS_ONLY mode: processing mag.csv to peaks.csv
+Generated /app/data/peaks.csv
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_wav_file_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_audioproc_script_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_wav_properties[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_mag_csv_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_mag_csv_structure[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_peaks_csv_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_peaks_csv_structure[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_peaks_accuracy[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_peaks_are_true_top3_and_sorted[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_audioproc_outputs_without_peaks[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_audioproc_calls_scipy_stft[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_cli_pipeline_enforces_awk_for_peaks[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_mag_csv_matches_scipy_stft[0m - AssertionError: mag.csv does not match Hann STFT magnitude.
+[31m================================================================ [31m[1m1 failed[0m, [32m12 passed[0m[31m in 15.58s[0m[31m =================================================================[0m
+[?2004hroot@d02d6c101a95:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@d02d6c101a95:/app# 

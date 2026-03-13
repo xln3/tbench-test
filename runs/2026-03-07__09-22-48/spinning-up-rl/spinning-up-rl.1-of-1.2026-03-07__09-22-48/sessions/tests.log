@@ -1,0 +1,310 @@
+[?2004hroot@4c575145ef63:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@4c575145ef63:/app# clear
+[?2004l[H[J[3J[?2004hroot@4c575145ef63:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+                                              0% [Waiting for headers]0% [Waiting for headers]                        Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [3 InRelease 14.2 kB/126 kB 11%]0% [3 InRelease 89.5 kB/126 kB 71%]                                   0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]21% [Waiting for headers]                         Get:5 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+21% [5 Packages 14.2 kB/2025 kB 1%]                                   23% [5 Packages 113 kB/2025 kB 6%]39% [5 Packages 1000 kB/2025 kB 49%]                                    58% [Working]58% [5 Packages store 0 B] [Waiting for headers]                                                58% [Waiting for headers]                         Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+59% [6 Packages 14.2 kB/2284 kB 1%]                                   60% [6 Packages 116 kB/2284 kB 5%]76% [6 Packages 1002 kB/2284 kB 44%]                                    99% [Working]99% [6 Packages store 0 B]                          100% [Working]              Fetched 4435 kB in 5s (832 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 43%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 30%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 1%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 651ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 57.58 KiB/356.91 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 78.80 KiB/356.91 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 77.32 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m------------------------------[2m[0m[0m 350.80 KiB/356.91 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 461.32 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 509.32 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)
+[2mpygments            [0m [32m------------------------------[2m[0m[0m 1.14 MiB/1.17 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 201ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mpackaging==26.0                                                                                                                      [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpackaging==26.0                                                                                                                      [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 22ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 7 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                         [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m____________________________________________________________________ test_spinup_available _____________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_spinup_available[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that spinup is available and can be run with --help"""[39;49;00m[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33m/app/spinningup/.venv/bin/python[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-m[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mspinup.run[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m--help[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            timeout=[94m30[39;49;00m,[90m[39;49;00m
+            cwd=[33m"[39;49;00m[33m/app/spinningup[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+>       [94massert[39;49;00m result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mspinup.run --help failed: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: spinup.run --help failed: Traceback (most recent call last):[0m
+[1m[31mE           File "<frozen runpy>", line 189, in _run_module_as_main[0m
+[1m[31mE           File "<frozen runpy>", line 112, in _get_module_details[0m
+[1m[31mE           File "/app/spinningup/spinup/__init__.py", line 3, in <module>[0m
+[1m[31mE             import tensorflow as tf[0m
+[1m[31mE         ModuleNotFoundError: No module named 'tensorflow'[0m
+[1m[31mE         [0m
+[1m[31mE       assert 1 == 0[0m
+[1m[31mE        +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-m', 'spinup.run', '--help'], returncode=1, stdout='', std...__init__.py", line 3, in <module>\n    import tensorflow as tf\nModuleNotFoundError: No module named \'tensorflow\'\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:20: AssertionError
+[31m[1m_______________________________________________________________ test_output_directory_structure ________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_output_directory_structure[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that expected output directory and files are created at precise path"""[39;49;00m[90m[39;49;00m
+        [90m# Check for the exact output path as specified in the task[39;49;00m[90m[39;49;00m
+        expected_dir = Path([33m"[39;49;00m[33m/app/spinningup/data/installtest/installtest_s0[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m expected_dir.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mExpected output directory [39;49;00m[33m{[39;49;00mexpected_dir[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Expected output directory /app/spinningup/data/installtest/installtest_s0 not found[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = exists()[0m
+[1m[31mE        +    where exists = PosixPath('/app/spinningup/data/installtest/installtest_s0').exists[0m
+
+[1m[31m/tests/test_outputs.py[0m:31: AssertionError
+[31m[1m____________________________________________________________ test_spinup_module_properly_installed _____________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_spinup_module_properly_installed[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that spinup module is properly installed with required dependencies"""[39;49;00m[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[90m[39;49;00m
+                [33m"[39;49;00m[33m/app/spinningup/.venv/bin/python[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m-c[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mimport spinup; import spinup.algos.pytorch.ppo; import gym; [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33mprint([39;49;00m[33m'[39;49;00m[33mAll imports successful[39;49;00m[33m'[39;49;00m[33m)[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            ],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            timeout=[94m30[39;49;00m,[90m[39;49;00m
+            cwd=[33m"[39;49;00m[33m/app/spinningup[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+>       [94massert[39;49;00m result.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mFailed to import required spinup modules: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: Failed to import required spinup modules: Traceback (most recent call last):[0m
+[1m[31mE           File "<string>", line 1, in <module>[0m
+[1m[31mE           File "/app/spinningup/spinup/__init__.py", line 3, in <module>[0m
+[1m[31mE             import tensorflow as tf[0m
+[1m[31mE         ModuleNotFoundError: No module named 'tensorflow'[0m
+[1m[31mE         [0m
+[1m[31mE       assert 1 == 0[0m
+[1m[31mE        +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-c', "import spinup; import spinup.algos.pytorch.ppo; impo...__init__.py", line 3, in <module>\n    import tensorflow as tf\nModuleNotFoundError: No module named \'tensorflow\'\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:82: AssertionError
+[31m[1m________________________________________________________________ test_hyperparameters_in_config ________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_hyperparameters_in_config[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the experiment was configured with the correct hyperparameters"""[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mjson[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        config_path = Path([33m"[39;49;00m[33m/app/spinningup/data/installtest/installtest_s0/config.json[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+>       [94massert[39;49;00m config_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mConfig file [39;49;00m[33m{[39;49;00mconfig_path[33m}[39;49;00m[33m not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Config file /app/spinningup/data/installtest/installtest_s0/config.json not found[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = exists()[0m
+[1m[31mE        +    where exists = PosixPath('/app/spinningup/data/installtest/installtest_s0/config.json').exists[0m
+
+[1m[31m/tests/test_outputs.py[0m:95: AssertionError
+[31m[1m________________________________________________________________ test_spinup_training_execution ________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_spinup_training_execution[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that full training command runs and creates expected output structure"""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            result = subprocess.run([90m[39;49;00m
+                [[90m[39;49;00m
+                    [33m"[39;49;00m[33m/app/spinningup/.venv/bin/python[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-m[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33mspinup.run[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33mppo[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m--hid[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m[32,32][39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m--env[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33mLunarLander-v2[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m--exp_name[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33minstallrepro[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m--gamma[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m0.999[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m--epochs[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m2[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                ],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+                timeout=[94m600[39;49;00m,  [90m# 10 minutes timeout for training[39;49;00m[90m[39;49;00m
+                cwd=[33m"[39;49;00m[33m/app/spinningup[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+>           [94massert[39;49;00m result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mTraining command failed: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE           AssertionError: Training command failed: Traceback (most recent call last):[0m
+[1m[31mE               File "<frozen runpy>", line 189, in _run_module_as_main[0m
+[1m[31mE               File "<frozen runpy>", line 112, in _get_module_details[0m
+[1m[31mE               File "/app/spinningup/spinup/__init__.py", line 3, in <module>[0m
+[1m[31mE                 import tensorflow as tf[0m
+[1m[31mE             ModuleNotFoundError: No module named 'tensorflow'[0m
+[1m[31mE             [0m
+[1m[31mE           assert 1 == 0[0m
+[1m[31mE            +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-m', 'spinup.run', 'ppo', '--hid', '[32,32]', '--env', 'Lu...__init__.py", line 3, in <module>\n    import tensorflow as tf\nModuleNotFoundError: No module named \'tensorflow\'\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:150: AssertionError
+[31m[1m______________________________________________________________________ test_venv_location ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_venv_location[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that virtual environment is created at the specified location[39;49;00m
+    [33m    /app/spinningup/.venv"""[39;49;00m[90m[39;49;00m
+        venv_path = Path([33m"[39;49;00m[33m/app/spinningup/.venv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        [94massert[39;49;00m venv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mVirtual environment not found at [39;49;00m[33m{[39;49;00mvenv_path[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m venv_path.is_dir(), [33mf[39;49;00m[33m"[39;49;00m[33mExpected [39;49;00m[33m{[39;49;00mvenv_path[33m}[39;49;00m[33m to be a directory[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Check for typical venv structure[39;49;00m[90m[39;49;00m
+        python_bin = venv_path / [33m"[39;49;00m[33mbin[39;49;00m[33m"[39;49;00m / [33m"[39;49;00m[33mpython[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m python_bin.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mPython binary not found at [39;49;00m[33m{[39;49;00mpython_bin[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Verify it's actually a virtual environment by checking it has spinup installed[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            result = subprocess.run([90m[39;49;00m
+                [[96mstr[39;49;00m(python_bin), [33m"[39;49;00m[33m-c[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mimport spinup; print([39;49;00m[33m'[39;49;00m[33mspinup found[39;49;00m[33m'[39;49;00m[33m)[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+                timeout=[94m60[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+>           [94massert[39;49;00m result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mspinup not found in venv at [39;49;00m[33m{[39;49;00mvenv_path[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE           AssertionError: spinup not found in venv at /app/spinningup/.venv[0m
+[1m[31mE           assert 1 == 0[0m
+[1m[31mE            +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-c', "import spinup; print('spinup found')"], returncode=1...k (most recent call last):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'spinup\'\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:176: AssertionError
+[31m[1m_____________________________________________________________________ test_spinup_version ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_spinup_version[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that spinup version 0.2.0 is installed"""[39;49;00m[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[90m[39;49;00m
+                [33m"[39;49;00m[33m/app/spinningup/.venv/bin/python[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m-c[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mimport spinup; print(spinup.__version__)[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            ],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            timeout=[94m60[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+>       [94massert[39;49;00m result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mFailed to get spinup version: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Failed to get spinup version: Traceback (most recent call last):[0m
+[1m[31mE           File "<string>", line 1, in <module>[0m
+[1m[31mE         ModuleNotFoundError: No module named 'spinup'[0m
+[1m[31mE         [0m
+[1m[31mE       assert 1 == 0[0m
+[1m[31mE        +  where 1 = CompletedProcess(args=['/app/spinningup/.venv/bin/python', '-c', 'import spinup; print(spinup.__version__)'], returnco...k (most recent call last):\n  File "<string>", line 1, in <module>\nModuleNotFoundError: No module named \'spinup\'\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:196: AssertionError
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_spinup_available[0m - AssertionError: spinup.run --help failed: Traceback (most recent call last):
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_output_directory_structure[0m - AssertionError: Expected output directory /app/spinningup/data/installtest/installtest_s0 not found
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_spinup_module_properly_installed[0m - AssertionError: Failed to import required spinup modules: Traceback (most recent call last):
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_hyperparameters_in_config[0m - AssertionError: Config file /app/spinningup/data/installtest/installtest_s0/config.json not found
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_spinup_training_execution[0m - AssertionError: Training command failed: Traceback (most recent call last):
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_venv_location[0m - AssertionError: spinup not found in venv at /app/spinningup/.venv
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_spinup_version[0m - AssertionError: Failed to get spinup version: Traceback (most recent call last):
+[31m====================================================================== [31m[1m7 failed[0m[31m in 0.31s[0m[31m =======================================================================[0m
+[?2004hroot@4c575145ef63:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@4c575145ef63:/app# 

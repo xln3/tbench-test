@@ -1,0 +1,6 @@
+['asciinema rec --stdin /logs/agent.cast', 'Enter']
+['clear', 'Enter']
+['source /installed-agent/setup-env.sh', 'Enter']
+["panda --prompt 'Use the sympy python library, \ncompute the definite integral of x**2 * e**x over the interval [0, 1], \nand return the result in simplified exact form (e.g., e - 1). \nSave the result to /app/output.txt and also print it to standard output.'", 'Enter']
+['bash ', '/tests/run-tests.sh', 'Enter']
+['C-d']

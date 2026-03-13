@@ -1,0 +1,46 @@
+[?2004hroot@8220e42356ab:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@8220e42356ab:/app# clear
+[?2004l[H[J[3J[?2004hroot@8220e42356ab:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@8220e42356ab:/app# panda --prompt 'Clean customer data using PostgreSQL. Figure out how to connect to postgres db and 
+[?2004l[?2004h> clean the data inside the db, and then export the cleaned data to a csv file.
+[?2004l[?2004h> 
+[?2004l[?2004h> Steps and rules:
+[?2004l[?2004h> 1. Use the configs inside the docker-compose.yml file to connect to the postgres db.
+[?2004l[?2004h> 2. Create table: customers (id INTEGER, name VARCHAR, email VARCHAR, 
+[?2004l[?2004h> phone VARCHAR, city VARCHAR)
+[?2004l[?2004h> 3. Import customers.csv using \COPY
+[?2004l[?2004h> 4. Clean data: remove duplicates, standardize emails to lowercase, 
+[?2004l[?2004h>    clean phone numbers to only contain digits (no hyphens or symbols)
+[?2004l[?2004h> 5. Export to /app/data/cleaned_customers.csv with headers (ordered by id)
+[?2004l[?2004h> 6. There should not be duplicate rows.
+[?2004l[?2004h> 
+[?2004l[?2004h> Remove rows missing both email AND phone. 
+[?2004l[?2004h> Must use PostgreSQL, there should be a Postgres DB, direct CSV editing or 
+[?2004l[?2004h> using other tools will fail the test. We will test the cleaned data csv against
+[?2004l[?2004h> a baseline csv file, and the cleaned data csv should be identical to the baseline csv.
+[?2004l[?2004h> We will also test the Postgres DB to make sure it contains all the cleaned data.
+[?2004l[?2004h> 
+[?2004l[?2004h> Note:
+[?2004l[?2004h> The test harness will verify that cleaning steps ran inside PostgreSQL by inspecting
+[?2004l[?2004h> pg_stat_statements and/or server logs, in addition to validating data equality. Tests
+[?2004l[?2004h> also look for evidence of client-side \COPY (COPY ... FROM STDIN / COPY ... TO STDOUT)
+[?2004l[?2004h> in pg_stat_statements. Any solution that performs transformations outside PostgreSQL
+[?2004l[?2004h> will fail. You should make sure the db exists and contains all the cleaned data.
+[?2004l[?2004h> '; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Read]
+[Glob]
+[Glob]
+[Glob]
+[Glob]
+[Bash]
+Error: OpenAI API error: 503 Service Unavailable
+upstream connect error or disconnect/reset before headers. reset reason: connection termination
+[?2004hroot@8220e42356ab:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@8220e42356ab:/app# 

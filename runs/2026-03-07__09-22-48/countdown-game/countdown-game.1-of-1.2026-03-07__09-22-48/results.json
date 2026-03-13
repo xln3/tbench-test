@@ -1,0 +1,21 @@
+{
+    "id": "0a30f0d6-b740-4955-b240-91973018312a",
+    "trial_name": "countdown-game.1-of-1.2026-03-07__09-22-48",
+    "task_id": "countdown-game",
+    "instruction": "Given the set of numbers [3, 8, 11, 19, 25, 75] and the target number 462,\nconstruct an arithmetic expression using each number at most once and the operations +, -, *, /,\nwith parentheses as needed, such that it evaluates exactly to the target.\n\nOutput only the valid arithmetic expression in a single line (digits, +, -, *, /, parentheses, spaces) without = or explanations,\nand write the output to '/app/output.txt'.\n",
+    "is_resolved": true,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_output_file_exists": "passed",
+        "test_countdown_expression": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/countdown-game/countdown-game.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T18:07:16.511445+00:00",
+    "trial_ended_at": "2026-03-07T18:09:28.368332+00:00",
+    "agent_started_at": "2026-03-07T18:07:22.941505+00:00",
+    "agent_ended_at": "2026-03-07T18:08:22.888697+00:00",
+    "test_started_at": "2026-03-07T18:08:26.415233+00:00",
+    "test_ended_at": "2026-03-07T18:09:15.588926+00:00"
+}

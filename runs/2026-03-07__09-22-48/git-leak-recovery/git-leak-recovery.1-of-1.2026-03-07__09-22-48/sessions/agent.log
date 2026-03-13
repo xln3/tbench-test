@@ -1,0 +1,70 @@
+[?2004hroot@8785084dcb6a:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@8785084dcb6a:/app# clear
+[?2004l[H[J[3J[?2004hroot@8785084dcb6a:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@8785084dcb6a:/app# panda --prompt 'A secret was accidentally committed to this repository in /app and then removed by rewriting history.
+[?2004l[?2004h> Please 
+[?2004l[?2004h>  1. recover the secret and write it to a /app/secret.txt file. 
+[?2004l[?2004h>  2. clean up the secret in that repo to make sure it cannot be found anywhere in that repo.
+[?2004l[?2004h>  3. make sure irrelevant files and commit messages remain untouched.
+[?2004l[?2004h> Hint:
+[?2004l[?2004h>   - The repo is in /app/repo
+[?2004l[?2004h>   - The secret format is secret[...].
+[?2004l[?2004h>   - There is only one string in the repo with secret[...] format.
+[?2004l[?2004h> '; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Write]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+< function=Bash>
+<parameter=command>
+cd /app/repo && git rev-list --objects --all | git cat-file --batch-check='%(objectname) %(objecttype) %(rest)' 2>/dev/null | grep -E '(blob|tree|commit)' | wc -l
+</parameter>
+<parameter=description>
+Count all git objects
+</parameter>
+</function>
+</tool_call>
+[?2004hroot@8785084dcb6a:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@8785084dcb6a:/app# 

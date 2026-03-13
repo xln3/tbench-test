@@ -1,0 +1,176 @@
+[?2004hroot@f881285f4f4e:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@f881285f4f4e:/app# clear
+[?2004l[H[J[3J[?2004hroot@f881285f4f4e:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]0% [Waiting for headers] [Waiting for headers]                                              Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+                                              0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 42%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 38%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpsycopg2-binary==2.9.9                                                                                                                                        [0m[2K[37m⠼[0m [2mpsycopg2-binary==2.9.9                                                                                                                                        [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m6 packages[0m [2min 708ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m------[2m------------------------[0m[0m 62.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 74.09 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m[2m------------------------------[0m[0m     0 B/2.88 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/6)
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 74.09 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/2.88 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 75.12 KiB/356.91 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 71.47 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m-[2m-----------------------------[0m[0m 60.16 KiB/2.88 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpytest              [0m [32m---------------[2m---------------[0m[0m 171.12 KiB/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 109.93 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m--[2m----------------------------[0m[0m 124.16 KiB/2.88 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpytest              [0m [32m------------------[2m------------[0m[0m 203.12 KiB/356.91 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 205.93 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m--[2m----------------------------[0m[0m 188.16 KiB/2.88 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpytest              [0m [32m------------------------------[2m[0m[0m 351.12 KiB/356.91 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 349.93 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m----[2m--------------------------[0m[0m 348.16 KiB/2.88 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (3/6)
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 349.93 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m----[2m--------------------------[0m[0m 380.16 KiB/2.88 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mpygments            [0m [32m----------------[2m--------------[0m[0m 621.93 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m-------[2m-----------------------[0m[0m 620.16 KiB/2.88 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mpygments            [0m [32m--------------------------[2m----[0m[0m 1005.93 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m------------[2m------------------[0m[0m 1.10 MiB/2.88 MiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mpsycopg2-binary     [0m [32m---------------[2m---------------[0m[0m 1.40 MiB/2.88 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mpsycopg2-binary     [0m [32m--------------------[2m----------[0m[0m 1.89 MiB/2.88 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (4/6)
+[2mpsycopg2-binary     [0m [32m-----------------------------[2m-[0m[0m 2.72 MiB/2.88 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (4/6)                                                                                                                                   [2K[2mPrepared [1m6 packages[0m [2min 771ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2mpackaging==26.0                                                                                                                      [0m[2K██████████░░░░░░░░░░ [3/6] [2mpackaging==26.0                                                                                                                      [0m[2K██████████░░░░░░░░░░ [3/6] [2mpsycopg2-binary==2.9.9                                                                                                               [0m[2K█████████████░░░░░░░ [4/6] [2mpsycopg2-binary==2.9.9                                                                                                               [0m[2K█████████████░░░░░░░ [4/6] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [5/6] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [5/6] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [6/6] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m6 packages[0m [2min 16ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpsycopg2-binary[0m[2m==2.9.9[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0 -- /app/.tbench-testing/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 4 items                                                                                                                                              [0m
+
+../tests/test_outputs.py::test_postgresql_is_running [32mPASSED[0m[32m                                                                                              [ 25%][0m
+../tests/test_outputs.py::test_database_proves_gameplay [31mFAILED[0m[31m                                                                                           [ 50%][0m
+../tests/test_outputs.py::test_no_cheating_via_direct_insert [31mFAILED[0m[31m                                                                                      [ 75%][0m
+../tests/test_outputs.py::test_lord_rust_binary_was_executed [31mFAILED[0m[31m                                                                                      [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m________________________________________________________________ test_database_proves_gameplay _________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:37: in test_database_proves_gameplay
+    [0mcur.execute([33m"[39;49;00m[33mSELECT COUNT(*) FROM players[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   psycopg2.errors.UndefinedTable: relation "players" does not exist[0m
+[1m[31mE   LINE 1: SELECT COUNT(*) FROM players[0m
+[1m[31mE                                ^[0m
+[31m[1m______________________________________________________________ test_no_cheating_via_direct_insert ______________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:158: in test_no_cheating_via_direct_insert
+    [0mcur.execute([33m"[39;49;00m[33mSELECT value FROM game_state WHERE key = [39;49;00m[33m'[39;49;00m[33mlast_reset[39;49;00m[33m'[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   psycopg2.errors.UndefinedTable: relation "game_state" does not exist[0m
+[1m[31mE   LINE 1: SELECT value FROM game_state WHERE key = 'last_reset'[0m
+[1m[31mE                             ^[0m
+
+[33mDuring handling of the above exception, another exception occurred:[0m
+[1m[31m/tests/test_outputs.py[0m:164: in test_no_cheating_via_direct_insert
+    [0mpytest.fail([33m"[39;49;00m[33mgame_state table doesn[39;49;00m[33m'[39;49;00m[33mt exist - game was never run[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   Failed: game_state table doesn't exist - game was never run[0m
+[31m[1m______________________________________________________________ test_lord_rust_binary_was_executed ______________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:208: in test_lord_rust_binary_was_executed
+    [0m[94massert[39;49;00m table [95min[39;49;00m tables, ([90m[39;49;00m
+[1m[31mE   AssertionError: Required table 'players' not found - game never initialized[0m
+[1m[31mE   assert 'players' in [][0m
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_database_proves_gameplay[0m - psycopg2.errors.UndefinedTable: relation "players" does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_no_cheating_via_direct_insert[0m - Failed: game_state table doesn't exist - game was never run
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_lord_rust_binary_was_executed[0m - AssertionError: Required table 'players' not found - game never initialized
+[31m================================================================= [31m[1m3 failed[0m, [32m1 passed[0m[31m in 0.24s[0m[31m ==================================================================[0m
+[?2004hroot@f881285f4f4e:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@f881285f4f4e:/app# 

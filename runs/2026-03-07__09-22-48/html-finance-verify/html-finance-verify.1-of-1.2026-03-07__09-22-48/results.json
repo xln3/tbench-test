@@ -1,0 +1,20 @@
+{
+    "id": "2e94caf0-d7b3-4d13-8773-d5c3294b1e9b",
+    "trial_name": "html-finance-verify.1-of-1.2026-03-07__09-22-48",
+    "task_id": "html-finance-verify",
+    "instruction": "You are given an html file of an earnings report of a company. However, exactly one financial metric in the html file is incorrect. \n\nCan you find that metric and output it in /app/value.txt. \n\nOutput two numbers separated by a comma:\n1. The line number on which the incorrect metric is located\n2. The value of the incorrect metric (just output the number, do not include units)\n\nExample output: 1,17",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_correct_value": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/html-finance-verify/html-finance-verify.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T20:05:19.316611+00:00",
+    "trial_ended_at": "2026-03-07T20:25:56.063909+00:00",
+    "agent_started_at": "2026-03-07T20:05:28.879848+00:00",
+    "agent_ended_at": "2026-03-07T20:25:29.078719+00:00",
+    "test_started_at": "2026-03-07T20:25:32.563483+00:00",
+    "test_ended_at": "2026-03-07T20:25:42.910652+00:00"
+}

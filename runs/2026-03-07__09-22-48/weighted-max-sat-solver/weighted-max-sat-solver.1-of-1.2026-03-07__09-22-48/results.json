@@ -1,0 +1,21 @@
+{
+    "id": "15509034-32ef-40cc-85b2-f7f92ea4fcd8",
+    "trial_name": "weighted-max-sat-solver.1-of-1.2026-03-07__09-22-48",
+    "task_id": "weighted-max-sat-solver",
+    "instruction": "Your job is to solve a weighted max sat instance provided in wcnf format.\n\nA WCNF (Weighted CNF) file is available at `/app/test_instance.wcnf`.\n\nYour task is to:\n1. Create or use a weighted max SAT solver to solve the max SAT instance at `/app/test_instance.wcnf`\n2. Save the optimal objective value to `/app/answer.txt`. For example, if the objective value is 1, run: echo -n \"1\" > answer.txt\n\nYou may use any programming language and any SAT solver library or implement your own solver.\n",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_solution_file_exists": "failed",
+        "test_solution_file_content": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/weighted-max-sat-solver/weighted-max-sat-solver.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T13:53:15.968863+00:00",
+    "trial_ended_at": "2026-03-07T14:14:13.356037+00:00",
+    "agent_started_at": "2026-03-07T13:53:22.421829+00:00",
+    "agent_ended_at": "2026-03-07T14:13:22.622635+00:00",
+    "test_started_at": "2026-03-07T14:13:26.121019+00:00",
+    "test_ended_at": "2026-03-07T14:14:00.094382+00:00"
+}

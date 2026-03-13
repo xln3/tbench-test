@@ -1,0 +1,21 @@
+{
+    "id": "da826135-5172-4199-ac8d-496933023cd7",
+    "trial_name": "gcode-to-text.1-of-1.2026-03-07__02-20-25",
+    "task_id": "gcode-to-text",
+    "instruction": "I have provided a file called text.gcode. This is a gcode file for a Prusa MK4s. I'm trying to print some text onto an existing object. When I run the print, what will the text show? Write the output to /app/out.txt",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_hello_file_exists": "passed",
+        "test_hello_file_content": "failed"
+    },
+    "recording_path": "2026-03-07__02-20-25/gcode-to-text/gcode-to-text.1-of-1.2026-03-07__02-20-25/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-06T18:20:25.862548+00:00",
+    "trial_ended_at": "2026-03-06T18:41:10.682111+00:00",
+    "agent_started_at": "2026-03-06T18:20:36.666116+00:00",
+    "agent_ended_at": "2026-03-06T18:40:36.866301+00:00",
+    "test_started_at": "2026-03-06T18:40:40.341540+00:00",
+    "test_ended_at": "2026-03-06T18:40:57.537877+00:00"
+}

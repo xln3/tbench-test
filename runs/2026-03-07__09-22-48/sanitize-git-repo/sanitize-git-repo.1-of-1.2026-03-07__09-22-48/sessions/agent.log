@@ -1,0 +1,54 @@
+[?2004hroot@9d7a4ceb5c60:/app/dclm# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@9d7a4ceb5c60:/app/dclm# clear
+[?2004l[H[J[3J[?2004hroot@9d7a4ceb5c60:/app/dclm# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@9d7a4ceb5c60:/app/dclm# panda --prompt 'Please help sanitize my github repository "dclm" of all API keys.
+[?2004l[?2004h> 
+[?2004l[?2004h> Please find and remove all such information and replace it with placeholder values as follows:
+[?2004l[?2004h> 
+[?2004l[?2004h> For example:
+[?2004l[?2004h> - If an AWS_ACCESS_KEY_ID is found, replace the actual value with <your-aws-access-key-id>
+[?2004l[?2004h> - If an AWS_SECRET_ACCESS_KEY is found, replace the actual value with <your-aws-secret-access-key>
+[?2004l[?2004h> - If a Github token is found, replace the actual value with <your-github-token>
+[?2004l[?2004h> - If a Huggingface token is found, replace the actual value with <your-huggingface-token>
+[?2004l[?2004h> 
+[?2004l[?2004h> Please ensure that the sensitive values are not present in the repository after the sanitization.
+[?2004l[?2004h> The placeholder values should be consistent across the repository and should be kept. Also, be careful to 
+[?2004l[?2004h> not delete or modify any files that are not contaminated with sensitive information.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Grep]
+[Grep]
+[Grep]
+[Read]
+[Grep]
+[Read]
+[Grep]
+[Grep]
+[TodoWrite]
+[Edit]
+[Grep]
+[Grep]
+[TodoWrite]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Check for any uncommitted changes][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check for any uncommitted changes][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check for any uncommitted changes][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check for any uncommitted changes][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Read]
+[Bash]
+[Grep]
+[Grep]
+[Read]
+[Edit]
+[Grep]
+[Bash]
+[TodoWrite]
+[Write]

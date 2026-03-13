@@ -1,0 +1,41 @@
+root@2d28df303c62:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@2d28df303c62:/app# panda --prompt 'There'"'"'s something wrong with my system-wide python installation - I can'"'"'t seem to install packages with pip.'; t
+mux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+✅ **Fixed!** Your pip installation is now working properly.
+root@2d28df303c62:/app#
+
+
+
+

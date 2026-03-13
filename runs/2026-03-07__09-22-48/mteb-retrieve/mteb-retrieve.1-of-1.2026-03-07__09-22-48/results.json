@@ -1,0 +1,18 @@
+{
+    "id": "eb387be0-6ee4-4f7c-82f6-96da2a5d5f1e",
+    "trial_name": "mteb-retrieve.1-of-1.2026-03-07__09-22-48",
+    "task_id": "mteb-retrieve",
+    "instruction": "Given the query \"terminal-bench\" retrieve the document with the 5th highest cosine similarity among the texts at /app/data.txt, where each line is a separate document, using the bge-small-zh-v1.5 embedding model at revision 7999e1d3359715c523056ef9478215996d62a620. Write the resulting line to /app/result.txt. You have the mteb package at version 1.36.8 installed.",
+    "is_resolved": null,
+    "failure_mode": "test_timeout",
+    "parser_results": null,
+    "recording_path": "2026-03-07__09-22-48/mteb-retrieve/mteb-retrieve.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T09:31:10.599624+00:00",
+    "trial_ended_at": "2026-03-07T09:37:40.051525+00:00",
+    "agent_started_at": "2026-03-07T09:31:18.569040+00:00",
+    "agent_ended_at": "2026-03-07T09:33:36.254964+00:00",
+    "test_started_at": "2026-03-07T09:33:39.751704+00:00",
+    "test_ended_at": "2026-03-07T09:37:39.994374+00:00"
+}

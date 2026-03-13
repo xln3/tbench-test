@@ -1,0 +1,20 @@
+{
+    "id": "cb06e3ee-b3f8-4d09-b6e7-720b5fd359a8",
+    "trial_name": "fix-permissions.1-of-1.2026-03-07__09-22-48",
+    "task_id": "fix-permissions",
+    "instruction": "A script called '/app/process_data.sh' won't run. Figure out what's wrong and fix it so the script can run successfully.",
+    "is_resolved": true,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_script_permissions": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/fix-permissions/fix-permissions.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T19:40:15.603223+00:00",
+    "trial_ended_at": "2026-03-07T19:41:54.657841+00:00",
+    "agent_started_at": "2026-03-07T19:40:21.853214+00:00",
+    "agent_ended_at": "2026-03-07T19:40:54.855620+00:00",
+    "test_started_at": "2026-03-07T19:40:58.349061+00:00",
+    "test_ended_at": "2026-03-07T19:41:41.993148+00:00"
+}

@@ -1,0 +1,1806 @@
+[?2004hroot@1379fd7e577d:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@1379fd7e577d:/app# clear
+[?2004l[H[J[3J[?2004hroot@1379fd7e577d:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@1379fd7e577d:/app# panda --prompt 'Your job is to solve a weighted max sat instance provided in wcnf format.
+[?2004l[?2004h> 
+[?2004l[?2004h> A WCNF (Weighted CNF) file is available at `/app/test_instance.wcnf`.
+[?2004l[?2004h> 
+[?2004l[?2004h> Your task is to:
+[?2004l[?2004h> 1. Create or use a weighted max SAT solver to solve the max SAT instance at `/app/test_instance.wcnf`
+[?2004l[?2004h> 2. Save the optimal objective value to `/app/answer.txt`. For example, if the objective value is 1, run: echo -n "1" > answer.txt
+[?2004l[?2004h> 
+[?2004l[?2004h> You may use any programming language and any SAT solver library or implement your own solver.
+[?2004l[?2004h> '; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[TodoWrite]
+[TodoWrite]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: Create venv and install pysat][39m [2m(0:29 remaining)[22m
+[2m... (8 more lines above)[22m
+[2m[22m
+[2mFailing command: /app/.venv/bin/python3[22m
+[2m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:29 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:28 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (2 more lines above)[22m
+[31m[39m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB][22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:27 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mGet:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB][22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:26 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:25 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mGet:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB][22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mGet:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:24 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB][22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:23 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:22 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mGet:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB][22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:21 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:20 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:19 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:18 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:17 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:16 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:15 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB][22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:13 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:12 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:11 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB][22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:10 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:09 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB][22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:08 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:07 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mGet:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB][22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mGet:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB][22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (17 more lines above)[22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (17 more lines above)[22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:06 remaining)[22m
+[2m... (17 more lines above)[22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (17 more lines above)[22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (17 more lines above)[22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (17 more lines above)[22m
+[2mGet:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB][22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (18 more lines above)[22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (18 more lines above)[22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (18 more lines above)[22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (18 more lines above)[22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (18 more lines above)[22m
+[2mGet:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB][22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:05 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:04 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mGet:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB][22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mGet:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB][22m
+[2mFetched 36.6 MB in 25s (1480 kB/s)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:03 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:02 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (26 more lines above)[22m
+[31m[39m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (27 more lines above)[22m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (27 more lines above)[22m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (27 more lines above)[22m
+[31mWARNING: apt does not have a stable CLI interface. Use with caution in scripts.[39m
+[31m[39m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (29 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (29 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (29 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (29 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:01 remaining)[22m
+[2m... (36 more lines above)[22m
+[2mSuggested packages:[22m
+[2m  python3-doc python3-tk python3-setuptools python3.12-doc binutils[22m
+[2m  binfmt-support[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (41 more lines above)[22m
+[2mThe following packages will be upgraded:[22m
+[2m  libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib python3[22m
+[2m  python3-minimal python3-pkg-resources python3.12 python3.12-minimal[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (41 more lines above)[22m
+[2mThe following packages will be upgraded:[22m
+[2m  libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib python3[22m
+[2m  python3-minimal python3-pkg-resources python3.12 python3.12-minimal[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (41 more lines above)[22m
+[2mThe following packages will be upgraded:[22m
+[2m  libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib python3[22m
+[2m  python3-minimal python3-pkg-resources python3.12 python3.12-minimal[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (41 more lines above)[22m
+[2mThe following packages will be upgraded:[22m
+[2m  libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib python3[22m
+[2m  python3-minimal python3-pkg-resources python3.12 python3.12-minimal[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (41 more lines above)[22m
+[2mThe following packages will be upgraded:[22m
+[2m  libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib python3[22m
+[2m  python3-minimal python3-pkg-resources python3.12 python3.12-minimal[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (45 more lines above)[22m
+[2mNeed to get 8556 kB of archives.[22m
+[2mAfter this operation, 2797 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (45 more lines above)[22m
+[2mNeed to get 8556 kB of archives.[22m
+[2mAfter this operation, 2797 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (45 more lines above)[22m
+[2mNeed to get 8556 kB of archives.[22m
+[2mAfter this operation, 2797 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (45 more lines above)[22m
+[2mNeed to get 8556 kB of archives.[22m
+[2mAfter this operation, 2797 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install python3-venv package][39m [2m(0:00 remaining)[22m
+[2m... (45 more lines above)[22m
+[2mNeed to get 8556 kB of archives.[22m
+[2mAfter this operation, 2797 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠇[39m [33m[Bash: Create venv and install pysat][39m [2m(0:29 remaining)[22m
+[2m... (8 more lines above)[22m
+[2m[22m
+[2mFailing command: /app/.venv/bin/python3[22m
+[2m[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K

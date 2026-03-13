@@ -1,0 +1,61 @@
+$ asciinema rec --stdin /logs/agent.cast
+asciinema: recording asciicast to /logs/agent.cast
+asciinema: press <ctrl-d> or type "exit" when you're done
+Process Process-1:
+                  Traceback (most recent call last):
+                                                      File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+                                                                                                                                        self.run()
+                                                                                                                                                    File "/usr/l
+ib/python3.10/multiprocessing/process.py", line 108, in run
+                                                               self._target(*self._args, **self._kwargs)
+                                                                                                          File "/usr/lib/python3/dist-packages/asciinema/recorde
+r.py", line 77, in run
+                          with self.writer(self.path, metadata=self.metadata, append=self.append) as w:
+                                                                                                         File "/usr/lib/python3/dist-packages/asciinema/asciicas
+t/v2.py", line 99, in __enter__
+                                   self.file = open(self.path, mode=self.mode, buffering=self.buffering)
+                                                                                                        PermissionError: [Errno 13] Permission denied: '/logs/ag
+ent.cast'
+         asciinema: recording finished
+asciinema: asciicast saved to /logs/agent.cast
+$ clear
+$ source /installed-agent/setup-env.sh; tmux wait -S done
+-sh: 3: source: not found
+$ panda --prompt 'Write a bash script (should run with `bash ..`) that will run to monitor idle nodes in a SLURM-based cluster.
+
+Given a partition collect how many nodes are idle every time interval.
+
+The script should output the number of idle nodes every>  time interval.
+Output file should be `/app/protocol_idle.log`.
+The o> utput should be in the format:
+```
+<timest> amp>,<total>,<idle>,<fraction>
+`> ``
+The header should be added only once at the beg> inning of the file.
+where:
+- `<timestamp>` is the current > timestamp in seconds since epoch, formatted as `YYYY-MM-> DD HH:MM:SS`
+- `<total>` is the total num> ber of nodes in the partition
+- `<idle>` is the n> umber of idle nodes in the partition
+->  `<fraction>` is the fraction of idle nodes in the partition (idle/total), should be expressed as a float w> ith 3 decimal places.
+The script should run for 1>  minute and then stop.
+
+The time interval is 10 seconds and the p> artition is `normal`.'; tmux wait -> S done
+> > > > Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+Error: PANDA_API_KEY is required. Set it in panda/.env
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+root@41c21538e653:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 3s (2821 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u14).
+0 upgraded, 0 newly installed, 0 to remove and 30 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 11 packages in 906ms
+Prepared 11 packages in 3.88s
+Installed 11 packages in 59ms
+ + iniconfig==2.3.0
+ + joblib==1.5.3
+ + numpy==2.3.1
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pypdf==5.6.1
+ + pytest==8.4.1
+ + scikit-learn==1.7.0
+ + scipy==1.17.1
+ + threadpoolctl==3.6.0
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 4 items
+
+../tests/test_outputs.py ....                                                                                                                            [100%]
+
+============================================================================ PASSES ============================================================================
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_script_exists
+PASSED ../tests/test_outputs.py::test_script_runs_and_produces_output
+PASSED ../tests/test_outputs.py::test_json_structure
+PASSED ../tests/test_outputs.py::test_field_mapping_logic
+====================================================================== 4 passed in 5.03s =======================================================================
+root@41c21538e653:/app#

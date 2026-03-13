@@ -1,0 +1,133 @@
+[?2004hroot@ccf7a27a07e4:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@ccf7a27a07e4:/app# clear
+[?2004l[H[J[3J[?2004hroot@ccf7a27a07e4:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+0% [1 InRelease 5484 B/256 kB 2%] [Waiting for headers]                                                       Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0% [1 InRelease 14.2 kB/256 kB 6%] [2 InRelease 4036 B/126 kB 3%]0% [1 InRelease 116 kB/256 kB 45%] [2 InRelease 57.6 kB/126 kB 46%]                                                                   0% [2 InRelease 110 kB/126 kB 87%]                                  0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]                        Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [3 InRelease 14.2 kB/126 kB 11%] [Waiting for headers]                                                         Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB]
+0% [3 InRelease 37.3 kB/126 kB 30%] [4 Packages 12.8 kB/1260 kB 1%]                                                                   0% [4 Packages 43.2 kB/1260 kB 3%]0% [Waiting for headers] [4 Packages 49.0 kB/1260 kB 4%]                                                        Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+0% [5 InRelease 5484 B/126 kB 4%] [4 Packages 159 kB/1260 kB 13%]0% [5 InRelease 80.8 kB/126 kB 64%] [4 Packages 634 kB/1260 kB 50%]                                                                   0% [4 Packages 989 kB/1260 kB 78%]                                  0% [Waiting for headers]0% [4 Packages store 0 B] [Waiting for headers]16% [4 Packages store 0 B] [Waiting for headers] [Waiting for headers]                                                                      17% [Waiting for headers] [Waiting for headers]                                               Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+17% [6 Packages 4096 B/19.3 MB 0%] [Waiting for headers]                                                        Get:7 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB]
+17% [6 Packages 14.2 kB/19.3 MB 0%] [7 Packages 14.2 kB/34.8 kB 41%]                                                                    17% [6 Packages 80.8 kB/19.3 MB 0%]17% [7 Packages store 0 B] [6 Packages 80.8 kB/19.3 MB 0%] [Waiting for headers]                                                                                18% [6 Packages 83.7 kB/19.3 MB 0%] [Waiting for headers]                                                         19% [6 Packages 478 kB/19.3 MB 2%] [Waiting for headers]                                                        Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB]
+20% [6 Packages 1021 kB/19.3 MB 5%] [8 Packages 3855 B/1895 kB 0%]29% [6 Packages 5039 kB/19.3 MB 26%] [8 Packages 86.6 kB/1895 kB 5%]48% [6 Packages 13.7 MB/19.3 MB 71%] [8 Packages 388 kB/1895 kB 20%]                                                                               2615 kB/s 7s62% [8 Packages 1051 kB/1895 kB 55%]                                                                                                               2615 kB/s 5s62% [6 Packages store 0 B] [Waiting for headers] [8 Packages 1051 kB/1895 kB 55%]                                                                  2615 kB/s 5s64% [6 Packages store 0 B] [Waiting for headers]                                                                                                   2615 kB/s 5s                                                                                                                                                               Get:9 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+64% [6 Packages store 0 B] [9 Packages 14.2 kB/117 kB 12%] [Waiting for headers]                                                                   2615 kB/s 5s                                                                                                                                                               Get:10 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB]
+64% [6 Packages store 0 B] [9 Packages 20.0 kB/117 kB 17%] [10 Packages 14.2 kB/3300 kB 0%]                                                        2615 kB/s 5s64% [6 Packages store 0 B] [10 Packages 43.2 kB/3300 kB 1%]                                                                                        2615 kB/s 5s65% [Waiting for headers] [10 Packages 49.0 kB/3300 kB 1%]                                                                                         2615 kB/s 5s65% [8 Packages store 0 B] [Waiting for headers] [10 Packages 49.0 kB/3300 kB 1%]                                                                  2615 kB/s 5s65% [Waiting for headers] [10 Packages 72.2 kB/3300 kB 2%]                                                                                         2615 kB/s 5s65% [9 Packages store 0 B] [Waiting for headers] [10 Packages 72.2 kB/3300 kB 2%]                                                                  2615 kB/s 5s66% [Waiting for headers] [10 Packages 72.2 kB/3300 kB 2%]                                                                                         2615 kB/s 5s                                                                                                                                                               Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+66% [11 Packages 14.2 kB/1808 kB 1%] [10 Packages 185 kB/3300 kB 6%]                                                                               2615 kB/s 5s68% [11 Packages 72.2 kB/1808 kB 4%] [10 Packages 743 kB/3300 kB 23%]                                                                              2615 kB/s 4s73% [11 Packages 492 kB/1808 kB 27%] [10 Packages 2832 kB/3300 kB 86%]                                                                             2615 kB/s 3s75% [11 Packages 802 kB/1808 kB 44%]                                                                                                               2615 kB/s 3s75% [10 Packages store 0 B] [11 Packages 802 kB/1808 kB 44%]                                                                                       2615 kB/s 3s77% [10 Packages store 0 B]                                                                                                                        2615 kB/s 3s78% [Waiting for headers]                                                                                                                          2615 kB/s 3s78% [11 Packages store 0 B] [Waiting for headers]                                                                                                  2615 kB/s 3s78% [Waiting for headers]                                                                                                                          2615 kB/s 3s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+78% [12 Packages 14.2 kB/331 kB 4%]                                                                                                                2615 kB/s 3s78% [12 Packages 86.6 kB/331 kB 26%]                                                                                                               2615 kB/s 3s79% [Working]                                                                                                                                      2615 kB/s 3s79% [12 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2615 kB/s 3s79% [Waiting for headers]                                                                                                                          2615 kB/s 3s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+79% [13 Packages 14.2 kB/2025 kB 1%]                                                                                                               2615 kB/s 3s79% [13 Packages 54.8 kB/2025 kB 3%]                                                                                                               2615 kB/s 3s80% [13 Packages 294 kB/2025 kB 15%]                                                                                                               2117 kB/s 3s84% [Working]                                                                                                                                      2117 kB/s 2s84% [13 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2117 kB/s 2s84% [Waiting for headers]                                                                                                                          2117 kB/s 2s                                                                                                                                                               Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+84% [14 Packages 14.2 kB/2284 kB 1%]                                                                                                               2117 kB/s 2s85% [14 Packages 75.1 kB/2284 kB 3%]                                                                                                               2117 kB/s 2s85% [14 Packages 433 kB/2284 kB 19%]                                                                                                               2117 kB/s 2s88% [14 Packages 1556 kB/2284 kB 68%]                                                                                                              2117 kB/s 2s89% [Working]                                                                                                                                      2117 kB/s 1s89% [14 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2117 kB/s 1s90% [Waiting for headers]                                                                                                                          2117 kB/s 1s                                                                                                                                                               Get:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB]
+90% [15 Packages 14.2 kB/38.1 kB 37%]                                                                                                              2117 kB/s 1s90% [Working]                                                                                                                                      2117 kB/s 1s90% [15 Packages store 0 B] [Waiting for headers]                                                                                                  2117 kB/s 1s91% [Waiting for headers]                                                                                                                          2117 kB/s 1s                                                                                                                                                               Get:16 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB]
+91% [16 Packages 14.2 kB/3486 kB 0%]                                                                                                               2117 kB/s 1s91% [16 Packages 80.8 kB/3486 kB 2%]                                                                                                               2117 kB/s 1s91% [16 Packages 397 kB/3486 kB 11%]                                                                                                               2117 kB/s 1s95% [16 Packages 2260 kB/3486 kB 65%]                                                                                                              2117 kB/s 0s98% [Working]                                                                                                                                      2117 kB/s 0s98% [16 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     2117 kB/s 0s99% [Waiting for headers]                                                                                                                          2117 kB/s 0s                                                                                                                                                               Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB]
+99% [17 Packages 14.2 kB/49.5 kB 29%]                                                                                                              2117 kB/s 0s99% [Working]                                                                                                                                      1241 kB/s 0s99% [17 Packages store 0 B] [Connecting to 10.0.0.1 (10.0.0.1)]                                                                                    1241 kB/s 0s99% [Waiting for headers]                                                                                                                          1241 kB/s 0s                                                                                                                                                               Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB]
+99% [18 Packages 14.2 kB/34.6 kB 41%]                                                                                                              1241 kB/s 0s99% [Working]                                                                                                                                      1241 kB/s 0s99% [18 Packages store 0 B]                                                                                                                        1241 kB/s 0s100% [Working]                                                                                                                                     1241 kB/s 0s                                                                                                                                                               Fetched 36.6 MB in 19s (1918 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 46%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 38%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 92%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+Testing dependencies are pre-installed
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 10 items                                                                                                                                             [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[31mF[0m[31m                                                                                                                      [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m____________________________________________________________________ test_https_connection _____________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_https_connection[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that HTTPS connection can be established"""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            [90m# Use curl to test HTTPS connection allowing self-signed certificates[39;49;00m[90m[39;49;00m
+            result = subprocess.run([90m[39;49;00m
+                [[90m[39;49;00m
+                    [33m"[39;49;00m[33mcurl[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-k[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-s[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-o[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m/dev/null[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m-w[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33m%[39;49;00m[33m{http_code}[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                    [33m"[39;49;00m[33mhttps://homeserver.local[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                ],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+                timeout=[94m30[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+>           [94massert[39;49;00m result.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mcurl failed with return code [39;49;00m[33m{[39;49;00mresult.returncode[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: curl failed with return code 35[0m
+[1m[31mE           assert 35 == 0[0m
+[1m[31mE            +  where 35 = CompletedProcess(args=['curl', '-k', '-s', '-o', '/dev/null', '-w', '%{http_code}', 'https://homeserver.local'], returncode=35, stdout='000', stderr='').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:109: AssertionError
+[31m[1m______________________________________________________________________ test_https_content ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_https_content[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that HTTPS serves the correct content"""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            result = subprocess.run([90m[39;49;00m
+                [[33m"[39;49;00m[33mcurl[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-k[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-s[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mhttps://homeserver.local[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+                timeout=[94m30[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+>           [94massert[39;49;00m result.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mcurl failed with return code [39;49;00m[33m{[39;49;00mresult.returncode[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: curl failed with return code 35[0m
+[1m[31mE           assert 35 == 0[0m
+[1m[31mE            +  where 35 = CompletedProcess(args=['curl', '-k', '-s', 'https://homeserver.local'], returncode=35, stdout='', stderr='').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:129: AssertionError
+[31m[1m___________________________________________________________________ test_mock_api_accessible ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_mock_api_accessible[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the mock Google Domains API is accessible (for debugging)"""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            response = requests.get([33m"[39;49;00m[33mhttp://google-api-mock:8080/health[39;49;00m[33m"[39;49;00m, timeout=[94m10[39;49;00m)[90m[39;49;00m
+>           [94massert[39;49;00m response.status_code == [94m200[39;49;00m, [33m"[39;49;00m[33mMock API is not accessible[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE           AssertionError: Mock API is not accessible[0m
+[1m[31mE           assert 502 == 200[0m
+[1m[31mE            +  where 502 = <Response [502]>.status_code[0m
+
+[1m[31m/tests/test_outputs.py[0m:170: AssertionError
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_html_page_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_ssl_certificates_exist[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_nginx_config_has_ssl[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_nginx_is_running[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_port_443_is_listening[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_dns_resolution[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_ssl_certificate_validity[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_https_connection[0m - AssertionError: curl failed with return code 35
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_https_content[0m - AssertionError: curl failed with return code 35
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_mock_api_accessible[0m - AssertionError: Mock API is not accessible
+[31m================================================================= [31m[1m3 failed[0m, [32m7 passed[0m[31m in 0.45s[0m[31m ==================================================================[0m
+[?2004hroot@ccf7a27a07e4:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@ccf7a27a07e4:/app# 

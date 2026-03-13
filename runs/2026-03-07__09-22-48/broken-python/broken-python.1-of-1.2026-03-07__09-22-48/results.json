@@ -1,0 +1,21 @@
+{
+    "id": "24563e10-583f-423c-8b23-8f3a7976be60",
+    "trial_name": "broken-python.1-of-1.2026-03-07__09-22-48",
+    "task_id": "broken-python",
+    "instruction": "There's something wrong with my system-wide python installation - I can't seem to install packages with pip.",
+    "is_resolved": true,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_pip_installed": "passed",
+        "test_pip_install": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/broken-python/broken-python.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T18:01:25.542868+00:00",
+    "trial_ended_at": "2026-03-07T18:05:10.332309+00:00",
+    "agent_started_at": "2026-03-07T18:01:33.416776+00:00",
+    "agent_ended_at": "2026-03-07T18:04:45.688780+00:00",
+    "test_started_at": "2026-03-07T18:04:49.364569+00:00",
+    "test_ended_at": "2026-03-07T18:04:57.423659+00:00"
+}

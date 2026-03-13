@@ -1,0 +1,27 @@
+{
+    "id": "075b863b-87f1-47eb-ac35-6ed6e0981681",
+    "trial_name": "vimscript-vim-quine.1-of-1.2026-03-07__09-22-48",
+    "task_id": "vimscript-vim-quine",
+    "instruction": "Write a Vimscript plugin called \"LayoutQuine\" that can replicate a Vim layout.\n\nCreate a plugin file that implements a `:LayoutQuine {path}` command.\nThis command inspects the current Vim session and recreates the layout.\n\nRequirements:\n1. Create the plugin file `/app/plugin/layout_quine.vim` containing pure Vimscript code\n2. Implement a `:LayoutQuine` command that takes the output file path as an argument\n3. The command must inspect and capture the current Vim session state\n4. The generated Vimscript must recreate the current layout, including:\n   - Tabs: total count and the active tab\n   - Windows per tab: count and split topology / orientation \n   - Buffers shown in each window \n5. Use canonical commands so behavior is testable and consistent: `tabnew`, `vsplit`, `split`,`edit`, `tabnext`, `wincmd`, etc.",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_plugin_exists": "passed",
+        "test_plugin_defines_command": "passed",
+        "test_layout_quine_multi_tab_functionality": "passed",
+        "test_layout_quine_script_format": "passed",
+        "test_layout_quine_recreates_buffer": "passed",
+        "test_layout_quine_split_topology_vertical": "passed",
+        "test_layout_quine_buffers_per_window": "passed",
+        "test_layout_quine_split_topology_horizontal": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/vimscript-vim-quine/vimscript-vim-quine.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T18:51:29.298323+00:00",
+    "trial_ended_at": "2026-03-07T19:01:18.615335+00:00",
+    "agent_started_at": "2026-03-07T18:51:46.042707+00:00",
+    "agent_ended_at": "2026-03-07T19:00:47.054177+00:00",
+    "test_started_at": "2026-03-07T19:00:50.546388+00:00",
+    "test_ended_at": "2026-03-07T19:01:05.974128+00:00"
+}

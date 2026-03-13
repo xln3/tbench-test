@@ -1,0 +1,22 @@
+{
+    "id": "6c43e005-108c-4931-8213-c76e37d5e20a",
+    "trial_name": "shell-deobfuscation.1-of-1.2026-03-07__09-22-48",
+    "task_id": "shell-deobfuscation",
+    "instruction": "You found a suspicious shell script at /app/suspicious_script.sh that appears to be heavily obfuscated. Your task is to deobfuscate it.\n\nRequirements:\n1. Create a file /app/clean.sh containing the exact deobfuscated commands from the suspicious script\n2. Remove execute permissions from both scripts as a safety measure\n3. Do NOT execute either the suspicious script or the clean script during your analysis\n4. The suspicious script must remain in its original location",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_clean_script_exists": "failed",
+        "test_clean_script_content_exact": "failed",
+        "test_no_script_execution": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/shell-deobfuscation/shell-deobfuscation.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T20:37:48.275871+00:00",
+    "trial_ended_at": "2026-03-07T20:40:42.150574+00:00",
+    "agent_started_at": "2026-03-07T20:39:48.445783+00:00",
+    "agent_ended_at": "2026-03-07T20:39:54.263727+00:00",
+    "test_started_at": "2026-03-07T20:39:57.745175+00:00",
+    "test_ended_at": "2026-03-07T20:40:29.182750+00:00"
+}

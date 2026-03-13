@@ -1,0 +1,827 @@
+[?2004hroot@3221fd060991:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@3221fd060991:/app# clear
+[?2004l[H[J[3J[?2004hroot@3221fd060991:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@3221fd060991:/app# panda --prompt 'You are provided with a Turtle file at `/app/university_graph.ttl` containing both the ontology and the instance data for a knowledge graph describing universities, departments, employees, students, classes, and related information.
+[?2004l[?2004h> 
+[?2004l[?2004h> Your task:
+[?2004l[?2004h> - Create a SPARQL query that retrieves all professors meeting all of the following criteria:
+[?2004l[?2004h>     1. They are full professors.
+[?2004l[?2004h>     2. They work in at least one department of a university located in a European Union country.
+[?2004l[?2004h>     3. Among all departments they work in, at least one has more than 10 students currently enrolled in any classes taught in that department.
+[?2004l[?2004h> 
+[?2004l[?2004h> Use 2025-08-16 as the reference (today) date wherever needed.
+[?2004l[?2004h> For the purpose of this task, assume that "European Union countries" refers to the official EU member states as of 2025-08-16 (the reference date).
+[?2004l[?2004h> In the knowledge graph, countries are represented using their two-letter ISO 3166-1 alpha-2 codes as string values.
+[?2004l[?2004h> For example, Greece is represented as "GR".
+[?2004l[?2004h> 
+[?2004l[?2004h> The query should return: 
+[?2004l[?2004h> ```
+[?2004l[?2004h> SELECT ?professorName (GROUP_CONCAT(DISTINCT ?country; separator=", ") AS ?countries)
+[?2004l[?2004h> ``` 
+[?2004l[?2004h> where ?professorName is the professor'"'"'s name, and ?countries lists all countries where the professor currently works in.
+[?2004l[?2004h> Save your query in `/app/solution.sparql`.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Read]
+[Read]
+[Grep]
+[Bash]
+[Write]
+[Grep]
+[Read]
+[Write]
+[Write]
+[Bash]
+[Bash]
+[Bash]
+[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:24 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:23 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:22 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:21 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:20 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:19 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:18 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:17 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:16 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:15 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:14 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:13 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:12 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:11 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:10 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:09 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:08 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:07 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:06 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:05 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:04 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:03 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:02 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:01 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: cd /app && apt-get update -qq && apt-get install -y python3…][39m [2m(0:00 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+[Bash]
+[36m⠧[39m [33m[Bash: cd /app && python3 test_query.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: cd /app && python3 test_query.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: cd /app && python3 test_query.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: cd /app && python3 test_query.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: cd /app && python3 test_query.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: cd /app && python3 test_query.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: cd /app && python3 test_query.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m... (13 more lines above)[22m
+[2m[22m
+[2m================================================================================[22m
+[2mQuery executed successfully![22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Write]
+[Bash]
+[36m⠼[39m [33m[Bash: cd /app && python3 debug_data.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: cd /app && python3 debug_data.py 2>&1][39m [2m(0:29 remaining)[22m
+[2m... (57 more lines above)[22m
+[2mhttp://university.org/ontology/Engineering_LMU -> http://university.org/ontology/LMU -> DE[22m
+[2mhttp://university.org/ontology/Robotics_UPM -> http://university.org/ontology/UPM -> ES[22m
+[2mhttp://university.org/ontology/HistoryAndPhilosophy_NKUA -> http://university.org/ontology/NKUA -> GR[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K<function=Write>
+<parameter=content>
+#!/usr/bin/env python3
+"""Check Marie Dubois specifically"""
+
+from rdflib import Graph, Namespace
+
+# Load the graph
+g = Graph()
+g.parse("/app/university_graph.ttl", format="turtle")
+
+# Define namespaces
+uni = Namespace("http://university.org/ontology/")
+
+print("=== MARIE DUBOIS INFO ===")
+for s, p, o in g.triples((None, uni.hasName, None)):
+    if str(o) == "Marie Dubois":
+        print(f"URI: {s}")
+        print(f"Role: {g.value(s, uni.role)}")
+        print(f"Works in: {list(g.objects(s, uni.worksIn))}")
+        
+        for dept in g.objects(s, uni.worksIn):
+            uni_uri = g.value(dept, uni.belongsTo)
+            country = g.value(uni_uri, uni.locatedInCountry)
+            print(f"  Department: {dept}")
+            print(f"  University: {uni_uri}")
+            print(f"  Country: {country}")
+            
+            # Count students in this department
+            student_count = 0
+            for course, _, _ in g.triples((None, uni.isTaughtIn, dept)):
+                for student, _, _ in g.triples((None, uni.isEnrolledIn, course)):
+                    # Check if student is currently enrolled
+                    enrollment_date = g.value(student, uni.hasEnrollmentDate)
+                    graduation_date = g.value(student, uni.hasGraduationDate)
+                    
+                    # Assume all students with enrollment date <= 2025-08-16 and (no graduation date or graduation date > 2025-08-16) are current
+                    if enrollment_date and str(enrollment_date) <= "2025-08-16":
+                        if not graduation_date or str(graduation_date) > "2025-08-16":
+                            student_count += 1
+            
+            print(f"  Students in department: {student_count}")
+
+print("\n=== MATHEMATICS_SORBONNE STUDENTS ===")
+dept = uni.Mathematics_Sorbonne
+student_set = set()
+for course, _, _ in g.triples((None, uni.isTaughtIn, dept)):
+    print(f"Course: {course}")
+    for student, _, _ in g.triples((None, uni.isEnrolledIn, course)):
+        name = g.value(student, uni.hasName)
+        enrollment_date = g.value(student, uni.hasEnrollmentDate)
+        graduation_date = g.value(student, uni.hasGraduationDate)
+        print(f"  {name}: enrolled={enrollment_date}, graduated={graduation_date}")
+        student_set.add(student)
+
+print(f"\nTotal unique students: {len(student_set)}")
+</parameter>
+<parameter=file_path>
+/app/check_marie.py
+</parameter>
+</function>
+</tool_call>
+[?2004hroot@3221fd060991:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@3221fd060991:/app# 

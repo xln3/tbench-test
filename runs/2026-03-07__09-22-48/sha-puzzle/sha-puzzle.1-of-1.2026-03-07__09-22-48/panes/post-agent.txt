@@ -1,0 +1,40 @@
+root@4e2a42fe67ba:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@4e2a42fe67ba:/app# panda --prompt 'Find a response that satisfies the following condition: the first letter of each word
+> in your answer has to spell, in words, the count of letters in its
+> own sha1 hash. Print it to a file called /app/solution.txt. '; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Write]
+[Bash]
+[Bash]
+[Read]
+[Bash]
+✓ **Solution found and verified!**
+
+The phrase **"the every now"** satisfies the condition:
+
+- **First letters**: t + e + n = "ten"
+- **SHA1 hash**: `dc62e4906bc632349f3191323392b85898d8dd03`
+- **Count of letters (a-f) in hash**: 10
+- **"ten"** equals **10** ✓
+
+The solution has been written to `/app/solution.txt`.
+root@4e2a42fe67ba:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

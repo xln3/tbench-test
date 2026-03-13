@@ -1,0 +1,558 @@
+[?2004hroot@8220e42356ab:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@8220e42356ab:/app# clear
+[?2004l[H[J[3J[?2004hroot@8220e42356ab:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]0% [Waiting for headers] [Waiting for headers]                                              Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0% [Waiting for headers] [1 InRelease 2588 B/126 kB 2%]                                                       Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+0% [2 InRelease 8192 B/256 kB 3%] [1 InRelease 2588 B/126 kB 2%]0% [2 InRelease 73.5 kB/256 kB 29%] [1 InRelease 76.4 kB/126 kB 61%]                                                                    0% [2 InRelease 123 kB/256 kB 48%]0% [2 InRelease 152 kB/256 kB 59%]                                  0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Get:3 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB]
+0% [Waiting for headers] [3 Packages 6999 B/3300 kB 0%]                                                       Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [4 InRelease 14.2 kB/126 kB 11%] [3 Packages 14.2 kB/3300 kB 0%]0% [4 InRelease 57.6 kB/126 kB 46%] [3 Packages 69.3 kB/3300 kB 2%]                                                                   0% [3 Packages 136 kB/3300 kB 4%]0% [Waiting for headers] [3 Packages 168 kB/3300 kB 5%]                                                       Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+0% [5 InRelease 2588 B/126 kB 2%] [3 Packages 278 kB/3300 kB 8%]0% [5 InRelease 54.7 kB/126 kB 43%] [3 Packages 803 kB/3300 kB 24%]                                                                   0% [3 Packages 1136 kB/3300 kB 34%]16% [Waiting for headers] [3 Packages 1261 kB/3300 kB 38%]                                                          Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+18% [6 Packages 9893 B/19.3 MB 0%] [3 Packages 1839 kB/3300 kB 56%]18% [6 Packages 57.7 kB/19.3 MB 0%] [3 Packages 2073 kB/3300 kB 63%]                                                                    20% [6 Packages 249 kB/19.3 MB 1%] [3 Packages 2467 kB/3300 kB 75%]23% [6 Packages 893 kB/19.3 MB 5%]                                                                                                                 768 kB/s 41s23% [3 Packages store 0 B] [6 Packages 893 kB/19.3 MB 5%]                                                                                          768 kB/s 41s25% [6 Packages 1475 kB/19.3 MB 8%] [Waiting for headers]                                                                                          768 kB/s 40s                                                                                                                                                               Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB]
+30% [6 Packages 3933 kB/19.3 MB 20%] [7 Packages 5551 B/1895 kB 0%]                                                                                768 kB/s 37s36% [6 Packages 6738 kB/19.3 MB 35%] [7 Packages 51.9 kB/1895 kB 3%]                                                                               768 kB/s 33s51% [6 Packages 13.1 MB/19.3 MB 68%] [7 Packages 276 kB/1895 kB 15%]                                                                               768 kB/s 25s64% [6 Packages 18.6 MB/19.3 MB 96%] [7 Packages 999 kB/1895 kB 53%]                                                                               768 kB/s 17s66% [7 Packages 1145 kB/1895 kB 60%]                                                                                                               768 kB/s 15s66% [6 Packages store 0 B] [Waiting for headers] [7 Packages 1145 kB/1895 kB 60%]                                                                  768 kB/s 15s68% [6 Packages store 0 B] [Waiting for headers]                                                                                                   768 kB/s 14s                                                                                                                                                               Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+68% [6 Packages store 0 B] [8 Packages 14.2 kB/1808 kB 1%] [Waiting for headers]                                                                   768 kB/s 14s                                                                                                                                                               Get:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB]
+68% [6 Packages store 0 B] [8 Packages 20.0 kB/1808 kB 1%] [9 Packages 9899 B/34.8 kB 28%]                                                         768 kB/s 14s68% [6 Packages store 0 B] [8 Packages 89.5 kB/1808 kB 5%]                                                                                         768 kB/s 14s69% [8 Packages 191 kB/1808 kB 11%] [Waiting for headers]                                                                                          768 kB/s 14s69% [7 Packages store 0 B] [8 Packages 191 kB/1808 kB 11%] [Waiting for headers]                                                                   768 kB/s 14s70% [8 Packages 302 kB/1808 kB 17%] [Waiting for headers]                                                                                          768 kB/s 14s70% [9 Packages store 0 B] [8 Packages 302 kB/1808 kB 17%] [Waiting for headers]                                                                   768 kB/s 14s70% [8 Packages 305 kB/1808 kB 17%] [Waiting for headers]                                                                                          768 kB/s 14s                                                                                                                                                               Get:10 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB]
+70% [8 Packages 444 kB/1808 kB 25%] [10 Packages 3855 B/1260 kB 0%]                                                                                768 kB/s 14s73% [8 Packages 1730 kB/1808 kB 96%] [10 Packages 46.1 kB/1260 kB 4%]                                                                              768 kB/s 12s74% [10 Packages 46.1 kB/1260 kB 4%]                                                                                                               768 kB/s 12s74% [8 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)] [10 Packages 51.9 kB/1260 kB 4%]                                                     768 kB/s 12s74% [Waiting for headers] [10 Packages 101 kB/1260 kB 8%]                                                                                          768 kB/s 12s                                                                                                                                                               Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+75% [11 Packages 2657 B/117 kB 2%] [10 Packages 330 kB/1260 kB 26%]                                                                                768 kB/s 12s77% [11 Packages 60.6 kB/117 kB 52%]                                                                                                               768 kB/s 10s77% [10 Packages store 0 B] [11 Packages 60.6 kB/117 kB 52%]                                                                                       768 kB/s 10s77% [11 Packages 86.6 kB/117 kB 74%]                                                                                                               768 kB/s 10s78% [Working]                                                                                                                                      768 kB/s 10s78% [11 Packages store 0 B]                                                                                                                        768 kB/s 10s78% [Waiting for headers]                                                                                                                          768 kB/s 10s78% [Waiting for headers]                                                                                                                          3834 kB/s 2s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+78% [12 Packages 14.2 kB/331 kB 4%]                                                                                                                3834 kB/s 2s78% [12 Packages 60.6 kB/331 kB 18%]                                                                                                               3834 kB/s 2s79% [12 Packages 268 kB/331 kB 81%]                                                                                                                3834 kB/s 2s79% [Working]                                                                                                                                      3834 kB/s 2s79% [12 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     3834 kB/s 2s79% [Waiting for headers]                                                                                                                          3834 kB/s 2s79% [Waiting for headers]                                                                                                                          3834 kB/s 2s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB]
+79% [13 Packages 5551 B/3486 kB 0%]                                                                                                                3834 kB/s 2s80% [13 Packages 60.6 kB/3486 kB 2%]                                                                                                               3834 kB/s 2s80% [13 Packages 260 kB/3486 kB 7%]                                                                                                                3834 kB/s 1s82% [13 Packages 1286 kB/3486 kB 37%]                                                                                                              3834 kB/s 1s87% [Working]                                                                                                                                      3834 kB/s 1s87% [13 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     3834 kB/s 1s88% [Waiting for headers]                                                                                                                          3834 kB/s 1s                                                                                                                                                               Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB]
+88% [14 Packages 14.2 kB/38.1 kB 37%]                                                                                                              3834 kB/s 1s88% [Working]                                                                                                                                      3834 kB/s 1s88% [14 Packages store 0 B] [Waiting for headers]                                                                                                  3834 kB/s 1s88% [Waiting for headers]                                                                                                                          3834 kB/s 1s88% [Waiting for headers]                                                                                                                          3834 kB/s 1s                                                                                                                                                               Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+88% [15 Packages 12.3 kB/2284 kB 1%]                                                                                                               3834 kB/s 1s88% [15 Packages 43.2 kB/2284 kB 2%]                                                                                                               3834 kB/s 1s89% [15 Packages 158 kB/2284 kB 7%]                                                                                                                 661 kB/s 6s89% [15 Packages 570 kB/2284 kB 25%]                                                                                                                661 kB/s 5s93% [15 Packages 2052 kB/2284 kB 90%]                                                                                                               661 kB/s 3s93% [Working]                                                                                                                                       661 kB/s 3s93% [15 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                      661 kB/s 3s94% [Waiting for headers]                                                                                                                           661 kB/s 3s                                                                                                                                                               Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+94% [16 Packages 14.2 kB/2025 kB 1%]                                                                                                                661 kB/s 3s94% [16 Packages 49.0 kB/2025 kB 2%]                                                                                                                661 kB/s 3s94% [16 Packages 202 kB/2025 kB 10%]                                                                                                                661 kB/s 2s96% [16 Packages 841 kB/2025 kB 42%]                                                                                                                661 kB/s 1s98% [Working]                                                                                                                                       661 kB/s 0s98% [16 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                      661 kB/s 0s99% [Waiting for headers]                                                                                                                           661 kB/s 0s                                                                                                                                                               Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB]
+99% [17 Packages 14.2 kB/49.5 kB 29%]                                                                                                               661 kB/s 0s99% [Working]                                                                                                                                       661 kB/s 0s99% [17 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                      661 kB/s 0s99% [Waiting for headers]                                                                                                                           661 kB/s 0s99% [Waiting for headers]                                                                                                                           661 kB/s 0s                                                                                                                                                               Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB]
+99% [18 Packages 4107 B/34.6 kB 12%]                                                                                                                661 kB/s 0s99% [Working]                                                                                                                                       661 kB/s 0s99% [18 Packages store 0 B]                                                                                                                         661 kB/s 0s100% [Working]                                                                                                                                      661 kB/s 0s                                                                                                                                                               Fetched 36.6 MB in 24s (1521 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 40%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 38%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following NEW packages will be installed:
+  curl
+0 upgraded, 1 newly installed, 0 to remove and 15 not upgraded.
+Need to get 227 kB of archives.
+After this operation, 534 kB of additional disk space will be used.
+0% [Working]0% [Waiting for headers]                        Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+5% [1 curl 14.2 kB/227 kB 6%]18% [1 curl 51.8 kB/227 kB 23%]                               75% [1 curl 211 kB/227 kB 93%]                              100% [Working]              Fetched 227 kB in 2s (134 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package curl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 31825 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpsycopg2-binary==2.9.9                                                                                                                                        [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m6 packages[0m [2min 669ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpytest              [0m [32m------[2m------------------------[0m[0m 60.85 KiB/356.91 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 205.76 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m-[2m-----------------------------[0m[0m 14.04 KiB/2.88 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpytest              [0m [32m------------------------[2m------[0m[0m 284.85 KiB/356.91 KiB
+[2mpygments            [0m [32m-----------[2m-------------------[0m[0m 413.76 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m---[2m---------------------------[0m[0m 222.04 KiB/2.88 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 509.65 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m----[2m--------------------------[0m[0m 318.04 KiB/2.88 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mpygments            [0m [32m---------------------[2m---------[0m[0m 829.76 KiB/1.17 MiB
+[2mpsycopg2-binary     [0m [32m--------[2m----------------------[0m[0m 766.04 KiB/2.88 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mpsycopg2-binary     [0m [32m------------[2m------------------[0m[0m 1.15 MiB/2.88 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mpsycopg2-binary     [0m [32m---------------[2m---------------[0m[0m 1.43 MiB/2.88 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mpsycopg2-binary     [0m [32m-------------------------[2m-----[0m[0m 2.37 MiB/2.88 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/6)                                                                                                                                   [2K[2mPrepared [1m6 packages[0m [2min 348ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2mpackaging==26.0                                                                                                                      [0m[2K██████████░░░░░░░░░░ [3/6] [2mpackaging==26.0                                                                                                                      [0m[2K██████████░░░░░░░░░░ [3/6] [2mpsycopg2-binary==2.9.9                                                                                                               [0m[2K█████████████░░░░░░░ [4/6] [2mpsycopg2-binary==2.9.9                                                                                                               [0m[2K█████████████░░░░░░░ [4/6] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [5/6] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [5/6] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [6/6] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m6 packages[0m [2min 19ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpsycopg2-binary[0m[2m==2.9.9[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 14 items                                                                                                                                             [0m
+
+../tests/test_outputs.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                  [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_________________________________________________________________ test_cleaned_csv_file_exists _________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_cleaned_csv_file_exists[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the cleaned CSV file was created."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+>       [94massert[39;49;00m cleaned_csv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mFile [39;49;00m[33m{[39;49;00mcleaned_csv_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: File /app/data/cleaned_customers.csv does not exist[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = exists()[0m
+[1m[31mE        +    where exists = PosixPath('/app/data/cleaned_customers.csv').exists[0m
+
+[1m[31m/tests/test_outputs.py[0m:19: AssertionError
+[31m[1m_________________________________________________________________ test_cleaned_csv_has_header __________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_cleaned_csv_has_header[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the cleaned CSV has proper headers."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94mwith[39;49;00m [96mopen[39;49;00m(cleaned_csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE       FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'[0m
+
+[1m[31m/tests/test_outputs.py[0m:26: FileNotFoundError
+[31m[1m___________________________________________________________________ test_cleaned_csv_content ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_cleaned_csv_content[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the CSV content has been properly cleaned."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94mwith[39;49;00m [96mopen[39;49;00m(cleaned_csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE       FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'[0m
+
+[1m[31m/tests/test_outputs.py[0m:40: FileNotFoundError
+[31m[1m___________________________________________________________________ test_duplicates_removed ____________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_duplicates_removed[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that duplicate entries have been removed."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94mwith[39;49;00m [96mopen[39;49;00m(cleaned_csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE       FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'[0m
+
+[1m[31m/tests/test_outputs.py[0m:60: FileNotFoundError
+[31m[1m______________________________________________________________________ test_data_quality _______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_data_quality[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that rows with missing critical data have been handled properly."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94mwith[39;49;00m [96mopen[39;49;00m(cleaned_csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE       FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'[0m
+
+[1m[31m/tests/test_outputs.py[0m:80: FileNotFoundError
+[31m[1m______________________________________________________________________ test_phone_format _______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_phone_format[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that phone numbers are properly formatted."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94mwith[39;49;00m [96mopen[39;49;00m(cleaned_csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE       FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'[0m
+
+[1m[31m/tests/test_outputs.py[0m:100: FileNotFoundError
+[31m[1m______________________________________________________________ test_postgres_database_connection _______________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_postgres_database_connection[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that PostgreSQL database is accessible and was used."""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            conn = psycopg2.connect([90m[39;49;00m
+                host=[33m"[39;49;00m[33mdb[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                port=[94m5432[39;49;00m,[90m[39;49;00m
+                user=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                password=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                database=[33m"[39;49;00m[33mcustomers_db[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+            cursor = conn.cursor()[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Check if customers table exists[39;49;00m[90m[39;49;00m
+            cursor.execute([33m"""[39;49;00m[33m[39;49;00m
+    [33m            SELECT EXISTS ([39;49;00m[33m[39;49;00m
+    [33m                SELECT FROM information_schema.tables[39;49;00m[33m[39;49;00m
+    [33m                WHERE table_name = [39;49;00m[33m'[39;49;00m[33mcustomers[39;49;00m[33m'[39;49;00m[33m[39;49;00m
+    [33m            );[39;49;00m[33m[39;49;00m
+    [33m        [39;49;00m[33m"""[39;49;00m)[90m[39;49;00m
+            result = cursor.fetchone()[90m[39;49;00m
+            table_exists = [96mbool[39;49;00m(result [95mand[39;49;00m result[[94m0[39;49;00m])[90m[39;49;00m
+>           [94massert[39;49;00m table_exists, ([90m[39;49;00m
+                [33m"[39;49;00m[33mPostgreSQL [39;49;00m[33m'[39;49;00m[33mcustomers[39;49;00m[33m'[39;49;00m[33m table does not exist - agent may have cheated[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: PostgreSQL 'customers' table does not exist - agent may have cheated[0m
+[1m[31mE           assert False[0m
+
+[1m[31m/tests/test_outputs.py[0m:136: AssertionError
+
+[33mDuring handling of the above exception, another exception occurred:[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_postgres_database_connection[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that PostgreSQL database is accessible and was used."""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            conn = psycopg2.connect([90m[39;49;00m
+                host=[33m"[39;49;00m[33mdb[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                port=[94m5432[39;49;00m,[90m[39;49;00m
+                user=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                password=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                database=[33m"[39;49;00m[33mcustomers_db[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+            cursor = conn.cursor()[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Check if customers table exists[39;49;00m[90m[39;49;00m
+            cursor.execute([33m"""[39;49;00m[33m[39;49;00m
+    [33m            SELECT EXISTS ([39;49;00m[33m[39;49;00m
+    [33m                SELECT FROM information_schema.tables[39;49;00m[33m[39;49;00m
+    [33m                WHERE table_name = [39;49;00m[33m'[39;49;00m[33mcustomers[39;49;00m[33m'[39;49;00m[33m[39;49;00m
+    [33m            );[39;49;00m[33m[39;49;00m
+    [33m        [39;49;00m[33m"""[39;49;00m)[90m[39;49;00m
+            result = cursor.fetchone()[90m[39;49;00m
+            table_exists = [96mbool[39;49;00m(result [95mand[39;49;00m result[[94m0[39;49;00m])[90m[39;49;00m
+            [94massert[39;49;00m table_exists, ([90m[39;49;00m
+                [33m"[39;49;00m[33mPostgreSQL [39;49;00m[33m'[39;49;00m[33mcustomers[39;49;00m[33m'[39;49;00m[33m table does not exist - agent may have cheated[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+            cursor.close()[90m[39;49;00m
+            conn.close()[90m[39;49;00m
+    [90m[39;49;00m
+        [94mexcept[39;49;00m [96mException[39;49;00m [94mas[39;49;00m e:[90m[39;49;00m
+>           [94massert[39;49;00m [94mFalse[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mCannot connect to PostgreSQL database: [39;49;00m[33m{[39;49;00me[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE           AssertionError: Cannot connect to PostgreSQL database: PostgreSQL 'customers' table does not exist - agent may have cheated[0m
+[1m[31mE             assert False[0m
+[1m[31mE           assert False[0m
+
+[1m[31m/tests/test_outputs.py[0m:144: AssertionError
+[31m[1m________________________________________________________________ test_postgres_table_structure _________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_postgres_table_structure[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the PostgreSQL table has correct structure."""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            conn = psycopg2.connect([90m[39;49;00m
+                host=[33m"[39;49;00m[33mdb[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                port=[94m5432[39;49;00m,[90m[39;49;00m
+                user=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                password=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                database=[33m"[39;49;00m[33mcustomers_db[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+            cursor = conn.cursor()[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Check table columns[39;49;00m[90m[39;49;00m
+            cursor.execute([33m"""[39;49;00m[33m[39;49;00m
+    [33m            SELECT column_name, data_type[39;49;00m[33m[39;49;00m
+    [33m            FROM information_schema.columns[39;49;00m[33m[39;49;00m
+    [33m            WHERE table_name = [39;49;00m[33m'[39;49;00m[33mcustomers[39;49;00m[33m'[39;49;00m[33m[39;49;00m
+    [33m            ORDER BY ordinal_position;[39;49;00m[33m[39;49;00m
+    [33m        [39;49;00m[33m"""[39;49;00m)[90m[39;49;00m
+            columns = cursor.fetchall()[90m[39;49;00m
+    [90m[39;49;00m
+            expected_columns = [[90m[39;49;00m
+                ([33m"[39;49;00m[33mid[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33minteger[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33mname[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33memail[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33mphone[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33mcity[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+            ][90m[39;49;00m
+    [90m[39;49;00m
+>           [94massert[39;49;00m [96mlen[39;49;00m(columns) == [94m5[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mExpected 5 columns, got [39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(columns)[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE           AssertionError: Expected 5 columns, got 0[0m
+[1m[31mE           assert 0 == 5[0m
+[1m[31mE            +  where 0 = len([])[0m
+
+[1m[31m/tests/test_outputs.py[0m:176: AssertionError
+
+[33mDuring handling of the above exception, another exception occurred:[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_postgres_table_structure[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the PostgreSQL table has correct structure."""[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            conn = psycopg2.connect([90m[39;49;00m
+                host=[33m"[39;49;00m[33mdb[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                port=[94m5432[39;49;00m,[90m[39;49;00m
+                user=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                password=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                database=[33m"[39;49;00m[33mcustomers_db[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+            cursor = conn.cursor()[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Check table columns[39;49;00m[90m[39;49;00m
+            cursor.execute([33m"""[39;49;00m[33m[39;49;00m
+    [33m            SELECT column_name, data_type[39;49;00m[33m[39;49;00m
+    [33m            FROM information_schema.columns[39;49;00m[33m[39;49;00m
+    [33m            WHERE table_name = [39;49;00m[33m'[39;49;00m[33mcustomers[39;49;00m[33m'[39;49;00m[33m[39;49;00m
+    [33m            ORDER BY ordinal_position;[39;49;00m[33m[39;49;00m
+    [33m        [39;49;00m[33m"""[39;49;00m)[90m[39;49;00m
+            columns = cursor.fetchall()[90m[39;49;00m
+    [90m[39;49;00m
+            expected_columns = [[90m[39;49;00m
+                ([33m"[39;49;00m[33mid[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33minteger[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33mname[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33memail[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33mphone[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                ([33m"[39;49;00m[33mcity[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcharacter varying[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+            ][90m[39;49;00m
+    [90m[39;49;00m
+            [94massert[39;49;00m [96mlen[39;49;00m(columns) == [94m5[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mExpected 5 columns, got [39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(columns)[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [94mfor[39;49;00m i, (col_name, col_type) [95min[39;49;00m [96menumerate[39;49;00m(columns):[90m[39;49;00m
+                expected_name, expected_type = expected_columns[i][90m[39;49;00m
+                [94massert[39;49;00m col_name == expected_name, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mColumn [39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m: expected [39;49;00m[33m{[39;49;00mexpected_name[33m}[39;49;00m[33m, got [39;49;00m[33m{[39;49;00mcol_name[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+                [94massert[39;49;00m expected_type [95min[39;49;00m col_type, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mColumn [39;49;00m[33m{[39;49;00mcol_name[33m}[39;49;00m[33m: expected type containing [39;49;00m[33m{[39;49;00mexpected_type[33m}[39;49;00m[33m, [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mgot [39;49;00m[33m{[39;49;00mcol_type[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+    [90m[39;49;00m
+            cursor.close()[90m[39;49;00m
+            conn.close()[90m[39;49;00m
+    [90m[39;49;00m
+        [94mexcept[39;49;00m [96mException[39;49;00m [94mas[39;49;00m e:[90m[39;49;00m
+>           [94massert[39;49;00m [94mFalse[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mError checking PostgreSQL table structure: [39;49;00m[33m{[39;49;00me[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE           AssertionError: Error checking PostgreSQL table structure: Expected 5 columns, got 0[0m
+[1m[31mE             assert 0 == 5[0m
+[1m[31mE              +  where 0 = len([])[0m
+[1m[31mE           assert False[0m
+
+[1m[31m/tests/test_outputs.py[0m:191: AssertionError
+[31m[1m________________________________________________________________ test_postgres_data_consistency ________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_postgres_data_consistency[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Verify that PostgreSQL customers table is semantically equal to[39;49;00m
+    [33m    cleaned_customers.csv."""[39;49;00m[90m[39;49;00m
+        [90m# --- Fetch from PostgreSQL ---[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m psycopg2.connect([90m[39;49;00m
+            host=[33m"[39;49;00m[33mdb[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            port=[94m5432[39;49;00m,[90m[39;49;00m
+            user=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            password=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            database=[33m"[39;49;00m[33mcustomers_db[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        ) [94mas[39;49;00m conn:[90m[39;49;00m
+            [94mwith[39;49;00m conn.cursor() [94mas[39;49;00m cur:[90m[39;49;00m
+>               cur.execute([33m"[39;49;00m[33mSELECT id, name, email, phone, city FROM customers;[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE               psycopg2.errors.UndefinedTable: relation "customers" does not exist[0m
+[1m[31mE               LINE 1: SELECT id, name, email, phone, city FROM customers;[0m
+[1m[31mE                                                                ^[0m
+
+[1m[31m/tests/test_outputs.py[0m:277: UndefinedTable
+[31m[1m___________________________________________________ test_pg_stat_statements_shows_cleaning_and_copy_queries ____________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_pg_stat_statements_shows_cleaning_and_copy_queries[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Assert that expected SQL statements were executed in Postgres[39;49;00m
+    [33m    (via pg_stat_statements)."""[39;49;00m[90m[39;49;00m
+        [90m# Connect and query pg_stat_statements for our DB[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m psycopg2.connect([90m[39;49;00m
+            host=[33m"[39;49;00m[33mdb[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            port=[94m5432[39;49;00m,[90m[39;49;00m
+            user=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            password=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            database=[33m"[39;49;00m[33mcustomers_db[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        ) [94mas[39;49;00m conn:[90m[39;49;00m
+            [94mwith[39;49;00m conn.cursor() [94mas[39;49;00m cur:[90m[39;49;00m
+                [90m# Require pg_stat_statements to be enabled and installed[39;49;00m[90m[39;49;00m
+                cur.execute([33m"[39;49;00m[33mSHOW shared_preload_libraries;[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+                preload_libs_row = cur.fetchone()[90m[39;49;00m
+                preload_libs = (preload_libs_row[[94m0[39;49;00m] [95mor[39;49;00m [33m"[39;49;00m[33m"[39;49;00m) [94mif[39;49;00m preload_libs_row [94melse[39;49;00m [33m"[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [94massert[39;49;00m [33m"[39;49;00m[33mpg_stat_statements[39;49;00m[33m"[39;49;00m [95min[39;49;00m preload_libs, ([90m[39;49;00m
+                    [33m"[39;49;00m[33mpg_stat_statements not in shared_preload_libraries; [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                    [33m"[39;49;00m[33mensure DB starts with [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                    [33m"[39;49;00m[33m-c shared_preload_libraries=pg_stat_statements [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                    [33m"[39;49;00m[33mand recreate the data volume[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+    [90m[39;49;00m
+                cur.execute([90m[39;49;00m
+                    [33m"[39;49;00m[33mSELECT EXISTS (SELECT 1 FROM pg_extension WHERE extname=[39;49;00m[33m'[39;49;00m[33mpg_stat_statements[39;49;00m[33m'[39;49;00m[33m);[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+                row = cur.fetchone()[90m[39;49;00m
+                has_ext = [96mbool[39;49;00m(row [95mand[39;49;00m row[[94m0[39;49;00m])[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Re-open cursor to read single row properly[39;49;00m[90m[39;49;00m
+            [94mwith[39;49;00m conn.cursor() [94mas[39;49;00m cur2:[90m[39;49;00m
+                cur2.execute([90m[39;49;00m
+                    [33m"[39;49;00m[33mSELECT EXISTS (SELECT 1 FROM pg_extension WHERE extname=[39;49;00m[33m'[39;49;00m[33mpg_stat_statements[39;49;00m[33m'[39;49;00m[33m);[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+                row2 = cur2.fetchone()[90m[39;49;00m
+                has_ext = [96mbool[39;49;00m(row2 [95mand[39;49;00m row2[[94m0[39;49;00m])[90m[39;49;00m
+                [94massert[39;49;00m has_ext, ([90m[39;49;00m
+                    [33m"[39;49;00m[33mpg_stat_statements extension is [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                    [33m"[39;49;00m[33mnot installed (CREATE EXTENSION required)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Read recorded queries for current database[39;49;00m[90m[39;49;00m
+                cur2.execute([90m[39;49;00m
+    [90m                [39;49;00m[33m"""[39;49;00m
+    [33m                SELECT query[39;49;00m
+    [33m                FROM pg_stat_statements pss[39;49;00m
+    [33m                JOIN pg_database d ON d.oid = pss.dbid[39;49;00m
+    [33m                WHERE d.datname = current_database();[39;49;00m
+    [33m                """[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+                queries = [33m"[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m.join([row[[94m0[39;49;00m] [94mfor[39;49;00m row [95min[39;49;00m cur2.fetchall() [94mif[39;49;00m row [95mand[39;49;00m row[[94m0[39;49;00m]])[90m[39;49;00m
+    [90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mre[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        queries_compact = re.sub([33mr[39;49;00m[33m"[39;49;00m[33m\[39;49;00m[33ms+[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m [39;49;00m[33m"[39;49;00m, queries.lower())[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Evidence for UPDATEs[39;49;00m[90m[39;49;00m
+        has_update_phone = ([90m[39;49;00m
+            re.search([90m[39;49;00m
+                [33mr[39;49;00m[33m"[39;49;00m[33mupdate[39;49;00m[33m\[39;49;00m[33ms+.*customers.*set[39;49;00m[33m\[39;49;00m[33ms+.*phone[39;49;00m[33m\[39;49;00m[33ms*=[39;49;00m[33m\[39;49;00m[33ms*regexp_replace[39;49;00m[33m\[39;49;00m[33ms*[39;49;00m[33m\[39;49;00m[33m([39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                queries_compact,[90m[39;49;00m
+            )[90m[39;49;00m
+            [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+        has_update_email = ([90m[39;49;00m
+            re.search([90m[39;49;00m
+                [33mr[39;49;00m[33m"[39;49;00m[33mupdate[39;49;00m[33m\[39;49;00m[33ms+.*customers.*set[39;49;00m[33m\[39;49;00m[33ms+.*email[39;49;00m[33m\[39;49;00m[33ms*=[39;49;00m[33m\[39;49;00m[33ms*lower[39;49;00m[33m\[39;49;00m[33ms*[39;49;00m[33m\[39;49;00m[33m([39;49;00m[33m"[39;49;00m, queries_compact[90m[39;49;00m
+            )[90m[39;49;00m
+            [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Evidence for DELETEs (either duplicate removal USING/delete missing contact WHERE)[39;49;00m[90m[39;49;00m
+        has_delete_using = ([90m[39;49;00m
+            re.search([33mr[39;49;00m[33m"[39;49;00m[33mdelete[39;49;00m[33m\[39;49;00m[33ms+from[39;49;00m[33m\[39;49;00m[33ms+.*customers.*using[39;49;00m[33m\[39;49;00m[33ms+.*customers[39;49;00m[33m"[39;49;00m, queries_compact)[90m[39;49;00m
+            [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+        has_delete_missing = ([90m[39;49;00m
+            re.search([33mr[39;49;00m[33m"[39;49;00m[33mdelete[39;49;00m[33m\[39;49;00m[33ms+from[39;49;00m[33m\[39;49;00m[33ms+.*customers.*where.*(email|phone)[39;49;00m[33m"[39;49;00m, queries_compact)[90m[39;49;00m
+            [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Evidence for client-side \COPY:[39;49;00m[90m[39;49;00m
+        [90m# - Import appears on server as COPY ... FROM STDIN[39;49;00m[90m[39;49;00m
+        [90m# - Export appears on server as COPY ... TO STDOUT (even if client gave a file path)[39;49;00m[90m[39;49;00m
+        has_copy_from_stdin = ([90m[39;49;00m
+            re.search([33mr[39;49;00m[33m"[39;49;00m[33mcopy[39;49;00m[33m\[39;49;00m[33ms+.*customers.*from[39;49;00m[33m\[39;49;00m[33ms+stdin[39;49;00m[33m"[39;49;00m, queries_compact) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+        has_copy_to_stdout = re.search([33mr[39;49;00m[33m"[39;49;00m[33mcopy[39;49;00m[33m\[39;49;00m[33ms+.*to[39;49;00m[33m\[39;49;00m[33ms+stdout[39;49;00m[33m"[39;49;00m, queries_compact) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        missing = [][90m[39;49;00m
+        [94mif[39;49;00m [95mnot[39;49;00m has_update_phone:[90m[39;49;00m
+            missing.append([33m"[39;49;00m[33mUPDATE ... SET phone = regexp_replace(...)[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        [94mif[39;49;00m [95mnot[39;49;00m has_update_email:[90m[39;49;00m
+            missing.append([33m"[39;49;00m[33mUPDATE ... SET email = lower(...)[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        [94mif[39;49;00m [95mnot[39;49;00m (has_delete_using [95mor[39;49;00m has_delete_missing):[90m[39;49;00m
+            missing.append([90m[39;49;00m
+                [33m"[39;49;00m[33mDELETE ... (USING customers ...) or DELETE ... WHERE ... (missing contact)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+        [94mif[39;49;00m [95mnot[39;49;00m has_copy_from_stdin:[90m[39;49;00m
+            missing.append([33m"[39;49;00m[33mCOPY ... FROM STDIN (evidence of client-side [39;49;00m[33m\\[39;49;00m[33mCOPY import)[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        [94mif[39;49;00m [95mnot[39;49;00m has_copy_to_stdout:[90m[39;49;00m
+            missing.append([33m"[39;49;00m[33mCOPY ... TO STDOUT (evidence of client-side [39;49;00m[33m\\[39;49;00m[33mCOPY export)[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m [95mnot[39;49;00m missing, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mExpected SQL evidence not found in pg_stat_statements: [39;49;00m[33m{[39;49;00mmissing[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: Expected SQL evidence not found in pg_stat_statements: ['UPDATE ... SET phone = regexp_replace(...)', 'UPDATE ... SET email = lower(...)', 'DELETE ... (USING customers ...) or DELETE ... WHERE ... (missing contact)', 'COPY ... FROM STDIN (evidence of client-side \\COPY import)', 'COPY ... TO STDOUT (evidence of client-side \\COPY export)'][0m
+[1m[31mE       assert not ['UPDATE ... SET phone = regexp_replace(...)', 'UPDATE ... SET email = lower(...)', 'DELETE ... (USING customers ...) ... ... FROM STDIN (evidence of client-side \\COPY import)', 'COPY ... TO STDOUT (evidence of client-side \\COPY export)'][0m
+
+[1m[31m/tests/test_outputs.py[0m:458: AssertionError
+[31m[1m___________________________________________________________ test_cleaned_csv_equals_customers_v1_csv ___________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_cleaned_csv_equals_customers_v1_csv[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Ensure cleaned_customers.csv content is identical to customers_v1.csv[39;49;00m
+    [33m    (after normalization)."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        baseline_csv_path = Path([33m"[39;49;00m[33m/app/data/customers_v1.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m cleaned_csv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mCSV file does not exist: [39;49;00m[33m{[39;49;00mcleaned_csv_path[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: CSV file does not exist: /app/data/cleaned_customers.csv[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = exists()[0m
+[1m[31mE        +    where exists = PosixPath('/app/data/cleaned_customers.csv').exists[0m
+
+[1m[31m/tests/test_outputs.py[0m:470: AssertionError
+[31m[1m______________________________________________________________ test_cleaned_csv_is_ordered_by_id _______________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_cleaned_csv_is_ordered_by_id[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Ensure cleaned_customers.csv rows are ordered by id ascending[39;49;00m
+    [33m    (as task specifies)."""[39;49;00m[90m[39;49;00m
+        cleaned_csv_path = Path([33m"[39;49;00m[33m/app/data/cleaned_customers.csv[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+>       [94massert[39;49;00m cleaned_csv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mCSV file does not exist: [39;49;00m[33m{[39;49;00mcleaned_csv_path[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: CSV file does not exist: /app/data/cleaned_customers.csv[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = exists()[0m
+[1m[31mE        +    where exists = PosixPath('/app/data/cleaned_customers.csv').exists[0m
+
+[1m[31m/tests/test_outputs.py[0m:524: AssertionError
+[31m[1m____________________________________________________________ test_postgres_matches_customers_v1_csv ____________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_postgres_matches_customers_v1_csv[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Verify PostgreSQL customers table matches customers_v1.csv (ground truth)"""[39;49;00m[90m[39;49;00m
+        [90m# --- Fetch from PostgreSQL ---[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m psycopg2.connect([90m[39;49;00m
+            host=[33m"[39;49;00m[33mdb[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            port=[94m5432[39;49;00m,[90m[39;49;00m
+            user=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            password=[33m"[39;49;00m[33mpostgres[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            database=[33m"[39;49;00m[33mcustomers_db[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        ) [94mas[39;49;00m conn:[90m[39;49;00m
+            [94mwith[39;49;00m conn.cursor() [94mas[39;49;00m cur:[90m[39;49;00m
+>               cur.execute([33m"[39;49;00m[33mSELECT id, name, email, phone, city FROM customers;[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE               psycopg2.errors.UndefinedTable: relation "customers" does not exist[0m
+[1m[31mE               LINE 1: SELECT id, name, email, phone, city FROM customers;[0m
+[1m[31mE                                                                ^[0m
+
+[1m[31m/tests/test_outputs.py[0m:556: UndefinedTable
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_psql_commands_were_used[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_cleaned_csv_file_exists[0m - AssertionError: File /app/data/cleaned_customers.csv does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_cleaned_csv_has_header[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_cleaned_csv_content[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_duplicates_removed[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_data_quality[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_phone_format[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/data/cleaned_customers.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_postgres_database_connection[0m - AssertionError: Cannot connect to PostgreSQL database: PostgreSQL 'customers' table does not exist - agent may have cheated
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_postgres_table_structure[0m - AssertionError: Error checking PostgreSQL table structure: Expected 5 columns, got 0
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_postgres_data_consistency[0m - psycopg2.errors.UndefinedTable: relation "customers" does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_pg_stat_statements_shows_cleaning_and_copy_queries[0m - AssertionError: Expected SQL evidence not found in pg_stat_statements: ['UPDATE ... SET phone = regexp_replace(...)', 'UPDATE ... SET email = lower(...)', ...
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_cleaned_csv_equals_customers_v1_csv[0m - AssertionError: CSV file does not exist: /app/data/cleaned_customers.csv
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_cleaned_csv_is_ordered_by_id[0m - AssertionError: CSV file does not exist: /app/data/cleaned_customers.csv
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_postgres_matches_customers_v1_csv[0m - psycopg2.errors.UndefinedTable: relation "customers" does not exist
+[31m================================================================= [31m[1m13 failed[0m, [32m1 passed[0m[31m in 0.47s[0m[31m =================================================================[0m
+[?2004hroot@8220e42356ab:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@8220e42356ab:/app# 

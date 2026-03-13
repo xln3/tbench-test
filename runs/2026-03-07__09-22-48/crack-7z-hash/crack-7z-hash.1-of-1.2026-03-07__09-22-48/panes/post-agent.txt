@@ -1,0 +1,40 @@
+root@0996fc7b356f:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@0996fc7b356f:/app# panda --prompt 'You need to create a file called "/app/solution.txt" with the word found in "secret_file.txt" in the "secrets.7z" archiv
+e.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Glob]
+[Bash]
+[Bash]
+⠧ [Bash: Install p7zip to extract 7z archives] (0:20 remaining)
+                                                               ... (18 more lines above)
+[Bash]
+⠏ [Bash: Extract secrets.7z archive to /tmp/secrets_extract] (0:00 remaining)
+... (15 more lines above)
+Blocks = 1
+
+
+(esc interrupt | ctrl+o expand)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

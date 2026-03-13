@@ -1,0 +1,22 @@
+{
+    "id": "3c295d56-1d4c-461a-9359-b9754389882a",
+    "trial_name": "extract-safely.1-of-1.2026-03-07__09-22-48",
+    "task_id": "extract-safely",
+    "instruction": "# Extract Solution Safely\n\nYou need to extract the contents of the solution from `/app/archive.tar` and write it to `/app/solution.txt`.",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_system_logs_exists": "passed",
+        "test_no_sensitive_exposure": "passed",
+        "test_solution_found": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/extract-safely/extract-safely.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T13:50:24.706064+00:00",
+    "trial_ended_at": "2026-03-07T13:55:49.244584+00:00",
+    "agent_started_at": "2026-03-07T13:55:13.640225+00:00",
+    "agent_ended_at": "2026-03-07T13:55:21.481204+00:00",
+    "test_started_at": "2026-03-07T13:55:25.016223+00:00",
+    "test_ended_at": "2026-03-07T13:55:36.265552+00:00"
+}

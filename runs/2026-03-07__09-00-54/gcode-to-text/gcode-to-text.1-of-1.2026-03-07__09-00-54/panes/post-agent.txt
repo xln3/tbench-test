@@ -1,0 +1,40 @@
+root@89a3d523ddcf:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@89a3d523ddcf:/app# panda --prompt 'I have provided a file called text.gcode. This is a gcode file for a Prusa MK4s. I'"'"'m trying to print some text onto
+an existing object. When I run the print, what will the text show? Write the output to /app/out.txt'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Write]
+The text that will be printed is:
+
+**"Embossed text"**
+
+This is specified in the gcode file on line 26:
+```
+M486 AEmbossed text
+```
+
+The M486 command is a Prusa-specific annotation command that labels objects or layers, and in this case, it indicates that the printer will create embossed text
+ with the content "Embossed text" on the existing object.
+root@89a3d523ddcf:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+root@85be7afadb3b:/app# bash /tests/run-tests.sh; tmux wait -S done
+Installing test dependencies...
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 4s (2079 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u14).
+0 upgraded, 0 newly installed, 0 to remove and 44 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 10 packages in 655ms
+Prepared 10 packages in 257ms
+Installed 10 packages in 23ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.5
+ + idna==3.11
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+ + requests==2.31.0
+ + urllib3==2.6.3
+Running tests...
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 2 items
+
+../tests/test_outputs.py .F                                                                                                                              [100%]
+
+=========================================================================== FAILURES ===========================================================================
+_________________________________________________________________ test_game_success_detection __________________________________________________________________
+
+    def test_game_success_detection():
+        """
+        Test that detects game success
+        and raises an exception if game was not successful.
+        """
+        # Query maze game status interface (hidden endpoint only tests know about)
+        success_response = requests.get("http://maze:8088/_test/success_check", timeout=10)
+>       assert success_response.status_code == 200, "Success check endpoint should work"
+E       AssertionError: Success check endpoint should work
+E       assert 502 == 200
+E        +  where 502 = <Response [502]>.status_code
+
+/tests/test_outputs.py:27: AssertionError
+============================================================================ PASSES ============================================================================
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_game_failure_detection
+FAILED ../tests/test_outputs.py::test_game_success_detection - AssertionError: Success check endpoint should work
+================================================================= 1 failed, 1 passed in 0.75s ==================================================================
+root@85be7afadb3b:/app#

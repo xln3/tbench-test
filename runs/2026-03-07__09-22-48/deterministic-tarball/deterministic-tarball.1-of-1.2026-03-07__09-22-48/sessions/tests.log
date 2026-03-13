@@ -1,0 +1,1057 @@
+[?2004hroot@b8052e512036:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@b8052e512036:/app# clear
+[?2004l[H[J[3J[?2004hroot@b8052e512036:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]0% [Waiting for headers] [Waiting for headers]                                              Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+                                              0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                                              0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+                                              0% [Waiting for headers]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 39%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 50%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 78%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcurl4t64
+The following NEW packages will be installed:
+  curl libcurl4t64
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 568 kB of archives.
+After this operation, 1481 kB of additional disk space will be used.
+0% [Working]0% [Waiting for headers]                        Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+1% [1 libcurl4t64 4096 B/342 kB 1%]9% [1 libcurl4t64 60.5 kB/342 kB 18%]33% [1 libcurl4t64 237 kB/342 kB 69%]                                     58% [Working]58% [Waiting for headers]                         Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+59% [2 curl 5500 B/227 kB 2%]62% [2 curl 25.8 kB/227 kB 11%]                               100% [Working]              Fetched 568 kB in 3s (177 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcurl4t64:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18686 files and directories currently installed.)
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠴[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠦[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠧[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠇[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠋[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠙[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠴[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠴[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠦[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠧[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠇[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠋[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠙[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠙[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠙[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠙[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠙[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 3.64s[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 5.47 KiB/1.17 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 5.47 KiB/1.17 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 5.47 KiB/1.17 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 5.47 KiB/1.17 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 5.47 KiB/1.17 MiB                                                                                           [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 5.47 KiB/1.17 MiB                                                                                           [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 78.68 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (1/5)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 78.68 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (1/5)
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 78.68 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (3/5)
+[2mpytest              [0m [32m--------------[2m----------------[0m[0m 158.68 KiB/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 141.92 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 333.92 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m---------------[2m---------------[0m[0m 573.92 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m-----------------------[2m-------[0m[0m 909.92 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m------------------------------[2m[0m[0m 1.14 MiB/1.17 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (3/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 561ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 22ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 12 items                                                                                                                                             [0m
+
+../tests/test_outputs.py [32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[31m                                                                                                                    [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m___________________________________________________________________ test_reproducible_builds ___________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_reproducible_builds[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that multiple builds produce identical output"""[39;49;00m[90m[39;49;00m
+        [90m# First build[39;49;00m[90m[39;49;00m
+        env1 = os.environ.copy()[90m[39;49;00m
+        env1[[33m"[39;49;00m[33mSOURCE_DATE_EPOCH[39;49;00m[33m"[39;49;00m] = [33m"[39;49;00m[33m1234567890[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m, env=env1)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'env': {'ASCIINEMA_REC': '1', 'HOME': '/root', 'HOSTNAME': 'b8052e512036', 'HTTPS_PROXY': 'http://10.0.0.1:7890', ...}, 'shell': True, 'stderr': -1, 'stdout': -1, ...}
+process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m_______________________________________________________________________ test_exclusions ________________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_exclusions[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that excluded patterns are not in archive"""[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m______________________________________________________________________ test_line_endings _______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_line_endings[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that text files have normalized line endings"""[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m_______________________________________________________________________ test_permissions _______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_permissions[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that permissions are normalized"""[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m________________________________________________________________________ test_metadata _________________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_metadata[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that metadata is deterministic"""[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m________________________________________________________________________ test_symlinks _________________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_symlinks[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that symlinks are preserved"""[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m____________________________________________________________________ test_source_date_epoch ____________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_source_date_epoch[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that SOURCE_DATE_EPOCH is respected"""[39;49;00m[90m[39;49;00m
+        env = os.environ.copy()[90m[39;49;00m
+        env[[33m"[39;49;00m[33mSOURCE_DATE_EPOCH[39;49;00m[33m"[39;49;00m] = [33m"[39;49;00m[33m1500000000[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m, env=env)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:152: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'env': {'ASCIINEMA_REC': '1', 'HOME': '/root', 'HOSTNAME': 'b8052e512036', 'HTTPS_PROXY': 'http://10.0.0.1:7890', ...}, 'shell': True, 'stderr': -1, 'stdout': -1, ...}
+process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m_________________________________________________________________ test_performance_constraints _________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_performance_constraints[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test performance with many files"""[39;49;00m[90m[39;49;00m
+        many_files = SRC / [33m"[39;49;00m[33mmany[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        SRC.mkdir(parents=[94mTrue[39;49;00m, exist_ok=[94mTrue[39;49;00m)[90m[39;49;00m
+        many_files.mkdir(exist_ok=[94mTrue[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([94m100[39;49;00m):[90m[39;49;00m
+            (many_files / [33mf[39;49;00m[33m"[39;49;00m[33mfile_[39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m.txt[39;49;00m[33m"[39;49;00m).write_text([33mf[39;49;00m[33m"[39;49;00m[33mContent [39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m\n[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        start = time.time()[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:172: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m_____________________________________________________________________ test_0600_exclusion ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_0600_exclusion[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that files with 0600 permissions are excluded"""[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+[31m[1m_______________________________________________________________________ test_edge_cases ________________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_edge_cases[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test handling of edge cases"""[39;49;00m[90m[39;49;00m
+>       sh([33mf[39;49;00m[33m"[39;49;00m[33mcd /app && [39;49;00m[33m{[39;49;00mBUILD_SCRIPT[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:196: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:19: in sh
+    [0m[94mreturn[39;49;00m subprocess.run([90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = True, timeout = None, check = True, popenargs = ('cd /app && /app/build.sh',)
+kwargs = {'shell': True, 'stderr': -1, 'stdout': -1, 'text': True}, process = <Popen: returncode: 1 args: 'cd /app && /app/build.sh'>
+stdout = 'Step 1: Copying source tree with exclusions...\nskipping non-regular file "src/README"\nskipping non-regular file "sr...rmalizing permissions...\nStep 6: Setting deterministic timestamps...\nStep 7: Creating deterministic tar archive...\n'
+stderr = 'zstd: /app/release.tar.zst already exists; stdin is an input - not proceeding.\n', retcode = 1
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mrun[39;49;00m(*popenargs,[90m[39;49;00m
+            [96minput[39;49;00m=[94mNone[39;49;00m, capture_output=[94mFalse[39;49;00m, timeout=[94mNone[39;49;00m, check=[94mFalse[39;49;00m, **kwargs):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Run command with arguments and return a CompletedProcess instance.[39;49;00m
+    [33m[39;49;00m
+    [33m    The returned instance will have attributes args, returncode, stdout and[39;49;00m
+    [33m    stderr. By default, stdout and stderr are not captured, and those attributes[39;49;00m
+    [33m    will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,[39;49;00m
+    [33m    or pass capture_output=True to capture both.[39;49;00m
+    [33m[39;49;00m
+    [33m    If check is True and the exit code was non-zero, it raises a[39;49;00m
+    [33m    CalledProcessError. The CalledProcessError object will have the return code[39;49;00m
+    [33m    in the returncode attribute, and output & stderr attributes if those streams[39;49;00m
+    [33m    were captured.[39;49;00m
+    [33m[39;49;00m
+    [33m    If timeout is given, and the process takes too long, a TimeoutExpired[39;49;00m
+    [33m    exception will be raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    There is an optional argument "input", allowing you to[39;49;00m
+    [33m    pass bytes or a string to the subprocess's stdin.  If you use this argument[39;49;00m
+    [33m    you may not also use the Popen constructor's "stdin" argument, as[39;49;00m
+    [33m    it will be used internally.[39;49;00m
+    [33m[39;49;00m
+    [33m    By default, all communication is in bytes, and therefore any "input" should[39;49;00m
+    [33m    be bytes, and the stdout and stderr will be bytes. If in text mode, any[39;49;00m
+    [33m    "input" should be a string, and stdout and stderr will be strings decoded[39;49;00m
+    [33m    according to locale encoding, or by "encoding" if set. Text mode is[39;49;00m
+    [33m    triggered by setting any of text, encoding, errors or universal_newlines.[39;49;00m
+    [33m[39;49;00m
+    [33m    The other arguments are the same as for the Popen constructor.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96minput[39;49;00m [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdin and input arguments may not both be used.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdin[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m capture_output:[90m[39;49;00m
+            [94mif[39;49;00m kwargs.get([33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m [95mor[39;49;00m kwargs.get([33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m) [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mValueError[39;49;00m([33m'[39;49;00m[33mstdout and stderr arguments may not be used [39;49;00m[33m'[39;49;00m[90m[39;49;00m
+                                 [33m'[39;49;00m[33mwith capture_output.[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstdout[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+            kwargs[[33m'[39;49;00m[33mstderr[39;49;00m[33m'[39;49;00m] = PIPE[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m Popen(*popenargs, **kwargs) [94mas[39;49;00m process:[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                stdout, stderr = process.communicate([96minput[39;49;00m, timeout=timeout)[90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutExpired [94mas[39;49;00m exc:[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [94mif[39;49;00m _mswindows:[90m[39;49;00m
+                    [90m# Windows accumulates the output in a single blocking[39;49;00m[90m[39;49;00m
+                    [90m# read() call run on child threads, with the timeout[39;49;00m[90m[39;49;00m
+                    [90m# being done in a join() on those threads.  communicate()[39;49;00m[90m[39;49;00m
+                    [90m# _after_ kill() is required to collect that and add it[39;49;00m[90m[39;49;00m
+                    [90m# to the exception.[39;49;00m[90m[39;49;00m
+                    exc.stdout, exc.stderr = process.communicate()[90m[39;49;00m
+                [94melse[39;49;00m:[90m[39;49;00m
+                    [90m# POSIX _communicate already populated the output so[39;49;00m[90m[39;49;00m
+                    [90m# far into the TimeoutExpired exception.[39;49;00m[90m[39;49;00m
+                    process.wait()[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            [94mexcept[39;49;00m:  [90m# Including KeyboardInterrupt, communicate handled that.[39;49;00m[90m[39;49;00m
+                process.kill()[90m[39;49;00m
+                [90m# We don't call process.wait() as .__exit__ does that for us.[39;49;00m[90m[39;49;00m
+                [94mraise[39;49;00m[90m[39;49;00m
+            retcode = process.poll()[90m[39;49;00m
+            [94mif[39;49;00m check [95mand[39;49;00m retcode:[90m[39;49;00m
+>               [94mraise[39;49;00m CalledProcessError(retcode, process.args,[90m[39;49;00m
+                                         output=stdout, stderr=stderr)[90m[39;49;00m
+[1m[31mE               subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.[0m
+
+[1m[31m/usr/lib/python3.12/subprocess.py[0m:571: CalledProcessError
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_build_script_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_build_script_creates_archive[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_reproducible_builds[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_exclusions[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_line_endings[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_permissions[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_metadata[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_symlinks[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_source_date_epoch[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_performance_constraints[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_0600_exclusion[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_edge_cases[0m - subprocess.CalledProcessError: Command 'cd /app && /app/build.sh' returned non-zero exit status 1.
+[31m================================================================= [31m[1m10 failed[0m, [32m2 passed[0m[31m in 4.65s[0m[31m =================================================================[0m
+[?2004hroot@b8052e512036:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@b8052e512036:/app# 

@@ -1,0 +1,376 @@
+[?2004hroot@7405a9afab32:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@7405a9afab32:/app# clear
+[?2004l[H[J[3J[?2004hroot@7405a9afab32:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]0% [Waiting for headers] [Waiting for headers]                                              Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+                                              0% [Waiting for headers]                        Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+0% [Waiting for headers]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 42%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 42%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 60%Building dependency tree... Done
+Reading state information... 0% Reading state information... 4%Reading state information... Done
+The following additional packages will be installed:
+  krb5-locales libbrotli1 libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-common libldap2 libnghttp2-14 libpsl5t64
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh-4 publicsuffix
+Suggested packages:
+  krb5-doc krb5-user libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  curl krb5-locales libbrotli1 libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-common libldap2 libnghttp2-14
+  libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh-4 publicsuffix
+0 upgraded, 19 newly installed, 0 to remove and 41 not upgraded.
+Need to get 2411 kB of archives.
+After this operation, 6894 kB of additional disk space will be used.
+0% [Working]0% [Waiting for headers]                        Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.6 [14.8 kB]
+0% [1 krb5-locales 5502 B/14.8 kB 37%]                                      2% [Working]2% [Waiting for headers]                        Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.6 [34.4 kB]
+2% [2 libkrb5support0 9846 B/34.4 kB 29%]                                         4% [Working]4% [Waiting for headers]                        Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.6 [82.0 kB]
+4% [3 libk5crypto3 5501 B/82.0 kB 7%]6% [3 libk5crypto3 54.7 kB/82.0 kB 67%]                                       8% [Working]8% [Waiting for headers]                        Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+8% [4 libkeyutils1 9490 B/9490 B 100%]                                      9% [Working]9% [Waiting for headers]                        Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.6 [348 kB]
+9% [5 libkrb5-3 5500 B/348 kB 2%]11% [5 libkrb5-3 57.6 kB/348 kB 17%]                                    17% [5 libkrb5-3 244 kB/348 kB 70%]                                   21% [Working]21% [Waiting for headers]                                                                                                                         81.0 kB/s 23s                                                                                                                                                               Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.6 [143 kB]
+22% [6 libgssapi-krb5-2 2604 B/143 kB 2%]                                                                                                         81.0 kB/s 23s23% [6 libgssapi-krb5-2 57.6 kB/143 kB 40%]                                                                                                       81.0 kB/s 23s27% [Working]                                                                                                                                     81.0 kB/s 21s27% [Waiting for headers]                                                                                                                         81.0 kB/s 21s                                                                                                                                                               Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.2 [74.3 kB]
+27% [7 libnghttp2-14 5501 B/74.3 kB 7%]                                                                                                           81.0 kB/s 21s29% [7 libnghttp2-14 51.8 kB/74.3 kB 70%]                                                                                                         81.0 kB/s 21s31% [Working]                                                                                                                                     81.0 kB/s 21s31% [Waiting for headers]                                                                                                                         81.0 kB/s 21s                                                                                                                                                               Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+31% [8 libpsl5t64 14.2 kB/57.1 kB 25%]                                                                                                            81.0 kB/s 20s33% [8 libpsl5t64 54.7 kB/57.1 kB 96%]                                                                                                            81.0 kB/s 20s34% [Working]                                                                                                                                     81.0 kB/s 20s34% [Waiting for headers]                                                                                                                         81.0 kB/s 20s                                                                                                                                                               Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 publicsuffix all 20231001.0357-0.1 [129 kB]
+34% [9 publicsuffix 5500 B/129 kB 4%]                                                                                                             81.0 kB/s 20s36% [9 publicsuffix 57.6 kB/129 kB 45%]                                                                                                           81.0 kB/s 19s39% [Working]                                                                                                                                     81.0 kB/s 18s39% [Waiting for headers]                                                                                                                         81.0 kB/s 18s                                                                                                                                                               Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+39% [10 libbrotli1 4096 B/331 kB 1%]                                                                                                              81.0 kB/s 18s41% [10 libbrotli1 54.7 kB/331 kB 17%]                                                                                                            81.0 kB/s 18s47% [10 libbrotli1 226 kB/331 kB 68%]                                                                                                             81.0 kB/s 15s51% [Working]                                                                                                                                       122 kB/s 9s51% [Waiting for headers]                                                                                                                           122 kB/s 9s                                                                                                                                                               Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+52% [11 libsasl2-modules-db 14.2 kB/20.4 kB 70%]                                                                                                    122 kB/s 9s53% [Working]                                                                                                                                       122 kB/s 9s53% [Waiting for headers]                                                                                                                           122 kB/s 9s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+53% [12 libsasl2-2 14.2 kB/53.2 kB 27%]                                                                                                             122 kB/s 9s56% [Working]                                                                                                                                       122 kB/s 9s56% [Waiting for headers]                                                                                                                           122 kB/s 9s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
+56% [13 libldap2 2604 B/198 kB 1%]                                                                                                                  122 kB/s 9s58% [13 libldap2 57.6 kB/198 kB 29%]                                                                                                                122 kB/s 8s63% [Working]                                                                                                                                       122 kB/s 7s63% [Waiting for headers]                                                                                                                           122 kB/s 7s                                                                                                                                                               Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+64% [14 librtmp1 14.2 kB/56.3 kB 25%]                                                                                                               122 kB/s 7s65% [14 librtmp1 51.8 kB/56.3 kB 92%]                                                                                                               122 kB/s 7s66% [Working]                                                                                                                                       122 kB/s 7s66% [Waiting for headers]                                                                                                                           122 kB/s 7s                                                                                                                                                               Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.3 [190 kB]
+66% [15 libssh-4 8396 B/190 kB 4%]                                                                                                                  122 kB/s 7s68% [15 libssh-4 60.5 kB/190 kB 32%]                                                                                                                122 kB/s 6s74% [Working]                                                                                                                                       122 kB/s 5s74% [Waiting for headers]                                                                                                                          82.5 kB/s 8s                                                                                                                                                               Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+74% [16 libcurl4t64 2604 B/342 kB 1%]                                                                                                              82.5 kB/s 8s75% [16 libcurl4t64 51.8 kB/342 kB 15%]                                                                                                            82.5 kB/s 7s80% [16 libcurl4t64 208 kB/342 kB 61%]                                                                                                             82.5 kB/s 5s86% [Working]                                                                                                                                      82.5 kB/s 3s86% [Waiting for headers]                                                                                                                          82.5 kB/s 3s                                                                                                                                                               Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+86% [17 curl 8396 B/227 kB 4%]                                                                                                                     82.5 kB/s 3s88% [17 curl 51.8 kB/227 kB 23%]                                                                                                                   82.5 kB/s 3s93% [17 curl 226 kB/227 kB 100%]                                                                                                                   82.5 kB/s 1s94% [Working]                                                                                                                                      82.5 kB/s 1s94% [Waiting for headers]                                                                                                                          82.5 kB/s 1s                                                                                                                                                               Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-common all 2.6.10+dfsg-0ubuntu0.24.04.1 [32.9 kB]
+95% [18 libldap-common 3806 B/32.9 kB 12%]                                                                                                         82.5 kB/s 1s97% [Working]                                                                                                                                      82.5 kB/s 0s97% [Waiting for headers]                                                                                                                          82.5 kB/s 0s                                                                                                                                                               Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-5ubuntu3.1 [69.9 kB]
+97% [19 libsasl2-modules 14.2 kB/69.9 kB 20%]                                                                                                      82.5 kB/s 0s98% [19 libsasl2-modules 43.1 kB/69.9 kB 62%]                                                                                                      82.5 kB/s 0s100% [Working]                                                                                                                                     82.5 kB/s 0s                                                                                                                                                               Fetched 2411 kB in 23s (103 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package krb5-locales.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6337 files and directories currently installed.)
+Preparing to unpack .../00-krb5-locales_1.20.1-6ubuntu2.6_all.deb ...
+Unpacking krb5-locales (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../01-libkrb5support0_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../02-libk5crypto3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../03-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../04-libkrb5-3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../05-libgssapi-krb5-2_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../06-libnghttp2-14_1.59.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../07-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../08-publicsuffix_20231001.0357-0.1_all.deb ...
+Unpacking publicsuffix (20231001.0357-0.1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../09-libbrotli1_1.1.0-2build2_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2build2) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../10-libsasl2-modules-db_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../11-libsasl2-2_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../12-libldap2_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../13-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../14-libssh-4_0.10.6-2ubuntu0.3_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../15-libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../16-curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../17-libldap-common_2.6.10+dfsg-0ubuntu0.24.04.1_all.deb ...
+Unpacking libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../18-libsasl2-modules_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libbrotli1:amd64 (1.1.0-2build2) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.6) ...
+Setting up libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up publicsuffix (20231001.0357-0.1) ...
+Setting up libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==9.0.2                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==9.0.2                                                                                                                                                 [0m[2K[37m⠸[0m [2mnumpy==2.4.2                                                                                                                                                  [0m[2K[37m⠼[0m [2mnumpy==2.4.2                                                                                                                                                  [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m6 packages[0m [2min 701ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 16.00 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 16.00 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 48.00 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 48.00 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m---------------------------[2m---[0m[0m 64.00 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m---------------------------[2m---[0m[0m 64.00 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 63.25 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m---------------------------[2m---[0m[0m 64.00 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 63.25 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m---------------------------[2m---[0m[0m 64.00 KiB/72.62 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 63.25 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m------------------------------[2m[0m[0m 72.62 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/366.02 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 93.18 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/15.85 MiB                                                                                         [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/366.02 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 93.18 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/15.85 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/366.02 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 93.18 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/15.85 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpytest              [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/366.02 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 109.18 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 32.00 KiB/15.85 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 509.18 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 383.66 KiB/15.85 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/6)
+[2mpygments            [0m [32m--------------[2m----------------[0m[0m 525.18 KiB/1.17 MiB
+[2mnumpy               [0m [32m-[2m-----------------------------[0m[0m 383.66 KiB/15.85 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mpygments            [0m [32m--------------------------[2m----[0m[0m 1021.18 KiB/1.17 MiB
+[2mnumpy               [0m [32m--[2m----------------------------[0m[0m 863.66 KiB/15.85 MiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m---[2m---------------------------[0m[0m 1.12 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m----[2m--------------------------[0m[0m 1.87 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m-----[2m-------------------------[0m[0m 2.59 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m-------[2m-----------------------[0m[0m 3.37 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/6)
+[2mnumpy               [0m [32m--------[2m----------------------[0m[0m 4.11 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m----------[2m--------------------[0m[0m 4.79 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------[2m-------------------[0m[0m 5.48 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m------------[2m------------------[0m[0m 6.30 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m--------------[2m----------------[0m[0m 7.00 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m---------------[2m---------------[0m[0m 7.50 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.66 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.67 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.73 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------[2m-------------[0m[0m 8.95 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-------------------[2m-----------[0m[0m 9.95 MiB/15.85 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m--------------------[2m----------[0m[0m 10.06 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m--------------------[2m----------[0m[0m 10.08 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m---------------------[2m---------[0m[0m 11.08 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m----------------------[2m--------[0m[0m 11.42 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m----------------------[2m--------[0m[0m 11.45 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m----------------------[2m--------[0m[0m 11.47 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m------------------------[2m------[0m[0m 12.33 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-------------------------[2m-----[0m[0m 12.90 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m--------------------------[2m----[0m[0m 13.51 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m---------------------------[2m---[0m[0m 13.86 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m-----------------------------[2m-[0m[0m 14.87 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (5/6)
+[2mnumpy               [0m [32m------------------------------[2m[0m[0m 15.36 MiB/15.85 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (5/6)                                                                                                                                   [2K[2mPrepared [1m6 packages[0m [2min 1.54s[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2mpluggy==1.6.0                                                                                                                        [0m[2K███░░░░░░░░░░░░░░░░░ [1/6] [2mpackaging==26.0                                                                                                                      [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2mpackaging==26.0                                                                                                                      [0m[2K██████░░░░░░░░░░░░░░ [2/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████████░░░░░░░░░░ [3/6] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████████░░░░░░░░░░ [3/6] [2mpytest==9.0.2                                                                                                                        [0m[2K█████████████░░░░░░░ [4/6] [2mpytest==9.0.2                                                                                                                        [0m[2K█████████████░░░░░░░ [4/6] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████░░░░ [5/6] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████░░░░ [5/6] [2mnumpy==2.4.2                                                                                                                         [0m[2K████████████████████ [6/6] [2mnumpy==2.4.2                                                                                                                         [0m[2K[2mInstalled [1m6 packages[0m [2min 50ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mnumpy[0m[2m==2.4.2[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==9.0.2[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /app/.tbench-testing/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 14 items                                                                                                                                             [0m
+
+../tests/test_outputs.py::test_prediction_file_exists [31mFAILED[0m[31m                                                                                             [  7%][0m
+../tests/test_outputs.py::test_prediction_file_format [31mFAILED[0m[31m                                                                                             [ 14%][0m
+../tests/test_outputs.py::test_predictions_are_not_uniform [31mFAILED[0m[31m                                                                                        [ 21%][0m
+../tests/test_outputs.py::test_predictions_are_reasonable [31mFAILED[0m[31m                                                                                         [ 28%][0m
+../tests/test_outputs.py::test_model_comparison_file_exists [31mFAILED[0m[31m                                                                                       [ 35%][0m
+../tests/test_outputs.py::test_model_comparison_format [31mFAILED[0m[31m                                                                                            [ 42%][0m
+../tests/test_outputs.py::test_model_comparison_values [31mFAILED[0m[31m                                                                                            [ 50%][0m
+../tests/test_outputs.py::test_lasso_selection_criteria_differ [31mFAILED[0m[31m                                                                                    [ 57%][0m
+../tests/test_outputs.py::test_predictions_correlate_with_features [31mFAILED[0m[31m                                                                                [ 64%][0m
+../tests/test_outputs.py::test_model_consistency [31mFAILED[0m[31m                                                                                                  [ 71%][0m
+../tests/test_outputs.py::test_data_split_was_performed [31mFAILED[0m[31m                                                                                           [ 78%][0m
+../tests/test_outputs.py::test_reproducible_results [31mFAILED[0m[31m                                                                                               [ 85%][0m
+../tests/test_outputs.py::test_training_validation_split_sizes [31mFAILED[0m[31m                                                                                    [ 92%][0m
+../tests/test_outputs.py::test_r_was_actually_used [31mFAILED[0m[31m                                                                                                [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_________________________________________________________________ test_prediction_file_exists __________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:13: in test_prediction_file_exists
+    [0m[94massert[39;49;00m pred_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mPrediction file [39;49;00m[33m{[39;49;00mpred_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE   AssertionError: Prediction file /app/predv1.txt does not exist[0m
+[1m[31mE   assert False[0m
+[1m[31mE    +  where False = exists()[0m
+[1m[31mE    +    where exists = PosixPath('/app/predv1.txt').exists[0m
+[31m[1m_________________________________________________________________ test_prediction_file_format __________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:20: in test_prediction_file_format
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(pred_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'[0m
+[31m[1m_______________________________________________________________ test_predictions_are_not_uniform _______________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:40: in test_predictions_are_not_uniform
+    [0mpredictions = test_prediction_file_format()[90m[39;49;00m
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31m/tests/test_outputs.py[0m:20: in test_prediction_file_format
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(pred_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'[0m
+[31m[1m_______________________________________________________________ test_predictions_are_reasonable ________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:51: in test_predictions_are_reasonable
+    [0mpredictions = test_prediction_file_format()[90m[39;49;00m
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31m/tests/test_outputs.py[0m:20: in test_prediction_file_format
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(pred_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'[0m
+[31m[1m______________________________________________________________ test_model_comparison_file_exists _______________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:64: in test_model_comparison_file_exists
+    [0m[94massert[39;49;00m csv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mModel comparison file [39;49;00m[33m{[39;49;00mcsv_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE   AssertionError: Model comparison file /app/model_comparison.csv does not exist[0m
+[1m[31mE   assert False[0m
+[1m[31mE    +  where False = exists()[0m
+[1m[31mE    +    where exists = PosixPath('/app/model_comparison.csv').exists[0m
+[31m[1m_________________________________________________________________ test_model_comparison_format _________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:71: in test_model_comparison_format
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'[0m
+[31m[1m_________________________________________________________________ test_model_comparison_values _________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:101: in test_model_comparison_values
+    [0mrows = test_model_comparison_format()[90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31m/tests/test_outputs.py[0m:71: in test_model_comparison_format
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'[0m
+[31m[1m_____________________________________________________________ test_lasso_selection_criteria_differ _____________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:140: in test_lasso_selection_criteria_differ
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'[0m
+[31m[1m___________________________________________________________ test_predictions_correlate_with_features ___________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:168: in test_predictions_correlate_with_features
+    [0mpredictions = test_prediction_file_format()[90m[39;49;00m
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31m/tests/test_outputs.py[0m:20: in test_prediction_file_format
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(pred_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'[0m
+[31m[1m____________________________________________________________________ test_model_consistency ____________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:200: in test_model_consistency
+    [0m[94mwith[39;49;00m [96mopen[39;49;00m(csv_path, [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'[0m
+[31m[1m________________________________________________________________ test_data_split_was_performed _________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:238: in test_data_split_was_performed
+    [0m[94massert[39;49;00m csv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mModel comparison file [39;49;00m[33m{[39;49;00mcsv_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE   AssertionError: Model comparison file /app/model_comparison.csv does not exist[0m
+[1m[31mE   assert False[0m
+[1m[31mE    +  where False = exists()[0m
+[1m[31mE    +    where exists = PosixPath('/app/model_comparison.csv').exists[0m
+[31m[1m__________________________________________________________________ test_reproducible_results ___________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:278: in test_reproducible_results
+    [0m[94massert[39;49;00m csv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mModel comparison file [39;49;00m[33m{[39;49;00mcsv_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE   AssertionError: Model comparison file /app/model_comparison.csv does not exist[0m
+[1m[31mE   assert False[0m
+[1m[31mE    +  where False = exists()[0m
+[1m[31mE    +    where exists = PosixPath('/app/model_comparison.csv').exists[0m
+[31m[1m_____________________________________________________________ test_training_validation_split_sizes _____________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:314: in test_training_validation_split_sizes
+    [0m[94massert[39;49;00m csv_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mModel comparison file [39;49;00m[33m{[39;49;00mcsv_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE   AssertionError: Model comparison file /app/model_comparison.csv does not exist[0m
+[1m[31mE   assert False[0m
+[1m[31mE    +  where False = exists()[0m
+[1m[31mE    +    where exists = PosixPath('/app/model_comparison.csv').exists[0m
+[31m[1m___________________________________________________________________ test_r_was_actually_used ___________________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:384: in test_r_was_actually_used
+    [0m[94massert[39;49;00m [96mlen[39;49;00m(r_evidence) > [94m0[39;49;00m, msg[90m[39;49;00m
+[1m[31mE   AssertionError: No evidence of R execution found - task requires R implementation[0m
+[1m[31mE   assert 0 > 0[0m
+[1m[31mE    +  where 0 = len([])[0m
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_prediction_file_exists[0m - AssertionError: Prediction file /app/predv1.txt does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_prediction_file_format[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_predictions_are_not_uniform[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_predictions_are_reasonable[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_model_comparison_file_exists[0m - AssertionError: Model comparison file /app/model_comparison.csv does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_model_comparison_format[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_model_comparison_values[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_lasso_selection_criteria_differ[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_predictions_correlate_with_features[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/predv1.txt'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_model_consistency[0m - FileNotFoundError: [Errno 2] No such file or directory: '/app/model_comparison.csv'
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_data_split_was_performed[0m - AssertionError: Model comparison file /app/model_comparison.csv does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_reproducible_results[0m - AssertionError: Model comparison file /app/model_comparison.csv does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_training_validation_split_sizes[0m - AssertionError: Model comparison file /app/model_comparison.csv does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_r_was_actually_used[0m - AssertionError: No evidence of R execution found - task requires R implementation
+[31m====================================================================== [31m[1m14 failed[0m[31m in 0.66s[0m[31m ======================================================================[0m
+[?2004hroot@7405a9afab32:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@7405a9afab32:/app# 

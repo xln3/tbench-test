@@ -1,0 +1,162 @@
+root@3b584b75b3e8:/home/docker# bash /tests/run-tests.sh; tmux wait -S done
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libapparmor1 libcurl4t64
+The following NEW packages will be installed:
+  curl libapparmor1 libcurl4t64 sudo
+0 upgraded, 4 newly installed, 0 to remove and 24 not upgraded.
+Need to get 1566 kB of archives.
+After this operation, 5150 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.5 [50.5 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 sudo amd64 1.9.15p5-3ubuntu5.24.04.1 [948 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+Fetched 1566 kB in 8s (208 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libapparmor1:amd64.
+(Reading database ... 18474 files and directories currently installed.)
+Preparing to unpack .../libapparmor1_4.0.1really4.0.1-0ubuntu0.24.04.5_amd64.deb ...
+Unpacking libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.5) ...
+Selecting previously unselected package sudo.
+Preparing to unpack .../sudo_1.9.15p5-3ubuntu5.24.04.1_amd64.deb ...
+Unpacking sudo (1.9.15p5-3ubuntu5.24.04.1) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.5) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up sudo (1.9.15p5-3ubuntu5.24.04.1) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 5 packages in 973ms
+Prepared 5 packages in 5.10s
+Installed 5 packages in 20ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 1 package in 2.00s
+Prepared 1 package in 7.23s
+Installed 1 package in 11ms
+ + pillow==11.1.0
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 1 package in 2.65s
+Prepared 1 package in 6.95s
+Installed 1 package in 42ms
+ + numpy==2.3.1
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 9 packages in 1.46s
+Prepared 6 packages in 9.05s
+Installed 6 packages in 51ms
+ + imageio==2.37.2
+ + lazy-loader==0.5
+ + networkx==3.6.1
+ + scikit-image==0.25.0
+ + scipy==1.17.1
+ + tifffile==2026.3.3
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 2 items
+
+../../tests/test_outputs.py FF                                                                                                                           [100%]
+
+=========================================================================== FAILURES ===========================================================================
+___________________________________________________________________ test_osmesa_is_runnable ____________________________________________________________________
+
+    def test_osmesa_is_runnable():
+        """
+        Test that the PyOpenGL OSMesa binding can create a context.
+        Execute as docker user.
+        """
+>       interp = _read_python_interpreter()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:116:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def _read_python_interpreter() -> Path:
+        """
+        Read the Python interpreter path as the docker user.
+        """
+        # Check file existence as docker user
+        result = _run_as_docker_user(
+            ["test", "-f", str(DOCKER_INTERPRETER_FILE)], capture_output=True
+        )
+>       assert result.returncode == 0, (
+            f"Interpreter pointer file {DOCKER_INTERPRETER_FILE}"
+            "does not exist or is not accessible by docker user"
+        )
+E       AssertionError: Interpreter pointer file /home/docker/python_interpreterdoes not exist or is not accessible by docker user
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['sudo', '-u', 'docker', 'test', '-f', '/home/docker/python_interpreter'], returncode=1, stdout=b'', stderr=b'').ret
+urncode
+
+/tests/test_outputs.py:37: AssertionError
+_______________________________________________ test_duck_script_produces_expected_images_with_saved_interpreter _______________________________________________
+
+    def test_duck_script_produces_expected_images_with_saved_interpreter():
+        """
+        Use the saved interpreter to run /home/docker/duck.py (with OSMesa),
+        then compare the freshly produced images to ground truth (byte-for-byte).
+        This guarantees the interpreter in the pointer file is the one that rendered.
+        Execute as docker user.
+        """
+>       interp = _read_python_interpreter()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/tests/test_outputs.py:134:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def _read_python_interpreter() -> Path:
+        """
+        Read the Python interpreter path as the docker user.
+        """
+        # Check file existence as docker user
+        result = _run_as_docker_user(
+            ["test", "-f", str(DOCKER_INTERPRETER_FILE)], capture_output=True
+        )
+>       assert result.returncode == 0, (
+            f"Interpreter pointer file {DOCKER_INTERPRETER_FILE}"
+            "does not exist or is not accessible by docker user"
+        )
+E       AssertionError: Interpreter pointer file /home/docker/python_interpreterdoes not exist or is not accessible by docker user
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['sudo', '-u', 'docker', 'test', '-f', '/home/docker/python_interpreter'], returncode=1, stdout=b'', stderr=b'').ret
+urncode
+
+/tests/test_outputs.py:37: AssertionError
+=================================================================== short test summary info ====================================================================
+FAILED ../../tests/test_outputs.py::test_osmesa_is_runnable - AssertionError: Interpreter pointer file /home/docker/python_interpreterdoes not exist or is not a
+ccessible by docker user
+FAILED ../../tests/test_outputs.py::test_duck_script_produces_expected_images_with_saved_interpreter - AssertionError: Interpreter pointer file /home/docker/pyt
+hon_interpreterdoes not exist or is not accessible by docker user
+====================================================================== 2 failed in 1.37s =======================================================================
+root@3b584b75b3e8:/home/docker#

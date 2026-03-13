@@ -1,0 +1,11 @@
+Processing tasks in duration order (longest first):
++-----+----------------+------------+------------+
+|   # | Task Name      | Duration   | Source     |
++=====+================+============+============+
+|   1 | eval-mteb.hard | 17m 0s     | calculated |
++-----+----------------+------------+------------+
+Total tasks: 1
+Starting harness run
+Run ID: 2026-03-05__20-30-23
+Running task: eval-mteb.hard
+Running docker compose command: docker compose -p eval-mteb-hard-1-of-1-2026-03-05__20-30-23 -f /home/xln/.cache/terminal-bench/terminal-bench-core/0.1.1/eval-mteb.hard/docker-compose.yaml build

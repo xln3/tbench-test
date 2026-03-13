@@ -1,0 +1,68 @@
+(terminal-bench) root@0ce811fe1c38:/app# bash /tests/run-tests.sh; tmux wait -S done
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting exceptiongroup>=1 (from pytest==8.4.1)
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=20 in /root/miniconda3/envs/terminal-bench/lib/python3.10/site-packages (from pytest==8.4.1) (25.0)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest==8.4.1)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting tomli>=1 (from pytest==8.4.1)
+  Downloading tomli-2.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1->pytest==8.4.1)
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 14.0 MB/s  0:00:00
+Downloading tomli-2.4.0-py3-none-any.whl (14 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Installing collected packages: typing-extensions, tomli, pygments, pluggy, iniconfig, exceptiongroup, pytest
+Successfully installed exceptiongroup-1.3.1 iniconfig-2.3.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.1 tomli-2.4.0 typing-extensions-4.15.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your syst
+em unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you a
+re doing and want to suppress this warning.
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.10.19, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 7 items
+
+../tests/test_outputs.py .......                                                                                                                         [100%]
+
+============================================================================ PASSES ============================================================================
+__________________________________________________________________ test_zsh_is_default_shell ___________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] getent passwd root result: root:x:0:0:root:/root:/usr/bin/zsh
+__________________________________________________________________ test_ohmyzsh_is_installed ___________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] omz version result: master (1e3abc1)
+______________________________________________________________________ test_ohmyzsh_theme ______________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] ZSH_THEME result: apple
+________________________________________________________________ test_ohmyzsh_installed_plugins ________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] plugins result: git z zsh-autosuggestions zsh-syntax-highlighting
+______________________________________________________________________ test_conda_in_zsh _______________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] conda command result: conda 4.12.0
+[DEBUG] python command result: /root/miniconda3/envs/terminal-bench/bin/python
+[DEBUG] python command result: Python 3.10.19
+______________________________________________________________________ test_conda_in_bash ______________________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[DEBUG] conda command result: conda 4.12.0
+[DEBUG] python command result: /root/miniconda3/envs/terminal-bench/bin/python
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_zsh_is_installed
+PASSED ../tests/test_outputs.py::test_zsh_is_default_shell
+PASSED ../tests/test_outputs.py::test_ohmyzsh_is_installed
+PASSED ../tests/test_outputs.py::test_ohmyzsh_theme
+PASSED ../tests/test_outputs.py::test_ohmyzsh_installed_plugins
+PASSED ../tests/test_outputs.py::test_conda_in_zsh
+PASSED ../tests/test_outputs.py::test_conda_in_bash
+====================================================================== 7 passed in 9.79s =======================================================================
+(terminal-bench) root@0ce811fe1c38:/app#

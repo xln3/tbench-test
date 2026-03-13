@@ -1,0 +1,217 @@
+[?2004hroot@f9f7ddfcebde:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@f9f7ddfcebde:/app# clear
+[?2004l[H[J[3J[?2004hroot@f9f7ddfcebde:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                                              0% [Waiting for headers]                        Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+0% [Waiting for headers]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 30%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 58%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 32%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 60%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 55%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following NEW packages will be installed:
+  curl
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 227 kB of archives.
+After this operation, 534 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+0% [1 curl 0 B/227 kB 0%]30% [1 curl 83.7 kB/227 kB 37%]                               100% [Working]              Fetched 227 kB in 1s (172 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package curl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 49113 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 787ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0/0[2K[37m⠙[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpytest              [0m [32m------------------[2m------------[0m[0m 204.04 KiB/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 157.85 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 349.85 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m-------------------[2m-----------[0m[0m 749.85 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m---------------------------[2m---[0m[0m 1.01 MiB/1.17 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (4/5)
+[2mpygments            [0m [32m------------------------------[2m[0m[0m 1.13 MiB/1.17 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (4/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 402ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████░░░░░░░░░░░░ [2/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 20ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 2 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [31mF[0m[31mF[0m[31m                                                                                                                              [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m______________________________________________________________________ test_klee_version _______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_klee_version[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Test that KLEE is installed and can report its version.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mbash[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-c[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33msource ~/.bashrc && klee --version[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            timeout=[94m30[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m result.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mKLEE --version failed with return code [39;49;00m[33m{[39;49;00mresult.returncode[33m}[39;49;00m[33m. [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mstderr: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: KLEE --version failed with return code 127. stderr: bash: line 1: klee: command not found[0m
+[1m[31mE         [0m
+[1m[31mE       assert 127 == 0[0m
+[1m[31mE        +  where 127 = CompletedProcess(args=['bash', '-c', 'source ~/.bashrc && klee --version'], returncode=127, stdout='', stderr='bash: line 1: klee: command not found\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:22: AssertionError
+[31m[1m______________________________________________________________ test_klee_basic_symbolic_execution ______________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_klee_basic_symbolic_execution[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Test KLEE with a basic symbolic execution example that creates two paths.[39;49;00m
+    [33m    Verifies KLEE runs successfully and explores both branches.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [90m# C source code with symbolic execution[39;49;00m[90m[39;49;00m
+        klee_test_source = [33m"""[39;49;00m[33m[39;49;00m
+    [33m#include <klee/klee.h>[39;49;00m[33m[39;49;00m
+    [33m[39;49;00m
+    [33mint main() [39;49;00m[33m{[39;49;00m[33m[39;49;00m
+    [33m    int a;[39;49;00m[33m[39;49;00m
+    [33m    klee_make_symbolic(&a, sizeof(a), [39;49;00m[33m"[39;49;00m[33ma[39;49;00m[33m"[39;49;00m[33m);[39;49;00m[33m[39;49;00m
+    [33m[39;49;00m
+    [33m    if (a > 10) [39;49;00m[33m{[39;49;00m[33m[39;49;00m
+    [33m        return 1;[39;49;00m[33m[39;49;00m
+    [33m    } else [39;49;00m[33m{[39;49;00m[33m[39;49;00m
+    [33m        return 0;[39;49;00m[33m[39;49;00m
+    [33m    }[39;49;00m[33m[39;49;00m
+    [33m}[39;49;00m[33m[39;49;00m
+    [33m"""[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Write the C source file[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m([33m"[39;49;00m[33mtest.c[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mw[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            f.write(klee_test_source)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Compile C to LLVM bitcode (uses CPATH from environment)[39;49;00m[90m[39;49;00m
+        compile_result = subprocess.run([90m[39;49;00m
+            [[90m[39;49;00m
+                [33m"[39;49;00m[33mbash[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m-c[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33msource ~/.bashrc && clang-16 -emit-llvm -c -g -O0 -Xclang -disable-O0-optnone test.c -o test.bc[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            ],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+            timeout=[94m30[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m compile_result.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mCompilation failed with return code [39;49;00m[33m{[39;49;00mcompile_result.returncode[33m}[39;49;00m[33m. [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mstderr: [39;49;00m[33m{[39;49;00mcompile_result.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: Compilation failed with return code 1. stderr: test.c:2:10: fatal error: 'klee/klee.h' file not found[0m
+[1m[31mE         #include <klee/klee.h>[0m
+[1m[31mE                  ^~~~~~~~~~~~~[0m
+[1m[31mE         1 error generated.[0m
+[1m[31mE         [0m
+[1m[31mE       assert 1 == 0[0m
+[1m[31mE        +  where 1 = CompletedProcess(args=['bash', '-c', 'source ~/.bashrc && clang-16 -emit-llvm -c -g -O0 -Xclang -disable-O0-optnone te...2:10: fatal error: 'klee/klee.h' file not found\n#include <klee/klee.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n").returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:65: AssertionError
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_klee_version[0m - AssertionError: KLEE --version failed with return code 127. stderr: bash: line 1: klee: command not found
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_klee_basic_symbolic_execution[0m - AssertionError: Compilation failed with return code 1. stderr: test.c:2:10: fatal error: 'klee/klee.h' file not found
+[31m====================================================================== [31m[1m2 failed[0m[31m in 0.12s[0m[31m =======================================================================[0m
+[?2004hroot@f9f7ddfcebde:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@f9f7ddfcebde:/app# 

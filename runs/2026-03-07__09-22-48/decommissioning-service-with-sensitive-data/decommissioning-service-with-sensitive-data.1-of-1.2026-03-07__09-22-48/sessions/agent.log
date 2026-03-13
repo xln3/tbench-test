@@ -1,0 +1,77 @@
+[?2004hroot@1c1d9e23ab8a:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@1c1d9e23ab8a:/app# clear
+[?2004l[H[J[3J[?2004hroot@1c1d9e23ab8a:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@1c1d9e23ab8a:/app# panda --prompt 'You are tasked with securely decommissioning a legacy service.
+[?2004l[?2004h> The service has sensitive user data located in the directory '"'"'/opt/sensitive_service_data/'"'"'.
+[?2004l[?2004h> Its configuration file is at '"'"'/etc/service_config.ini'"'"'.
+[?2004l[?2004h> Its PID (Process ID) file is at '"'"'/tmp/service.pid'"'"'.
+[?2004l[?2004h> 
+[?2004l[?2004h> Your objectives are, IN ORDER:
+[?2004l[?2004h> 1. Create a TAR GZ archive of the entire '"'"'/opt/sensitive_service_data/'"'"' directory.
+[?2004l[?2004h>     Name this intermediate archive '"'"'sensitive_files.tar.gz'"'"' and place it in your current working directory.
+[?2004l[?2004h>     Preserve the directory structure of the original files such that the final archive contains files like `opt/sensitive_service_data/*`.
+[?2004l[?2004h> 2. Encrypt the '"'"'sensitive_files.tar.gz'"'"' archive using GPG symmetric encryption with the AES256 cipher.
+[?2004l[?2004h>     The passphrase to use for encryption is '"'"'t-bench-passphrase'"'"'.
+[?2004l[?2004h>     Store the final encrypted archive as '"'"'/app/service_archive.gpg'"'"'.
+[?2004l[?2004h> 3. Securely delete all original files within the '"'"'/opt/sensitive_service_data/'"'"' directory. Each file must be overwritten at least 3 times using '"'"'shred'"'"' and then removed. After all files inside are shredded and removed, delete the now-empty '"'"'/opt/sensitive_service_data/'"'"' directory itself.
+[?2004l[?2004h> 4. Delete the service configuration and PID file.
+[?2004l[?2004h> 5. CRITICAL: No unencrypted sensitive data or archives should remain on the system in accessible locations.
+[?2004l[?2004h> 
+[?2004l[?2004h> Perform all archive creation and encryption tasks in your current working directory.
+[?2004l[?2004h> Adherence to the order of operations is crucial for security.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+[Bash]
+[36m⠙[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:29 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:28 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Encrypt the TAR GZ archive using GPG with AES256 cipher and passphrase][39m [2m(0:28 remaining)[22m
+[31mgpg: directory '/root/.gnupg' created[39m
+[31mgpg: keybox '/root/.gnupg/pubring.kbx' created[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[Bash]

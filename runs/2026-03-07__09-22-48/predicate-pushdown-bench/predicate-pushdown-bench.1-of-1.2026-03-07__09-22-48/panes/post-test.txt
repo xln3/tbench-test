@@ -1,0 +1,90 @@
+root@67862e7d7e29:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB]
+Fetched 36.6 MB in 17s (2205 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 40 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 5 packages in 686ms
+Prepared 5 packages in 184ms
+Installed 5 packages in 21ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+[info] welcome to sbt 1.12.3 (Ubuntu Java 17.0.18)
+[info] loading project definition from /app/project
+[info] loading settings for project app from build.sbt...
+[info] set current project to PredicatePushdownOptimization (in build file:/app/)
+[success] Total time: 0 s, completed Mar 7, 2026, 3:20:01 AM
+[info] compiling 5 Scala sources to /app/target/scala-2.13/classes ...
+[warn] 3 deprecations
+[warn] 6 deprecations (since 2.13.0)
+[warn] 2 deprecations (since 2.13.3)
+[warn] 1 deprecation (since 3.0.0)
+[warn] 12 deprecations in total; re-run with -deprecation for details
+[warn] 5 warnings found
+[info] done compiling
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[success] Total time: 12 s, completed Mar 7, 2026, 3:20:13 AM
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 3 items
+
+../tests/test_outputs.py ...                                                                                                                             [100%]
+
+============================================================================ PASSES ============================================================================
+_________________________________________________________ test_local_mode_improvement_within_tolerance _________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Pair 1: 35.720s -> 20.911s (41.46% improvement)
+Pair 2: 33.214s -> 20.612s (37.94% improvement)
+Pair 3: 37.435s -> 23.017s (38.51% improvement)
+Reference average improvement: 39.31%
+_____________________________________________________ test_local_cluster_mode_improvement_within_tolerance _____________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Pair 1: 73.431s -> 43.146s (41.24% improvement)
+Pair 2: 69.810s -> 44.396s (36.40% improvement)
+Pair 3: 71.689s -> 44.141s (38.43% improvement)
+Reference average improvement: 38.69%
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_metrics_file_exists_and_well_formed
+PASSED ../tests/test_outputs.py::test_local_mode_improvement_within_tolerance
+PASSED ../tests/test_outputs.py::test_local_cluster_mode_improvement_within_tolerance
+================================================================ 3 passed in 715.76s (0:11:55) =================================================================
+root@67862e7d7e29:/app#

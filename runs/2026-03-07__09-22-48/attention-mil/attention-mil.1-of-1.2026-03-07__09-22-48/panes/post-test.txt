@@ -1,0 +1,73 @@
+root@9914919892e0:/app# bash /tests/run-tests.sh; tmux wait -S done
+Looking in indexes: https://download.pytorch.org/whl/cpu
+Requirement already satisfied: torch==2.7.0 in /usr/local/lib/python3.13/site-packages (2.7.0+cpu)
+Requirement already satisfied: filelock in /usr/local/lib/python3.13/site-packages (from torch==2.7.0) (3.20.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.13/site-packages (from torch==2.7.0) (4.15.0)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.13/site-packages (from torch==2.7.0) (70.2.0)
+Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.13/site-packages (from torch==2.7.0) (1.14.0)
+Requirement already satisfied: networkx in /usr/local/lib/python3.13/site-packages (from torch==2.7.0) (3.6.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.13/site-packages (from torch==2.7.0) (3.1.6)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.13/site-packages (from torch==2.7.0) (2025.12.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.13/site-packages (from sympy>=1.13.3->torch==2.7.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.13/site-packages (from jinja2->torch==2.7.0) (3.0.2)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your syst
+em unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you ar
+e doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 24.3.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+Requirement already satisfied: numpy in /usr/local/lib/python3.13/site-packages (2.3.0)
+Collecting pytest
+  Downloading pytest-9.0.2-py3-none-any.whl.metadata (7.6 kB)
+Collecting psutil==7.0.0
+  Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (22 kB)
+Collecting iniconfig>=1.0.1 (from pytest)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging>=22 (from pytest)
+  Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pluggy<2,>=1.5 (from pytest)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Downloading psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (277 kB)
+Downloading pytest-9.0.2-py3-none-any.whl (374 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading packaging-26.0-py3-none-any.whl (74 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 13.2 MB/s eta 0:00:00
+Installing collected packages: pygments, psutil, pluggy, packaging, iniconfig, pytest
+Successfully installed iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 psutil-7.0.0 pygments-2.19.2 pytest-9.0.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your syst
+em unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you ar
+e doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 24.3.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-9.0.2, pluggy-1.6.0
+rootdir: /tests
+collected 11 items
+
+../tests/test_outputs.py ...........                                                                                                                     [100%]
+
+============================================================================ PASSES ============================================================================
+______________________________________________________________ test_basic_test_function_executes _______________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Running basic ABMIL test...
+✓ Forward pass completed successfully!
+Logits shape: torch.Size([1, 2]), Attention shape: torch.Size([50, 1])
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_abmil_file_exists
+PASSED ../tests/test_outputs.py::test_attention_mechanism_implementation
+PASSED ../tests/test_outputs.py::test_abmil_model_initialization
+PASSED ../tests/test_outputs.py::test_abmil_forward_pass_comprehensive
+PASSED ../tests/test_outputs.py::test_numerical_stability
+PASSED ../tests/test_outputs.py::test_gradient_flow
+PASSED ../tests/test_outputs.py::test_memory_efficiency_large_bags
+PASSED ../tests/test_outputs.py::test_speed_scalability
+PASSED ../tests/test_outputs.py::test_numerical_precision_dtypes
+PASSED ../tests/test_outputs.py::test_direct_model_execution
+PASSED ../tests/test_outputs.py::test_basic_test_function_executes
+====================================================================== 11 passed in 3.70s ======================================================================
+root@9914919892e0:/app#

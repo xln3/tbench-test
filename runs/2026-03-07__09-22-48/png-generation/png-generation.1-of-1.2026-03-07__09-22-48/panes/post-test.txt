@@ -1,0 +1,70 @@
+root@fcb24c62aea6:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 3s (2859 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u14).
+0 upgraded, 0 newly installed, 0 to remove and 30 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 54 packages in 4.09s
+⠴ Preparing packages... (43/54)
+nvidia-cuda-nvrtc-cu12   ------------------------------ 73.10 MiB/83.96 MiB
+nvidia-nvshmem-cu12      ------------------------------ 73.57 MiB/132.66 MiB
+triton                   ------------------------------ 73.25 MiB/179.57 MiB
+nvidia-cufft-cu12        ------------------------------ 73.75 MiB/184.17 MiB
+nvidia-cusolver-cu12     ------------------------------ 73.68 MiB/255.11 MiB
+nvidia-cusparselt-cu12   ------------------------------ 73.28 MiB/273.89 MiB
+nvidia-cusparse-cu12     ------------------------------ 73.06 MiB/274.86 MiB
+nvidia-nccl-cu12         ------------------------------ 73.17 MiB/307.42 MiB
+nvidia-cublas-cu12       ------------------------------ 73.25 MiB/566.81 MiB
+nvidia-cudnn-cu12        ------------------------------ 74.13 MiB/674.02 MiB
+torch                    ------------------------------ 73.71 MiB/873.30 MiB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

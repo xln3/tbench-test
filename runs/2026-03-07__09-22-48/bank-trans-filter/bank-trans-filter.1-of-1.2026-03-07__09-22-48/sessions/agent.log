@@ -1,0 +1,35 @@
+[?2004hroot@156fb64cd581:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@156fb64cd581:/app# clear
+[?2004l[H[J[3J[?2004hroot@156fb64cd581:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@156fb64cd581:/app# panda --prompt '
+[?2004l[?2004h> You will be given a list of bank transactions (/app/data/bank_transactions.csv) and your job is to filter those transactions so that everything is gone except the transactions pertaining to a particular company. The file may contain typos.
+[?2004l[?2004h> We can tell that the company is the same company because it has the same name or the same account number.
+[?2004l[?2004h> The company is North West Capital. Return all the transactions that pertain to this company as a list of JSON. 
+[?2004l[?2004h> 
+[?2004l[?2004h> You must provide your output as a json file in a format containing every single row that pertains to that particular company, call it /app/data/output.json.
+[?2004l[?2004h> 
+[?2004l[?2004h> The output JSON must be:
+[?2004l[?2004h> - A JSON array (no top-level key, just [])
+[?2004l[?2004h> - Each object must have these exact keys matching the CSV columns:
+[?2004l[?2004h>   * "Company Name" e.g. "North West Capital"
+[?2004l[?2004h>   * "Account Number" e.g. "BUS-12345678"
+[?2004l[?2004h>   * "Date" e.g. "2023-01-01"
+[?2004l[?2004h>   * "Amount" e.g. "-$1000.00"
+[?2004l[?2004h>   * "Transaction Type" e.g. "Credit"
+[?2004l[?2004h>   * "Description" e.g. "Investment"
+[?2004l[?2004h> - Sorted by Date in ascending order
+[?2004l[?2004h> - All values should be strings, preserving the exact format and values from the CSV'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Write]
+[Bash]
+[36m⠙[39m [33m[Bash: Run the transaction filtering script][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Read]
+[Write]
+[Bash]
+[Read]
+[Bash]
+[Bash]

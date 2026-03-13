@@ -1,0 +1,40 @@
+root@05c3416220fa:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@05c3416220fa:/app# panda --prompt 'You are given a picture of a 9 by 9 Sudoku puzzle with classical rules,
+> it'"'"'s located at /app/sudoku.jpeg. Solve this puzzle and
+> place your solution at /app/solution.txt,
+> each line should contain only 9 numbers seperated by space,
+> there should only be 9 lines (9 rows) of integers in your solution and nothing else.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Read]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+⠸ [Bash: Extract Sudoku grid using PIL and pytesseract] (0:29 remaining)
+                                                                        ... (36 more lines above)
+[Bash]
+      [Bash]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

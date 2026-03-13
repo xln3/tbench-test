@@ -1,0 +1,11 @@
+[?2004hroot@3750d4a82063:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@3750d4a82063:/app# clear
+[?2004l[H[J[3J[?2004hroot@3750d4a82063:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@3750d4a82063:/app# panda --prompt 'Access the MinIO credentials by investigating the security configuration
+[?2004l[?2004h> of the MinIO service and print them to the file `/app/result.txt`.
+[?2004l[?2004h> 
+[?2004l[?2004h> MinIO is running on node1:9000.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Task]

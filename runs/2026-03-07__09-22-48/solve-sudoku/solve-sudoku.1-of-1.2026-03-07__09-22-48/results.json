@@ -1,0 +1,18 @@
+{
+    "id": "a6148203-7cda-4731-91b8-78d7ed1c4586",
+    "trial_name": "solve-sudoku.1-of-1.2026-03-07__09-22-48",
+    "task_id": "solve-sudoku",
+    "instruction": "You are given a picture of a 9 by 9 Sudoku puzzle with classical rules, \nit's located at /app/sudoku.jpeg. Solve this puzzle and \nplace your solution at /app/solution.txt, \neach line should contain only 9 numbers seperated by space, \nthere should only be 9 lines (9 rows) of integers in your solution and nothing else.",
+    "is_resolved": null,
+    "failure_mode": "parse_error",
+    "parser_results": null,
+    "recording_path": "2026-03-07__09-22-48/solve-sudoku/solve-sudoku.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T14:18:07.638320+00:00",
+    "trial_ended_at": "2026-03-07T14:38:39.053750+00:00",
+    "agent_started_at": "2026-03-07T14:18:20.924954+00:00",
+    "agent_ended_at": "2026-03-07T14:38:21.127411+00:00",
+    "test_started_at": "2026-03-07T14:38:24.598865+00:00",
+    "test_ended_at": "2026-03-07T14:38:26.023932+00:00"
+}

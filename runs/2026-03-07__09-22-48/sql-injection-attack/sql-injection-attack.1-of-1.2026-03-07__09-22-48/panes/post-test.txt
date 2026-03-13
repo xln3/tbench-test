@@ -1,0 +1,99 @@
+root@e1c502195253:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 4s (2259 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u14).
+0 upgraded, 0 newly installed, 0 to remove and 43 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 10 packages in 694ms
+Prepared 10 packages in 848ms
+Installed 10 packages in 59ms
+ + certifi==2026.2.25
+ + charset-normalizer==3.4.5
+ + idna==3.11
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+ + requests==2.32.3
+ + urllib3==2.6.3
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 2 items
+
+../tests/test_outputs.py FF                                                                                                                              [100%]
+
+=========================================================================== FAILURES ===========================================================================
+______________________________________________________________________ test_users_deleted ______________________________________________________________________
+
+    def test_users_deleted():
+        """
+        Test that admin and bob were deleted while all other users
+        (mickey, minnie, donald, goofy, pluto) remain and can still log in"""
+        print("Waiting for services to be ready...")
+        time.sleep(15)
+
+        # Test 1: Try to login as admin. This should fail as the admin is deleted.
+        try:
+            response = requests.post(
+                "http://vulnerable_service:5000/login",
+                json={"username": "admin' --", "password": "anything"},
+                timeout=10,
+            )
+            print(f"Admin login attempt - Status: {response.status_code}")
+            print(f"Admin login response: {response.text}")
+
+>           assert response.status_code == 401, "Admin user still exists - deletion failed"
+E           AssertionError: Admin user still exists - deletion failed
+E           assert 502 == 401
+E            +  where 502 = <Response [502]>.status_code
+
+/tests/test_outputs.py:26: AssertionError
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Waiting for services to be ready...
+Admin login attempt - Status: 502
+Admin login response:
+___________________________________________________________________ test_api_usage_verified ____________________________________________________________________
+
+    def test_api_usage_verified():
+        """Verify that deletions were performed via proper API endpoints"""
+        import re
+        from pathlib import Path
+
+        log_path = Path("/app/logs/deletion_log.txt")
+
+        if not log_path.exists():
+>           assert False, "Deletion log not found"
+E           AssertionError: Deletion log not found
+E           assert False
+
+/tests/test_outputs.py:79: AssertionError
+=================================================================== short test summary info ====================================================================
+FAILED ../tests/test_outputs.py::test_users_deleted - AssertionError: Admin user still exists - deletion failed
+FAILED ../tests/test_outputs.py::test_api_usage_verified - AssertionError: Deletion log not found
+====================================================================== 2 failed in 15.68s ======================================================================
+root@e1c502195253:/app#

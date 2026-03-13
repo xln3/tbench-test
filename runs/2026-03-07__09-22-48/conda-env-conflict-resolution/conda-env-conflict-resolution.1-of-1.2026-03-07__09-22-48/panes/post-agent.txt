@@ -1,0 +1,40 @@
+[Edit]
+[Bash]
+[Bash]
+⠦ [Bash: Remove existing datasci environment and recreate it] (0:00 remaining)
+... (97 more lines above)
+  zstd-1.5.7-hb78ec9c_6
+
+
+(esc interrupt | ctrl+o expand)
+scipy-1.9.0          | 26.2 MB   | #####6     |  56%
+
+
+
+scipy-1.9.0          | 26.2 MB   | ####8      |  49%
+
+
+
+scipy-1.9.0          | 26.2 MB   | ####1      |  42%
+
+
+scipy-1.9.0          | 26.2 MB   | ###4       |  35%
+
+
+
+
+
+
+scikit-learn-1.0.2   | 26.8 MB   | 7          |   8%
+
+
+scikit-learn-1.0.2   | 26.8 MB   | 3          |   4%
+
+
+
+scipy-1.9.0          | 26.2 MB   |            |   0%
+
+
+
+
+

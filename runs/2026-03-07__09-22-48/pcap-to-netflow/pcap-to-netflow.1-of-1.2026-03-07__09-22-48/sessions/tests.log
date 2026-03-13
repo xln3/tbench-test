@@ -1,0 +1,350 @@
+[?2004hroot@3ea569881d5c:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@3ea569881d5c:/app# clear
+[?2004l[H[J[3J[?2004hroot@3ea569881d5c:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+0% [Waiting for headers]                        Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0% [Waiting for headers] [2 InRelease 14.2 kB/126 kB 11%]0% [Waiting for headers] [2 InRelease 14.2 kB/126 kB 11%]                                                         Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [3 InRelease 9828 B/126 kB 8%] [2 InRelease 75.0 kB/126 kB 59%]                                                                  0% [3 InRelease 14.2 kB/126 kB 11%]0% [3 InRelease 31.5 kB/126 kB 25%]                                   0% [Working]0% [Waiting for headers]                        Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+0% [4 InRelease 9828 B/126 kB 8%]0% [4 InRelease 83.7 kB/126 kB 66%]                                   0% [Working]100% [Working]              Fetched 378 kB in 3s (140 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 34%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 72%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 45%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 4%Reading state information... Done
+The following additional packages will be installed:
+  krb5-locales libbrotli1 libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-common libldap2 libnghttp2-14 librtmp1
+  libsasl2-2 libsasl2-modules libsasl2-modules-db libssh-4
+Suggested packages:
+  krb5-doc krb5-user libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  curl krb5-locales libbrotli1 libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-common libldap2 libnghttp2-14 librtmp1
+  libsasl2-2 libsasl2-modules libsasl2-modules-db libssh-4
+0 upgraded, 17 newly installed, 0 to remove and 41 not upgraded.
+Need to get 2224 kB of archives.
+After this operation, 6408 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.6 [14.8 kB]
+0% [1 krb5-locales 3806 B/14.8 kB 26%]                                      2% [Working]            Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.6 [34.4 kB]
+2% [2 libkrb5support0 14.2 kB/34.4 kB 41%]                                          4% [Working]            Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.6 [82.0 kB]
+4% [3 libk5crypto3 6949 B/82.0 kB 8%]                                     8% [Working]            Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+8% [4 libkeyutils1 5503 B/9490 B 58%]                                     10% [Working]             Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.6 [348 kB]
+10% [5 libkrb5-3 4096 B/348 kB 1%]13% [5 libkrb5-3 83.7 kB/348 kB 24%]                                    23% [Working]             Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.6 [143 kB]
+24% [6 libgssapi-krb5-2 5500 B/143 kB 4%]26% [6 libgssapi-krb5-2 80.8 kB/143 kB 57%]                                           30% [Working]             Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.2 [74.3 kB]
+30% [7 libnghttp2-14 2605 B/74.3 kB 4%]34% [Working]                                                                                                                                      114 kB/s 13s                                                                                                                                                               Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+34% [8 libbrotli1 4096 B/331 kB 1%]                                                                                                                114 kB/s 13s37% [8 libbrotli1 83.7 kB/331 kB 25%]                                                                                                              114 kB/s 12s47% [Working]                                                                                                                                      114 kB/s 10s                                                                                                                                                               Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+47% [9 libsasl2-modules-db 2606 B/20.4 kB 13%]                                                                                                     114 kB/s 10s49% [Working]                                                                                                                                      114 kB/s 10s                                                                                                                                                               Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+49% [10 libsasl2-2 0 B/53.2 kB 0%]                                                                                                                 114 kB/s 10s52% [Working]                                                                                                                                       114 kB/s 9s                                                                                                                                                               Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
+52% [11 libldap2 0 B/198 kB 0%]                                                                                                                     114 kB/s 9s55% [11 libldap2 83.7 kB/198 kB 42%]                                                                                                                114 kB/s 9s60% [Working]                                                                                                                                       114 kB/s 8s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+60% [12 librtmp1 12.7 kB/56.3 kB 23%]                                                                                                               114 kB/s 7s63% [Working]                                                                                                                                       114 kB/s 7s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.3 [190 kB]
+63% [13 libssh-4 0 B/190 kB 0%]                                                                                                                     114 kB/s 7s66% [13 libssh-4 80.8 kB/190 kB 43%]                                                                                                                114 kB/s 6s71% [Working]                                                                                                                                       139 kB/s 4s                                                                                                                                                               Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+71% [14 libcurl4t64 6948 B/342 kB 2%]                                                                                                               139 kB/s 4s74% [14 libcurl4t64 77.8 kB/342 kB 23%]                                                                                                             139 kB/s 4s85% [Working]                                                                                                                                       139 kB/s 2s                                                                                                                                                               Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+85% [15 curl 8396 B/227 kB 4%]                                                                                                                      139 kB/s 2s88% [15 curl 83.7 kB/227 kB 37%]                                                                                                                    139 kB/s 1s94% [Working]                                                                                                                                       139 kB/s 0s                                                                                                                                                               Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-common all 2.6.10+dfsg-0ubuntu0.24.04.1 [32.9 kB]
+94% [16 libldap-common 14.2 kB/32.9 kB 43%]                                                                                                         139 kB/s 0s96% [Working]                                                                                                                                       139 kB/s 0s                                                                                                                                                               Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-5ubuntu3.1 [69.9 kB]
+96% [17 libsasl2-modules 0 B/69.9 kB 0%]                                                                                                            139 kB/s 0s100% [Working]                                                                                                                                      139 kB/s 0s                                                                                                                                                               Fetched 2224 kB in 17s (135 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package krb5-locales.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6364 files and directories currently installed.)
+Preparing to unpack .../00-krb5-locales_1.20.1-6ubuntu2.6_all.deb ...
+Unpacking krb5-locales (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../01-libkrb5support0_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../02-libk5crypto3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../03-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../04-libkrb5-3_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../05-libgssapi-krb5-2_1.20.1-6ubuntu2.6_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../06-libnghttp2-14_1.59.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../07-libbrotli1_1.1.0-2build2_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2build2) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../08-libsasl2-modules-db_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../09-libsasl2-2_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../10-libldap2_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../11-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../12-libssh-4_0.10.6-2ubuntu0.3_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../13-libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../14-curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../15-libldap-common_2.6.10+dfsg-0ubuntu0.24.04.1_all.deb ...
+Unpacking libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../16-libsasl2-modules_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libbrotli1:amd64 (1.1.0-2build2) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.6) ...
+Setting up libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.6) ...
+Setting up libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠸[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠸[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠸[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠸[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 558ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 78.52 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 78.52 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 78.52 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 78.52 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 94.52 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 110.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 126.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 142.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 142.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 142.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 142.52 KiB/1.17 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 142.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 222.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 254.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/356.91 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 350.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpytest              [0m [32m-------------------[2m-----------[0m[0m 223.65 KiB/356.91 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 478.52 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m-----------------[2m-------------[0m[0m 654.52 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (3/5)
+[2mpygments            [0m [32m---------------------[2m---------[0m[0m 814.52 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (3/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 335ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 22ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mnetflow==0.12.2                                                                                                                                               [0m[2K[37m⠸[0m [2mnetflow==0.12.2                                                                                                                                               [0m[2K[37m⠸[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m1 package[0m [2min 596ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/1)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mnetflow             [0m [32m[2m------------------------------[0m[0m     0 B/34.11 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mnetflow             [0m [32m---------------[2m---------------[0m[0m 16.00 KiB/34.11 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mnetflow             [0m [32m-----------------------------[2m-[0m[0m 32.00 KiB/34.11 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mnetflow             [0m [32m------------------------------[2m[0m[0m 34.11 KiB/34.11 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)                                                                                                                                   [2K[37m⠙[0m [2m[0m (1/1)                                                                                                                                                        [2K[2mPrepared [1m1 package[0m [2min 87ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/1] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/1] [2mnetflow==0.12.2                                                                                                                      [0m[2K████████████████████ [1/1] [2mnetflow==0.12.2                                                                                                                      [0m[2K[2mInstalled [1m1 package[0m [2min 9ms[0m[0m
+ [32m+[39m [1mnetflow[0m[2m==0.12.2[0m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mscapy==2.6.1                                                                                                                                                  [0m[2K[37m⠹[0m [2mscapy==2.6.1                                                                                                                                                  [0m[2K[37m⠹[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m1 package[0m [2min 361ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/1)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/1)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m[2m------------------------------[0m[0m     0 B/2.31 MiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/2.31 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m-[2m-----------------------------[0m[0m 30.91 KiB/2.31 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m-[2m-----------------------------[0m[0m 46.91 KiB/2.31 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/2.31 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m--[2m----------------------------[0m[0m 78.91 KiB/2.31 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m--[2m----------------------------[0m[0m 94.91 KiB/2.31 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m--[2m----------------------------[0m[0m 110.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m--[2m----------------------------[0m[0m 126.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m--[2m----------------------------[0m[0m 142.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m---[2m---------------------------[0m[0m 158.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m---[2m---------------------------[0m[0m 174.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m---[2m---------------------------[0m[0m 190.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m---[2m---------------------------[0m[0m 206.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m---[2m---------------------------[0m[0m 222.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m----[2m--------------------------[0m[0m 238.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m----[2m--------------------------[0m[0m 254.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m----[2m--------------------------[0m[0m 270.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m----[2m--------------------------[0m[0m 286.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m-------------[2m-----------------[0m[0m 990.91 KiB/2.31 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/1)
+[2mscapy               [0m [32m--------------------------[2m----[0m[0m 1.98 MiB/2.31 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/1)                                                                                                                                   [2K[2mPrepared [1m1 package[0m [2min 228ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/1] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/1] [2mscapy==2.6.1                                                                                                                         [0m[2K████████████████████ [1/1] [2mscapy==2.6.1                                                                                                                         [0m[2K[2mInstalled [1m1 package[0m [2min 24ms[0m[0m
+ [32m+[39m [1mscapy[0m[2m==2.6.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 4 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                            [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m______________________________________________________________ TestNetFlows.test_total_flow_count ______________________________________________________________[0m
+
+self = <test_outputs.TestNetFlows object at 0x7f4c14d78dd0>, flows = <test_outputs.NetFlows object at 0x7f4c14f2b3b0>
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_total_flow_count[39;49;00m([96mself[39;49;00m, flows):[90m[39;49;00m
+>       [94massert[39;49;00m [96mlen[39;49;00m(flows.flows) == [94m1209[39;49;00m, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mExpected 1209 flows, but got [39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(flows.flows)[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: Expected 1209 flows, but got 636[0m
+[1m[31mE       assert 636 == 1209[0m
+[1m[31mE        +  where 636 = len([<DataRecord with data {'IPV4_SRC_ADDR': 50983, 'IPV4_DST_ADDR': 2208235520, 'NEXT_HOP': 1114112, 'INPUT': 0, 'OUTPUT'...RT': 0, 'TCP_FLAGS': 0, 'PROTO': 0, 'TOS': 0, 'SRC_AS': 44048, 'DST_AS': 65281, 'SRC_MASK': 114, 'DST_MASK': 33}>, ...])[0m
+[1m[31mE        +    where [<DataRecord with data {'IPV4_SRC_ADDR': 50983, 'IPV4_DST_ADDR': 2208235520, 'NEXT_HOP': 1114112, 'INPUT': 0, 'OUTPUT'...RT': 0, 'TCP_FLAGS': 0, 'PROTO': 0, 'TOS': 0, 'SRC_AS': 44048, 'DST_AS': 65281, 'SRC_MASK': 114, 'DST_MASK': 33}>, ...] = <test_outputs.NetFlows object at 0x7f4c14f2b3b0>.flows[0m
+
+[1m[31m/tests/test_outputs.py[0m:79: AssertionError
+[31m[1m________________________________________________________________ TestNetFlows.test_flow_0_data _________________________________________________________________[0m
+
+self = <test_outputs.TestNetFlows object at 0x7f4c1596bce0>, flows = <test_outputs.NetFlows object at 0x7f4c14f2b3b0>
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_flow_0_data[39;49;00m([96mself[39;49;00m, flows):[90m[39;49;00m
+        expected_data = {[90m[39;49;00m
+            [33m"[39;49;00m[33mtimestamp[39;49;00m[33m"[39;49;00m: [94m1295981576046[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mIPV4_SRC_ADDR[39;49;00m[33m"[39;49;00m: [94m3232236419[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mIPV4_DST_ADDR[39;49;00m[33m"[39;49;00m: [94m4294967295[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mSRC_PORT[39;49;00m[33m"[39;49;00m: [94m68[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mDST_PORT[39;49;00m[33m"[39;49;00m: [94m67[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mTCP_FLAGS[39;49;00m[33m"[39;49;00m: [94m0[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mPROTO[39;49;00m[33m"[39;49;00m: [94m17[39;49;00m,[90m[39;49;00m
+        }[90m[39;49;00m
+>       [96mself[39;49;00m.check_flow_data(flows.flows[[94m0[39;49;00m], expected_data)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_outputs.TestNetFlows object at 0x7f4c1596bce0>
+flow = <DataRecord with data {'IPV4_SRC_ADDR': 50983, 'IPV4_DST_ADDR': 2208235520, 'NEXT_HOP': 1114112, 'INPUT': 0, 'OUTPUT':...RT': 0, 'DST_PORT': 0, 'TCP_FLAGS': 0, 'PROTO': 0, 'TOS': 1, 'SRC_AS': 0, 'DST_AS': 328, 'SRC_MASK': 0, 'DST_MASK': 1}>
+expected_data = {'DST_PORT': 67, 'IPV4_DST_ADDR': 4294967295, 'IPV4_SRC_ADDR': 3232236419, 'PROTO': 17, ...}
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mcheck_flow_data[39;49;00m([96mself[39;49;00m, flow, expected_data):[90m[39;49;00m
+        [94mfor[39;49;00m field, expected_value [95min[39;49;00m expected_data.items():[90m[39;49;00m
+            actual_value = [96mgetattr[39;49;00m(flow, field)[90m[39;49;00m
+>           [94massert[39;49;00m actual_value == expected_value, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mExpected [39;49;00m[33m{[39;49;00mfield[33m}[39;49;00m[33m=[39;49;00m[33m{[39;49;00mexpected_value[33m}[39;49;00m[33m, got [39;49;00m[33m{[39;49;00mactual_value[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: Expected timestamp=1295981576046, got 1291686873210[0m
+[1m[31mE           assert 1291686873210 == 1295981576046[0m
+
+[1m[31m/tests/test_outputs.py[0m:74: AssertionError
+[31m[1m_______________________________________________________________ TestNetFlows.test_flow_171_data ________________________________________________________________[0m
+
+self = <test_outputs.TestNetFlows object at 0x7f4c14d799d0>, flows = <test_outputs.NetFlows object at 0x7f4c14f2b3b0>
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_flow_171_data[39;49;00m([96mself[39;49;00m, flows):[90m[39;49;00m
+        expected_data = {[90m[39;49;00m
+            [33m"[39;49;00m[33mtimestamp[39;49;00m[33m"[39;49;00m: [94m1295981831981[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mIPV4_SRC_ADDR[39;49;00m[33m"[39;49;00m: [94m1208931686[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mIPV4_DST_ADDR[39;49;00m[33m"[39;49;00m: [94m3232236419[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mSRC_PORT[39;49;00m[33m"[39;49;00m: [94m443[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mDST_PORT[39;49;00m[33m"[39;49;00m: [94m52202[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mTCP_FLAGS[39;49;00m[33m"[39;49;00m: [94m27[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mPROTO[39;49;00m[33m"[39;49;00m: [94m6[39;49;00m,[90m[39;49;00m
+        }[90m[39;49;00m
+>       [96mself[39;49;00m.check_flow_data(flows.flows[[94m171[39;49;00m], expected_data)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_outputs.TestNetFlows object at 0x7f4c14d799d0>
+flow = <DataRecord with data {'IPV4_SRC_ADDR': 1176863010, 'IPV4_DST_ADDR': 0, 'NEXT_HOP': 0, 'INPUT': 0, 'OUTPUT': 19, 'IN_P...T': 5480, 'DST_PORT': 0, 'TCP_FLAGS': 6, 'PROTO': 0, 'TOS': 0, 'SRC_AS': 0, 'DST_AS': 0, 'SRC_MASK': 0, 'DST_MASK': 0}>
+expected_data = {'DST_PORT': 52202, 'IPV4_DST_ADDR': 3232236419, 'IPV4_SRC_ADDR': 1208931686, 'PROTO': 6, ...}
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mcheck_flow_data[39;49;00m([96mself[39;49;00m, flow, expected_data):[90m[39;49;00m
+        [94mfor[39;49;00m field, expected_value [95min[39;49;00m expected_data.items():[90m[39;49;00m
+            actual_value = [96mgetattr[39;49;00m(flow, field)[90m[39;49;00m
+>           [94massert[39;49;00m actual_value == expected_value, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mExpected [39;49;00m[33m{[39;49;00mfield[33m}[39;49;00m[33m=[39;49;00m[33m{[39;49;00mexpected_value[33m}[39;49;00m[33m, got [39;49;00m[33m{[39;49;00mactual_value[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: Expected timestamp=1295981831981, got 1295981552658[0m
+[1m[31mE           assert 1295981552658 == 1295981831981[0m
+
+[1m[31m/tests/test_outputs.py[0m:74: AssertionError
+[31m[1m_______________________________________________________________ TestNetFlows.test_last_flow_data _______________________________________________________________[0m
+
+self = <test_outputs.TestNetFlows object at 0x7f4c14d72450>, flows = <test_outputs.NetFlows object at 0x7f4c14f2b3b0>
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_last_flow_data[39;49;00m([96mself[39;49;00m, flows):[90m[39;49;00m
+        [94massert[39;49;00m [96mlen[39;49;00m(flows.flows) > [94m0[39;49;00m, [33m"[39;49;00m[33mFlow list is empty[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        expected_data = {[90m[39;49;00m
+            [33m"[39;49;00m[33mtimestamp[39;49;00m[33m"[39;49;00m: [94m1295982726000[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mIPV4_SRC_ADDR[39;49;00m[33m"[39;49;00m: [94m3232236419[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mIPV4_DST_ADDR[39;49;00m[33m"[39;49;00m: [94m3423529573[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mSRC_PORT[39;49;00m[33m"[39;49;00m: [94m57231[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mDST_PORT[39;49;00m[33m"[39;49;00m: [94m8443[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mTCP_FLAGS[39;49;00m[33m"[39;49;00m: [94m24[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mPROTO[39;49;00m[33m"[39;49;00m: [94m6[39;49;00m,[90m[39;49;00m
+        }[90m[39;49;00m
+>       [96mself[39;49;00m.check_flow_data(flows.flows[-[94m1[39;49;00m], expected_data)[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_outputs.TestNetFlows object at 0x7f4c14d72450>
+flow = <DataRecord with data {'IPV4_SRC_ADDR': 29032448, 'IPV4_DST_ADDR': 520486912, 'NEXT_HOP': 0, 'INPUT': 0, 'OUTPUT': 0, ...0, 'DST_PORT': 18, 'TCP_FLAGS': 0, 'PROTO': 29, 'TOS': 85, 'SRC_AS': 1, 'DST_AS': 47200, 'SRC_MASK': 0, 'DST_MASK': 1}>
+expected_data = {'DST_PORT': 8443, 'IPV4_DST_ADDR': 3423529573, 'IPV4_SRC_ADDR': 3232236419, 'PROTO': 6, ...}
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mcheck_flow_data[39;49;00m([96mself[39;49;00m, flow, expected_data):[90m[39;49;00m
+        [94mfor[39;49;00m field, expected_value [95min[39;49;00m expected_data.items():[90m[39;49;00m
+            actual_value = [96mgetattr[39;49;00m(flow, field)[90m[39;49;00m
+>           [94massert[39;49;00m actual_value == expected_value, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mExpected [39;49;00m[33m{[39;49;00mfield[33m}[39;49;00m[33m=[39;49;00m[33m{[39;49;00mexpected_value[33m}[39;49;00m[33m, got [39;49;00m[33m{[39;49;00mactual_value[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: Expected timestamp=1295982726000, got 1295981840505[0m
+[1m[31mE           assert 1295981840505 == 1295982726000[0m
+
+[1m[31m/tests/test_outputs.py[0m:74: AssertionError
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mTestNetFlows::test_total_flow_count[0m - AssertionError: Expected 1209 flows, but got 636
+[31mFAILED[0m ../tests/test_outputs.py::[1mTestNetFlows::test_flow_0_data[0m - AssertionError: Expected timestamp=1295981576046, got 1291686873210
+[31mFAILED[0m ../tests/test_outputs.py::[1mTestNetFlows::test_flow_171_data[0m - AssertionError: Expected timestamp=1295981831981, got 1295981552658
+[31mFAILED[0m ../tests/test_outputs.py::[1mTestNetFlows::test_last_flow_data[0m - AssertionError: Expected timestamp=1295982726000, got 1295981840505
+[31m====================================================================== [31m[1m4 failed[0m[31m in 0.30s[0m[31m =======================================================================[0m
+[?2004hroot@3ea569881d5c:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@3ea569881d5c:/app# 

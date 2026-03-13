@@ -1,0 +1,25 @@
+{
+    "id": "6586605e-912f-4ec4-a68f-590e04d8f3c1",
+    "trial_name": "find-restaurant.1-of-1.2026-03-07__09-22-48",
+    "task_id": "find-restaurant",
+    "instruction": "You're in charge of making a dinner reservation for your team! August and Taylor both have different food preferences and work schedules, but you'll need to figure out what those are by talking to them directly. Some team members can be particular about who they'll speak to, so you may need to authenticate yourself before getting their information.\n\nThere are some tools in `/app/` to help you out: `call_august`, `call_taylor`, `get_schedules`, and `call_restaurant`. \n\nOnce you know everyone's preferences and schedules, pick a restaurant that works for everyone. Don't forget to factor in commute time from the office to the restaurant. \nMake the reservation using your company name. \n\nWhen you're done, save the reservation details to `/app/results.txt` like this:\n  Restaurant Name: Company Name",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_august_requirements_met": "failed",
+        "test_taylor_requirements_met": "failed",
+        "test_schedules_were_downloaded": "failed",
+        "test_reservation_was_made - AssertionError: No reservation was made": "failed",
+        "test_schedule_constraints_respected": "failed",
+        "test_services_were_actually_called - AssertionError: No reservation made": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/find-restaurant/find-restaurant.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T20:29:34.669762+00:00",
+    "trial_ended_at": "2026-03-07T20:50:34.691713+00:00",
+    "agent_started_at": "2026-03-07T20:29:58.889240+00:00",
+    "agent_ended_at": "2026-03-07T20:49:59.046753+00:00",
+    "test_started_at": "2026-03-07T20:50:02.514745+00:00",
+    "test_ended_at": "2026-03-07T20:50:11.343635+00:00"
+}

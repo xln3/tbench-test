@@ -1,0 +1,46 @@
+[?2004hroot@30f5cd3bf68b:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@30f5cd3bf68b:/app# clear
+[?2004l[H[J[3J[?2004hroot@30f5cd3bf68b:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@30f5cd3bf68b:/app# panda --prompt 'There'"'"'s a /app/filter.py script that attempts to remove JavaScript from HTML files to prevent XSS attacks.
+[?2004l[?2004h> The /app/filter.py script takes an HTML file as a command-line argument and modifies it in-place.
+[?2004l[?2004h> 
+[?2004l[?2004h> Usage: python /app/filter.py <html_file>
+[?2004l[?2004h> 
+[?2004l[?2004h> Your task is to create a file called /app/out.html that, even after being processed by /app/filter.py, 
+[?2004l[?2004h> will still trigger a JavaScript alert() when opened in a browser.
+[?2004l[?2004h> Your file should not require any interaction with the webpage and should trigger automatically.
+[?2004l[?2004h> 
+[?2004l[?2004h> You can run /app/test_outputs.py to verify.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Read]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]

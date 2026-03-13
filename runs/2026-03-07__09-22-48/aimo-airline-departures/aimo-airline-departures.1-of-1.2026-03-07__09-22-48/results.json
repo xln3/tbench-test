@@ -1,0 +1,23 @@
+{
+    "id": "5d43cda1-7c86-4735-b7e2-8ac168e5e8d0",
+    "trial_name": "aimo-airline-departures.1-of-1.2026-03-07__09-22-48",
+    "task_id": "aimo-airline-departures",
+    "instruction": "# AIMO Problem 1: Airline Departure Problem\n\nThree airline companies operate flights from Dodola island. Each company has a different schedule of departures:\n- The first company departs every 100 days\n- The second company departs every 120 days\n- The third company departs every 150 days\n\nWhat is the greatest positive integer d for which it is true that there will be d consecutive days without a flight from Dodola island, regardless of the departure times of the various airlines?\n\nYour task is to:\n\n1. Create a Python script named `/app/airline_analysis.py` that:\n   - Solves the problem to find the maximum gap\n   - Writes the final answer (just the number) for the maximum number of consecutive no-flight days to a file called `/app/results.txt`\n\nAll files should be created in the current directory (/app).",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_required_files[/app/airline_analysis.py-Python script]": "passed",
+        "test_required_files[/app/results.txt-results file]": "passed",
+        "test_script_runs": "passed",
+        "test_answer": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/aimo-airline-departures/aimo-airline-departures.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T18:17:25.119807+00:00",
+    "trial_ended_at": "2026-03-07T18:22:35.738350+00:00",
+    "agent_started_at": "2026-03-07T18:19:04.193353+00:00",
+    "agent_ended_at": "2026-03-07T18:22:05.267080+00:00",
+    "test_started_at": "2026-03-07T18:22:08.748060+00:00",
+    "test_ended_at": "2026-03-07T18:22:22.961058+00:00"
+}

@@ -1,0 +1,18 @@
+{
+    "id": "1f344d41-e6ec-4d25-a3a2-1acb016bf866",
+    "trial_name": "cron-broken-network.1-of-1.2026-03-07__09-22-48",
+    "task_id": "cron-broken-network",
+    "instruction": "For some reason I can't /usr/bin/curl example.com, can you figure out why and fix it so I can /usr/bin/curl example.com?",
+    "is_resolved": null,
+    "failure_mode": "parse_error",
+    "parser_results": null,
+    "recording_path": "2026-03-07__09-22-48/cron-broken-network/cron-broken-network.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T15:33:18.814590+00:00",
+    "trial_ended_at": "2026-03-07T15:56:14.229771+00:00",
+    "agent_started_at": "2026-03-07T15:35:51.129132+00:00",
+    "agent_ended_at": "2026-03-07T15:55:51.331678+00:00",
+    "test_started_at": "2026-03-07T15:55:54.822588+00:00",
+    "test_ended_at": "2026-03-07T15:56:00.424760+00:00"
+}

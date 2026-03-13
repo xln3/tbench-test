@@ -1,0 +1,44 @@
+root@2926e2f5485c:/taichi-dev/taichi# asciinema rec --stdin /logs/tests.cast
+asciinema: recording asciicast to /logs/tests.cast
+asciinema: press <ctrl-d> or type "exit" when you're done
+root@2926e2f5485c:/taichi-dev/taichi# clear
+root@2926e2f5485c:/taichi-dev/taichi# bash /tests/run-tests.sh; tmux wait -S done
+Collecting pytest==8.4.1
+  Could not find a version that satisfies the requirement pytest==8.4.1 (from versions: 2.0.0, 2.0.1, 2.0.2, 2.0.3, 2.1.0, 2.1.1, 2.1.2, 2.1.3, 2.2.0, 2.2.1, 2.
+2.2, 2.2.3, 2.2.4, 2.3.0, 2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.3.5, 2.4.0, 2.4.1, 2.4.2, 2.5.0, 2.5.1, 2.5.2, 2.6.0, 2.6.1, 2.6.2, 2.6.3, 2.6.4, 2.7.0, 2.7.1, 2.7.2, 2
+.7.3, 2.8.0, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.8.7, 2.9.0, 2.9.1, 2.9.2, 3.0.0, 3.0.1, 3.0.2, 3.0.3, 3.0.4, 3.0.5, 3.0.6, 3.0.7, 3.1.0, 3.1.1, 3.1.2,
+3.1.3, 3.2.0, 3.2.1, 3.2.2, 3.2.3, 3.2.4, 3.2.5, 3.3.0, 3.3.1, 3.3.2, 3.4.0, 3.4.1, 3.4.2, 3.5.0, 3.5.1, 3.6.0, 3.6.1, 3.6.2, 3.6.3, 3.6.4, 3.7.0, 3.7.1, 3.7.2,
+ 3.7.3, 3.7.4, 3.8.0, 3.8.1, 3.8.2, 3.9.1, 3.9.2, 3.9.3, 3.10.0, 3.10.1, 4.0.0, 4.0.1, 4.0.2, 4.1.0, 4.1.1, 4.2.0, 4.2.1, 4.3.0, 4.3.1, 4.4.0, 4.4.1, 4.4.2, 4.5
+.0, 4.6.0, 4.6.1, 4.6.2, 4.6.3, 4.6.4, 4.6.5, 4.6.6, 4.6.7, 4.6.8, 4.6.9, 4.6.10, 4.6.11, 5.0.0, 5.0.1, 5.1.0, 5.1.1, 5.1.2, 5.1.3, 5.2.0, 5.2.1, 5.2.2, 5.2.3,
+5.2.4, 5.3.0, 5.3.1, 5.3.2, 5.3.3, 5.3.4, 5.3.5, 5.4.0, 5.4.1, 5.4.2, 5.4.3, 6.0.0rc1, 6.0.0, 6.0.1, 6.0.2, 6.1.0, 6.1.1, 6.1.2, 6.2.0, 6.2.1, 6.2.2, 6.2.3, 6.2
+.4, 6.2.5, 7.0.0rc1, 7.0.0, 7.0.1)
+No matching distribution found for pytest==8.4.1
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.6.9, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /tests
+plugins: forked-1.3.0, xdist-2.3.0, rerunfailures-10.1
+collected 0 items / 1 error
+
+============================================================================ ERRORS ============================================================================
+_______________________________________________________________ ERROR collecting test_outputs.py _______________________________________________________________
+/tests/test_outputs.py:13: in <module>
+    os.chdir("/app")
+E   FileNotFoundError: [Errno 2] No such file or directory: '/app'
+
+During handling of the above exception, another exception occurred:
+/tests/test_outputs.py:16: in <module>
+    assert False, f"Error importing maximal_square module: {e}"
+E   AssertionError: Error importing maximal_square module: [Errno 2] No such file or directory: '/app'
+E   assert False
+=================================================================== short test summary info ====================================================================
+ERROR ../../tests/test_outputs.py - AssertionError: Error importing maximal_square module: [Errno 2] No such file or directory: '/app'
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+======================================================================= 1 error in 0.29s =======================================================================
+root@2926e2f5485c:/taichi-dev/taichi#
+
+
+
+
+
+
+

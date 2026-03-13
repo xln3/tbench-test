@@ -1,0 +1,94 @@
+root@2e41c1cb5a80:/app# bash /tests/run-tests.sh; tmux wait -S done
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+Fetched 4435 kB in 8s (569 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 40 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 5 packages in 943ms
+Prepared 5 packages in 335ms
+Installed 5 packages in 174ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 6 items
+
+../tests/test_outputs.py ...F..                                                                                                                          [100%]
+
+=========================================================================== FAILURES ===========================================================================
+__________________________________________________________________ test_outputs_match_exactly __________________________________________________________________
+
+    def test_outputs_match_exactly():
+        """Asserts the optimized query output matches the golden query EXACTLY:
+        - same column names (case and order)
+        - same number of rows
+        - same row values in the same order
+        """
+        assert DB_PATH.exists(), f"DB not found at {DB_PATH}"
+        assert GOLDEN_SQL_PATH.exists(), f"Golden SQL not found at {GOLDEN_SQL_PATH}"
+        assert SOL_SQL_PATH.exists(), f"Solution SQL not found at {SOL_SQL_PATH}"
+
+        q_golden = _read_sql(GOLDEN_SQL_PATH)
+        q_sol = _read_sql(SOL_SQL_PATH)
+
+        cols_g, rows_g = _execute_get_columns_and_rows(DB_PATH, q_golden)
+        cols_s, rows_s = _execute_get_columns_and_rows(DB_PATH, q_sol)
+
+        # Column names must match exactly (including case) and order
+>       assert cols_g == cols_s, (
+            f"Column names/order differ.\nGolden:  {cols_g}\nSolution:{cols_s}"
+        )
+E       AssertionError: Column names/order differ.
+E         Golden:  ('word_id', 'word', 'total_synsets', 'total_senses', 'distinct_domains', 'distinct_posids', 'top_synsetid', 'top_synset_sense_count')
+E         Solution:('word_id', 'word', 'total_synsets', 'total_senses', 'distinct_domains', 'distinct_posids', 'top_synsetid', 'synset_sense_count')
+E       assert ('word_id', '..._posids', ...) == ('word_id', '..._posids', ...)
+E
+E         At index 7 diff: 'top_synset_sense_count' != 'synset_sense_count'
+E         Use -v to get more diff
+
+/tests/test_outputs.py:165: AssertionError
+============================================================================ PASSES ============================================================================
+___________________________________________________________ test_compare_golden_vs_solution_runtime ____________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Running iteration 0 of 5
+{'iterations': 5, 'golden': {'median_s': 0.8459162563085556, 'min_s': 0.8347112443298101, 'max_s': 0.9278030171990395}, 'solution': {'median_s': 0.8544302880764
+008, 'min_s': 0.8480912111699581, 'max_s': 1.2187259178608656}, 'speedup_solution_vs_golden': 0.9900354284174394}
+___________________________________________________________ test_solution_contains_single_sql_query ____________________________________________________________
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+✓ Solution file contains exactly one valid SQL SELECT statement
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_compare_golden_vs_my_sql_query_correctness
+PASSED ../tests/test_outputs.py::test_check_for_db_modifications
+PASSED ../tests/test_outputs.py::test_compare_golden_vs_solution_runtime
+PASSED ../tests/test_outputs.py::test_solution_contains_single_sql_query
+PASSED ../tests/test_outputs.py::test_solution_is_small
+FAILED ../tests/test_outputs.py::test_outputs_match_exactly - AssertionError: Column names/order differ.
+=========================================================== 1 failed, 5 passed in 593.96s (0:09:53) ============================================================
+root@2e41c1cb5a80:/app#

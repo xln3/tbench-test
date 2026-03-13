@@ -1,0 +1,20 @@
+{
+    "id": "96a9baaf-990f-49a6-aa48-335bebb1960a",
+    "trial_name": "count-dataset-tokens.1-of-1.2026-03-07__09-22-48",
+    "task_id": "count-dataset-tokens",
+    "instruction": "Tell me how many deepseek tokens are there in the science domain of the ryanmarten/OpenThoughts-1k-sample dataset on huggingface.\nThe dataset README gives critical information on how to use the dataset.\nYou should use the Qwen2.5-1.5B-Instruct tokenizer to determine the number of tokens.\nTo provide the final answer, write the integer number of tokens without spaces or commas (e.g. \"1000000\") to the file /app/answer.txt.\n",
+    "is_resolved": false,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_command_output_content_example": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/count-dataset-tokens/count-dataset-tokens.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T19:46:14.717347+00:00",
+    "trial_ended_at": "2026-03-07T20:01:22.134526+00:00",
+    "agent_started_at": "2026-03-07T19:46:20.668483+00:00",
+    "agent_ended_at": "2026-03-07T20:00:47.641707+00:00",
+    "test_started_at": "2026-03-07T20:00:51.158512+00:00",
+    "test_ended_at": "2026-03-07T20:01:05.308501+00:00"
+}

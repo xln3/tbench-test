@@ -1,0 +1,19 @@
+[?2004hroot@51d7cb1dca75:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@51d7cb1dca75:/app# clear
+[?2004l[H[J[3J[?2004hroot@51d7cb1dca75:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@51d7cb1dca75:/app# panda --prompt 'A script called '"'"'/app/process_data.sh'"'"' won'"'"'t run. Figure out what'"'"'s wrong and fix it so the script can run successfully.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+All tasks have been completed successfully.
+[?2004hroot@51d7cb1dca75:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@51d7cb1dca75:/app# 

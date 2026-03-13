@@ -1,0 +1,1236 @@
+[?2004hroot@1724f1902f65:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@1724f1902f65:/app# clear
+[?2004l[H[J[3J[?2004hroot@1724f1902f65:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+0% [1 InRelease 6932 B/256 kB 3%] [Waiting for headers]                                                       Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+0% [1 InRelease 28.7 kB/256 kB 11%] [2 InRelease 14.2 kB/126 kB 11%]                                                                    0% [1 InRelease 231 kB/256 kB 90%] [2 InRelease 118 kB/126 kB 94%]                                                                  0% [1 InRelease 243 kB/256 kB 95%]                                  0% [Working]0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [3 InRelease 3788 B/126 kB 3%] [Waiting for headers]                                                       Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB]
+0% [3 InRelease 14.2 kB/126 kB 11%] [4 Packages 2655 B/1260 kB 0%]                                                                  0% [4 Packages 98.2 kB/1260 kB 8%]0% [Waiting for headers] [4 Packages 133 kB/1260 kB 11%]                                                        Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+0% [5 InRelease 5484 B/126 kB 4%] [4 Packages 518 kB/1260 kB 41%]                                                                 0% [5 InRelease 34.4 kB/126 kB 27%]0% [4 Packages store 0 B] [5 InRelease 34.4 kB/126 kB 27%]                                                          0% [5 InRelease 43.1 kB/126 kB 34%] [Waiting for headers]                                                         0% [Waiting for headers]17% [Waiting for headers] [Waiting for headers]                                               Get:6 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB]
+17% [Waiting for headers] [6 Packages 14.2 kB/3300 kB 0%]                                                         Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+17% [7 Packages 14.2 kB/1808 kB 1%] [6 Packages 49.0 kB/3300 kB 1%]                                                                   18% [7 Packages 114 kB/1808 kB 6%] [6 Packages 320 kB/3300 kB 10%]24% [7 Packages 945 kB/1808 kB 52%] [6 Packages 2083 kB/3300 kB 63%]                                                                    28% [6 Packages 3119 kB/3300 kB 95%]28% [7 Packages store 0 B] [Waiting for headers] [6 Packages 3119 kB/3300 kB 95%]                                                                                 28% [7 Packages store 0 B] [Waiting for headers]                                                29% [Waiting for headers] [Waiting for headers]29% [6 Packages store 0 B] [Waiting for headers] [Waiting for headers]                                                                      29% [Waiting for headers] [Waiting for headers]                                               Get:8 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+29% [8 Packages 9897 B/117 kB 8%] [Waiting for headers]                                                       Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB]
+29% [8 Packages 14.2 kB/117 kB 12%] [9 Packages 14.2 kB/1895 kB 1%]                                                                   30% [9 Packages 78.0 kB/1895 kB 4%]30% [8 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)] [9 Packages 78.0 kB/1895 kB 4%]                                                                                             30% [Waiting for headers] [9 Packages 80.8 kB/1895 kB 4%]                                                         Get:10 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+31% [10 Packages 12.3 kB/331 kB 4%] [9 Packages 433 kB/1895 kB 23%]34% [10 Packages 57.7 kB/331 kB 17%]                                                                                                              1449 kB/s 19s34% [9 Packages store 0 B] [10 Packages 57.7 kB/331 kB 17%] [Waiting for headers]                                                                 1449 kB/s 19s35% [10 Packages 117 kB/331 kB 35%] [Waiting for headers]                                                                                         1449 kB/s 18s                                                                                                                                                               Get:11 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB]
+35% [10 Packages 313 kB/331 kB 94%] [11 Packages 5555 B/34.8 kB 16%]                                                                              1449 kB/s 18s35% [11 Packages 14.2 kB/34.8 kB 41%]                                                                                                             1449 kB/s 18s35% [10 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)] [11 Packages 14.2 kB/34.8 kB 41%]                                                  1449 kB/s 18s36% [Waiting for headers] [11 Packages 14.2 kB/34.8 kB 41%]                                                                                       1449 kB/s 18s36% [Waiting for headers]                                                                                                                         1449 kB/s 18s36% [11 Packages store 0 B] [Waiting for headers]                                                                                                 1449 kB/s 18s37% [Waiting for headers]                                                                                                                         1449 kB/s 18s                                                                                                                                                               Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+37% [12 Packages 14.2 kB/19.3 MB 0%]                                                                                                              1449 kB/s 18s37% [12 Packages 110 kB/19.3 MB 1%]                                                                                                               1449 kB/s 18s38% [12 Packages 614 kB/19.3 MB 3%]                                                                                                               1449 kB/s 18s48% [12 Packages 5192 kB/19.3 MB 27%]                                                                                                             1449 kB/s 15s69% [12 Packages 14.8 MB/19.3 MB 77%]                                                                                                              1449 kB/s 8s79% [Working]                                                                                                                                      1449 kB/s 5s79% [12 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     1449 kB/s 5s                                                                                                                                                               Get:13 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB]
+79% [12 Packages store 0 B] [13 Packages 14.2 kB/38.1 kB 37%]                                                                                      1449 kB/s 5s79% [12 Packages store 0 B]                                                                                                                        1449 kB/s 5s                                                                                                                                                               Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+79% [12 Packages store 0 B] [14 Packages 14.2 kB/2025 kB 1%]                                                                                       1449 kB/s 5s79% [14 Packages 14.2 kB/2025 kB 1%]                                                                                                               1449 kB/s 5s79% [13 Packages store 0 B] [14 Packages 14.2 kB/2025 kB 1%]                                                                                       1449 kB/s 5s80% [14 Packages 14.2 kB/2025 kB 1%]                                                                                                               1449 kB/s 5s80% [14 Packages 191 kB/2025 kB 9%]                                                                                                                1449 kB/s 5s82% [14 Packages 870 kB/2025 kB 43%]                                                                                                               1449 kB/s 4s84% [Working]                                                                                                                                      1449 kB/s 4s84% [14 Packages store 0 B] [Waiting for headers]                                                                                                  1449 kB/s 4s85% [Waiting for headers]                                                                                                                          1449 kB/s 4s                                                                                                                                                               Get:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB]
+85% [15 Packages 14.2 kB/3486 kB 0%]                                                                                                               1449 kB/s 4s85% [15 Packages 113 kB/3486 kB 3%]                                                                                                                3442 kB/s 1s87% [15 Packages 993 kB/3486 kB 28%]                                                                                                               3442 kB/s 1s93% [Working]                                                                                                                                      3442 kB/s 0s93% [15 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     3442 kB/s 0s93% [Waiting for headers]                                                                                                                          3442 kB/s 0s                                                                                                                                                               Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+93% [16 Packages 14.2 kB/2284 kB 1%]                                                                                                               3442 kB/s 0s93% [16 Packages 113 kB/2284 kB 5%]                                                                                                                3442 kB/s 0s95% [16 Packages 679 kB/2284 kB 30%]                                                                                                               3442 kB/s 0s98% [Working]                                                                                                                                      3442 kB/s 0s98% [16 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     3442 kB/s 0s99% [Waiting for headers]                                                                                                                          3442 kB/s 0s                                                                                                                                                               Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB]
+99% [17 Packages 12.3 kB/49.5 kB 25%]                                                                                                              3442 kB/s 0s99% [Working]                                                                                                                                      3442 kB/s 0s99% [17 Packages store 0 B] [Connected to 10.0.0.1 (10.0.0.1)]                                                                                     3442 kB/s 0s99% [Waiting for headers]                                                                                                                          3442 kB/s 0s                                                                                                                                                               Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB]
+99% [18 Packages 14.2 kB/34.6 kB 41%]                                                                                                              3442 kB/s 0s99% [Working]                                                                                                                                      3442 kB/s 0s99% [18 Packages store 0 B]                                                                                                                        3442 kB/s 0s100% [Working]                                                                                                                                     3442 kB/s 0s                                                                                                                                                               Fetched 36.6 MB in 16s (2243 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 48%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 49%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 85%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libbrotli1 libcurl4t64 libnghttp2-14 libpsl5t64 librtmp1 libssh-4
+The following NEW packages will be installed:
+  curl libbrotli1 libcurl4t64 libnghttp2-14 libpsl5t64 librtmp1 libssh-4
+0 upgraded, 7 newly installed, 0 to remove and 26 not upgraded.
+Need to get 1276 kB of archives.
+After this operation, 3304 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.2 [74.3 kB]
+1% [1 libnghttp2-14 14.2 kB/74.3 kB 19%]                                        8% [Working]            Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+8% [2 libpsl5t64 14.2 kB/57.1 kB 25%]                                     14% [Working]             Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+15% [3 libbrotli1 14.2 kB/331 kB 4%]21% [3 libbrotli1 105 kB/331 kB 32%]                                    38% [Working]             Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+38% [4 librtmp1 14.2 kB/56.3 kB 25%]                                    44% [Working]             Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.3 [190 kB]
+45% [5 libssh-4 14.2 kB/190 kB 7%]51% [5 libssh-4 113 kB/190 kB 59%]                                  59% [Working]             Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+59% [6 libcurl4t64 3804 B/342 kB 1%]66% [6 libcurl4t64 116 kB/342 kB 34%]                                     83% [Working]             Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+84% [7 curl 14.2 kB/227 kB 6%]                                                                                                                      175 kB/s 1s89% [7 curl 104 kB/227 kB 46%]                                                                                                                      175 kB/s 0s100% [Working]                                                                                                                                      175 kB/s 0s                                                                                                                                                               Fetched 1276 kB in 7s (189 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libnghttp2-14:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 13750 files and directories currently installed.)
+Preparing to unpack .../0-libnghttp2-14_1.59.0-1ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../1-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../2-libbrotli1_1.1.0-2build2_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2build2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../3-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../4-libssh-4_0.10.6-2ubuntu0.3_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../5-libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../6-curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up libbrotli1:amd64 (1.1.0-2build2) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Setting up libssh-4:amd64 (0.10.6-2ubuntu0.3) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠴[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠦[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠧[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠇[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠋[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠙[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠹[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠸[0m [2mmailman==3.3.8                                                                                                                                                [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠸[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠸[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠸[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠴[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠴[0m [2maiosmtpd==1.4.6                                                                                                                                               [0m[2K[37m⠴[0m [2malembic==1.18.4                                                                                                                                               [0m[2K[37m⠴[0m [2matpublic==7.0.0                                                                                                                                               [0m[2K[37m⠴[0m [2mauthheaders==0.16.3                                                                                                                                           [0m[2K[37m⠦[0m [2mauthheaders==0.16.3                                                                                                                                           [0m[2K[37m⠧[0m [2mauthheaders==0.16.3                                                                                                                                           [0m[2K[37m⠇[0m [2mauthheaders==0.16.3                                                                                                                                           [0m[2K[37m⠋[0m [2mauthheaders==0.16.3                                                                                                                                           [0m[2K[37m⠋[0m [2mauthres==1.2.0                                                                                                                                                [0m[2K[37m⠋[0m [2mclick==8.3.1                                                                                                                                                  [0m[2K[37m⠋[0m [2mdnspython==2.8.0                                                                                                                                              [0m[2K[37m⠋[0m [2mfalcon==4.2.0                                                                                                                                                 [0m[2K[37m⠋[0m [2mflufl-bounce==4.0                                                                                                                                             [0m[2K[37m⠋[0m [2mflufl-i18n==6.0.0                                                                                                                                             [0m[2K[37m⠋[0m [2mflufl-lock==9.0.0                                                                                                                                             [0m[2K[37m⠋[0m [2mimportlib-resources==6.5.2                                                                                                                                    [0m[2K[37m⠋[0m [2mgunicorn==25.1.0                                                                                                                                              [0m[2K[37m⠋[0m [2mlazr-config==3.1                                                                                                                                              [0m[2K[37m⠋[0m [2mpython-dateutil==2.9.0.post0                                                                                                                                  [0m[2K[37m⠋[0m [2mpasslib==1.7.4                                                                                                                                                [0m[2K[37m⠋[0m [2mrequests==2.32.5                                                                                                                                              [0m[2K[37m⠋[0m [2msqlalchemy==2.0.48                                                                                                                                            [0m[2K[37m⠋[0m [2mzope-component==7.1                                                                                                                                           [0m[2K[37m⠋[0m [2mzope-configuration==7.0                                                                                                                                       [0m[2K[37m⠋[0m [2mzope-event==6.1                                                                                                                                               [0m[2K[37m⠋[0m [2mzope-interface==8.2                                                                                                                                           [0m[2K[37m⠋[0m [2mattrs==25.4.0                                                                                                                                                 [0m[2K[37m⠋[0m [2mmako==1.3.10                                                                                                                                                  [0m[2K[37m⠋[0m [2mtyping-extensions==4.15.0                                                                                                                                     [0m[2K[37m⠋[0m [2mdkimpy==1.1.8                                                                                                                                                 [0m[2K[37m⠙[0m [2mdkimpy==1.1.8                                                                                                                                                 [0m[2K[37m⠹[0m [2mdkimpy==1.1.8                                                                                                                                                 [0m[2K[37m⠸[0m [2mdkimpy==1.1.8                                                                                                                                                 [0m[2K[37m⠼[0m [2mdkimpy==1.1.8                                                                                                                                                 [0m[2K[37m⠴[0m [2mdkimpy==1.1.8                                                                                                                                                 [0m[2K[37m⠦[0m [2mdkimpy==1.1.8                                                                                                                                                 [0m[2K[37m⠦[0m [2mpublicsuffix2==2.20191221                                                                                                                                     [0m[2K[37m⠦[0m [2mpsutil==7.2.2                                                                                                                                                 [0m[2K[37m⠦[0m [2msetuptools==82.0.0                                                                                                                                            [0m[2K[37m⠦[0m [2mlazr-delegates==2.1.1                                                                                                                                         [0m[2K[37m⠦[0m [2msix==1.17.0                                                                                                                                                   [0m[2K[37m⠦[0m [2mcharset-normalizer==3.4.5                                                                                                                                     [0m[2K[37m⠦[0m [2midna==3.11                                                                                                                                                    [0m[2K[37m⠦[0m [2murllib3==2.6.3                                                                                                                                                [0m[2K[37m⠦[0m [2mcertifi==2026.2.25                                                                                                                                            [0m[2K[37m⠦[0m [2mgreenlet==3.3.2                                                                                                                                               [0m[2K[37m⠦[0m [2mgreenlet==3.3.2                                                                                                                                               [0m[2K[37m⠦[0m [2mzope-hookable==8.2                                                                                                                                            [0m[2K[37m⠦[0m [2mzope-i18nmessageid==8.2                                                                                                                                       [0m[2K[37m⠦[0m [2mzope-schema==8.1                                                                                                                                              [0m[2K[37m⠦[0m [2mmarkupsafe==3.0.3                                                                                                                                             [0m[2K[37m⠦[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m46 packages[0m [2min 4.74s[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/45)                                                                                                                                  [2K   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)                                                                                                                                  [1A[2K[1B[2K[1A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)                                                                                                                                  [2A[2K[1B[2K[1B[2K[2A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)                                                                                                                                  [3A[2K[1B[2K[1B[2K[1B[2K[3A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)                                                                                                                                  [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2msix                 [0m [32m[2m------------------------------[0m[0m     0 B/10.79 KiB                                                                                           [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB                                                                                         [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB                                                                                         [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB                                                                                         [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB                                                                                         [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB                                                                                         [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB                                                                                         [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2mimportlib-resources [0m [32m[2m------------------------------[0m[0m     0 B/36.58 KiB                                                                                           [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB                                                                                         [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB                                                                                         [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB                                                                                         [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB                                                                                         [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB
+[2midna                [0m [32m[2m------------------------------[0m[0m     0 B/69.34 KiB                                                                                           [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msix                 [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB
+[2midna                [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB                                                                                         [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB
+[2mtyping-extensions   [0m [32m[2m------------------------------[0m[0m     0 B/43.57 KiB
+[2midna                [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2mmako                [0m [32m[2m------------------------------[0m[0m     0 B/76.67 KiB
+[2mpython-dateutil     [0m [32m[2m------------------------------[0m[0m     0 B/224.50 KiB                                                                                          [11A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[11A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB
+[2mtyping-extensions   [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2midna                [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2mmako                [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.67 KiB
+[2mpython-dateutil     [0m [32m--[2m----------------------------[0m[0m 14.86 KiB/224.50 KiB                                                                                        [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mimportlib-resources [0m [32m-------------[2m-----------------[0m[0m 14.87 KiB/36.58 KiB
+[2mtyping-extensions   [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2midna                [0m [32m----------------------------[2m--[0m[0m 62.85 KiB/69.34 KiB
+[2mmako                [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.67 KiB
+[2mpython-dateutil     [0m [32m--[2m----------------------------[0m[0m 14.86 KiB/224.50 KiB                                                                                        [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mimportlib-resources [0m [32m--------------------------[2m----[0m[0m 30.87 KiB/36.58 KiB
+[2mtyping-extensions   [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2mmako                [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.67 KiB
+[2mpython-dateutil     [0m [32m--[2m----------------------------[0m[0m 14.86 KiB/224.50 KiB                                                                                        [9A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[9A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mimportlib-resources [0m [32m--------------------------[2m----[0m[0m 30.87 KiB/36.58 KiB
+[2mtyping-extensions   [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2mrequests            [0m [32m[2m------------------------------[0m[0m     0 B/63.22 KiB
+[2mattrs               [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2mmako                [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.67 KiB
+[2mgunicorn            [0m [32m---[2m---------------------------[0m[0m 14.91 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m--[2m----------------------------[0m[0m 14.86 KiB/224.50 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [12A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[12A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mtyping-extensions   [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/43.57 KiB
+[2mrequests            [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/63.22 KiB
+[2mattrs               [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2mmako                [0m [32m--------------[2m----------------[0m[0m 33.35 KiB/76.67 KiB
+[2mgunicorn            [0m [32m---[2m---------------------------[0m[0m 14.91 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m-------[2m-----------------------[0m[0m 46.86 KiB/224.50 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [11A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[11A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mrequests            [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/63.22 KiB
+[2mattrs               [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2mmako                [0m [32m--------------------[2m----------[0m[0m 49.35 KiB/76.67 KiB
+[2mgunicorn            [0m [32m---[2m---------------------------[0m[0m 14.91 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m---------[2m---------------------[0m[0m 62.86 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [11A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[11A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mlazr-delegates      [0m [32m[2m------------------------------[0m[0m     0 B/16.03 KiB
+[2mrequests            [0m [32m------------------------------[2m[0m[0m 62.87 KiB/63.22 KiB
+[2mattrs               [0m [32m-----------------------------[2m-[0m[0m 62.88 KiB/66.03 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpsutil              [0m [32m---[2m---------------------------[0m[0m 14.85 KiB/151.91 KiB
+[2mgunicorn            [0m [32m----------[2m--------------------[0m[0m 63.24 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m---------------[2m---------------[0m[0m 108.10 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mlazr-delegates      [0m [32m[2m------------------------------[0m[0m     0 B/16.03 KiB
+[2mattrs               [0m [32m------------------------------[2m[0m[0m 66.03 KiB/66.03 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpsutil              [0m [32m-------[2m-----------------------[0m[0m 30.85 KiB/151.91 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mgunicorn            [0m [32m----------[2m--------------------[0m[0m 63.24 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m---------------[2m---------------[0m[0m 108.10 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 72.42 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [16A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[16A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mlazr-delegates      [0m [32m[2m------------------------------[0m[0m     0 B/16.03 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpsutil              [0m [32m-------[2m-----------------------[0m[0m 30.85 KiB/151.91 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mgunicorn            [0m [32m----------[2m--------------------[0m[0m 63.24 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m---------------[2m---------------[0m[0m 108.10 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 72.42 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpsutil              [0m [32m----------[2m--------------------[0m[0m 46.85 KiB/151.91 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mgunicorn            [0m [32m-------------[2m-----------------[0m[0m 78.91 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m-------------------[2m-----------[0m[0m 140.10 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 78.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mpsutil              [0m [32m----------------[2m--------------[0m[0m 76.38 KiB/151.91 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mgunicorn            [0m [32m---------------[2m---------------[0m[0m 94.91 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m---------------------[2m---------[0m[0m 156.10 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 94.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mpsutil              [0m [32m-------------------[2m-----------[0m[0m 92.38 KiB/151.91 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mgunicorn            [0m [32m-----------------------[2m-------[0m[0m 142.91 KiB/192.45 KiB
+[2mpython-dateutil     [0m [32m-------------------------[2m-----[0m[0m 185.98 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 126.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mflufl-i18n          [0m [32m------------------------------[2m[0m[0m 10.60 KiB/10.60 KiB
+[2mlazr-config         [0m [32m-------------[2m-----------------[0m[0m 14.91 KiB/36.67 KiB
+[2murllib3             [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m---[2m---------------------------[0m[0m 14.91 KiB/150.65 KiB
+[2mpsutil              [0m [32m----------------------------[2m--[0m[0m 140.38 KiB/151.91 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mpython-dateutil     [0m [32m----------------------------[2m--[0m[0m 204.10 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mdnspython           [0m [32m[2m------------------------------[0m[0m     0 B/323.33 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m-----[2m-------------------------[0m[0m 190.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [19A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[19A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mmarkupsafe          [0m [32m--------------------[2m----------[0m[0m 14.88 KiB/22.41 KiB
+[2mlazr-config         [0m [32m-------------[2m-----------------[0m[0m 14.91 KiB/36.67 KiB
+[2murllib3             [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m---[2m---------------------------[0m[0m 14.91 KiB/150.65 KiB
+[2mpsutil              [0m [32m------------------------------[2m[0m[0m 151.91 KiB/151.91 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mpython-dateutil     [0m [32m------------------------------[2m[0m[0m 220.10 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mdnspython           [0m [32m[2m------------------------------[0m[0m     0 B/323.33 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m-----[2m-------------------------[0m[0m 198.05 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [19A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[19A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mmarkupsafe          [0m [32m--------------------[2m----------[0m[0m 14.88 KiB/22.41 KiB
+[2mlazr-config         [0m [32m-------------[2m-----------------[0m[0m 14.91 KiB/36.67 KiB
+[2murllib3             [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-------[2m-----------------------[0m[0m 30.91 KiB/150.65 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2mpython-dateutil     [0m [32m------------------------------[2m[0m[0m 224.50 KiB/224.50 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mdnspython           [0m [32m[2m------------------------------[0m[0m     0 B/323.33 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 206.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [18A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[18A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mmarkupsafe          [0m [32m--------------------[2m----------[0m[0m 14.88 KiB/22.41 KiB
+[2mlazr-config         [0m [32m-------------[2m-----------------[0m[0m 14.91 KiB/36.67 KiB
+[2murllib3             [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-------[2m-----------------------[0m[0m 30.91 KiB/150.65 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2malembic             [0m [32m[2m------------------------------[0m[0m     0 B/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mdnspython           [0m [32m[2m------------------------------[0m[0m     0 B/323.33 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 206.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [17A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[17A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mflufl-lock          [0m [32m------------------------------[2m[0m[0m 10.87 KiB/10.87 KiB
+[2mmarkupsafe          [0m [32m--------------------[2m----------[0m[0m 14.88 KiB/22.41 KiB
+[2murllib3             [0m [32m-------------------[2m-----------[0m[0m 78.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------[2m--------------------[0m[0m 46.88 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-------[2m-----------------------[0m[0m 34.39 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m---[2m---------------------------[0m[0m 14.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2malembic             [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mdnspython           [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/323.33 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 206.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [18A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[18A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mmarkupsafe          [0m [32m--------------------[2m----------[0m[0m 14.88 KiB/22.41 KiB
+[2murllib3             [0m [32m-------------------[2m-----------[0m[0m 78.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------[2m--------------------[0m[0m 46.88 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-------[2m-----------------------[0m[0m 34.39 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m---[2m---------------------------[0m[0m 14.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2malembic             [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mdnspython           [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/323.33 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 206.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [17A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[17A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (0/45)
+[2mzope-hookable       [0m [32m[2m------------------------------[0m[0m     0 B/23.81 KiB
+[2mzope-i18nmessageid  [0m [32m---------------[2m---------------[0m[0m 14.90 KiB/29.96 KiB
+[2mzope-configuration  [0m [32m[2m------------------------------[0m[0m     0 B/76.67 KiB
+[2mzope-schema         [0m [32m[2m------------------------------[0m[0m     0 B/83.02 KiB
+[2mpublicsuffix2       [0m [32m------[2m------------------------[0m[0m 14.83 KiB/86.95 KiB
+[2mclick               [0m [32m-----[2m-------------------------[0m[0m 14.85 KiB/105.74 KiB
+[2murllib3             [0m [32m----------------------[2m--------[0m[0m 94.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------------[2m-----------------[0m[0m 65.02 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m--------------[2m----------------[0m[0m 66.39 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m------[2m------------------------[0m[0m 30.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2malembic             [0m [32m------[2m------------------------[0m[0m 48.00 KiB/257.71 KiB
+[2mzope-interface      [0m [32m[2m------------------------------[0m[0m     0 B/258.65 KiB
+[2mdnspython           [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/323.33 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mgreenlet            [0m [32m[2m------------------------------[0m[0m     0 B/599.49 KiB
+[2mfalcon              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/867.55 KiB
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 254.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [24A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[24A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-hookable       [0m [32m---------[2m---------------------[0m[0m 6.99 KiB/23.81 KiB
+[2mzope-i18nmessageid  [0m [32m---------------[2m---------------[0m[0m 14.90 KiB/29.96 KiB
+[2mzope-configuration  [0m [32m[2m------------------------------[0m[0m     0 B/76.67 KiB
+[2mzope-schema         [0m [32m------[2m------------------------[0m[0m 14.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m------[2m------------------------[0m[0m 14.83 KiB/86.95 KiB
+[2mclick               [0m [32m-----[2m-------------------------[0m[0m 14.85 KiB/105.74 KiB
+[2murllib3             [0m [32m----------------------[2m--------[0m[0m 94.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------------[2m-----------------[0m[0m 65.02 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m--------------[2m----------------[0m[0m 66.39 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m------[2m------------------------[0m[0m 30.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m[2m------------------------------[0m[0m     0 B/191.67 KiB
+[2malembic             [0m [32m------[2m------------------------[0m[0m 48.00 KiB/257.71 KiB
+[2mzope-interface      [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/258.65 KiB
+[2mdnspython           [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/323.33 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mpasslib             [0m [32m[2m------------------------------[0m[0m     0 B/513.24 KiB
+[2mgreenlet            [0m [32m[2m------------------------------[0m[0m     0 B/599.49 KiB
+[2mfalcon              [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/867.55 KiB
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 254.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m[2m------------------------------[0m[0m     0 B/3.19 MiB                                                                                            [24A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[24A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2matpublic            [0m [32m[2m------------------------------[0m[0m     0 B/6.27 KiB
+[2mzope-hookable       [0m [32m-----------------------------[2m-[0m[0m 22.99 KiB/23.81 KiB
+[2mzope-i18nmessageid  [0m [32m---------------------[2m---------[0m[0m 20.94 KiB/29.96 KiB
+[2mzope-component      [0m [32m-------[2m-----------------------[0m[0m 14.91 KiB/66.52 KiB
+[2mzope-configuration  [0m [32m------[2m------------------------[0m[0m 14.87 KiB/76.67 KiB
+[2mzope-schema         [0m [32m------[2m------------------------[0m[0m 14.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m-----------[2m-------------------[0m[0m 30.83 KiB/86.95 KiB
+[2mclick               [0m [32m---------[2m---------------------[0m[0m 30.85 KiB/105.74 KiB
+[2murllib3             [0m [32m--------------------------[2m----[0m[0m 110.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------------[2m--------------[0m[0m 77.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m----------------[2m--------------[0m[0m 78.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m--------[2m----------------------[0m[0m 46.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/191.67 KiB
+[2malembic             [0m [32m--------[2m----------------------[0m[0m 60.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m----[2m--------------------------[0m[0m 32.00 KiB/258.65 KiB
+[2mdnspython           [0m [32m------[2m------------------------[0m[0m 61.30 KiB/323.33 KiB
+[2mpytest              [0m [32m----[2m--------------------------[0m[0m 40.50 KiB/356.91 KiB
+[2mpasslib             [0m [32m--[2m----------------------------[0m[0m 32.00 KiB/513.24 KiB
+[2mgreenlet            [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m--[2m----------------------------[0m[0m 46.91 KiB/867.55 KiB
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 270.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/3.19 MiB                                                                                          [26A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[26A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2matpublic            [0m [32m[2m------------------------------[0m[0m     0 B/6.27 KiB
+[2mzope-hookable       [0m [32m-----------------------------[2m-[0m[0m 22.99 KiB/23.81 KiB
+[2mzope-component      [0m [32m-------[2m-----------------------[0m[0m 14.91 KiB/66.52 KiB
+[2mzope-configuration  [0m [32m------[2m------------------------[0m[0m 14.87 KiB/76.67 KiB
+[2mzope-schema         [0m [32m------[2m------------------------[0m[0m 14.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m---------------[2m---------------[0m[0m 41.54 KiB/86.95 KiB
+[2mclick               [0m [32m--------------[2m----------------[0m[0m 46.85 KiB/105.74 KiB
+[2murllib3             [0m [32m--------------------------[2m----[0m[0m 110.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------------[2m--------------[0m[0m 77.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m----------------[2m--------------[0m[0m 78.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m--------[2m----------------------[0m[0m 46.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/191.67 KiB
+[2malembic             [0m [32m--------[2m----------------------[0m[0m 60.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m----[2m--------------------------[0m[0m 32.00 KiB/258.65 KiB
+[2mdnspython           [0m [32m------[2m------------------------[0m[0m 61.30 KiB/323.33 KiB
+[2mpytest              [0m [32m----[2m--------------------------[0m[0m 40.50 KiB/356.91 KiB
+[2mpasslib             [0m [32m--[2m----------------------------[0m[0m 32.00 KiB/513.24 KiB
+[2mgreenlet            [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m--[2m----------------------------[0m[0m 46.91 KiB/867.55 KiB
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 270.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 16.00 KiB/3.19 MiB                                                                                          [25A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[25A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-hookable       [0m [32m-----------------------------[2m-[0m[0m 22.99 KiB/23.81 KiB
+[2mzope-component      [0m [32m-------[2m-----------------------[0m[0m 14.91 KiB/66.52 KiB
+[2mzope-configuration  [0m [32m-------------[2m-----------------[0m[0m 30.87 KiB/76.67 KiB
+[2mzope-schema         [0m [32m------------[2m------------------[0m[0m 30.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m---------------[2m---------------[0m[0m 41.54 KiB/86.95 KiB
+[2mclick               [0m [32m--------------[2m----------------[0m[0m 46.85 KiB/105.74 KiB
+[2murllib3             [0m [32m------------------------------[2m[0m[0m 126.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------------------[2m-----------[0m[0m 93.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-------------------[2m-----------[0m[0m 94.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m-----------[2m-------------------[0m[0m 62.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----[2m--------------------------[0m[0m 22.87 KiB/191.67 KiB
+[2malembic             [0m [32m--------[2m----------------------[0m[0m 60.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m----[2m--------------------------[0m[0m 32.00 KiB/258.65 KiB
+[2mdnspython           [0m [32m------[2m------------------------[0m[0m 61.30 KiB/323.33 KiB
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 56.50 KiB/356.91 KiB
+[2mpasslib             [0m [32m--[2m----------------------------[0m[0m 32.00 KiB/513.24 KiB
+[2mgreenlet            [0m [32m--[2m----------------------------[0m[0m 32.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m--[2m----------------------------[0m[0m 46.91 KiB/867.55 KiB
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 270.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 32.00 KiB/3.19 MiB                                                                                          [24A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[24A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-component      [0m [32m-------[2m-----------------------[0m[0m 14.91 KiB/66.52 KiB
+[2mzope-configuration  [0m [32m-------------[2m-----------------[0m[0m 30.87 KiB/76.67 KiB
+[2mzope-schema         [0m [32m------------[2m------------------[0m[0m 30.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m---------------[2m---------------[0m[0m 41.54 KiB/86.95 KiB
+[2mclick               [0m [32m--------------[2m----------------[0m[0m 46.85 KiB/105.74 KiB
+[2murllib3             [0m [32m------------------------------[2m[0m[0m 126.16 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------------------[2m-----------[0m[0m 93.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-------------------[2m-----------[0m[0m 94.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m-----------[2m-------------------[0m[0m 62.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----[2m--------------------------[0m[0m 22.87 KiB/191.67 KiB
+[2malembic             [0m [32m---------[2m---------------------[0m[0m 76.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m----[2m--------------------------[0m[0m 32.00 KiB/258.65 KiB
+[2mdnspython           [0m [32m--------[2m----------------------[0m[0m 77.30 KiB/323.33 KiB
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 56.50 KiB/356.91 KiB
+[2mpasslib             [0m [32m--[2m----------------------------[0m[0m 32.00 KiB/513.24 KiB
+[2mgreenlet            [0m [32m--[2m----------------------------[0m[0m 32.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m--[2m----------------------------[0m[0m 46.91 KiB/867.55 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 286.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 32.00 KiB/3.19 MiB                                                                                          [23A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[23A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-component      [0m [32m--------------[2m----------------[0m[0m 30.91 KiB/66.52 KiB
+[2mzope-configuration  [0m [32m-------------------[2m-----------[0m[0m 46.87 KiB/76.67 KiB
+[2mzope-schema         [0m [32m-----------------[2m-------------[0m[0m 46.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m--------------------[2m----------[0m[0m 57.54 KiB/86.95 KiB
+[2mclick               [0m [32m------------------[2m------------[0m[0m 62.85 KiB/105.74 KiB
+[2mcertifi             [0m [32m----------------------[2m--------[0m[0m 109.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-------------------[2m-----------[0m[0m 94.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m--------------[2m----------------[0m[0m 78.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----[2m--------------------------[0m[0m 22.87 KiB/191.67 KiB
+[2malembic             [0m [32m---------[2m---------------------[0m[0m 76.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m------[2m------------------------[0m[0m 48.00 KiB/258.65 KiB
+[2mdnspython           [0m [32m--------[2m----------------------[0m[0m 77.30 KiB/323.33 KiB
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 56.50 KiB/356.91 KiB
+[2mpasslib             [0m [32m---[2m---------------------------[0m[0m 48.00 KiB/513.24 KiB
+[2mgreenlet            [0m [32m---[2m---------------------------[0m[0m 45.55 KiB/599.49 KiB
+[2mfalcon              [0m [32m--[2m----------------------------[0m[0m 55.71 KiB/867.55 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 286.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 32.00 KiB/3.19 MiB                                                                                          [22A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[22A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-component      [0m [32m--------------[2m----------------[0m[0m 30.91 KiB/66.52 KiB
+[2mzope-configuration  [0m [32m-------------------[2m-----------[0m[0m 46.87 KiB/76.67 KiB
+[2mzope-schema         [0m [32m-----------------[2m-------------[0m[0m 46.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m--------------------[2m----------[0m[0m 57.54 KiB/86.95 KiB
+[2mclick               [0m [32m------------------[2m------------[0m[0m 62.85 KiB/105.74 KiB
+[2mcertifi             [0m [32m----------------------[2m--------[0m[0m 109.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-----------------------[2m-------[0m[0m 110.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m--------------[2m----------------[0m[0m 78.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m-------[2m-----------------------[0m[0m 38.87 KiB/191.67 KiB
+[2malembic             [0m [32m---------[2m---------------------[0m[0m 76.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m------[2m------------------------[0m[0m 48.00 KiB/258.65 KiB
+[2mdnspython           [0m [32m---------[2m---------------------[0m[0m 93.30 KiB/323.33 KiB
+[2mpytest              [0m [32m------[2m------------------------[0m[0m 63.09 KiB/356.91 KiB
+[2mpasslib             [0m [32m---[2m---------------------------[0m[0m 48.00 KiB/513.24 KiB
+[2mgreenlet            [0m [32m---[2m---------------------------[0m[0m 45.55 KiB/599.49 KiB
+[2mfalcon              [0m [32m--[2m----------------------------[0m[0m 55.71 KiB/867.55 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 286.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 48.00 KiB/3.19 MiB                                                                                          [22A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[22A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-component      [0m [32m-----------------------------[2m-[0m[0m 62.91 KiB/66.52 KiB
+[2mzope-schema         [0m [32m-----------------------------[2m-[0m[0m 78.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m----------------------------[2m--[0m[0m 78.83 KiB/86.95 KiB
+[2mclick               [0m [32m---------------------------[2m---[0m[0m 94.85 KiB/105.74 KiB
+[2mcertifi             [0m [32m-----------------------------[2m-[0m[0m 141.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m--------------------------[2m----[0m[0m 126.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m-----------------[2m-------------[0m[0m 94.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m---------[2m---------------------[0m[0m 54.87 KiB/191.67 KiB
+[2malembic             [0m [32m-------------[2m-----------------[0m[0m 108.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m---------[2m---------------------[0m[0m 77.38 KiB/258.65 KiB
+[2mdnspython           [0m [32m-----------[2m-------------------[0m[0m 109.30 KiB/323.33 KiB
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 77.29 KiB/356.91 KiB
+[2mpasslib             [0m [32m----[2m--------------------------[0m[0m 63.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----[2m--------------------------[0m[0m 62.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m---[2m---------------------------[0m[0m 78.91 KiB/867.55 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 318.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 61.65 KiB/3.19 MiB                                                                                          [21A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[21A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-schema         [0m [32m-----------------------------[2m-[0m[0m 78.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m----------------------------[2m--[0m[0m 78.83 KiB/86.95 KiB
+[2mclick               [0m [32m------------------------------[2m[0m[0m 105.74 KiB/105.74 KiB
+[2mcertifi             [0m [32m-----------------------------[2m-[0m[0m 141.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-----------------------------[2m-[0m[0m 142.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m-------------------[2m-----------[0m[0m 110.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----------[2m--------------------[0m[0m 59.88 KiB/191.67 KiB
+[2malembic             [0m [32m---------------[2m---------------[0m[0m 124.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-----------[2m-------------------[0m[0m 93.28 KiB/258.65 KiB
+[2mdnspython           [0m [32m------------[2m------------------[0m[0m 125.30 KiB/323.33 KiB
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 93.29 KiB/356.91 KiB
+[2mpasslib             [0m [32m-----[2m-------------------------[0m[0m 79.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----[2m--------------------------[0m[0m 62.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m---[2m---------------------------[0m[0m 78.91 KiB/867.55 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 334.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 77.65 KiB/3.19 MiB                                                                                          [20A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[20A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-schema         [0m [32m-----------------------------[2m-[0m[0m 78.88 KiB/83.02 KiB
+[2mpublicsuffix2       [0m [32m----------------------------[2m--[0m[0m 78.83 KiB/86.95 KiB
+[2mcertifi             [0m [32m-----------------------------[2m-[0m[0m 141.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-----------------------------[2m-[0m[0m 142.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m----------------------[2m--------[0m[0m 126.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----------[2m--------------------[0m[0m 62.75 KiB/191.67 KiB
+[2malembic             [0m [32m---------------[2m---------------[0m[0m 124.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-----------[2m-------------------[0m[0m 93.28 KiB/258.65 KiB
+[2mdnspython           [0m [32m------------[2m------------------[0m[0m 125.30 KiB/323.33 KiB
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 93.29 KiB/356.91 KiB
+[2mpasslib             [0m [32m-----[2m-------------------------[0m[0m 79.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----[2m--------------------------[0m[0m 62.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m---[2m---------------------------[0m[0m 78.91 KiB/867.55 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 334.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 77.65 KiB/3.19 MiB                                                                                          [19A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[19A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mpublicsuffix2       [0m [32m------------------------------[2m[0m[0m 86.95 KiB/86.95 KiB
+[2mcertifi             [0m [32m-----------------------------[2m-[0m[0m 141.12 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-----------------------------[2m-[0m[0m 142.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m----------------------[2m--------[0m[0m 126.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----------[2m--------------------[0m[0m 62.75 KiB/191.67 KiB
+[2malembic             [0m [32m---------------[2m---------------[0m[0m 124.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-----------[2m-------------------[0m[0m 93.28 KiB/258.65 KiB
+[2mdnspython           [0m [32m------------[2m------------------[0m[0m 125.30 KiB/323.33 KiB
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 93.29 KiB/356.91 KiB
+[2mpasslib             [0m [32m-----[2m-------------------------[0m[0m 79.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----[2m--------------------------[0m[0m 62.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m----[2m--------------------------[0m[0m 94.91 KiB/867.55 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 334.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 77.65 KiB/3.19 MiB                                                                                          [18A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[18A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mcertifi             [0m [32m------------------------------[2m[0m[0m 150.08 KiB/150.08 KiB
+[2maiosmtpd            [0m [32m-----------------------------[2m-[0m[0m 142.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m----------------------[2m--------[0m[0m 126.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----------[2m--------------------[0m[0m 62.75 KiB/191.67 KiB
+[2malembic             [0m [32m---------------[2m---------------[0m[0m 124.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-----------[2m-------------------[0m[0m 93.28 KiB/258.65 KiB
+[2mdnspython           [0m [32m------------[2m------------------[0m[0m 125.30 KiB/323.33 KiB
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 93.29 KiB/356.91 KiB
+[2mpasslib             [0m [32m-----[2m-------------------------[0m[0m 79.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----[2m--------------------------[0m[0m 78.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m----[2m--------------------------[0m[0m 94.91 KiB/867.55 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 334.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 77.65 KiB/3.19 MiB                                                                                          [17A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[17A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2maiosmtpd            [0m [32m-----------------------------[2m-[0m[0m 142.91 KiB/150.65 KiB
+[2mflufl-bounce        [0m [32m----------------------[2m--------[0m[0m 126.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----------[2m--------------------[0m[0m 62.75 KiB/191.67 KiB
+[2malembic             [0m [32m---------------[2m---------------[0m[0m 124.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-----------[2m-------------------[0m[0m 93.28 KiB/258.65 KiB
+[2mdnspython           [0m [32m------------[2m------------------[0m[0m 125.30 KiB/323.33 KiB
+[2mpytest              [0m [32m----------[2m--------------------[0m[0m 109.29 KiB/356.91 KiB
+[2mpasslib             [0m [32m-----[2m-------------------------[0m[0m 79.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----[2m--------------------------[0m[0m 78.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m----[2m--------------------------[0m[0m 94.91 KiB/867.55 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 343.82 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 93.65 KiB/3.19 MiB                                                                                          [16A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[16A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mflufl-bounce        [0m [32m----------------------[2m--------[0m[0m 126.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m----------[2m--------------------[0m[0m 62.75 KiB/191.67 KiB
+[2malembic             [0m [32m---------------[2m---------------[0m[0m 124.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-------------[2m-----------------[0m[0m 109.28 KiB/258.65 KiB
+[2mdnspython           [0m [32m--------------[2m----------------[0m[0m 141.30 KiB/323.33 KiB
+[2mpytest              [0m [32m----------[2m--------------------[0m[0m 109.29 KiB/356.91 KiB
+[2mpasslib             [0m [32m------[2m------------------------[0m[0m 95.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----[2m--------------------------[0m[0m 78.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m----[2m--------------------------[0m[0m 94.91 KiB/867.55 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 343.82 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-[2m-----------------------------[0m[0m 93.65 KiB/3.19 MiB                                                                                          [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mflufl-bounce        [0m [32m-------------------------[2m-----[0m[0m 142.83 KiB/175.77 KiB
+[2mcharset-normalizer  [0m [32m-------------[2m-----------------[0m[0m 78.75 KiB/191.67 KiB
+[2malembic             [0m [32m-----------------[2m-------------[0m[0m 140.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-------------[2m-----------------[0m[0m 109.28 KiB/258.65 KiB
+[2mdnspython           [0m [32m--------------[2m----------------[0m[0m 141.30 KiB/323.33 KiB
+[2mpytest              [0m [32m----------[2m--------------------[0m[0m 117.44 KiB/356.91 KiB
+[2mpasslib             [0m [32m------[2m------------------------[0m[0m 95.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m-----[2m-------------------------[0m[0m 94.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m----[2m--------------------------[0m[0m 110.91 KiB/867.55 KiB
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 359.82 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m--[2m----------------------------[0m[0m 109.65 KiB/3.19 MiB                                                                                         [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mcharset-normalizer  [0m [32m------------------[2m------------[0m[0m 110.75 KiB/191.67 KiB
+[2malembic             [0m [32m---------------------[2m---------[0m[0m 178.45 KiB/257.71 KiB
+[2mzope-interface      [0m [32m-----------------[2m-------------[0m[0m 141.38 KiB/258.65 KiB
+[2mdnspython           [0m [32m------------------[2m------------[0m[0m 189.30 KiB/323.33 KiB
+[2mpytest              [0m [32m------------[2m------------------[0m[0m 142.04 KiB/356.91 KiB
+[2mpasslib             [0m [32m---------[2m---------------------[0m[0m 143.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m-------[2m-----------------------[0m[0m 126.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m-----[2m-------------------------[0m[0m 142.91 KiB/867.55 KiB
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 382.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m--[2m----------------------------[0m[0m 141.65 KiB/3.19 MiB                                                                                         [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mcharset-normalizer  [0m [32m-------------------------[2m-----[0m[0m 158.75 KiB/191.67 KiB
+[2malembic             [0m [32m--------------------------[2m----[0m[0m 220.33 KiB/257.71 KiB
+[2mzope-interface      [0m [32m----------------------[2m--------[0m[0m 189.38 KiB/258.65 KiB
+[2mdnspython           [0m [32m---------------------[2m---------[0m[0m 226.25 KiB/323.33 KiB
+[2mpytest              [0m [32m-----------------[2m-------------[0m[0m 191.09 KiB/356.91 KiB
+[2mpasslib             [0m [32m------------[2m------------------[0m[0m 191.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----------[2m--------------------[0m[0m 188.84 KiB/599.49 KiB
+[2mfalcon              [0m [32m-------[2m-----------------------[0m[0m 174.81 KiB/867.55 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 446.44 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m--[2m----------------------------[0m[0m 189.65 KiB/3.19 MiB                                                                                         [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mcharset-normalizer  [0m [32m------------------------------[2m[0m[0m 190.75 KiB/191.67 KiB
+[2mzope-interface      [0m [32m------------------------[2m------[0m[0m 205.38 KiB/258.65 KiB
+[2mdnspython           [0m [32m-------------------------[2m-----[0m[0m 269.08 KiB/323.33 KiB
+[2mpytest              [0m [32m-------------------[2m-----------[0m[0m 223.09 KiB/356.91 KiB
+[2mpasslib             [0m [32m-------------[2m-----------------[0m[0m 211.61 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----------[2m--------------------[0m[0m 190.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m--------[2m----------------------[0m[0m 206.81 KiB/867.55 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 446.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m---[2m---------------------------[0m[0m 221.65 KiB/3.19 MiB                                                                                         [13A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[13A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mzope-interface      [0m [32m--------------------------[2m----[0m[0m 221.38 KiB/258.65 KiB
+[2mdnspython           [0m [32m---------------------------[2m---[0m[0m 285.08 KiB/323.33 KiB
+[2mpytest              [0m [32m---------------------[2m---------[0m[0m 239.09 KiB/356.91 KiB
+[2mpasslib             [0m [32m--------------[2m----------------[0m[0m 227.61 KiB/513.24 KiB
+[2mgreenlet            [0m [32m-----------[2m-------------------[0m[0m 215.47 KiB/599.49 KiB
+[2mfalcon              [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/867.55 KiB
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 462.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m---[2m---------------------------[0m[0m 237.65 KiB/3.19 MiB                                                                                         [12A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[12A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mdnspython           [0m [32m----------------------------[2m--[0m[0m 301.08 KiB/323.33 KiB
+[2mpytest              [0m [32m-----------------------[2m-------[0m[0m 271.09 KiB/356.91 KiB
+[2mpasslib             [0m [32m---------------[2m---------------[0m[0m 255.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m-------------[2m-----------------[0m[0m 254.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m---------[2m---------------------[0m[0m 238.91 KiB/867.55 KiB
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 508.71 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m---[2m---------------------------[0m[0m 253.65 KiB/3.19 MiB                                                                                         [11A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[11A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mpytest              [0m [32m---------------------------[2m---[0m[0m 319.09 KiB/356.91 KiB
+[2mpasslib             [0m [32m------------------[2m------------[0m[0m 303.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m--------------[2m----------------[0m[0m 270.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m----------[2m--------------------[0m[0m 270.91 KiB/867.55 KiB
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 510.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m---[2m---------------------------[0m[0m 292.93 KiB/3.19 MiB                                                                                         [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (18/45)
+[2mpytest              [0m [32m------------------------------[2m[0m[0m 351.09 KiB/356.91 KiB
+[2mpasslib             [0m [32m---------------------[2m---------[0m[0m 351.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m----------------[2m--------------[0m[0m 318.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m-----------[2m-------------------[0m[0m 303.92 KiB/867.55 KiB
+[2mpygments            [0m [32m---------------[2m---------------[0m[0m 574.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m---[2m---------------------------[0m[0m 317.65 KiB/3.19 MiB                                                                                         [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2mpasslib             [0m [32m-----------------------[2m-------[0m[0m 383.95 KiB/513.24 KiB
+[2mgreenlet            [0m [32m-----------------[2m-------------[0m[0m 325.05 KiB/599.49 KiB
+[2mfalcon              [0m [32m------------[2m------------------[0m[0m 334.91 KiB/867.55 KiB
+[2mpygments            [0m [32m---------------[2m---------------[0m[0m 574.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m----[2m--------------------------[0m[0m 349.65 KiB/3.19 MiB                                                                                         [9A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[9A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2mgreenlet            [0m [32m------------------------[2m------[0m[0m 462.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m----------------[2m--------------[0m[0m 456.56 KiB/867.55 KiB
+[2mpygments            [0m [32m-------------------[2m-----------[0m[0m 718.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-----[2m-------------------------[0m[0m 525.65 KiB/3.19 MiB                                                                                         [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2mgreenlet            [0m [32m-------------------------[2m-----[0m[0m 494.00 KiB/599.49 KiB
+[2mfalcon              [0m [32m-----------------[2m-------------[0m[0m 487.16 KiB/867.55 KiB
+[2mpygments            [0m [32m-------------------[2m-----------[0m[0m 734.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-----[2m-------------------------[0m[0m 541.65 KiB/3.19 MiB                                                                                         [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2mfalcon              [0m [32m---------------------[2m---------[0m[0m 584.56 KiB/867.55 KiB
+[2mpygments            [0m [32m--------------------[2m----------[0m[0m 766.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m------[2m------------------------[0m[0m 637.65 KiB/3.19 MiB                                                                                         [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2mpygments            [0m [32m----------------------[2m--------[0m[0m 846.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-------[2m-----------------------[0m[0m 701.65 KiB/3.19 MiB                                                                                         [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2mpygments            [0m [32m------------------------[2m------[0m[0m 926.54 KiB/1.17 MiB
+[2msqlalchemy          [0m [32m-------[2m-----------------------[0m[0m 749.65 KiB/3.19 MiB                                                                                         [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2msqlalchemy          [0m [32m-----------[2m-------------------[0m[0m 1.12 MiB/3.19 MiB                                                                                           [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2msqlalchemy          [0m [32m--------------[2m----------------[0m[0m 1.39 MiB/3.19 MiB                                                                                           [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (35/45)
+[2msqlalchemy          [0m [32m----------------------[2m--------[0m[0m 2.34 MiB/3.19 MiB                                                                                           [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠼[0m [2mPreparing packages...[0m (40/45)
+[2msqlalchemy          [0m [32m-----------------------------[2m-[0m[0m 3.03 MiB/3.19 MiB                                                                                           [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠼[0m [2mPreparing packages...[0m (40/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+   [36m[1mBuilding[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠴[0m [2mPreparing packages...[0m (41/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+   [36m[1mBuilding[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠴[0m [2mPreparing packages...[0m (41/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠴[0m [2mPreparing packages...[0m (41/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+   [36m[1mBuilding[0m[39m authres[2m==1.2.0[0m
+[37m⠦[0m [2mPreparing packages...[0m (43/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠦[0m [2mPreparing packages...[0m (43/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠧[0m [2mPreparing packages...[0m (44/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠇[0m [2mPreparing packages...[0m (44/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠋[0m [2mPreparing packages...[0m (44/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠙[0m [2mPreparing packages...[0m (44/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠹[0m [2mPreparing packages...[0m (44/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A   [36m[1mBuilding[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (44/45)                                                                                                                                 [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A      [32m[1mBuilt[0m[39m mailman[2m==3.3.8[0m
+      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2mPreparing packages...[0m (44/45)                                                                                                                                 [3A[2K[1B[2K[1B[2K[1B[2K[3A      [32m[1mBuilt[0m[39m authheaders[2m==0.16.3[0m
+      [32m[1mBuilt[0m[39m dkimpy[2m==1.1.8[0m
+      [32m[1mBuilt[0m[39m authres[2m==1.2.0[0m
+[37m⠸[0m [2m[0m (45/45)                                                                                                                                                      [2K[2mPrepared [1m45 packages[0m [2min 2.31s[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/46] [2mInstalling wheels...                                                                                                                [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/46] [2mtyping-extensions==4.15.0                                                                                                           [0m[2K░░░░░░░░░░░░░░░░░░░░ [1/46] [2mtyping-extensions==4.15.0                                                                                                           [0m[2K░░░░░░░░░░░░░░░░░░░░ [1/46] [2msix==1.17.0                                                                                                                         [0m[2K░░░░░░░░░░░░░░░░░░░░ [2/46] [2msix==1.17.0                                                                                                                         [0m[2K░░░░░░░░░░░░░░░░░░░░ [2/46] [2murllib3==2.6.3                                                                                                                      [0m[2K█░░░░░░░░░░░░░░░░░░░ [3/46] [2murllib3==2.6.3                                                                                                                      [0m[2K█░░░░░░░░░░░░░░░░░░░ [3/46] [2mzope-schema==8.1                                                                                                                    [0m[2K█░░░░░░░░░░░░░░░░░░░ [4/46] [2mzope-schema==8.1                                                                                                                    [0m[2K█░░░░░░░░░░░░░░░░░░░ [4/46] [2mzope-interface==8.2                                                                                                                 [0m[2K██░░░░░░░░░░░░░░░░░░ [5/46] [2mzope-interface==8.2                                                                                                                 [0m[2K██░░░░░░░░░░░░░░░░░░ [5/46] [2mflufl-lock==9.0.0                                                                                                                   [0m[2K██░░░░░░░░░░░░░░░░░░ [6/46] [2mflufl-lock==9.0.0                                                                                                                   [0m[2K██░░░░░░░░░░░░░░░░░░ [6/46] [2mcharset-normalizer==3.4.5                                                                                                           [0m[2K███░░░░░░░░░░░░░░░░░ [7/46] [2mcharset-normalizer==3.4.5                                                                                                           [0m[2K███░░░░░░░░░░░░░░░░░ [7/46] [2mzope-component==7.1                                                                                                                 [0m[2K███░░░░░░░░░░░░░░░░░ [8/46] [2mzope-component==7.1                                                                                                                 [0m[2K███░░░░░░░░░░░░░░░░░ [8/46] [2mlazr-config==3.1                                                                                                                    [0m[2K███░░░░░░░░░░░░░░░░░ [9/46] [2mlazr-config==3.1                                                                                                                    [0m[2K[2mInstalled [1m46 packages[0m [2min 46ms[0m[0m
+ [32m+[39m [1maiosmtpd[0m[2m==1.4.6[0m
+ [32m+[39m [1malembic[0m[2m==1.18.4[0m
+ [32m+[39m [1matpublic[0m[2m==7.0.0[0m
+ [32m+[39m [1mattrs[0m[2m==25.4.0[0m
+ [32m+[39m [1mauthheaders[0m[2m==0.16.3[0m
+ [32m+[39m [1mauthres[0m[2m==1.2.0[0m
+ [32m+[39m [1mcertifi[0m[2m==2026.2.25[0m
+ [32m+[39m [1mcharset-normalizer[0m[2m==3.4.5[0m
+ [32m+[39m [1mclick[0m[2m==8.3.1[0m
+ [32m+[39m [1mdkimpy[0m[2m==1.1.8[0m
+ [32m+[39m [1mdnspython[0m[2m==2.8.0[0m
+ [32m+[39m [1mfalcon[0m[2m==4.2.0[0m
+ [32m+[39m [1mflufl-bounce[0m[2m==4.0[0m
+ [32m+[39m [1mflufl-i18n[0m[2m==6.0.0[0m
+ [32m+[39m [1mflufl-lock[0m[2m==9.0.0[0m
+ [32m+[39m [1mgreenlet[0m[2m==3.3.2[0m
+ [32m+[39m [1mgunicorn[0m[2m==25.1.0[0m
+ [32m+[39m [1midna[0m[2m==3.11[0m
+ [32m+[39m [1mimportlib-resources[0m[2m==6.5.2[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mlazr-config[0m[2m==3.1[0m
+ [32m+[39m [1mlazr-delegates[0m[2m==2.1.1[0m
+ [32m+[39m [1mmailman[0m[2m==3.3.8[0m
+ [32m+[39m [1mmako[0m[2m==1.3.10[0m
+ [32m+[39m [1mmarkupsafe[0m[2m==3.0.3[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpasslib[0m[2m==1.7.4[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpsutil[0m[2m==7.2.2[0m
+ [32m+[39m [1mpublicsuffix2[0m[2m==2.20191221[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+ [32m+[39m [1mpython-dateutil[0m[2m==2.9.0.post0[0m
+ [32m+[39m [1mrequests[0m[2m==2.32.5[0m
+ [32m+[39m [1msetuptools[0m[2m==82.0.0[0m
+ [32m+[39m [1msix[0m[2m==1.17.0[0m
+ [32m+[39m [1msqlalchemy[0m[2m==2.0.48[0m
+ [32m+[39m [1mtyping-extensions[0m[2m==4.15.0[0m
+ [32m+[39m [1murllib3[0m[2m==2.6.3[0m
+ [32m+[39m [1mzope-component[0m[2m==7.1[0m
+ [32m+[39m [1mzope-configuration[0m[2m==7.0[0m
+ [32m+[39m [1mzope-event[0m[2m==6.1[0m
+ [32m+[39m [1mzope-hookable[0m[2m==8.2[0m
+ [32m+[39m [1mzope-i18nmessageid[0m[2m==8.2[0m
+ [32m+[39m [1mzope-interface[0m[2m==8.2[0m
+ [32m+[39m [1mzope-schema[0m[2m==8.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 3 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[31mF[0m[31m                                                                                                                             [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m________________________________________________________________ test_join_announce_leave_flow _________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_join_announce_leave_flow[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Full flow of user joining, announcing, and leaving the mailing list."""[39;49;00m[90m[39;49;00m
+        subject = [33m"[39;49;00m[33mSecret Announcement[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        user = [33m"[39;49;00m[33malicegray[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        add_user(user)[90m[39;49;00m
+        mbox_path = [33mf[39;49;00m[33m"[39;49;00m[33m/var/mail/[39;49;00m[33m{[39;49;00muser[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92m_assert_mailbox_exists[39;49;00m():[90m[39;49;00m
+            [94massert[39;49;00m os.path.exists(mbox_path), [33mf[39;49;00m[33m"[39;49;00m[33mMailbox not found: [39;49;00m[33m{[39;49;00mmbox_path[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92m_assert_not_member[39;49;00m():[90m[39;49;00m
+            mlist = get_mlist()[90m[39;49;00m
+            user_member = mlist.members.get_member([33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00muser[33m}[39;49;00m[33m@[39;49;00m[33m{[39;49;00mDOMAIN_NAME[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+            [94massert[39;49;00m user_member [95mis[39;49;00m [94mNone[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00muser[33m}[39;49;00m[33m is a member: [39;49;00m[33m{[39;49;00muser_member[33m=}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92m_assert_member[39;49;00m():[90m[39;49;00m
+            mlist = get_mlist()[90m[39;49;00m
+            user_member = mlist.members.get_member([33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00muser[33m}[39;49;00m[33m@[39;49;00m[33m{[39;49;00mDOMAIN_NAME[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+            [94massert[39;49;00m user_member, [33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00muser[33m}[39;49;00m[33m is not a member: [39;49;00m[33m{[39;49;00muser_member[33m=}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mdef[39;49;00m[90m [39;49;00m[92m_assert_announcement[39;49;00m():[90m[39;49;00m
+            mbox = mailbox.mbox(mbox_path)[90m[39;49;00m
+            announce_msgs = [msg [94mfor[39;49;00m msg [95min[39;49;00m mbox [94mif[39;49;00m subject [95min[39;49;00m msg.get([33m"[39;49;00m[33mSubject[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m"[39;49;00m)][90m[39;49;00m
+            [94massert[39;49;00m [96mlen[39;49;00m(announce_msgs) == [94m1[39;49;00m, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mExpected 1 announcement, found [39;49;00m[33m{[39;49;00m[96mlen[39;49;00m(announce_msgs)[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+>       send_email([90m[39;49;00m
+            body=[33m"[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            subject=[33m"[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            from_addr=[33mf[39;49;00m[33m"[39;49;00m[33m{[39;49;00muser[33m}[39;49;00m[33m@[39;49;00m[33m{[39;49;00mDOMAIN_NAME[33m}[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            to_addr=JOIN_LIST,[90m[39;49;00m
+        )[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:197: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/tests/test_outputs.py[0m:90: in send_email
+    [0mserver.send_message(msg)[90m[39;49;00m
+[1m[31m/usr/lib/python3.12/smtplib.py[0m:975: in send_message
+    [0m[94mreturn[39;49;00m [96mself[39;49;00m.sendmail(from_addr, to_addrs, flatmsg, mail_options,[90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <smtplib.SMTP object at 0x7fbdcb28c650>, from_addr = 'alicegray@local.edu', to_addrs = ['reading-group-join@local.edu']
+msg = b'Content-Type: text/plain; charset="us-ascii"\r\nMIME-Version: 1.0\r\nContent-Transfer-Encoding: 7bit\r\nSubject: \r\nFrom: alicegray@local.edu\r\nTo: reading-group-join@local.edu\r\n\r\n'
+mail_options = (), rcpt_options = ()
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92msendmail[39;49;00m([96mself[39;49;00m, from_addr, to_addrs, msg, mail_options=(),[90m[39;49;00m
+                 rcpt_options=()):[90m[39;49;00m
+    [90m    [39;49;00m[33m"""This command performs an entire mail transaction.[39;49;00m
+    [33m[39;49;00m
+    [33m    The arguments are:[39;49;00m
+    [33m        - from_addr    : The address sending this mail.[39;49;00m
+    [33m        - to_addrs     : A list of addresses to send this mail to.  A bare[39;49;00m
+    [33m                         string will be treated as a list with 1 address.[39;49;00m
+    [33m        - msg          : The message to send.[39;49;00m
+    [33m        - mail_options : List of ESMTP options (such as 8bitmime) for the[39;49;00m
+    [33m                         mail command.[39;49;00m
+    [33m        - rcpt_options : List of ESMTP options (such as DSN commands) for[39;49;00m
+    [33m                         all the rcpt commands.[39;49;00m
+    [33m[39;49;00m
+    [33m    msg may be a string containing characters in the ASCII range, or a byte[39;49;00m
+    [33m    string.  A string is encoded to bytes using the ascii codec, and lone[39;49;00m
+    [33m    \\r and \\n characters are converted to \\r\\n characters.[39;49;00m
+    [33m[39;49;00m
+    [33m    If there has been no previous EHLO or HELO command this session, this[39;49;00m
+    [33m    method tries ESMTP EHLO first.  If the server does ESMTP, message size[39;49;00m
+    [33m    and each of the specified options will be passed to it.  If EHLO[39;49;00m
+    [33m    fails, HELO will be tried and ESMTP options suppressed.[39;49;00m
+    [33m[39;49;00m
+    [33m    This method will return normally if the mail is accepted for at least[39;49;00m
+    [33m    one recipient.  It returns a dictionary, with one entry for each[39;49;00m
+    [33m    recipient that was refused.  Each entry contains a tuple of the SMTP[39;49;00m
+    [33m    error code and the accompanying error message sent by the server.[39;49;00m
+    [33m[39;49;00m
+    [33m    This method may raise the following exceptions:[39;49;00m
+    [33m[39;49;00m
+    [33m     SMTPHeloError          The server didn't reply properly to[39;49;00m
+    [33m                            the helo greeting.[39;49;00m
+    [33m     SMTPRecipientsRefused  The server rejected ALL recipients[39;49;00m
+    [33m                            (no mail was sent).[39;49;00m
+    [33m     SMTPSenderRefused      The server didn't accept the from_addr.[39;49;00m
+    [33m     SMTPDataError          The server replied with an unexpected[39;49;00m
+    [33m                            error code (other than a refusal of[39;49;00m
+    [33m                            a recipient).[39;49;00m
+    [33m     SMTPNotSupportedError  The mail_options parameter includes 'SMTPUTF8'[39;49;00m
+    [33m                            but the SMTPUTF8 extension is not supported by[39;49;00m
+    [33m                            the server.[39;49;00m
+    [33m[39;49;00m
+    [33m    Note: the connection will be open even after an exception is raised.[39;49;00m
+    [33m[39;49;00m
+    [33m    Example:[39;49;00m
+    [33m[39;49;00m
+    [33m     >>> import smtplib[39;49;00m
+    [33m     >>> s=smtplib.SMTP("localhost")[39;49;00m
+    [33m     >>> tolist=["one@one.org","two@two.org","three@three.org","four@four.org"][39;49;00m
+    [33m     >>> msg = '''\\[39;49;00m
+    [33m     ... From: Me@my.org[39;49;00m
+    [33m     ... Subject: testin'...[39;49;00m
+    [33m     ...[39;49;00m
+    [33m     ... This is a test '''[39;49;00m
+    [33m     >>> s.sendmail("me@my.org",tolist,msg)[39;49;00m
+    [33m     { "three@three.org" : ( 550 ,"User unknown" ) }[39;49;00m
+    [33m     >>> s.quit()[39;49;00m
+    [33m[39;49;00m
+    [33m    In the above example, the message was accepted for delivery to three[39;49;00m
+    [33m    of the four addresses, and one was rejected, with the error code[39;49;00m
+    [33m    550.  If all addresses are accepted, then the method will return an[39;49;00m
+    [33m    empty dictionary.[39;49;00m
+    [33m[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [96mself[39;49;00m.ehlo_or_helo_if_needed()[90m[39;49;00m
+        esmtp_opts = [][90m[39;49;00m
+        [94mif[39;49;00m [96misinstance[39;49;00m(msg, [96mstr[39;49;00m):[90m[39;49;00m
+            msg = _fix_eols(msg).encode([33m'[39;49;00m[33mascii[39;49;00m[33m'[39;49;00m)[90m[39;49;00m
+        [94mif[39;49;00m [96mself[39;49;00m.does_esmtp:[90m[39;49;00m
+            [94mif[39;49;00m [96mself[39;49;00m.has_extn([33m'[39;49;00m[33msize[39;49;00m[33m'[39;49;00m):[90m[39;49;00m
+                esmtp_opts.append([33m"[39;49;00m[33msize=[39;49;00m[33m%d[39;49;00m[33m"[39;49;00m % [96mlen[39;49;00m(msg))[90m[39;49;00m
+            [94mfor[39;49;00m option [95min[39;49;00m mail_options:[90m[39;49;00m
+                esmtp_opts.append(option)[90m[39;49;00m
+        (code, resp) = [96mself[39;49;00m.mail(from_addr, esmtp_opts)[90m[39;49;00m
+        [94mif[39;49;00m code != [94m250[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m code == [94m421[39;49;00m:[90m[39;49;00m
+                [96mself[39;49;00m.close()[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                [96mself[39;49;00m._rset()[90m[39;49;00m
+            [94mraise[39;49;00m SMTPSenderRefused(code, resp, from_addr)[90m[39;49;00m
+        senderrs = {}[90m[39;49;00m
+        [94mif[39;49;00m [96misinstance[39;49;00m(to_addrs, [96mstr[39;49;00m):[90m[39;49;00m
+            to_addrs = [to_addrs][90m[39;49;00m
+        [94mfor[39;49;00m each [95min[39;49;00m to_addrs:[90m[39;49;00m
+            (code, resp) = [96mself[39;49;00m.rcpt(each, rcpt_options)[90m[39;49;00m
+            [94mif[39;49;00m (code != [94m250[39;49;00m) [95mand[39;49;00m (code != [94m251[39;49;00m):[90m[39;49;00m
+                senderrs[each] = (code, resp)[90m[39;49;00m
+            [94mif[39;49;00m code == [94m421[39;49;00m:[90m[39;49;00m
+                [96mself[39;49;00m.close()[90m[39;49;00m
+                [94mraise[39;49;00m SMTPRecipientsRefused(senderrs)[90m[39;49;00m
+        [94mif[39;49;00m [96mlen[39;49;00m(senderrs) == [96mlen[39;49;00m(to_addrs):[90m[39;49;00m
+            [90m# the server refused all our recipients[39;49;00m[90m[39;49;00m
+            [96mself[39;49;00m._rset()[90m[39;49;00m
+>           [94mraise[39;49;00m SMTPRecipientsRefused(senderrs)[90m[39;49;00m
+[1m[31mE           smtplib.SMTPRecipientsRefused: {'reading-group-join@local.edu': (550, b'5.1.1 <reading-group-join@local.edu>: Recipient address rejected: User unknown in local recipient table')}[0m
+
+[1m[31m/usr/lib/python3.12/smtplib.py[0m:890: SMTPRecipientsRefused
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+alicegray added successfully.
+[33m======================================================================= warnings summary =======================================================================[0m
+test_outputs.py::test_mlist_exists
+  /app/.tbench-testing/lib/python3.12/site-packages/mailman/database/model.py:56: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Model = declarative_base(cls=ModelMeta)
+
+test_outputs.py::test_mlist_exists
+  /app/.tbench-testing/lib/python3.12/site-packages/passlib/utils/__init__.py:854: DeprecationWarning: 'crypt' is deprecated and slated for removal in Python 3.13
+    from crypt import crypt as _crypt
+
+test_outputs.py::test_mlist_exists
+test_outputs.py::test_mlist_exists
+test_outputs.py::test_mlist_exists
+test_outputs.py::test_mlist_exists
+test_outputs.py::test_mlist_exists
+test_outputs.py::test_mlist_exists
+  /app/.tbench-testing/lib/python3.12/site-packages/importlib_resources/_functional.py:57: DeprecationWarning: importlib.resources.contents is deprecated. Use files(anchor).iterdir() instead.
+    warnings.warn(
+
+test_outputs.py::test_mlist_exists
+  /app/.tbench-testing/lib/python3.12/site-packages/mailman/commands/cli_gatenews.py:24: DeprecationWarning: 'nntplib' is deprecated and slated for removal in Python 3.13
+    import nntplib
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================================================================ PASSES ============================================================================
+[32m[1m__________________________________________________________________ test_simple_local_delivery __________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+bobgreen added successfully.
+Retrying in 2 seconds...
+Direct delivery to bobgreen works: Direct Message
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_simple_local_delivery[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_mlist_exists[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_join_announce_leave_flow[0m - smtplib.SMTPRecipientsRefused: {'reading-group-join@local.edu': (550, b'5.1.1 <reading-group-join@local.edu>: Recipient address rejected: User unknown in l...
+[31m=========================================================== [31m[1m1 failed[0m, [32m2 passed[0m, [33m9 warnings[0m[31m in 6.57s[0m[31m ============================================================[0m
+[?2004hroot@1724f1902f65:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@1724f1902f65:/app# 

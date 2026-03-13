@@ -1,0 +1,1395 @@
+[?2004hroot@ca79ade836ed:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@ca79ade836ed:/app# clear
+[?2004l[H[J[3J[?2004hroot@ca79ade836ed:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+0% [1 InRelease 4096 B/151 kB 3%]                                 0% [Working]            Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+0% [2 InRelease 1444 B/55.4 kB 3%]0% [2 InRelease 55.4 kB/55.4 kB 100%]                                     0% [Waiting for headers]0% [Waiting for headers]                        Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+0% [3 InRelease 15.6 kB/48.0 kB 33%]                                    0% [Working]16% [Waiting for headers]                         Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+16% [4 Packages 4096 B/8792 kB 0%]61% [4 Packages 5359 kB/8792 kB 61%]                                    91% [Working]91% [4 Packages store 0 B] [Waiting for headers]                                                Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+91% [4 Packages store 0 B] [5 Packages 6924 B/6924 B 100%]                                                          91% [4 Packages store 0 B]                          Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+91% [4 Packages store 0 B] [6 Packages 15.6 kB/293 kB 5%]                                                         93% [4 Packages store 0 B]93% [4 Packages store 0 B]93% [4 Packages store 0 B]                          96% [Working]96% [5 Packages store 0 B]                          98% [Working]98% [6 Packages store 0 B]                          100% [Working]              Fetched 9346 kB in 3s (3175 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u14).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.12 interpreter at: [36m/usr/local/bin/python[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.13.12 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠹[0m [2mrequests==2.32.4                                                                                                                                              [0m[2K[37m⠹[0m [2mnbformat==5.10.4                                                                                                                                              [0m[2K[37m⠹[0m [2mjupyter-server==2.17.0                                                                                                                                        [0m[2K[37m⠸[0m [2mjupyter-server==2.17.0                                                                                                                                        [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2mcharset-normalizer==3.4.5                                                                                                                                     [0m[2K[37m⠼[0m [2midna==3.11                                                                                                                                                    [0m[2K[37m⠼[0m [2murllib3==2.6.3                                                                                                                                                [0m[2K[37m⠼[0m [2mcertifi==2026.2.25                                                                                                                                            [0m[2K[37m⠼[0m [2mfastjsonschema==2.21.2                                                                                                                                        [0m[2K[37m⠼[0m [2mjsonschema==4.26.0                                                                                                                                            [0m[2K[37m⠼[0m [2mjupyter-core==5.9.1                                                                                                                                           [0m[2K[37m⠼[0m [2mtraitlets==5.14.3                                                                                                                                             [0m[2K[37m⠼[0m [2manyio==4.12.1                                                                                                                                                 [0m[2K[37m⠼[0m [2margon2-cffi==25.1.0                                                                                                                                           [0m[2K[37m⠼[0m [2mjinja2==3.1.6                                                                                                                                                 [0m[2K[37m⠼[0m [2mjupyter-client==8.8.0                                                                                                                                         [0m[2K[37m⠼[0m [2mjupyter-events==0.12.0                                                                                                                                        [0m[2K[37m⠼[0m [2mjsonschema==4.26.0                                                                                                                                            [0m[2K[37m⠼[0m [2mjupyter-server-terminals==0.5.4                                                                                                                               [0m[2K[37m⠼[0m [2mnbconvert==7.17.0                                                                                                                                             [0m[2K[37m⠼[0m [2mprometheus-client==0.24.1                                                                                                                                     [0m[2K[37m⠼[0m [2mpyzmq==27.1.0                                                                                                                                                 [0m[2K[37m⠼[0m [2msend2trash==2.1.0                                                                                                                                             [0m[2K[37m⠴[0m [2mwebsocket-client==1.9.0                                                                                                                                       [0m[2K[37m⠴[0m [2mattrs==25.4.0                                                                                                                                                 [0m[2K[37m⠦[0m [2mattrs==25.4.0                                                                                                                                                 [0m[2K[37m⠦[0m [2mjsonschema-specifications==2025.9.1                                                                                                                           [0m[2K[37m⠦[0m [2mreferencing==0.37.0                                                                                                                                           [0m[2K[37m⠦[0m [2mrpds-py==0.30.0                                                                                                                                               [0m[2K[37m⠦[0m [2mplatformdirs==4.9.4                                                                                                                                           [0m[2K[37m⠧[0m [2mbleach==6.3.0                                                                                                                                                 [0m[2K[37m⠧[0m [2mbleach==6.3.0                                                                                                                                                 [0m[2K[37m⠧[0m [2mptyprocess==0.7.0                                                                                                                                             [0m[2K[37m⠧[0m [2mcffi==2.0.0                                                                                                                                                   [0m[2K[37m⠧[0m [2mcffi==2.0.0                                                                                                                                                   [0m[2K[37m⠇[0m [2mtinycss2==1.4.0                                                                                                                                               [0m[2K[37m⠇[0m [2mpycparser==3.0                                                                                                                                                [0m[2K[37m⠇[0m [2mpycparser==3.0                                                                                                                                                [0m[2K[37m⠇[0m [2mtzdata==2025.3                                                                                                                                                [0m[2K[37m⠋[0m [2mtzdata==2025.3                                                                                                                                                [0m[2K[2mResolved [1m65 packages[0m [2min 1.64s[0m[0m
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0/0[2K[37m⠙[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/65)                                                                                                                                  [2K[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mtzdata              [0m [32m[2m------------------------------[0m[0m     0 B/340.35 KiB                                                                                          [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mtzdata              [0m [32m--[2m----------------------------[0m[0m 14.84 KiB/340.35 KiB                                                                                        [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mplatformdirs        [0m [32m[2m------------------------------[0m[0m     0 B/20.72 KiB
+[2mattrs               [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mplatformdirs        [0m [32m[2m------------------------------[0m[0m     0 B/20.72 KiB
+[2mattrs                    [0m [32m[2m------------------------------[0m[0m     0 B/66.03 KiB
+[2manyio               [0m [32m[2m------------------------------[0m[0m     0 B/110.93 KiB
+[2mtzdata              [0m [32m---[2m---------------------------[0m[0m 30.84 KiB/340.35 KiB                                                                                        [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mwebcolors                [0m [32m[2m------------------------------[0m[0m     0 B/14.56 KiB
+[2mjupyterlab-pygments      [0m [32m[2m------------------------------[0m[0m     0 B/15.51 KiB
+[2mjsonschema-specifications[0m [32m-------------------------[2m-----[0m[0m 14.86 KiB/18.00 KiB
+[2mpluggy                   [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mplatformdirs             [0m [32m----------------------[2m--------[0m[0m 14.84 KiB/20.72 KiB
+[2mattrs                    [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2manyio                    [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.93 KiB
+[2mtzdata                   [0m [32m-------[2m-----------------------[0m[0m 76.64 KiB/340.35 KiB                                                                                   [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mjupyterlab-pygments      [0m [32m-----------------------------[2m-[0m[0m 14.87 KiB/15.51 KiB
+[2mjsonschema-specifications[0m [32m-------------------------[2m-----[0m[0m 14.86 KiB/18.00 KiB
+[2mpluggy                   [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mplatformdirs             [0m [32m----------------------[2m--------[0m[0m 14.84 KiB/20.72 KiB
+[2mnbclient                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/24.87 KiB
+[2mtinycss2                 [0m [32m[2m------------------------------[0m[0m     0 B/25.99 KiB
+[2mreferencing              [0m [32m------------------[2m------------[0m[0m 14.88 KiB/26.14 KiB
+[2mtyping-extensions        [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2mrequests                 [0m [32m--------[2m----------------------[0m[0m 14.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2midna                     [0m [32m[2m------------------------------[0m[0m     0 B/69.34 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2manyio                    [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.93 KiB
+[2mtzdata                   [0m [32m-------[2m-----------------------[0m[0m 76.64 KiB/340.35 KiB                                                                                   [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mjsonschema-specifications[0m [32m-------------------------[2m-----[0m[0m 14.86 KiB/18.00 KiB
+[2mpluggy                   [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mplatformdirs             [0m [32m------------------------------[2m[0m[0m 20.72 KiB/20.72 KiB
+[2mmarkupsafe               [0m [32m--------------------[2m----------[0m[0m 14.91 KiB/22.44 KiB
+[2mnbclient                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/24.87 KiB
+[2mtinycss2                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/25.99 KiB
+[2mreferencing              [0m [32m------------------[2m------------[0m[0m 14.88 KiB/26.14 KiB
+[2mtyping-extensions        [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2mrequests                 [0m [32m--------[2m----------------------[0m[0m 14.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m---------[2m---------------------[0m[0m 18.43 KiB/66.03 KiB
+[2midna                     [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2manyio                    [0m [32m---------[2m---------------------[0m[0m 30.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m[2m------------------------------[0m[0m     0 B/128.50 KiB
+[2mjinja2                   [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/131.74 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mtzdata                   [0m [32m---------[2m---------------------[0m[0m 92.64 KiB/340.35 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                     [18A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[18A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mjsonschema-specifications[0m [32m-------------------------[2m-----[0m[0m 14.86 KiB/18.00 KiB
+[2mpluggy                   [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mmarkupsafe               [0m [32m--------------------[2m----------[0m[0m 14.91 KiB/22.44 KiB
+[2mnbclient                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/24.87 KiB
+[2mtinycss2                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/25.99 KiB
+[2mreferencing              [0m [32m------------------[2m------------[0m[0m 14.88 KiB/26.14 KiB
+[2mtyping-extensions        [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2mrequests                 [0m [32m--------[2m----------------------[0m[0m 14.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m---------[2m---------------------[0m[0m 18.43 KiB/66.03 KiB
+[2midna                     [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2manyio                    [0m [32m---------[2m---------------------[0m[0m 30.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m[2m------------------------------[0m[0m     0 B/128.50 KiB
+[2mjinja2                   [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/131.74 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mtzdata                   [0m [32m---------[2m---------------------[0m[0m 92.64 KiB/340.35 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                     [17A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[17A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mjsonschema-specifications[0m [32m-------------------------[2m-----[0m[0m 14.86 KiB/18.00 KiB
+[2mmarkupsafe               [0m [32m--------------------[2m----------[0m[0m 14.91 KiB/22.44 KiB
+[2mnbclient                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/24.87 KiB
+[2mtinycss2                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/25.99 KiB
+[2mreferencing              [0m [32m------------------[2m------------[0m[0m 14.88 KiB/26.14 KiB
+[2mtyping-extensions        [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2mrequests                 [0m [32m--------[2m----------------------[0m[0m 14.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m---------[2m---------------------[0m[0m 18.43 KiB/66.03 KiB
+[2midna                     [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2manyio                    [0m [32m---------[2m---------------------[0m[0m 30.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m[2m------------------------------[0m[0m     0 B/128.50 KiB
+[2mjinja2                   [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/131.74 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mtzdata                   [0m [32m---------[2m---------------------[0m[0m 92.64 KiB/340.35 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                     [16A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[16A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mmarkupsafe               [0m [32m--------------------[2m----------[0m[0m 14.91 KiB/22.44 KiB
+[2mnbclient                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/24.87 KiB
+[2mtinycss2                 [0m [32m------------------[2m------------[0m[0m 14.88 KiB/25.99 KiB
+[2mreferencing              [0m [32m---------------------[2m---------[0m[0m 17.83 KiB/26.14 KiB
+[2mtyping-extensions        [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/43.57 KiB
+[2mrequests                 [0m [32m--------[2m----------------------[0m[0m 14.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m----------------[2m--------------[0m[0m 34.43 KiB/66.03 KiB
+[2midna                     [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2manyio                    [0m [32m-------------[2m-----------------[0m[0m 46.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/131.74 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mtzdata                   [0m [32m---------[2m---------------------[0m[0m 92.64 KiB/340.35 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                     [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2msend2trash               [0m [32m[2m------------------------------[0m[0m     0 B/17.20 KiB
+[2mmarkupsafe               [0m [32m--------------------[2m----------[0m[0m 14.91 KiB/22.44 KiB
+[2mnbclient                 [0m [32m------------------------------[2m[0m[0m 24.87 KiB/24.87 KiB
+[2mreferencing              [0m [32m---------------------[2m---------[0m[0m 17.83 KiB/26.14 KiB
+[2mtyping-extensions        [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/43.57 KiB
+[2mrequests                 [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m----------------[2m--------------[0m[0m 34.43 KiB/66.03 KiB
+[2midna                     [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m[2m------------------------------[0m[0m     0 B/76.62 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2mjsonschema               [0m [32m------[2m------------------------[0m[0m 14.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m[2m------------------------------[0m[0m     0 B/105.20 KiB
+[2manyio                    [0m [32m-------------[2m-----------------[0m[0m 46.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/131.74 KiB
+[2mbleach                   [0m [32m[2m------------------------------[0m[0m     0 B/160.58 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mpython-dateutil          [0m [32m[2m------------------------------[0m[0m     0 B/224.50 KiB
+[2mnbconvert                [0m [32m[2m------------------------------[0m[0m     0 B/255.38 KiB
+[2mtzdata                   [0m [32m---------[2m---------------------[0m[0m 92.64 KiB/340.35 KiB
+[2mrpds-py                  [0m [32m[2m------------------------------[0m[0m     0 B/384.79 KiB
+[2mpyyaml                   [0m [32m[2m------------------------------[0m[0m     0 B/782.84 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                     [24A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[24A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2msend2trash               [0m [32m[2m------------------------------[0m[0m     0 B/17.20 KiB
+[2mmarkupsafe               [0m [32m--------------------[2m----------[0m[0m 14.91 KiB/22.44 KiB
+[2mreferencing              [0m [32m---------------------[2m---------[0m[0m 17.83 KiB/26.14 KiB
+[2mtyping-extensions        [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/43.57 KiB
+[2mrequests                 [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m----------------[2m--------------[0m[0m 34.43 KiB/66.03 KiB
+[2midna                     [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m[2m------------------------------[0m[0m     0 B/76.62 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2mjsonschema               [0m [32m------[2m------------------------[0m[0m 14.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m[2m------------------------------[0m[0m     0 B/105.20 KiB
+[2manyio                    [0m [32m-------------[2m-----------------[0m[0m 46.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/131.74 KiB
+[2mbleach                   [0m [32m[2m------------------------------[0m[0m     0 B/160.58 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mpython-dateutil          [0m [32m[2m------------------------------[0m[0m     0 B/224.50 KiB
+[2mnbconvert                [0m [32m[2m------------------------------[0m[0m     0 B/255.38 KiB
+[2mtzdata                   [0m [32m---------[2m---------------------[0m[0m 92.64 KiB/340.35 KiB
+[2mrpds-py                  [0m [32m[2m------------------------------[0m[0m     0 B/384.79 KiB
+[2mpyyaml                   [0m [32m[2m------------------------------[0m[0m     0 B/782.84 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                     [23A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[23A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2msend2trash               [0m [32m--------------------------[2m----[0m[0m 14.88 KiB/17.20 KiB
+[2mmarkupsafe               [0m [32m--------------------[2m----------[0m[0m 14.91 KiB/22.44 KiB
+[2mtyping-extensions        [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/43.57 KiB
+[2mpycparser                [0m [32m[2m------------------------------[0m[0m     0 B/47.04 KiB
+[2mrequests                 [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m-----------------------[2m-------[0m[0m 50.43 KiB/66.03 KiB
+[2marrow                    [0m [32m[2m------------------------------[0m[0m     0 B/67.18 KiB
+[2midna                     [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m[2m------------------------------[0m[0m     0 B/80.68 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2mjsonschema               [0m [32m------[2m------------------------[0m[0m 14.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m-----[2m-------------------------[0m[0m 14.85 KiB/105.20 KiB
+[2manyio                    [0m [32m------------------[2m------------[0m[0m 62.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m[2m------------------------------[0m[0m     0 B/150.08 KiB
+[2mbleach                   [0m [32m[2m------------------------------[0m[0m     0 B/160.58 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mpython-dateutil          [0m [32m--[2m----------------------------[0m[0m 14.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m--[2m----------------------------[0m[0m 9.52 KiB/255.38 KiB
+[2mtzdata                   [0m [32m----------[2m--------------------[0m[0m 108.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m[2m------------------------------[0m[0m     0 B/379.12 KiB
+[2mrpds-py                  [0m [32m[2m------------------------------[0m[0m     0 B/384.79 KiB
+[2mpyyaml                   [0m [32m-[2m-----------------------------[0m[0m 14.85 KiB/782.84 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 29.77 KiB/1.17 MiB                                                                                     [27A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[27A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2msend2trash               [0m [32m--------------------------[2m----[0m[0m 14.88 KiB/17.20 KiB
+[2mmarkupsafe               [0m [32m------------------------------[2m[0m[0m 22.44 KiB/22.44 KiB
+[2mpycparser                [0m [32m[2m------------------------------[0m[0m     0 B/47.04 KiB
+[2mrequests                 [0m [32m-----------------------[2m-------[0m[0m 46.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m-----------------------[2m-------[0m[0m 50.43 KiB/66.03 KiB
+[2marrow                    [0m [32m[2m------------------------------[0m[0m     0 B/67.18 KiB
+[2midna                     [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m[2m------------------------------[0m[0m     0 B/80.68 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2mjsonschema               [0m [32m------[2m------------------------[0m[0m 14.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m-----[2m-------------------------[0m[0m 14.85 KiB/105.20 KiB
+[2manyio                    [0m [32m------------------[2m------------[0m[0m 62.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m[2m------------------------------[0m[0m     0 B/150.08 KiB
+[2mbleach                   [0m [32m[2m------------------------------[0m[0m     0 B/160.58 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mpython-dateutil          [0m [32m--[2m----------------------------[0m[0m 14.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m--[2m----------------------------[0m[0m 9.52 KiB/255.38 KiB
+[2mtzdata                   [0m [32m----------[2m--------------------[0m[0m 108.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m[2m------------------------------[0m[0m     0 B/379.12 KiB
+[2mrpds-py                  [0m [32m[2m------------------------------[0m[0m     0 B/384.79 KiB
+[2mpyyaml                   [0m [32m-[2m-----------------------------[0m[0m 14.85 KiB/782.84 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 29.77 KiB/1.17 MiB                                                                                     [26A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[26A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2msend2trash               [0m [32m--------------------------[2m----[0m[0m 14.88 KiB/17.20 KiB
+[2mpycparser                [0m [32m[2m------------------------------[0m[0m     0 B/47.04 KiB
+[2mrequests                 [0m [32m-----------------------[2m-------[0m[0m 46.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m-----------------------[2m-------[0m[0m 50.43 KiB/66.03 KiB
+[2marrow                    [0m [32m[2m------------------------------[0m[0m     0 B/67.18 KiB
+[2midna                     [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m[2m------------------------------[0m[0m     0 B/80.68 KiB
+[2mtraitlets                [0m [32m[2m------------------------------[0m[0m     0 B/83.36 KiB
+[2mjsonschema               [0m [32m------[2m------------------------[0m[0m 14.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m-----[2m-------------------------[0m[0m 14.85 KiB/105.20 KiB
+[2manyio                    [0m [32m------------------[2m------------[0m[0m 62.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m[2m------------------------------[0m[0m     0 B/150.08 KiB
+[2mbleach                   [0m [32m[2m------------------------------[0m[0m     0 B/160.58 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mpython-dateutil          [0m [32m--[2m----------------------------[0m[0m 14.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m--[2m----------------------------[0m[0m 9.52 KiB/255.38 KiB
+[2mtzdata                   [0m [32m----------[2m--------------------[0m[0m 108.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m[2m------------------------------[0m[0m     0 B/379.12 KiB
+[2mrpds-py                  [0m [32m[2m------------------------------[0m[0m     0 B/384.79 KiB
+[2mpyyaml                   [0m [32m-[2m-----------------------------[0m[0m 14.85 KiB/782.84 KiB
+[2mpygments                 [0m [32m-[2m-----------------------------[0m[0m 29.77 KiB/1.17 MiB                                                                                     [25A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[25A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpycparser                [0m [32m----------[2m--------------------[0m[0m 14.88 KiB/47.04 KiB
+[2mrequests                 [0m [32m-----------------------[2m-------[0m[0m 46.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m-----------------------------[2m-[0m[0m 62.08 KiB/66.03 KiB
+[2marrow                    [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/67.18 KiB
+[2midna                     [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m------[2m------------------------[0m[0m 14.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------[2m------------------------[0m[0m 13.52 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------[2m------------------------[0m[0m 16.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m-----------[2m-------------------[0m[0m 30.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m-----[2m-------------------------[0m[0m 14.85 KiB/105.20 KiB
+[2manyio                    [0m [32m----------------------[2m--------[0m[0m 78.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m[2m------------------------------[0m[0m     0 B/190.99 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mpython-dateutil          [0m [32m-----[2m-------------------------[0m[0m 30.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m--[2m----------------------------[0m[0m 14.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m-------------[2m-----------------[0m[0m 140.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m[2m------------------------------[0m[0m     0 B/379.12 KiB
+[2mrpds-py                  [0m [32m[2m------------------------------[0m[0m     0 B/384.79 KiB
+[2mpyyaml                   [0m [32m--[2m----------------------------[0m[0m 30.85 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 45.77 KiB/1.17 MiB                                                                                     [25A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[25A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpycparser                [0m [32m----------[2m--------------------[0m[0m 14.88 KiB/47.04 KiB
+[2mrequests                 [0m [32m-----------------------[2m-------[0m[0m 46.88 KiB/63.33 KiB
+[2mattrs                    [0m [32m-----------------------------[2m-[0m[0m 62.08 KiB/66.03 KiB
+[2marrow                    [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/67.18 KiB
+[2midna                     [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------[2m------------------------[0m[0m 13.52 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------[2m------------------------[0m[0m 16.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m-----------[2m-------------------[0m[0m 30.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m---------[2m---------------------[0m[0m 30.85 KiB/105.20 KiB
+[2manyio                    [0m [32m----------------------[2m--------[0m[0m 78.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m[2m------------------------------[0m[0m     0 B/190.99 KiB
+[2mcffi                     [0m [32m[2m------------------------------[0m[0m     0 B/214.35 KiB
+[2mpython-dateutil          [0m [32m-----[2m-------------------------[0m[0m 30.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m--[2m----------------------------[0m[0m 14.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m--------------[2m----------------[0m[0m 156.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m[2m------------------------------[0m[0m     0 B/379.12 KiB
+[2mrpds-py                  [0m [32m[2m------------------------------[0m[0m     0 B/384.79 KiB
+[2mpyyaml                   [0m [32m--[2m----------------------------[0m[0m 30.85 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 45.77 KiB/1.17 MiB                                                                                     [25A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[25A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mjupyter-events           [0m [32m------------------------[2m------[0m[0m 14.90 KiB/18.97 KiB
+[2mpycparser                [0m [32m--------------------[2m----------[0m[0m 30.88 KiB/47.04 KiB
+[2mrequests                 [0m [32m-----------------------------[2m-[0m[0m 59.86 KiB/63.33 KiB
+[2marrow                    [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/67.18 KiB
+[2midna                     [0m [32m----------------------------[2m--[0m[0m 62.85 KiB/69.34 KiB
+[2mpackaging                [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------[2m------------------------[0m[0m 14.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------------[2m------------------[0m[0m 32.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m----------------[2m--------------[0m[0m 46.88 KiB/88.51 KiB
+[2mbeautifulsoup4           [0m [32m---------[2m---------------------[0m[0m 30.85 KiB/105.20 KiB
+[2manyio                    [0m [32m----------------------[2m--------[0m[0m 78.88 KiB/110.93 KiB
+[2murllib3                  [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m------[2m------------------------[0m[0m 32.00 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----[2m-------------------------[0m[0m 30.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----[2m--------------------------[0m[0m 30.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m----------------[2m--------------[0m[0m 177.31 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/384.79 KiB
+[2mpyyaml                   [0m [32m--[2m----------------------------[0m[0m 45.06 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 45.77 KiB/1.17 MiB                                                                                     [25A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[25A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mjupyter-events           [0m [32m------------------------[2m------[0m[0m 14.90 KiB/18.97 KiB
+[2mpycparser                [0m [32m--------------------[2m----------[0m[0m 30.88 KiB/47.04 KiB
+[2marrow                    [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/67.18 KiB
+[2midna                     [0m [32m------------------------------[2m[0m[0m 69.34 KiB/69.34 KiB
+[2mpackaging                [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m-------------------[2m-----------[0m[0m 46.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------[2m------------------------[0m[0m 14.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------------[2m------------------[0m[0m 32.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m----------------[2m--------------[0m[0m 46.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m[2m------------------------------[0m[0m     0 B/104.85 KiB
+[2mbeautifulsoup4           [0m [32m--------------[2m----------------[0m[0m 46.85 KiB/105.20 KiB
+[2manyio                    [0m [32m-------------------------[2m-----[0m[0m 91.91 KiB/110.93 KiB
+[2murllib3                  [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m------[2m------------------------[0m[0m 32.00 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------[2m-----------------------[0m[0m 46.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----[2m--------------------------[0m[0m 30.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m------------------[2m------------[0m[0m 193.31 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--[2m----------------------------[0m[0m 21.92 KiB/384.79 KiB
+[2mpyyaml                   [0m [32m--[2m----------------------------[0m[0m 45.06 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 61.77 KiB/1.17 MiB                                                                                     [25A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[25A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mjupyter-events           [0m [32m------------------------[2m------[0m[0m 14.90 KiB/18.97 KiB
+[2mpycparser                [0m [32m--------------------[2m----------[0m[0m 30.88 KiB/47.04 KiB
+[2marrow                    [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/67.18 KiB
+[2mpackaging                [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m-------------------[2m-----------[0m[0m 46.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------[2m------------------------[0m[0m 14.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------------[2m------------------[0m[0m 32.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m----------------[2m--------------[0m[0m 46.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m[2m------------------------------[0m[0m     0 B/104.85 KiB
+[2mbeautifulsoup4           [0m [32m--------------[2m----------------[0m[0m 46.85 KiB/105.20 KiB
+[2manyio                    [0m [32m-------------------------[2m-----[0m[0m 91.91 KiB/110.93 KiB
+[2murllib3                  [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m------[2m------------------------[0m[0m 32.00 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---[2m---------------------------[0m[0m 16.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m-----[2m-------------------------[0m[0m 32.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------[2m-----------------------[0m[0m 46.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----[2m--------------------------[0m[0m 30.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m------------------[2m------------[0m[0m 193.31 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--[2m----------------------------[0m[0m 21.92 KiB/384.79 KiB
+[2mpyyaml                   [0m [32m--[2m----------------------------[0m[0m 45.06 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 61.77 KiB/1.17 MiB                                                                                     [24A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[24A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2mpycparser                [0m [32m------------------------------[2m[0m[0m 46.88 KiB/47.04 KiB
+[2marrow                    [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/67.18 KiB
+[2mpackaging                [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m-------------------[2m-----------[0m[0m 46.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------------[2m------------------[0m[0m 30.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------------------[2m------------[0m[0m 48.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m----------------------[2m--------[0m[0m 62.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m[2m------------------------------[0m[0m     0 B/104.85 KiB
+[2mbeautifulsoup4           [0m [32m--------------[2m----------------[0m[0m 46.85 KiB/105.20 KiB
+[2manyio                    [0m [32m------------------------------[2m[0m[0m 107.91 KiB/110.93 KiB
+[2murllib3                  [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/128.50 KiB
+[2mjinja2                   [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------[2m--------------------[0m[0m 46.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------[2m---------------------[0m[0m 47.33 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m------[2m------------------------[0m[0m 32.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m-----[2m-------------------------[0m[0m 32.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------[2m-----------------------[0m[0m 46.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m------[2m------------------------[0m[0m 46.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m-------------------[2m-----------[0m[0m 204.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--[2m----------------------------[0m[0m 21.92 KiB/384.79 KiB
+[2mpyyaml                   [0m [32m---[2m---------------------------[0m[0m 61.06 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 73.58 KiB/1.17 MiB                                                                                     [23A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[23A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2marrow                    [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/67.18 KiB
+[2mpackaging                [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mnbformat                 [0m [32m-------------------------[2m-----[0m[0m 62.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------------[2m------------------[0m[0m 30.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------------------[2m------------[0m[0m 48.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m----------------------[2m--------[0m[0m 62.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m[2m------------------------------[0m[0m     0 B/104.85 KiB
+[2mbeautifulsoup4           [0m [32m------------------[2m------------[0m[0m 62.85 KiB/105.20 KiB
+[2manyio                    [0m [32m------------------------------[2m[0m[0m 107.91 KiB/110.93 KiB
+[2murllib3                  [0m [32m------------------[2m------------[0m[0m 75.38 KiB/128.50 KiB
+[2mjinja2                   [0m [32m------------------[2m------------[0m[0m 75.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------[2m--------------------[0m[0m 46.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------[2m---------------------[0m[0m 47.33 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m------[2m------------------------[0m[0m 32.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m-------[2m-----------------------[0m[0m 48.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------[2m---------------------[0m[0m 62.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m------[2m------------------------[0m[0m 46.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m--------------------[2m----------[0m[0m 220.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---[2m---------------------------[0m[0m 37.92 KiB/384.79 KiB
+[2mpyyaml                   [0m [32m---[2m---------------------------[0m[0m 61.06 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 73.58 KiB/1.17 MiB                                                                                     [22A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[22A[37m⠙[0m [2mPreparing packages...[0m (0/65)
+[2marrow                    [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/67.18 KiB
+[2mnbformat                 [0m [32m-------------------------[2m-----[0m[0m 62.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------------------[2m------------[0m[0m 46.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m------------------[2m------------[0m[0m 48.00 KiB/83.36 KiB
+[2mjsonschema               [0m [32m---------------------------[2m---[0m[0m 78.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m--[2m----------------------------[0m[0m 6.10 KiB/104.85 KiB
+[2mbeautifulsoup4           [0m [32m------------------[2m------------[0m[0m 62.85 KiB/105.20 KiB
+[2manyio                    [0m [32m------------------------------[2m[0m[0m 107.91 KiB/110.93 KiB
+[2murllib3                  [0m [32m------------------[2m------------[0m[0m 75.38 KiB/128.50 KiB
+[2mjinja2                   [0m [32m------------------[2m------------[0m[0m 75.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------------[2m-----------------[0m[0m 62.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------[2m---------------------[0m[0m 47.33 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m------[2m------------------------[0m[0m 32.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m-------[2m-----------------------[0m[0m 48.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------[2m---------------------[0m[0m 62.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m------[2m------------------------[0m[0m 46.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m--------------------[2m----------[0m[0m 220.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---[2m---------------------------[0m[0m 37.92 KiB/384.79 KiB
+[2mpyyaml                   [0m [32m---[2m---------------------------[0m[0m 76.50 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 73.58 KiB/1.17 MiB                                                                                     [21A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[21A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2marrow                    [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/67.18 KiB
+[2mnbformat                 [0m [32m-------------------------[2m-----[0m[0m 62.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------------------[2m------------[0m[0m 46.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m-----------------------[2m-------[0m[0m 63.34 KiB/83.36 KiB
+[2mjsonschema               [0m [32m---------------------------[2m---[0m[0m 78.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m--[2m----------------------------[0m[0m 6.10 KiB/104.85 KiB
+[2mbeautifulsoup4           [0m [32m------------------[2m------------[0m[0m 62.85 KiB/105.20 KiB
+[2manyio                    [0m [32m------------------------------[2m[0m[0m 107.91 KiB/110.93 KiB
+[2murllib3                  [0m [32m------------------[2m------------[0m[0m 75.38 KiB/128.50 KiB
+[2mjinja2                   [0m [32m------------------[2m------------[0m[0m 75.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------------[2m-----------------[0m[0m 62.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------[2m------------------[0m[0m 60.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m--------[2m----------------------[0m[0m 48.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m-------[2m-----------------------[0m[0m 48.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------[2m---------------------[0m[0m 62.86 KiB/224.50 KiB
+[2mnbconvert                [0m [32m-------[2m-----------------------[0m[0m 57.15 KiB/255.38 KiB
+[2mtzdata                   [0m [32m--------------------[2m----------[0m[0m 220.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m----[2m--------------------------[0m[0m 48.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---[2m---------------------------[0m[0m 37.92 KiB/384.79 KiB
+[2mpyyaml                   [0m [32m---[2m---------------------------[0m[0m 76.50 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 73.58 KiB/1.17 MiB                                                                                     [21A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[21A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mfastjsonschema           [0m [32m[2m------------------------------[0m[0m     0 B/23.46 KiB
+[2marrow                    [0m [32m-----------------------------[2m-[0m[0m 62.85 KiB/67.18 KiB
+[2mnbformat                 [0m [32m-------------------------[2m-----[0m[0m 62.88 KiB/76.62 KiB
+[2mwebsocket-client         [0m [32m------------------[2m------------[0m[0m 46.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m-----------------------[2m-------[0m[0m 63.34 KiB/83.36 KiB
+[2mjsonschema               [0m [32m---------------------------[2m---[0m[0m 78.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m--[2m----------------------------[0m[0m 6.10 KiB/104.85 KiB
+[2mbeautifulsoup4           [0m [32m------------------[2m------------[0m[0m 62.85 KiB/105.20 KiB
+[2murllib3                  [0m [32m------------------[2m------------[0m[0m 75.38 KiB/128.50 KiB
+[2mjinja2                   [0m [32m------------------[2m------------[0m[0m 75.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------------[2m-----------------[0m[0m 62.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------[2m------------------[0m[0m 60.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m--------[2m----------------------[0m[0m 48.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m-------[2m-----------------------[0m[0m 48.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----------[2m-------------------[0m[0m 77.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m-------[2m-----------------------[0m[0m 57.15 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------[2m---------[0m[0m 236.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m----[2m--------------------------[0m[0m 48.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---[2m---------------------------[0m[0m 37.92 KiB/384.79 KiB
+[2mtornado                  [0m [32m[2m------------------------------[0m[0m     0 B/434.88 KiB
+[2mpyyaml                   [0m [32m---[2m---------------------------[0m[0m 76.50 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 75.37 KiB/1.17 MiB                                                                                     [22A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[22A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mfastjsonschema           [0m [32m[2m------------------------------[0m[0m     0 B/23.46 KiB
+[2marrow                    [0m [32m-----------------------------[2m-[0m[0m 62.85 KiB/67.18 KiB
+[2mwebsocket-client         [0m [32m------------------[2m------------[0m[0m 46.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m-----------------------[2m-------[0m[0m 63.34 KiB/83.36 KiB
+[2mjsonschema               [0m [32m---------------------------[2m---[0m[0m 78.88 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m--[2m----------------------------[0m[0m 6.10 KiB/104.85 KiB
+[2mbeautifulsoup4           [0m [32m------------------[2m------------[0m[0m 62.85 KiB/105.20 KiB
+[2murllib3                  [0m [32m------------------[2m------------[0m[0m 75.38 KiB/128.50 KiB
+[2mjinja2                   [0m [32m------------------[2m------------[0m[0m 75.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------------[2m-----------------[0m[0m 62.88 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------[2m------------------[0m[0m 60.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m--------[2m----------------------[0m[0m 48.00 KiB/190.99 KiB
+[2mcffi                     [0m [32m-------[2m-----------------------[0m[0m 48.00 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----------[2m-------------------[0m[0m 77.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m-------[2m-----------------------[0m[0m 57.15 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------[2m---------[0m[0m 236.64 KiB/340.35 KiB
+[2mjupyter-server           [0m [32m----[2m--------------------------[0m[0m 48.00 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---[2m---------------------------[0m[0m 37.92 KiB/384.79 KiB
+[2mtornado                  [0m [32m[2m------------------------------[0m[0m     0 B/434.88 KiB
+[2mpyyaml                   [0m [32m---[2m---------------------------[0m[0m 76.50 KiB/782.84 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 75.37 KiB/1.17 MiB                                                                                     [21A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[21A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mpython-json-logger       [0m [32m[2m------------------------------[0m[0m     0 B/15.18 KiB
+[2mfastjsonschema           [0m [32m-------------------[2m-----------[0m[0m 14.84 KiB/23.46 KiB
+[2mdefusedxml               [0m [32m[2m------------------------------[0m[0m     0 B/25.00 KiB
+[2mjupyter-core             [0m [32m[2m------------------------------[0m[0m     0 B/28.35 KiB
+[2msoupsieve                [0m [32m[2m------------------------------[0m[0m     0 B/36.15 KiB
+[2mprometheus-client        [0m [32m[2m------------------------------[0m[0m     0 B/62.56 KiB
+[2mwebsocket-client         [0m [32m------------------------[2m------[0m[0m 62.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m-----------------------------[2m-[0m[0m 79.34 KiB/83.36 KiB
+[2margon2-cffi-bindings     [0m [32m[2m------------------------------[0m[0m     0 B/85.08 KiB
+[2mjsonschema               [0m [32m----------------------------[2m--[0m[0m 80.86 KiB/88.51 KiB
+[2mjupyter-client           [0m [32m---[2m---------------------------[0m[0m 7.67 KiB/104.85 KiB
+[2mbeautifulsoup4           [0m [32m-----------------------[2m-------[0m[0m 78.85 KiB/105.20 KiB
+[2mlark                     [0m [32m[2m------------------------------[0m[0m     0 B/110.50 KiB
+[2murllib3                  [0m [32m----------------------[2m--------[0m[0m 91.38 KiB/128.50 KiB
+[2mjinja2                   [0m [32m---------------------[2m---------[0m[0m 91.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------------[2m--------------[0m[0m 76.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------------[2m---------------[0m[0m 76.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------[2m--------------------[0m[0m 63.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m---------[2m---------------------[0m[0m 62.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----------[2m-------------------[0m[0m 77.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m---------[2m---------------------[0m[0m 73.15 KiB/255.38 KiB
+[2mtzdata                   [0m [32m-----------------------[2m-------[0m[0m 252.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-----[2m-------------------------[0m[0m 62.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-----[2m-------------------------[0m[0m 62.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----[2m--------------------------[0m[0m 92.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m--[2m----------------------------[0m[0m 75.37 KiB/1.17 MiB                                                                                     [29A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[29A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mpython-json-logger       [0m [32m------------------------------[2m[0m[0m 14.87 KiB/15.18 KiB
+[2mfastjsonschema           [0m [32m-------------------[2m-----------[0m[0m 14.84 KiB/23.46 KiB
+[2mdefusedxml               [0m [32m------------------[2m------------[0m[0m 14.83 KiB/25.00 KiB
+[2mjupyter-core             [0m [32m------[2m------------------------[0m[0m 4.86 KiB/28.35 KiB
+[2msoupsieve                [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m[2m------------------------------[0m[0m     0 B/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2mwebsocket-client         [0m [32m------------------------------[2m[0m[0m 78.87 KiB/80.68 KiB
+[2mtraitlets                [0m [32m-----------------------------[2m-[0m[0m 79.34 KiB/83.36 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 14.86 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-------[2m-----------------------[0m[0m 23.67 KiB/104.85 KiB
+[2mbeautifulsoup4           [0m [32m----------------------------[2m--[0m[0m 94.85 KiB/105.20 KiB
+[2mlark                     [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m----------------------[2m--------[0m[0m 92.39 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-------------------------[2m-----[0m[0m 107.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------------------[2m-----------[0m[0m 92.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------------[2m---------------[0m[0m 76.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------[2m--------------------[0m[0m 63.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m-----------[2m-------------------[0m[0m 78.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------------[2m-----------------[0m[0m 93.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m------------------------[2m------[0m[0m 268.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-----[2m-------------------------[0m[0m 62.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-----[2m-------------------------[0m[0m 62.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----[2m--------------------------[0m[0m 92.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 91.37 KiB/1.17 MiB                                                                                     [29A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[29A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mpython-json-logger       [0m [32m------------------------------[2m[0m[0m 14.87 KiB/15.18 KiB
+[2mfastjsonschema           [0m [32m----------------------------[2m--[0m[0m 21.20 KiB/23.46 KiB
+[2mdefusedxml               [0m [32m------------------[2m------------[0m[0m 14.83 KiB/25.00 KiB
+[2mjupyter-core             [0m [32m------[2m------------------------[0m[0m 4.86 KiB/28.35 KiB
+[2msoupsieve                [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m[2m------------------------------[0m[0m     0 B/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2mwebsocket-client         [0m [32m------------------------------[2m[0m[0m 78.87 KiB/80.68 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 14.86 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-------[2m-----------------------[0m[0m 23.67 KiB/104.85 KiB
+[2mbeautifulsoup4           [0m [32m----------------------------[2m--[0m[0m 94.85 KiB/105.20 KiB
+[2mlark                     [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m----------------------[2m--------[0m[0m 92.39 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-------------------------[2m-----[0m[0m 107.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------------------[2m-----------[0m[0m 92.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------[2m------------[0m[0m 92.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m-------------[2m-----------------[0m[0m 79.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m-----------[2m-------------------[0m[0m 78.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------------[2m-----------------[0m[0m 93.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m--------------------------[2m----[0m[0m 284.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m--[2m----------------------------[0m[0m 14.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-------[2m-----------------------[0m[0m 78.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-----[2m-------------------------[0m[0m 62.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 108.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 91.37 KiB/1.17 MiB                                                                                     [28A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[28A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mpython-json-logger       [0m [32m------------------------------[2m[0m[0m 14.87 KiB/15.18 KiB
+[2mfastjsonschema           [0m [32m----------------------------[2m--[0m[0m 21.20 KiB/23.46 KiB
+[2mdefusedxml               [0m [32m------------------[2m------------[0m[0m 14.83 KiB/25.00 KiB
+[2mjupyter-core             [0m [32m----------------[2m--------------[0m[0m 14.85 KiB/28.35 KiB
+[2msoupsieve                [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m---------[2m---------------------[0m[0m 14.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2mwebsocket-client         [0m [32m------------------------------[2m[0m[0m 78.87 KiB/80.68 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 16.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m------------[2m------------------[0m[0m 39.67 KiB/104.85 KiB
+[2mlark                     [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m----------------------[2m--------[0m[0m 92.39 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-------------------------[2m-----[0m[0m 107.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------------------[2m--------[0m[0m 108.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------[2m------------[0m[0m 92.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m-------------[2m-----------------[0m[0m 79.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------[2m----------------[0m[0m 94.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------------[2m---------------[0m[0m 109.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------------[2m---[0m[0m 300.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-------[2m-----------------------[0m[0m 78.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------[2m-----------------------[0m[0m 78.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 108.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 30.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 107.37 KiB/1.17 MiB                                                                                    [27A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[27A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mfastjsonschema           [0m [32m----------------------------[2m--[0m[0m 21.20 KiB/23.46 KiB
+[2mdefusedxml               [0m [32m------------------[2m------------[0m[0m 14.83 KiB/25.00 KiB
+[2mjupyter-core             [0m [32m----------------[2m--------------[0m[0m 14.85 KiB/28.35 KiB
+[2msoupsieve                [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m---------[2m---------------------[0m[0m 14.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2mwebsocket-client         [0m [32m------------------------------[2m[0m[0m 78.87 KiB/80.68 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 16.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m------------[2m------------------[0m[0m 39.67 KiB/104.85 KiB
+[2mlark                     [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m------------------------[2m------[0m[0m 99.93 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-----------------------------[2m-[0m[0m 123.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------------------[2m--------[0m[0m 108.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------[2m------------[0m[0m 92.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m-------------[2m-----------------[0m[0m 79.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------[2m----------------[0m[0m 94.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------------[2m---------------[0m[0m 109.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------------[2m---[0m[0m 300.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-------[2m-----------------------[0m[0m 78.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------[2m-----------------------[0m[0m 78.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 108.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 30.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 107.37 KiB/1.17 MiB                                                                                    [26A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[26A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mfastjsonschema           [0m [32m----------------------------[2m--[0m[0m 21.20 KiB/23.46 KiB
+[2mdefusedxml               [0m [32m------------------[2m------------[0m[0m 14.83 KiB/25.00 KiB
+[2mjupyter-core             [0m [32m----------------[2m--------------[0m[0m 14.85 KiB/28.35 KiB
+[2msoupsieve                [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m---------[2m---------------------[0m[0m 14.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2mwebsocket-client         [0m [32m------------------------------[2m[0m[0m 78.87 KiB/80.68 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 16.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m------------[2m------------------[0m[0m 39.67 KiB/104.85 KiB
+[2mlark                     [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m------------------------[2m------[0m[0m 99.93 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-----------------------------[2m-[0m[0m 123.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------------------[2m--------[0m[0m 108.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------[2m------------[0m[0m 92.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------------[2m--------------[0m[0m 95.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------[2m----------------[0m[0m 94.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------------[2m---------------[0m[0m 109.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------------[2m---[0m[0m 300.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m--------[2m----------------------[0m[0m 94.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------[2m-----------------------[0m[0m 78.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 108.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 30.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 107.37 KiB/1.17 MiB                                                                                    [26A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[26A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mfastjsonschema           [0m [32m------------------------------[2m[0m[0m 23.46 KiB/23.46 KiB
+[2mdefusedxml               [0m [32m------------------[2m------------[0m[0m 14.83 KiB/25.00 KiB
+[2mjupyter-core             [0m [32m----------------[2m--------------[0m[0m 14.85 KiB/28.35 KiB
+[2msoupsieve                [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m---------[2m---------------------[0m[0m 14.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 16.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m------------[2m------------------[0m[0m 39.67 KiB/104.85 KiB
+[2mlark                     [0m [32m-----[2m-------------------------[0m[0m 14.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m------------------------[2m------[0m[0m 99.93 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-----------------------------[2m-[0m[0m 123.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------------------[2m--------[0m[0m 108.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------[2m------------[0m[0m 92.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------------[2m--------------[0m[0m 95.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------[2m----------------[0m[0m 94.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------------[2m---------------[0m[0m 109.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------------[2m---[0m[0m 300.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m--------[2m----------------------[0m[0m 94.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------[2m-----------------------[0m[0m 78.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 108.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 30.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 107.37 KiB/1.17 MiB                                                                                    [25A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[25A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mdefusedxml               [0m [32m------------------------------[2m[0m[0m 25.00 KiB/25.00 KiB
+[2mjupyter-core             [0m [32m----------------[2m--------------[0m[0m 14.85 KiB/28.35 KiB
+[2msoupsieve                [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m---------[2m---------------------[0m[0m 14.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 16.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m------------[2m------------------[0m[0m 39.67 KiB/104.85 KiB
+[2mlark                     [0m [32m---------[2m---------------------[0m[0m 30.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m------------------------[2m------[0m[0m 99.93 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-----------------------------[2m-[0m[0m 123.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------------------[2m--------[0m[0m 108.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------[2m------------[0m[0m 92.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------------[2m--------------[0m[0m 95.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------[2m----------------[0m[0m 94.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------------[2m---------------[0m[0m 109.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------------[2m---[0m[0m 300.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m--------[2m----------------------[0m[0m 94.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------[2m-----------------------[0m[0m 78.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 108.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 30.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 107.37 KiB/1.17 MiB                                                                                    [24A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[24A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mjupyter-core             [0m [32m----------------[2m--------------[0m[0m 14.85 KiB/28.35 KiB
+[2msoupsieve                [0m [32m--------------------------[2m----[0m[0m 30.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m---------[2m---------------------[0m[0m 14.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/62.56 KiB
+[2margon2-cffi-bindings     [0m [32m------[2m------------------------[0m[0m 16.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m------------[2m------------------[0m[0m 39.67 KiB/104.85 KiB
+[2mlark                     [0m [32m---------[2m---------------------[0m[0m 30.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m------------------------[2m------[0m[0m 99.93 KiB/128.50 KiB
+[2mjinja2                   [0m [32m-----------------------------[2m-[0m[0m 123.99 KiB/131.74 KiB
+[2mcertifi                  [0m [32m----------------------[2m--------[0m[0m 108.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------[2m------------[0m[0m 92.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------------[2m--------------[0m[0m 95.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------[2m----------------[0m[0m 94.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m---------------[2m---------------[0m[0m 109.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------[2m--------------------[0m[0m 78.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m---------------------------[2m---[0m[0m 300.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m--------[2m----------------------[0m[0m 94.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------[2m-----------------------[0m[0m 78.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---[2m---------------------------[0m[0m 30.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 108.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 30.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 107.37 KiB/1.17 MiB                                                                                    [23A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[23A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2msoupsieve                [0m [32m--------------------------[2m----[0m[0m 30.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m---------[2m---------------------[0m[0m 14.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m---------------[2m---------------[0m[0m 30.87 KiB/62.56 KiB
+[2margon2-cffi-bindings     [0m [32m------------[2m------------------[0m[0m 32.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m----------------[2m--------------[0m[0m 55.67 KiB/104.85 KiB
+[2mlark                     [0m [32m---------[2m---------------------[0m[0m 30.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m------------------------[2m------[0m[0m 99.93 KiB/128.50 KiB
+[2mjinja2                   [0m [32m------------------------------[2m[0m[0m 131.74 KiB/131.74 KiB
+[2mcertifi                  [0m [32m-------------------------[2m-----[0m[0m 124.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------------------[2m---------[0m[0m 108.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------------[2m--------------[0m[0m 95.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m----------------[2m--------------[0m[0m 110.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----------------[2m-------------[0m[0m 125.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m------------[2m------------------[0m[0m 94.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m----------------------------[2m--[0m[0m 316.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m--------[2m----------------------[0m[0m 94.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------[2m----------------------[0m[0m 94.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 109.80 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 46.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 109.75 KiB/1.17 MiB                                                                                    [22A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[22A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2msoupsieve                [0m [32m--------------------------[2m----[0m[0m 30.88 KiB/36.15 KiB
+[2mmistune                  [0m [32m------------------[2m------------[0m[0m 30.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m---------------[2m---------------[0m[0m 30.87 KiB/62.56 KiB
+[2margon2-cffi-bindings     [0m [32m------------[2m------------------[0m[0m 32.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m----------------[2m--------------[0m[0m 55.67 KiB/104.85 KiB
+[2mlark                     [0m [32m---------[2m---------------------[0m[0m 30.88 KiB/110.50 KiB
+[2murllib3                  [0m [32m----------------------------[2m--[0m[0m 115.93 KiB/128.50 KiB
+[2mcertifi                  [0m [32m-------------------------[2m-----[0m[0m 124.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------------------[2m---------[0m[0m 108.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m----------------[2m--------------[0m[0m 95.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m----------------[2m--------------[0m[0m 110.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----------------[2m-------------[0m[0m 125.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m------------[2m------------------[0m[0m 94.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m----------------------------[2m--[0m[0m 316.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m--------[2m----------------------[0m[0m 94.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------[2m----------------------[0m[0m 94.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 109.80 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 46.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 109.75 KiB/1.17 MiB                                                                                    [21A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[21A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mmistune                  [0m [32m------------------[2m------------[0m[0m 30.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m-----------------------[2m-------[0m[0m 46.87 KiB/62.56 KiB
+[2margon2-cffi-bindings     [0m [32m------------[2m------------------[0m[0m 32.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m----------------[2m--------------[0m[0m 55.67 KiB/104.85 KiB
+[2mlark                     [0m [32m-----------[2m-------------------[0m[0m 39.03 KiB/110.50 KiB
+[2murllib3                  [0m [32m----------------------------[2m--[0m[0m 115.93 KiB/128.50 KiB
+[2mcertifi                  [0m [32m-------------------------[2m-----[0m[0m 124.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------------------[2m---------[0m[0m 108.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m------------------[2m------------[0m[0m 111.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m----------------[2m--------------[0m[0m 110.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----------------[2m-------------[0m[0m 125.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m------------[2m------------------[0m[0m 94.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m----------------------------[2m--[0m[0m 316.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------[2m---------------------[0m[0m 110.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------[2m----------------------[0m[0m 94.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m----[2m--------------------------[0m[0m 46.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 109.80 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--[2m----------------------------[0m[0m 46.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m---[2m---------------------------[0m[0m 109.75 KiB/1.17 MiB                                                                                    [20A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[20A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mmistune                  [0m [32m------------------------[2m------[0m[0m 41.00 KiB/52.34 KiB
+[2mprometheus-client        [0m [32m-----------------------[2m-------[0m[0m 46.87 KiB/62.56 KiB
+[2margon2-cffi-bindings     [0m [32m------------------[2m------------[0m[0m 48.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-------------------[2m-----------[0m[0m 64.00 KiB/104.85 KiB
+[2mlark                     [0m [32m-----------[2m-------------------[0m[0m 39.03 KiB/110.50 KiB
+[2mcertifi                  [0m [32m-----------------------------[2m-[0m[0m 140.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------------[2m------[0m[0m 124.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---------------------[2m---------[0m[0m 127.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m------------------[2m------------[0m[0m 126.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------------------[2m-----------[0m[0m 141.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m--------------[2m----------------[0m[0m 110.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m------------------------------[2m[0m[0m 332.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m------[2m------------------------[0m[0m 62.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------[2m--------------------[0m[0m 126.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---------[2m---------------------[0m[0m 110.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m-----[2m-------------------------[0m[0m 62.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----[2m-------------------------[0m[0m 125.80 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 57.53 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 125.75 KiB/1.17 MiB                                                                                    [19A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[19A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mmistune                  [0m [32m------------------------[2m------[0m[0m 41.00 KiB/52.34 KiB
+[2margon2-cffi-bindings     [0m [32m------------------[2m------------[0m[0m 48.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-------------------[2m-----------[0m[0m 64.00 KiB/104.85 KiB
+[2mlark                     [0m [32m---------------[2m---------------[0m[0m 55.03 KiB/110.50 KiB
+[2mcertifi                  [0m [32m-----------------------------[2m-[0m[0m 140.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m------------------------[2m------[0m[0m 124.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---------------------[2m---------[0m[0m 127.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m------------------[2m------------[0m[0m 126.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------------------[2m-----------[0m[0m 141.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m---------------[2m---------------[0m[0m 126.91 KiB/255.38 KiB
+[2mtzdata                   [0m [32m------------------------------[2m[0m[0m 332.64 KiB/340.35 KiB
+[2mpytest                   [0m [32m------[2m------------------------[0m[0m 64.38 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------[2m--------------------[0m[0m 126.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m----------[2m--------------------[0m[0m 126.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m------[2m------------------------[0m[0m 78.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m------[2m------------------------[0m[0m 140.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 57.53 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 125.75 KiB/1.17 MiB                                                                                    [18A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[18A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mmistune                  [0m [32m------------------------[2m------[0m[0m 41.00 KiB/52.34 KiB
+[2margon2-cffi-bindings     [0m [32m-----------------------[2m-------[0m[0m 64.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-------------------[2m-----------[0m[0m 64.00 KiB/104.85 KiB
+[2mlark                     [0m [32m---------------[2m---------------[0m[0m 55.03 KiB/110.50 KiB
+[2mcertifi                  [0m [32m-----------------------------[2m-[0m[0m 140.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------------------------[2m---[0m[0m 140.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---------------------[2m---------[0m[0m 127.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m------------------[2m------------[0m[0m 126.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-------------------[2m-----------[0m[0m 141.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m---------------[2m---------------[0m[0m 126.91 KiB/255.38 KiB
+[2mpytest                   [0m [32m------[2m------------------------[0m[0m 64.38 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------[2m--------------------[0m[0m 126.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m----------[2m--------------------[0m[0m 126.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m------[2m------------------------[0m[0m 78.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m------[2m------------------------[0m[0m 140.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 73.53 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 139.37 KiB/1.17 MiB                                                                                    [17A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[17A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2margon2-cffi-bindings     [0m [32m-----------------------[2m-------[0m[0m 64.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-----------------------[2m-------[0m[0m 80.00 KiB/104.85 KiB
+[2mlark                     [0m [32m---------------[2m---------------[0m[0m 55.03 KiB/110.50 KiB
+[2mcertifi                  [0m [32m-----------------------------[2m-[0m[0m 140.57 KiB/150.08 KiB
+[2mbleach                   [0m [32m---------------------------[2m---[0m[0m 140.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---------------------[2m---------[0m[0m 127.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------------[2m----------[0m[0m 141.59 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m----------------------[2m--------[0m[0m 157.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m---------------[2m---------------[0m[0m 126.91 KiB/255.38 KiB
+[2mpytest                   [0m [32m------[2m------------------------[0m[0m 64.38 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------[2m--------------------[0m[0m 126.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m----------[2m--------------------[0m[0m 126.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m------[2m------------------------[0m[0m 78.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m------[2m------------------------[0m[0m 140.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 73.53 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 139.37 KiB/1.17 MiB                                                                                    [16A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[16A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2margon2-cffi-bindings     [0m [32m-----------------------[2m-------[0m[0m 64.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-----------------------[2m-------[0m[0m 80.00 KiB/104.85 KiB
+[2mlark                     [0m [32m---------------[2m---------------[0m[0m 55.03 KiB/110.50 KiB
+[2mbleach                   [0m [32m---------------------------[2m---[0m[0m 140.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---------------------[2m---------[0m[0m 127.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------------[2m----------[0m[0m 141.59 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m----------------------[2m--------[0m[0m 157.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m---------------[2m---------------[0m[0m 126.91 KiB/255.38 KiB
+[2mpytest                   [0m [32m------[2m------------------------[0m[0m 64.38 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------[2m--------------------[0m[0m 126.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m----------[2m--------------------[0m[0m 126.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m------[2m------------------------[0m[0m 78.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m------[2m------------------------[0m[0m 140.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 73.53 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 139.37 KiB/1.17 MiB                                                                                    [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2margon2-cffi-bindings     [0m [32m-----------------------[2m-------[0m[0m 64.74 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m-----------------------[2m-------[0m[0m 80.00 KiB/104.85 KiB
+[2mlark                     [0m [32m--------------------[2m----------[0m[0m 71.03 KiB/110.50 KiB
+[2mbleach                   [0m [32m---------------------------[2m---[0m[0m 140.45 KiB/160.58 KiB
+[2mcharset-normalizer       [0m [32m---------------------[2m---------[0m[0m 127.65 KiB/190.99 KiB
+[2mcffi                     [0m [32m--------------------[2m----------[0m[0m 141.59 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m----------------------[2m--------[0m[0m 157.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m-----------------[2m-------------[0m[0m 142.91 KiB/255.38 KiB
+[2mpytest                   [0m [32m------[2m------------------------[0m[0m 64.38 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------[2m--------------------[0m[0m 126.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m----------[2m--------------------[0m[0m 126.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m------[2m------------------------[0m[0m 78.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m------[2m------------------------[0m[0m 140.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 73.53 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 139.37 KiB/1.17 MiB                                                                                    [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2margon2-cffi-bindings     [0m [32m----------------------------[2m--[0m[0m 78.86 KiB/85.08 KiB
+[2mjupyter-client           [0m [32m------------------------------[2m[0m[0m 104.85 KiB/104.85 KiB
+[2mlark                     [0m [32m----------------------[2m--------[0m[0m 78.88 KiB/110.50 KiB
+[2mcharset-normalizer       [0m [32m------------------------[2m------[0m[0m 148.16 KiB/190.99 KiB
+[2mcffi                     [0m [32m-----------------------[2m-------[0m[0m 157.59 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m------------------------[2m------[0m[0m 173.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m-------------------[2m-----------[0m[0m 158.91 KiB/255.38 KiB
+[2mpytest                   [0m [32m--------[2m----------------------[0m[0m 94.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-------------[2m-----------------[0m[0m 158.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m------------[2m------------------[0m[0m 149.97 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------[2m----------------------[0m[0m 110.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-------[2m-----------------------[0m[0m 172.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 78.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 155.37 KiB/1.17 MiB                                                                                    [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2margon2-cffi-bindings     [0m [32m----------------------------[2m--[0m[0m 78.86 KiB/85.08 KiB
+[2mlark                     [0m [32m----------------------[2m--------[0m[0m 78.88 KiB/110.50 KiB
+[2mcharset-normalizer       [0m [32m------------------------[2m------[0m[0m 148.16 KiB/190.99 KiB
+[2mcffi                     [0m [32m-----------------------[2m-------[0m[0m 157.59 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m------------------------[2m------[0m[0m 173.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m-------------------[2m-----------[0m[0m 158.91 KiB/255.38 KiB
+[2mpytest                   [0m [32m--------[2m----------------------[0m[0m 94.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-------------[2m-----------------[0m[0m 158.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m------------[2m------------------[0m[0m 149.97 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------[2m----------------------[0m[0m 110.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-------[2m-----------------------[0m[0m 172.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---[2m---------------------------[0m[0m 78.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 155.37 KiB/1.17 MiB                                                                                    [13A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[13A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mlark                     [0m [32m--------------------------[2m----[0m[0m 94.88 KiB/110.50 KiB
+[2mcharset-normalizer       [0m [32m--------------------------[2m----[0m[0m 164.16 KiB/190.99 KiB
+[2mcffi                     [0m [32m-------------------------[2m-----[0m[0m 173.59 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m--------------------------[2m----[0m[0m 189.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m-------------------[2m-----------[0m[0m 158.91 KiB/255.38 KiB
+[2mpytest                   [0m [32m--------[2m----------------------[0m[0m 94.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m--------------[2m----------------[0m[0m 174.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m------------[2m------------------[0m[0m 149.97 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------[2m---------------------[0m[0m 126.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-------[2m-----------------------[0m[0m 172.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m----[2m--------------------------[0m[0m 94.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m----[2m--------------------------[0m[0m 158.26 KiB/1.17 MiB                                                                                    [12A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[12A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mcharset-normalizer       [0m [32m-----------------------------[2m-[0m[0m 180.16 KiB/190.99 KiB
+[2mcffi                     [0m [32m---------------------------[2m---[0m[0m 189.59 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m----------------------------[2m--[0m[0m 205.56 KiB/224.50 KiB
+[2mnbconvert                [0m [32m--------------------[2m----------[0m[0m 168.58 KiB/255.38 KiB
+[2mpytest                   [0m [32m----------[2m--------------------[0m[0m 110.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------[2m--------------[0m[0m 190.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---------------[2m---------------[0m[0m 181.97 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------[2m---------------------[0m[0m 127.15 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m--------[2m----------------------[0m[0m 204.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-----[2m-------------------------[0m[0m 110.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-----[2m-------------------------[0m[0m 174.26 KiB/1.17 MiB                                                                                    [11A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[11A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mcffi                     [0m [32m---------------------------[2m---[0m[0m 190.39 KiB/214.35 KiB
+[2mpython-dateutil          [0m [32m-----------------------------[2m-[0m[0m 210.09 KiB/224.50 KiB
+[2mnbconvert                [0m [32m----------------------[2m--------[0m[0m 184.58 KiB/255.38 KiB
+[2mpytest                   [0m [32m-----------[2m-------------------[0m[0m 126.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------[2m--------------[0m[0m 190.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---------------[2m---------------[0m[0m 181.97 KiB/384.79 KiB
+[2mtornado                  [0m [32m----------[2m--------------------[0m[0m 142.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m--------[2m----------------------[0m[0m 204.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-----[2m-------------------------[0m[0m 126.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-----[2m-------------------------[0m[0m 190.26 KiB/1.17 MiB                                                                                    [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mcffi                     [0m [32m-----------------------------[2m-[0m[0m 202.62 KiB/214.35 KiB
+[2mnbconvert                [0m [32m------------------------[2m------[0m[0m 200.58 KiB/255.38 KiB
+[2mpytest                   [0m [32m-------------[2m-----------------[0m[0m 142.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-----------------[2m-------------[0m[0m 206.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---------------[2m---------------[0m[0m 190.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m----------[2m--------------------[0m[0m 142.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m---------[2m---------------------[0m[0m 220.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m------[2m------------------------[0m[0m 142.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m------[2m------------------------[0m[0m 203.37 KiB/1.17 MiB                                                                                    [9A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[9A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mcffi                     [0m [32m-----------------------------[2m-[0m[0m 202.62 KiB/214.35 KiB
+[2mnbconvert                [0m [32m------------------------[2m------[0m[0m 200.58 KiB/255.38 KiB
+[2mpytest                   [0m [32m-------------[2m-----------------[0m[0m 142.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-----------------[2m-------------[0m[0m 206.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m---------------[2m---------------[0m[0m 190.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m-----------[2m-------------------[0m[0m 158.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m---------[2m---------------------[0m[0m 220.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m------[2m------------------------[0m[0m 142.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m------[2m------------------------[0m[0m 203.37 KiB/1.17 MiB                                                                                    [9A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[9A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mnbconvert                [0m [32m-------------------------[2m-----[0m[0m 205.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m--------------[2m----------------[0m[0m 158.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m------------------[2m------------[0m[0m 222.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-----------------[2m-------------[0m[0m 206.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m-----------[2m-------------------[0m[0m 158.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 236.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m------[2m------------------------[0m[0m 158.28 KiB/821.28 KiB
+[2mpygments                 [0m [32m------[2m------------------------[0m[0m 219.37 KiB/1.17 MiB                                                                                    [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m[2m------------------------------[0m[0m     0 B/4.14 KiB
+[2miniconfig                [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mjsonpointer              [0m [32m[2m------------------------------[0m[0m     0 B/7.42 KiB
+[2mrfc3987-syntax           [0m [32m[2m------------------------------[0m[0m     0 B/7.86 KiB
+[2mpandocfilters            [0m [32m------------------------------[2m[0m[0m 8.46 KiB/8.46 KiB
+[2mfqdn                     [0m [32m------------------------------[2m[0m[0m 8.91 KiB/8.91 KiB
+[2msix                      [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2muri-template             [0m [32m------------------------------[2m[0m[0m 10.88 KiB/10.88 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mwebencodings             [0m [32m------------------------------[2m[0m[0m 11.50 KiB/11.50 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mterminado                [0m [32m------------------------------[2m[0m[0m 13.82 KiB/13.82 KiB
+[2margon2-cffi              [0m [32m------------------------------[2m[0m[0m 14.31 KiB/14.31 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m---------------[2m---------------[0m[0m 174.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 252.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 171.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [21A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[21A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m[2m------------------------------[0m[0m     0 B/4.14 KiB
+[2miniconfig                [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mjsonpointer              [0m [32m[2m------------------------------[0m[0m     0 B/7.42 KiB
+[2mrfc3987-syntax           [0m [32m[2m------------------------------[0m[0m     0 B/7.86 KiB
+[2mpandocfilters            [0m [32m------------------------------[2m[0m[0m 8.46 KiB/8.46 KiB
+[2mfqdn                     [0m [32m------------------------------[2m[0m[0m 8.91 KiB/8.91 KiB
+[2msix                      [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2muri-template             [0m [32m------------------------------[2m[0m[0m 10.88 KiB/10.88 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mwebencodings             [0m [32m------------------------------[2m[0m[0m 11.50 KiB/11.50 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mterminado                [0m [32m------------------------------[2m[0m[0m 13.82 KiB/13.82 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m---------------[2m---------------[0m[0m 174.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 252.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 171.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [20A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[20A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m[2m------------------------------[0m[0m     0 B/4.14 KiB
+[2miniconfig                [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mjsonpointer              [0m [32m[2m------------------------------[0m[0m     0 B/7.42 KiB
+[2mrfc3987-syntax           [0m [32m[2m------------------------------[0m[0m     0 B/7.86 KiB
+[2mpandocfilters            [0m [32m------------------------------[2m[0m[0m 8.46 KiB/8.46 KiB
+[2mfqdn                     [0m [32m------------------------------[2m[0m[0m 8.91 KiB/8.91 KiB
+[2msix                      [0m [32m------------------------------[2m[0m[0m 10.79 KiB/10.79 KiB
+[2muri-template             [0m [32m------------------------------[2m[0m[0m 10.88 KiB/10.88 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mwebencodings             [0m [32m------------------------------[2m[0m[0m 11.50 KiB/11.50 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m---------------[2m---------------[0m[0m 174.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 252.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 171.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [19A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[19A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m[2m------------------------------[0m[0m     0 B/4.14 KiB
+[2miniconfig                [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mjsonpointer              [0m [32m[2m------------------------------[0m[0m     0 B/7.42 KiB
+[2mrfc3987-syntax           [0m [32m[2m------------------------------[0m[0m     0 B/7.86 KiB
+[2mpandocfilters            [0m [32m------------------------------[2m[0m[0m 8.46 KiB/8.46 KiB
+[2mfqdn                     [0m [32m------------------------------[2m[0m[0m 8.91 KiB/8.91 KiB
+[2muri-template             [0m [32m------------------------------[2m[0m[0m 10.88 KiB/10.88 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mwebencodings             [0m [32m------------------------------[2m[0m[0m 11.50 KiB/11.50 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m---------------[2m---------------[0m[0m 174.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 252.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 171.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [18A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[18A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m[2m------------------------------[0m[0m     0 B/4.14 KiB
+[2miniconfig                [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mjsonpointer              [0m [32m[2m------------------------------[0m[0m     0 B/7.42 KiB
+[2mrfc3987-syntax           [0m [32m[2m------------------------------[0m[0m     0 B/7.86 KiB
+[2mpandocfilters            [0m [32m------------------------------[2m[0m[0m 8.46 KiB/8.46 KiB
+[2mfqdn                     [0m [32m------------------------------[2m[0m[0m 8.91 KiB/8.91 KiB
+[2muri-template             [0m [32m------------------------------[2m[0m[0m 10.88 KiB/10.88 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m---------------[2m---------------[0m[0m 174.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 252.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 171.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [17A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[17A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m------------------------------[2m[0m[0m 4.14 KiB/4.14 KiB
+[2miniconfig                [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mjsonpointer              [0m [32m------------------------------[2m[0m[0m 7.42 KiB/7.42 KiB
+[2mrfc3987-syntax           [0m [32m------------------------------[2m[0m[0m 7.86 KiB/7.86 KiB
+[2mfqdn                     [0m [32m------------------------------[2m[0m[0m 8.91 KiB/8.91 KiB
+[2muri-template             [0m [32m------------------------------[2m[0m[0m 10.88 KiB/10.88 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m-----------------[2m-------------[0m[0m 190.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 260.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 187.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [16A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[16A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m------------------------------[2m[0m[0m 4.14 KiB/4.14 KiB
+[2miniconfig                [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mjsonpointer              [0m [32m------------------------------[2m[0m[0m 7.42 KiB/7.42 KiB
+[2mrfc3987-syntax           [0m [32m------------------------------[2m[0m[0m 7.86 KiB/7.86 KiB
+[2mfqdn                     [0m [32m------------------------------[2m[0m[0m 8.91 KiB/8.91 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m-----------------[2m-------------[0m[0m 190.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 260.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 187.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3986-validator        [0m [32m------------------------------[2m[0m[0m 4.14 KiB/4.14 KiB
+[2miniconfig                [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mjsonpointer              [0m [32m------------------------------[2m[0m[0m 7.42 KiB/7.42 KiB
+[2mrfc3987-syntax           [0m [32m------------------------------[2m[0m[0m 7.86 KiB/7.86 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mjupyter-server-terminals [0m [32m--------------[2m----------------[0m[0m 6.08 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m-----------------[2m-------------[0m[0m 190.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m---------------------[2m---------[0m[0m 254.29 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m-------------------[2m-----------[0m[0m 238.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m--------------[2m----------------[0m[0m 190.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m----------[2m--------------------[0m[0m 260.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------[2m-----------------------[0m[0m 187.60 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 251.37 KiB/1.17 MiB                                                                                    [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3339-validator        [0m [32m------------------------------[2m[0m[0m 3.41 KiB/3.41 KiB
+[2miniconfig                [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mjsonpointer              [0m [32m------------------------------[2m[0m[0m 7.42 KiB/7.42 KiB
+[2mrfc3987-syntax           [0m [32m------------------------------[2m[0m[0m 7.86 KiB/7.86 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mjupyter-server-terminals [0m [32m------------------------------[2m[0m[0m 13.38 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3339-validator        [0m [32m------------------------------[2m[0m[0m 3.41 KiB/3.41 KiB
+[2miniconfig                [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mrfc3987-syntax           [0m [32m------------------------------[2m[0m[0m 7.86 KiB/7.86 KiB
+[2misoduration              [0m [32m------------------------------[2m[0m[0m 11.06 KiB/11.06 KiB
+[2mjupyter-server-terminals [0m [32m------------------------------[2m[0m[0m 13.38 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [13A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[13A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3339-validator        [0m [32m------------------------------[2m[0m[0m 3.41 KiB/3.41 KiB
+[2miniconfig                [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mrfc3987-syntax           [0m [32m------------------------------[2m[0m[0m 7.86 KiB/7.86 KiB
+[2mjupyter-server-terminals [0m [32m------------------------------[2m[0m[0m 13.38 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [12A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[12A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3339-validator        [0m [32m------------------------------[2m[0m[0m 3.41 KiB/3.41 KiB
+[2miniconfig                [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mjupyter-server-terminals [0m [32m------------------------------[2m[0m[0m 13.38 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [11A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[11A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3339-validator        [0m [32m------------------------------[2m[0m[0m 3.41 KiB/3.41 KiB
+[2mjupyter-server-terminals [0m [32m------------------------------[2m[0m[0m 13.38 KiB/13.38 KiB
+[2mnbconvert                [0m [32m----------------------------[2m--[0m[0m 237.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3339-validator        [0m [32m------------------------------[2m[0m[0m 3.41 KiB/3.41 KiB
+[2mnbconvert                [0m [32m------------------------------[2m[0m[0m 253.36 KiB/255.38 KiB
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [9A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[9A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mrfc3339-validator        [0m [32m------------------------------[2m[0m[0m 3.41 KiB/3.41 KiB
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A[37m⠹[0m [2mPreparing packages...[0m (17/65)
+[2mpytest                   [0m [32m------------------[2m------------[0m[0m 206.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m----------------------[2m--------[0m[0m 271.10 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m--------------------[2m----------[0m[0m 254.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m---------------[2m---------------[0m[0m 206.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------[2m-------------------[0m[0m 276.03 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 206.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------[2m-----------------------[0m[0m 255.37 KiB/1.17 MiB                                                                                    [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mpytest                   [0m [32m----------------------[2m--------[0m[0m 254.88 KiB/356.91 KiB
+[2mjupyter-server           [0m [32m-------------------------[2m-----[0m[0m 313.65 KiB/379.12 KiB
+[2mrpds-py                  [0m [32m------------------------[2m------[0m[0m 302.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m-------------------[2m-----------[0m[0m 270.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-------------[2m-----------------[0m[0m 316.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------[2m----------------------[0m[0m 214.33 KiB/821.28 KiB
+[2mpygments                 [0m [32m--------[2m----------------------[0m[0m 303.37 KiB/1.17 MiB                                                                                    [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mpytest                   [0m [32m----------------------------[2m--[0m[0m 326.18 KiB/356.91 KiB
+[2mrpds-py                  [0m [32m----------------------------[2m--[0m[0m 350.10 KiB/384.79 KiB
+[2mtornado                  [0m [32m------------------------[2m------[0m[0m 334.88 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m---------------[2m---------------[0m[0m 380.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-----------[2m-------------------[0m[0m 286.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m----------[2m--------------------[0m[0m 381.55 KiB/1.17 MiB                                                                                    [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mpytest                   [0m [32m------------------------------[2m[0m[0m 350.88 KiB/356.91 KiB
+[2mtornado                  [0m [32m--------------------------[2m----[0m[0m 372.25 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m-----------------[2m-------------[0m[0m 428.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------------[2m-----------------[0m[0m 334.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-----------[2m-------------------[0m[0m 399.37 KiB/1.17 MiB                                                                                    [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mtornado                  [0m [32m----------------------------[2m--[0m[0m 392.56 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m------------------[2m------------[0m[0m 444.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m-------------[2m-----------------[0m[0m 350.91 KiB/821.28 KiB
+[2mpygments                 [0m [32m-----------[2m-------------------[0m[0m 438.53 KiB/1.17 MiB                                                                                    [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mtornado                  [0m [32m-----------------------------[2m-[0m[0m 408.56 KiB/434.88 KiB
+[2mpyyaml                   [0m [32m--------------------[2m----------[0m[0m 508.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m---------------[2m---------------[0m[0m 392.56 KiB/821.28 KiB
+[2mpygments                 [0m [32m------------[2m------------------[0m[0m 447.37 KiB/1.17 MiB                                                                                    [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mpyyaml                   [0m [32m---------------------[2m---------[0m[0m 541.75 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m----------------[2m--------------[0m[0m 424.56 KiB/821.28 KiB
+[2mpygments                 [0m [32m-------------[2m-----------------[0m[0m 510.01 KiB/1.17 MiB                                                                                    [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mpyyaml                   [0m [32m------------------------------[2m[0m[0m 780.50 KiB/782.84 KiB
+[2mpyzmq                    [0m [32m--------------------------[2m----[0m[0m 710.11 KiB/821.28 KiB
+[2mpygments                 [0m [32m---------------------[2m---------[0m[0m 831.37 KiB/1.17 MiB                                                                                    [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mpyzmq                    [0m [32m---------------------------[2m---[0m[0m 728.56 KiB/821.28 KiB
+[2mpygments                 [0m [32m----------------------[2m--------[0m[0m 847.37 KiB/1.17 MiB                                                                                    [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (58/65)
+[2mpygments                 [0m [32m--------------------------[2m----[0m[0m 1023.37 KiB/1.17 MiB                                                                                   [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (58/65)                                                                                                                                 [2K[2mPrepared [1m65 packages[0m [2min 534ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/65] [2mInstalling wheels...                                                                                                                [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/65] [2mtyping-extensions==4.15.0                                                                                                           [0m[2K░░░░░░░░░░░░░░░░░░░░ [1/65] [2mtyping-extensions==4.15.0                                                                                                           [0m[2K░░░░░░░░░░░░░░░░░░░░ [1/65] [2mpluggy==1.6.0                                                                                                                       [0m[2K░░░░░░░░░░░░░░░░░░░░ [2/65] [2mpluggy==1.6.0                                                                                                                       [0m[2K░░░░░░░░░░░░░░░░░░░░ [2/65] [2mplatformdirs==4.9.4                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [3/65] [2mplatformdirs==4.9.4                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [3/65] [2mrfc3987-syntax==1.1.0                                                                                                               [0m[2K█░░░░░░░░░░░░░░░░░░░ [4/65] [2mrfc3987-syntax==1.1.0                                                                                                               [0m[2K█░░░░░░░░░░░░░░░░░░░ [4/65] [2midna==3.11                                                                                                                          [0m[2K█░░░░░░░░░░░░░░░░░░░ [5/65] [2midna==3.11                                                                                                                          [0m[2K█░░░░░░░░░░░░░░░░░░░ [5/65] [2mmarkupsafe==3.0.3                                                                                                                   [0m[2K█░░░░░░░░░░░░░░░░░░░ [6/65] [2mmarkupsafe==3.0.3                                                                                                                   [0m[2K█░░░░░░░░░░░░░░░░░░░ [6/65] [2mpyyaml==6.0.3                                                                                                                       [0m[2K██░░░░░░░░░░░░░░░░░░ [7/65] [2mpyyaml==6.0.3                                                                                                                       [0m[2K██░░░░░░░░░░░░░░░░░░ [7/65] [2mterminado==0.18.1                                                                                                                   [0m[2K██░░░░░░░░░░░░░░░░░░ [8/65] [2mterminado==0.18.1                                                                                                                   [0m[2K██░░░░░░░░░░░░░░░░░░ [8/65] [2msix==1.17.0                                                                                                                         [0m[2K██░░░░░░░░░░░░░░░░░░ [9/65] [2msix==1.17.0                                                                                                                         [0m[2K[2mInstalled [1m65 packages[0m [2min 44ms[0m[0m
+ [32m+[39m [1manyio[0m[2m==4.12.1[0m
+ [32m+[39m [1margon2-cffi[0m[2m==25.1.0[0m
+ [32m+[39m [1margon2-cffi-bindings[0m[2m==25.1.0[0m
+ [32m+[39m [1marrow[0m[2m==1.4.0[0m
+ [32m+[39m [1mattrs[0m[2m==25.4.0[0m
+ [32m+[39m [1mbeautifulsoup4[0m[2m==4.14.3[0m
+ [32m+[39m [1mbleach[0m[2m==6.3.0[0m
+ [32m+[39m [1mcertifi[0m[2m==2026.2.25[0m
+ [32m+[39m [1mcffi[0m[2m==2.0.0[0m
+ [32m+[39m [1mcharset-normalizer[0m[2m==3.4.5[0m
+ [32m+[39m [1mdefusedxml[0m[2m==0.7.1[0m
+ [32m+[39m [1mfastjsonschema[0m[2m==2.21.2[0m
+ [32m+[39m [1mfqdn[0m[2m==1.5.1[0m
+ [32m+[39m [1midna[0m[2m==3.11[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1misoduration[0m[2m==20.11.0[0m
+ [32m+[39m [1mjinja2[0m[2m==3.1.6[0m
+ [32m+[39m [1mjsonpointer[0m[2m==3.0.0[0m
+ [32m+[39m [1mjsonschema[0m[2m==4.26.0[0m
+ [32m+[39m [1mjsonschema-specifications[0m[2m==2025.9.1[0m
+ [32m+[39m [1mjupyter-client[0m[2m==8.8.0[0m
+ [32m+[39m [1mjupyter-core[0m[2m==5.9.1[0m
+ [32m+[39m [1mjupyter-events[0m[2m==0.12.0[0m
+ [32m+[39m [1mjupyter-server[0m[2m==2.17.0[0m
+ [32m+[39m [1mjupyter-server-terminals[0m[2m==0.5.4[0m
+ [32m+[39m [1mjupyterlab-pygments[0m[2m==0.3.0[0m
+ [32m+[39m [1mlark[0m[2m==1.3.1[0m
+ [32m+[39m [1mmarkupsafe[0m[2m==3.0.3[0m
+ [32m+[39m [1mmistune[0m[2m==3.2.0[0m
+ [32m+[39m [1mnbclient[0m[2m==0.10.4[0m
+ [32m+[39m [1mnbconvert[0m[2m==7.17.0[0m
+ [32m+[39m [1mnbformat[0m[2m==5.10.4[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpandocfilters[0m[2m==1.5.1[0m
+ [32m+[39m [1mplatformdirs[0m[2m==4.9.4[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mprometheus-client[0m[2m==0.24.1[0m
+ [32m+[39m [1mptyprocess[0m[2m==0.7.0[0m
+ [32m+[39m [1mpycparser[0m[2m==3.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+ [32m+[39m [1mpython-dateutil[0m[2m==2.9.0.post0[0m
+ [32m+[39m [1mpython-json-logger[0m[2m==4.0.0[0m
+ [32m+[39m [1mpyyaml[0m[2m==6.0.3[0m
+ [32m+[39m [1mpyzmq[0m[2m==27.1.0[0m
+ [32m+[39m [1mreferencing[0m[2m==0.37.0[0m
+ [32m+[39m [1mrequests[0m[2m==2.32.4[0m
+ [32m+[39m [1mrfc3339-validator[0m[2m==0.1.4[0m
+ [32m+[39m [1mrfc3986-validator[0m[2m==0.1.1[0m
+ [32m+[39m [1mrfc3987-syntax[0m[2m==1.1.0[0m
+ [32m+[39m [1mrpds-py[0m[2m==0.30.0[0m
+ [32m+[39m [1msend2trash[0m[2m==2.1.0[0m
+ [32m+[39m [1msix[0m[2m==1.17.0[0m
+ [32m+[39m [1msoupsieve[0m[2m==2.8.3[0m
+ [32m+[39m [1mterminado[0m[2m==0.18.1[0m
+ [32m+[39m [1mtinycss2[0m[2m==1.4.0[0m
+ [32m+[39m [1mtornado[0m[2m==6.5.4[0m
+ [32m+[39m [1mtraitlets[0m[2m==5.14.3[0m
+ [32m+[39m [1mtyping-extensions[0m[2m==4.15.0[0m
+ [32m+[39m [1mtzdata[0m[2m==2025.3[0m
+ [32m+[39m [1muri-template[0m[2m==1.3.0[0m
+ [32m+[39m [1murllib3[0m[2m==2.6.3[0m
+ [32m+[39m [1mwebcolors[0m[2m==25.10.0[0m
+ [32m+[39m [1mwebencodings[0m[2m==0.5.1[0m
+ [32m+[39m [1mwebsocket-client[0m[2m==1.9.0[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.12, pytest-8.4.1, pluggy-1.6.0 -- /app/.tbench-testing/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: anyio-4.12.1
+[1mcollecting ... [0m[1mcollecting 4 items                                                                                                                                             [0m[1mcollected 4 items                                                                                                                                              [0m
+
+../tests/test_outputs.py::test_jupyter_server_running [32mPASSED[0m[32m                                                                                             [ 25%][0m
+../tests/test_outputs.py::test_jupyter_config_exists [32mPASSED[0m[32m                                                                                              [ 50%][0m
+../tests/test_outputs.py::test_sample_notebook_exists [32mPASSED[0m[32m                                                                                             [ 75%][0m
+../tests/test_outputs.py::test_password_authentication [32mPASSED[0m[33m                                                                                            [100%][0m
+
+[33m======================================================================= warnings summary =======================================================================[0m
+test_outputs.py::test_sample_notebook_exists
+  /app/.tbench-testing/lib/python3.13/site-packages/nbformat/__init__.py:96: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.
+    validate(nb)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_jupyter_server_running[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_jupyter_config_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_sample_notebook_exists[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_password_authentication[0m
+[33m================================================================= [32m4 passed[0m, [33m[1m1 warning[0m[33m in 4.17s[0m[33m =================================================================[0m
+[?2004hroot@ca79ade836ed:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@ca79ade836ed:/app# 

@@ -1,0 +1,40 @@
+root@52b15d4e3d2f:/app# bash /tests/run-tests.sh; tmux wait -S done
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-timeout==2.3.1
+  Downloading pytest_timeout-2.3.1-py3-none-any.whl.metadata (20 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (26.0)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (2.19.2)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pytest_timeout-2.3.1-py3-none-any.whl (14 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Installing collected packages: pluggy, iniconfig, pytest, pytest-timeout
+Successfully installed iniconfig-2.3.0 pluggy-1.6.0 pytest-8.4.1 pytest-timeout-2.3.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your syst
+em unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you ar
+e doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 24.3.1 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: timeout-2.3.1, anyio-4.12.1
+collected 11 items
+
+../tests/test_outputs.py::test_stable_kmeans_file_exists PASSED                                                                                          [  9%]
+../tests/test_outputs.py::test_test_implementation_file_exists PASSED                                                                                    [ 18%]
+../tests/test_outputs.py::test_stable_kmeans_has_required_classes PASSED                                                                                 [ 27%]
+../tests/test_outputs.py::test_fit_parallel_api_exists PASSED                                                                                            [ 36%]
+../tests/test_outputs.py::test_parallel_processing_occurs
+
+
+
+
+

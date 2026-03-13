@@ -1,0 +1,22 @@
+{
+    "id": "d9708cfd-b242-44da-a347-ead4e63ca5a1",
+    "trial_name": "log-summary.1-of-1.2026-03-07__09-22-48",
+    "task_id": "log-summary",
+    "instruction": "In `/app/logs` there are multiple `.log` files from different services. Your task is to scan all `.log` files and count how many lines contain \"ERROR\", \"WARNING\", and \"INFO\".\n  \nOutput your results to `/app/summary.csv` with the following structure:\nseverity,count\nERROR,<total number of ERROR lines across all files>\nWARNING,<total number of WARNING lines across all files>\nINFO,<total number of INFO lines across all files>\n\nThe output should be a valid CSV file with exactly four lines in total (one header line and one line for each severity level).",
+    "is_resolved": true,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_summary_file_exists": "passed",
+        "test_summary_file_format": "passed",
+        "test_summary_counts_are_correct": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/log-summary/log-summary.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T18:17:53.716043+00:00",
+    "trial_ended_at": "2026-03-07T18:23:50.742118+00:00",
+    "agent_started_at": "2026-03-07T18:18:23.325095+00:00",
+    "agent_ended_at": "2026-03-07T18:22:35.962358+00:00",
+    "test_started_at": "2026-03-07T18:22:39.472244+00:00",
+    "test_ended_at": "2026-03-07T18:23:37.729134+00:00"
+}

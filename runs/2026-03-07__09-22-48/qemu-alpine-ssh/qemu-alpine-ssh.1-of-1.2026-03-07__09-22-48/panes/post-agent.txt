@@ -1,0 +1,44 @@
+root@41633fcfe145:/app# asciinema rec --stdin /logs/agent.cast
+asciinema: recording asciicast to /logs/agent.cast
+asciinema: press <ctrl-d> or type "exit" when you're done
+root@41633fcfe145:/app# clear
+root@41633fcfe145:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@41633fcfe145:/app# panda --prompt 'Start the /app/alpine.iso image in qemu, and then start an ssh server on the alpine linux vm. When you'"'"'re done, I sh
+ould be able to run `ssh -p 2222 root@localhost` with password `password123` and be dropped into a shell. On the /app/alpine.iso image, the default username is
+root with no password.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+error: Uncaught (in promise) Error: Failed to load SQLite3 Dynamic Library
+  throw new Error("Failed to load SQLite3 Dynamic Library", { cause: e });
+        ^
+    at https://jsr.io/@db/sqlite/0.12.0/src/ffi.ts:633:9
+Caused by: TypeError: error sending request for url (https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so): client error (Connect): tls
+ handshake eof
+    at async mainFetch (ext:deno_fetch/26_fetch.js:192:12)
+    at async fetch (ext:deno_fetch/26_fetch.js:475:11)
+    at async download (https://jsr.io/@denosaurs/plug/1.1.0/download.ts:277:26)
+    at async dlopen (https://jsr.io/@denosaurs/plug/1.1.0/mod.ts:158:25)
+    at async https://jsr.io/@db/sqlite/0.12.0/src/ffi.ts:616:7
+root@41633fcfe145:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

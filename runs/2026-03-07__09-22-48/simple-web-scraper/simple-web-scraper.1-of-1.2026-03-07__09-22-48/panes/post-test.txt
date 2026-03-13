@@ -1,0 +1,109 @@
+root@4dd5cfebb0d1:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+Fetched 9346 kB in 2s (3777 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u14).
+0 upgraded, 0 newly installed, 0 to remove and 44 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 11 packages in 884ms
+Prepared 11 packages in 1.83s
+Installed 11 packages in 68ms
+ + iniconfig==2.3.0
+ + numpy==2.4.2
+ + packaging==26.0
+ + pandas==2.3.2
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+ + python-dateutil==2.9.0.post0
+ + pytz==2026.1.post1
+ + six==1.17.0
+ + tzdata==2025.3
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 5 items
+
+../tests/test_outputs.py ..FFF                                                                                                                           [100%]
+
+=========================================================================== FAILURES ===========================================================================
+____________________________________________________________________ test_data_completeness ____________________________________________________________________
+
+    def test_data_completeness():
+        """Test that all books were scraped"""
+        df = pd.read_csv("/app/books.csv")
+
+        # Should have scraped 7 books total
+>       assert len(df) == 7, f"Expected 7 books, got {len(df)}"
+E       AssertionError: Expected 7 books, got 10
+E       assert 10 == 7
+E        +  where 10 = len(                    title               author  year  rating  price\n0        The Great Gatsby  F. Scott Fitzgerald  19...the Rings
+     J.R.R. Tolkien  1954     4.9  24.99\n9               Jane Eyre     Charlotte Brontë  1847     4.5  11.50)
+
+/tests/test_outputs.py:35: AssertionError
+______________________________________________________________________ test_data_accuracy ______________________________________________________________________
+
+    def test_data_accuracy():
+        """Test the accuracy of scraped data"""
+        df = pd.read_csv("/app/books.csv")
+
+        # Check specific book details
+        gatsby = df[df["title"] == "The Great Gatsby"].iloc[0]
+        assert gatsby["author"] == "F. Scott Fitzgerald", (
+            "Author should be F. Scott Fitzgerald"
+        )
+        assert gatsby["year"] == 1925, "Year should be 1925"
+>       assert gatsby["rating"] == 4.2, "Rating should be 4.2"
+E       AssertionError: Rating should be 4.2
+E       assert np.float64(4.5) == 4.2
+
+/tests/test_outputs.py:62: AssertionError
+______________________________________________________________________ test_report_exists ______________________________________________________________________
+
+    def test_report_exists():
+        """Test that the summary report was created"""
+        report_path = Path("/app/report.txt")
+        assert report_path.exists(), "Summary report file should exist"
+
+        # Read the summary report
+        report_content = report_path.read_text()
+
+        # Check for required information
+        assert "7" in report_content, "Report should show correct book count"
+>       assert "13.85" in report_content, "Report should include average price"
+E       AssertionError: Report should include average price
+E       assert '13.85' in 'Bookstore Scraper Summary Report\n========================================\n\nTotal number of books scraped: 10\nAver...\nHighest rat
+ed book:\n  Title: The Hobbit\n  Author: J.R.R. Tolkien\n  Rating: 4.9/5\n  Price: $15.99\n  Year: 1937\n'
+
+/tests/test_outputs.py:82: AssertionError
+============================================================================ PASSES ============================================================================
+=================================================================== short test summary info ====================================================================
+PASSED ../tests/test_outputs.py::test_csv_file_exists
+PASSED ../tests/test_outputs.py::test_csv_structure
+FAILED ../tests/test_outputs.py::test_data_completeness - AssertionError: Expected 7 books, got 10
+FAILED ../tests/test_outputs.py::test_data_accuracy - AssertionError: Rating should be 4.2
+FAILED ../tests/test_outputs.py::test_report_exists - AssertionError: Report should include average price
+================================================================= 3 failed, 2 passed in 2.74s ==================================================================
+root@4dd5cfebb0d1:/app#

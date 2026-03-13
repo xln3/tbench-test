@@ -1,0 +1,40 @@
+root@dc26dc0284ca:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@dc26dc0284ca:/app# panda --prompt '# Extract Solution Safely
+>
+> You need to extract the contents of the solution from `/app/archive.tar` and write it to `/app/solution.txt`.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+error: Uncaught (in promise) Error: Failed to load SQLite3 Dynamic Library
+  throw new Error("Failed to load SQLite3 Dynamic Library", { cause: e });
+        ^
+    at https://jsr.io/@db/sqlite/0.12.0/src/ffi.ts:633:9
+Caused by: Error: Could not open library: Could not open library: /root/.cache/deno/plug/https/github.com/78749b9d49a2ade61a15e9f85b00f70dbb4a41d888e32eb719cae9
+83f13dead9.so: failed to map segment from shared object
+    at new DynamicLibrary (ext:deno_ffi/00_ffi.js:457:42)
+    at Object.dlopen (ext:deno_ffi/00_ffi.js:563:10)
+    at dlopen (https://jsr.io/@denosaurs/plug/1.1.0/mod.ts:158:15)
+    at eventLoopTick (ext:core/01_core.js:187:7)
+    at async https://jsr.io/@db/sqlite/0.12.0/src/ffi.ts:616:7
+root@dc26dc0284ca:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

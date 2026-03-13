@@ -1,0 +1,40 @@
+root@7cb682298c89:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@7cb682298c89:/app# panda --prompt 'I want you to cache the `albert/albert-base-v2` model and tokenizer from huggingface so that I can use it offline via ca
+che when I'"'"'m on my next flight.
+> transformers==4.52.4 and torch==2.7.1 have been installed system-wide, please do not uninstall them.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+error: Uncaught (in promise) Error: Failed to load SQLite3 Dynamic Library
+  throw new Error("Failed to load SQLite3 Dynamic Library", { cause: e });
+        ^
+    at https://jsr.io/@db/sqlite/0.12.0/src/ffi.ts:633:9
+Caused by: Error: Could not open library: Could not open library: /root/.cache/deno/plug/https/github.com/78749b9d49a2ade61a15e9f85b00f70dbb4a41d888e32eb719cae9
+83f13dead9.so: failed to map segment from shared object
+    at new DynamicLibrary (ext:deno_ffi/00_ffi.js:457:42)
+    at Object.dlopen (ext:deno_ffi/00_ffi.js:563:10)
+    at dlopen (https://jsr.io/@denosaurs/plug/1.1.0/mod.ts:158:15)
+    at eventLoopTick (ext:core/01_core.js:187:7)
+    at async https://jsr.io/@db/sqlite/0.12.0/src/ffi.ts:616:7
+root@7cb682298c89:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

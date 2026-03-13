@@ -1,0 +1,543 @@
+[?2004hroot@5c64a7b5f81b:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@5c64a7b5f81b:/app# clear
+[?2004l[H[J[3J[?2004hroot@5c64a7b5f81b:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@5c64a7b5f81b:/app# panda --prompt 'You need to build a simple KV store server using grpc that records number values for different string keys. Your server will use a Python dict as the KV store. A client will communicate with your server via RPC calls.
+[?2004l[?2004h> 
+[?2004l[?2004h> You need to:
+[?2004l[?2004h> 1. Install grpcio (1.73.0) and grpcio-tools (1.73.0) python packages system-wide.
+[?2004l[?2004h> 2. Create a file /app/kv-store.proto containing a service called KVStore, which creates two RPCs:
+[?2004l[?2004h>   a. GetVal takes a message named GetValRequest that includes a key (string) as a parameter and returns a GetValResponse with a val (int) field
+[?2004l[?2004h>   b. SetVal takes a message named SetValRequest that includes a key (string) and a value (int) as parameters and returns a SetValResponse with a val (int) field
+[?2004l[?2004h> 3. Generate the Python code for the grpc interface from the proto file (protobuf generates two python files: {class name}_pb2.py and {class name}_pb2_grpc.py) and place them in the /app directory.
+[?2004l[?2004h> 4. Create /app/server.py, in which you will implement the server logic for the KVStore service in a class called Server. You will use port 5328.
+[?2004l[?2004h> 5. Run the server.py file and keep it running in the background.
+[?2004l[?2004h> '; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[TodoWrite]
+[Bash]
+[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:27 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:26 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:25 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:24 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2mCollecting grpcio==1.73.0[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2mCollecting grpcio-tools==1.73.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2mCollecting grpcio-tools==1.73.0[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2mCollecting grpcio-tools==1.73.0[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2mCollecting grpcio-tools==1.73.0[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2mCollecting grpcio-tools==1.73.0[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)[22m
+[2mCollecting grpcio-tools==1.73.0[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:23 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mCollecting grpcio-tools==1.73.0[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (3 more lines above)[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (3 more lines above)[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (3 more lines above)[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (3 more lines above)[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (3 more lines above)[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (3 more lines above)[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (3 more lines above)[22m
+[2m  Downloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.3 kB)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mCollecting protobuf<7.0.0,>=6.30.0 (from grpcio-tools==1.73.0)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2mCollecting setuptools (from grpcio-tools==1.73.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (5 more lines above)[22m
+[2m  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)[22m
+[2mCollecting setuptools (from grpcio-tools==1.73.0)[22m
+[2m  Downloading setuptools-82.0.0-py3-none-any.whl.metadata (6.6 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:22 remaining)[22m
+[2m... (6 more lines above)[22m
+[2mCollecting setuptools (from grpcio-tools==1.73.0)[22m
+[2m  Downloading setuptools-82.0.0-py3-none-any.whl.metadata (6.6 kB)[22m
+[2mDownloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (6 more lines above)[22m
+[2mCollecting setuptools (from grpcio-tools==1.73.0)[22m
+[2m  Downloading setuptools-82.0.0-py3-none-any.whl.metadata (6.6 kB)[22m
+[2mDownloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (6 more lines above)[22m
+[2mCollecting setuptools (from grpcio-tools==1.73.0)[22m
+[2m  Downloading setuptools-82.0.0-py3-none-any.whl.metadata (6.6 kB)[22m
+[2mDownloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (6 more lines above)[22m
+[2mCollecting setuptools (from grpcio-tools==1.73.0)[22m
+[2m  Downloading setuptools-82.0.0-py3-none-any.whl.metadata (6.6 kB)[22m
+[2mDownloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (7 more lines above)[22m
+[2m  Downloading setuptools-82.0.0-py3-none-any.whl.metadata (6.6 kB)[22m
+[2mDownloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 14.2 MB/s eta 0:00:00[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mDownloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 14.2 MB/s eta 0:00:00[22m
+[2mDownloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mDownloading grpcio-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 14.2 MB/s eta 0:00:00[22m
+[2mDownloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (9 more lines above)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 14.2 MB/s eta 0:00:00[22m
+[2mDownloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 15.6 MB/s eta 0:00:00[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mDownloading grpcio_tools-1.73.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 15.6 MB/s eta 0:00:00[22m
+[2mDownloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (11 more lines above)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 15.6 MB/s eta 0:00:00[22m
+[2mDownloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:21 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mDownloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:20 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:19 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mDownloading setuptools-82.0.0-py3-none-any.whl (1.0 MB)[22m
+[2m   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 13.0 MB/s eta 0:00:00[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2mSuccessfully installed grpcio-1.73.0 grpcio-tools-1.73.0 protobuf-6.33.5 setuptools-82.0.0[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2mSuccessfully installed grpcio-1.73.0 grpcio-tools-1.73.0 protobuf-6.33.5 setuptools-82.0.0[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2mSuccessfully installed grpcio-1.73.0 grpcio-tools-1.73.0 protobuf-6.33.5 setuptools-82.0.0[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2mSuccessfully installed grpcio-1.73.0 grpcio-tools-1.73.0 protobuf-6.33.5 setuptools-82.0.0[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (15 more lines above)[22m
+[2mInstalling collected packages: setuptools, protobuf, grpcio, grpcio-tools[22m
+[2mSuccessfully installed grpcio-1.73.0 grpcio-tools-1.73.0 protobuf-6.33.5 setuptools-82.0.0[22m
+[31mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your s…[0m[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (18 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (18 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:18 remaining)[22m
+[2m... (18 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:17 remaining)[22m
+[2m... (18 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:17 remaining)[22m
+[2m... (18 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:17 remaining)[22m
+[2m... (18 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install grpcio and grpcio-tools version 1.73.0][39m [2m(0:17 remaining)[22m
+[2m... (18 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 24.3.1 -> 26.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[TodoWrite]
+[Write]
+[TodoWrite]
+[Bash]
+[36m⠙[39m [33m[Bash: Generate Python gRPC code from proto file][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[TodoWrite]
+[Write]
+[TodoWrite]
+[Bash]

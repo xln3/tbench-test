@@ -1,0 +1,165 @@
+[?2004hroot@08d3e2e8c6df:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@08d3e2e8c6df:/app# clear
+[?2004l[H[J[3J[?2004hroot@08d3e2e8c6df:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@08d3e2e8c6df:/app# panda --prompt 'Write a CoreWars program that achieves a winning average against five classic opponent warriors.
+[?2004l[?2004h> pMARS (CoreWars simulator) is pre-installed and configured. The core size is 8000 and max cycles is 80000.
+[?2004l[?2004h> 
+[?2004l[?2004h> You can examine opponent code in `warriors/`:
+[?2004l[?2004h>   - `stone.red` - Classic stone bomber that drops DAT every 4 positions
+[?2004l[?2004h>   - `paper.red` - Classic paper/replicator with fast copying loop  
+[?2004l[?2004h>   - `vampire.red` - Pit trapper that scatters JMP fangs to redirect enemies
+[?2004l[?2004h>   - `snake.red` - Snake that moves through memory by copying itself
+[?2004l[?2004h>   - `g2-clear.red` - G2-Clear that wipes memory with deadly DAT bombs
+[?2004l[?2004h> 
+[?2004l[?2004h> Write your program to `my_warrior.red`. 
+[?2004l[?2004h> Your warrior must achieve at least a 75% win rate (75+ wins out of 100 battles) against `stone.red`, `vampire.red`, and `paper.red`, and achieve at least a 33% win rate (33+ wins out of 100 battles) against `snake.red` and `g2-clear.red`.
+[?2004l[?2004h> Testing will be performed using pMARS batch mode: `pmars -b -r 100 -f my_warrior.red warriors/<opponent>.red`.
+[?2004l[?2004h> 
+[?2004l[?2004h> Do not modify opponent files in `warriors/`.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Glob]
+[Read]
+[Read]
+[Read]
+[Read]
+[Read]
+[Write]
+[Bash]
+[36m⠙[39m [33m[Bash: Test against stone.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Test against stone.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Test against stone.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+[Bash]
+[36m⠼[39m [33m[Bash: Test against stone.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Test against stone.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Test against stone.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠧[39m [33m[Bash: Test against paper.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠇[39m [33m[Bash: Test against vampire.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠏[39m [33m[Bash: Test against snake.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Test against snake.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[36m⠹[39m [33m[Bash: Test against g2-clear.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+[Bash]
+[36m⠸[39m [33m[Bash: Test against snake.red with imp spiral][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Test against snake.red with imp spiral][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Test against snake.red with imp spiral][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+[Bash]
+[36m⠦[39m [33m[Bash: Test against snake.red with decoys][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Test against snake.red with decoys][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Test against snake.red with decoys][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+[Write]
+[Bash]
+[36m⠏[39m [33m[Bash: Test against g2-clear.red][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]
+[Write]

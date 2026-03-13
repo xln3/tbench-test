@@ -1,0 +1,358 @@
+[?2004hroot@ae7846fa76fb:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@ae7846fa76fb:/app# clear
+[?2004l[H[J[3J[?2004hroot@ae7846fa76fb:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+0% [1 InRelease 10.8 kB/151 kB 7%]                                  0% [Working]0% [Waiting for headers]                        Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+0% [2 InRelease 14.4 kB/55.4 kB 26%]                                    0% [Working]0% [Waiting for headers]                        Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+0% [3 InRelease 12.3 kB/48.0 kB 26%]                                    0% [Working]16% [Waiting for headers]                         Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+16% [4 Packages 0 B/8792 kB 0%]17% [4 Packages 124 kB/8792 kB 1%]18% [4 Packages 238 kB/8792 kB 3%]19% [4 Packages 364 kB/8792 kB 4%]19% [4 Packages 462 kB/8792 kB 5%]20% [4 Packages 541 kB/8792 kB 6%]22% [4 Packages 719 kB/8792 kB 8%]23% [4 Packages 834 kB/8792 kB 9%]25% [4 Packages 1167 kB/8792 kB 13%]26% [4 Packages 1178 kB/8792 kB 13%]26% [4 Packages 1178 kB/8792 kB 13%]                                                                                                               221 kB/s 35s28% [4 Packages 1438 kB/8792 kB 16%]                                                                                                               221 kB/s 34s31% [4 Packages 1828 kB/8792 kB 21%]                                                                                                               221 kB/s 32s34% [4 Packages 2147 kB/8792 kB 24%]                                                                                                               221 kB/s 31s34% [4 Packages 2216 kB/8792 kB 25%]                                                                                                               221 kB/s 31s37% [4 Packages 2497 kB/8792 kB 28%]                                                                                                               221 kB/s 29s41% [4 Packages 3027 kB/8792 kB 34%]                                                                                                               221 kB/s 27s46% [4 Packages 3561 kB/8792 kB 41%]                                                                                                               221 kB/s 25s49% [4 Packages 3893 kB/8792 kB 44%]                                                                                                               221 kB/s 23s50% [4 Packages 4069 kB/8792 kB 46%]                                                                                                               221 kB/s 22s56% [4 Packages 4761 kB/8792 kB 54%]                                                                                                               221 kB/s 19s57% [4 Packages 4892 kB/8792 kB 56%]                                                                                                               221 kB/s 18s61% [4 Packages 5285 kB/8792 kB 60%]                                                                                                                684 kB/s 5s69% [4 Packages 6203 kB/8792 kB 71%]                                                                                                                684 kB/s 4s76% [4 Packages 7055 kB/8792 kB 80%]                                                                                                                684 kB/s 2s80% [4 Packages 7579 kB/8792 kB 86%]                                                                                                                684 kB/s 2s82% [4 Packages 7775 kB/8792 kB 88%]                                                                                                                684 kB/s 1s85% [4 Packages 8169 kB/8792 kB 93%]                                                                                                                684 kB/s 1s85% [4 Packages 8169 kB/8792 kB 93%]                                                                                                                684 kB/s 1s87% [4 Packages 8300 kB/8792 kB 94%]                                                                                                                684 kB/s 1s91% [Working]                                                                                                                                       684 kB/s 0s91% [4 Packages store 0 B] [Waiting for headers]                                                                                                    684 kB/s 0s                                                                                                                                                               Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+91% [4 Packages store 0 B] [5 Packages 6924 B/6924 B 100%]                                                                                          684 kB/s 0s91% [4 Packages store 0 B]                                                                                                                          684 kB/s 0s                                                                                                                                                               Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+91% [4 Packages store 0 B] [6 Packages 15.6 kB/293 kB 5%]                                                                                           684 kB/s 0s93% [4 Packages store 0 B]                                                                                                                          684 kB/s 0s93% [4 Packages store 0 B]                                                                                                                          684 kB/s 0s96% [Working]                                                                                                                                       684 kB/s 0s96% [5 Packages store 0 B]                                                                                                                          684 kB/s 0s98% [Working]                                                                                                                                       684 kB/s 0s98% [6 Packages store 0 B]                                                                                                                          684 kB/s 0s100% [Working]                                                                                                                                      684 kB/s 0s                                                                                                                                                               Fetched 9346 kB in 18s (529 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 58%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcurl4
+The following NEW packages will be installed:
+  curl libcurl4
+0 upgraded, 2 newly installed, 0 to remove and 34 not upgraded.
+Need to get 707 kB of archives.
+After this operation, 1361 kB of additional disk space will be used.
+0% [Working]            Get:1 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+1% [1 libcurl4 7220 B/392 kB 2%]22% [1 libcurl4 195 kB/392 kB 50%]                                  54% [Working]             Get:2 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+55% [2 curl 8192 B/316 kB 3%]                             100% [Working]              Fetched 707 kB in 1s (622 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcurl4:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18821 files and directories currently installed.)
+Preparing to unpack .../libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u14) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up curl (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+[2mUsing Python 3.13.1 environment at: /usr/local[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠸[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠴[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠦[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠧[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠧[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠇[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠇[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠇[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠇[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠇[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 1.42s[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 78.54 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 94.54 KiB/1.17 MiB                                                                                          [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 110.54 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 110.54 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 110.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 126.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 142.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 158.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/356.91 KiB
+[2mpygments            [0m [32m-------[2m-----------------------[0m[0m 254.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 95.09 KiB/356.91 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 286.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m-----------[2m-------------------[0m[0m 127.09 KiB/356.91 KiB
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 334.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m--------------[2m----------------[0m[0m 159.09 KiB/356.91 KiB
+[2mpygments            [0m [32m-----------[2m-------------------[0m[0m 414.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m---------------[2m---------------[0m[0m 175.09 KiB/356.91 KiB
+[2mpygments            [0m [32m-----------[2m-------------------[0m[0m 414.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m---------------[2m---------------[0m[0m 175.09 KiB/356.91 KiB
+[2mpygments            [0m [32m-----------[2m-------------------[0m[0m 430.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m---------------------------[2m---[0m[0m 318.99 KiB/356.91 KiB
+[2mpygments            [0m [32m-------------[2m-----------------[0m[0m 510.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m---------------------------[2m---[0m[0m 319.09 KiB/356.91 KiB
+[2mpygments            [0m [32m--------------[2m----------------[0m[0m 526.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m---------------------------[2m---[0m[0m 319.09 KiB/356.91 KiB
+[2mpygments            [0m [32m--------------[2m----------------[0m[0m 542.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m-----------------------------[2m-[0m[0m 335.09 KiB/356.91 KiB
+[2mpygments            [0m [32m--------------[2m----------------[0m[0m 542.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m-----------------------------[2m-[0m[0m 335.09 KiB/356.91 KiB
+[2mpygments            [0m [32m---------------[2m---------------[0m[0m 558.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m-----------------------------[2m-[0m[0m 335.09 KiB/356.91 KiB
+[2mpygments            [0m [32m---------------[2m---------------[0m[0m 574.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpytest              [0m [32m-----------------------------[2m-[0m[0m 335.09 KiB/356.91 KiB
+[2mpygments            [0m [32m---------------[2m---------------[0m[0m 590.54 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpygments            [0m [32m----------------[2m--------------[0m[0m 622.54 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (2/4)
+[2mpygments            [0m [32m------------------------------[2m[0m[0m 1.13 MiB/1.17 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (2/4)                                                                                                                                   [2K[2mPrepared [1m4 packages[0m [2min 977ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/4] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/4] [2mpluggy==1.6.0                                                                                                                        [0m[2K█████░░░░░░░░░░░░░░░ [1/4] [2mpluggy==1.6.0                                                                                                                        [0m[2K█████░░░░░░░░░░░░░░░ [1/4] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████████░░░░░░░░░░ [2/4] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████████░░░░░░░░░░ [2/4] [2mpytest==8.4.1                                                                                                                        [0m[2K███████████████░░░░░ [3/4] [2mpytest==8.4.1                                                                                                                        [0m[2K███████████████░░░░░ [3/4] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [4/4] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m4 packages[0m [2min 20ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 11 items                                                                                                                                             [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                     [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_______________________________________________________________________ test_ccomplexity _______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_ccomplexity[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test ccomplexity module on computing writhe."""[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mnp[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mpyknotid[39;49;00m[04m[96m.[39;49;00m[04m[96mspacecurves[39;49;00m[04m[96m.[39;49;00m[04m[96mccomplexity[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mcc[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# just a simple square[39;49;00m[90m[39;49;00m
+        points = np.array([90m[39;49;00m
+            [[[94m0.0[39;49;00m, [94m0.0[39;49;00m, [94m0.0[39;49;00m], [[94m1.0[39;49;00m, [94m0.0[39;49;00m, [94m0.0[39;49;00m], [[94m1.0[39;49;00m, [94m1.0[39;49;00m, [94m0.0[39;49;00m], [[94m0.0[39;49;00m, [94m1.0[39;49;00m, [94m0.0[39;49;00m]],[90m[39;49;00m
+            dtype=np.float64,[90m[39;49;00m
+        )[90m[39;49;00m
+        contributions = np.zeros(([94m4[39;49;00m, [94m4[39;49;00m), dtype=np.float64)[90m[39;49;00m
+        order = np.array([[94m0[39;49;00m, [94m1[39;49;00m, [94m2[39;49;00m, [94m3[39;49;00m], dtype=np.int64)[90m[39;49;00m
+>       result = cc.cython_higher_order_writhe(points, contributions, order)[90m[39;49;00m
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpyknotid/spacecurves/ccomplexity.pyx[0m:11: in pyknotid.spacecurves.ccomplexity.cython_higher_order_writhe
+    [0m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31mpyknotid/spacecurves/ccomplexity.pyx[0m:16: in pyknotid.spacecurves.ccomplexity.cython_higher_order_writhe
+    [0m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+attr = 'int'
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92m__getattr__[39;49;00m(attr):[90m[39;49;00m
+        [90m# Warn for expired attributes[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mwarnings[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m attr == [33m"[39;49;00m[33mlinalg[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mlinalg[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mlinalg[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m linalg[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mfft[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mfft[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mfft[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m fft[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mdtypes[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mdtypes[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mdtypes[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m dtypes[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mrandom[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mrandom[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mrandom[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m random[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mpolynomial[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mpolynomial[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mpolynomial[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m polynomial[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mma[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mma[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mma[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m ma[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mctypeslib[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mctypeslib[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mctypeslib[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m ctypeslib[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mexceptions[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mexceptions[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mexceptions[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m exceptions[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mtesting[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mtesting[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mtesting[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m testing[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mmatlib[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mmatlib[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mmatlib[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m matlib[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mf2py[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mf2py[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mf2py[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m f2py[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mtyping[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mtyping[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mtyping[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m typing[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mrec[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mrec[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mrec[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m rec[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mchar[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mchar[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mchar[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m char[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33marray_api[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mraise[39;49;00m [96mAttributeError[39;49;00m([33m"[39;49;00m[33m`numpy.array_api` is not available from [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                                 [33m"[39;49;00m[33mnumpy 2.0 onwards[39;49;00m[33m"[39;49;00m, name=[94mNone[39;49;00m)[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mcore[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mcore[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mcore[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m core[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mstrings[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mstrings[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mstrings[39;49;00m[90m[39;49;00m
+            [94mreturn[39;49;00m strings[90m[39;49;00m
+        [94melif[39;49;00m attr == [33m"[39;49;00m[33mdistutils[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m [33m'[39;49;00m[33mdistutils[39;49;00m[33m'[39;49;00m [95min[39;49;00m __numpy_submodules__:[90m[39;49;00m
+                [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[04m[96m.[39;49;00m[04m[96mdistutils[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mdistutils[39;49;00m[90m[39;49;00m
+                [94mreturn[39;49;00m distutils[90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                [94mraise[39;49;00m [96mAttributeError[39;49;00m([33m"[39;49;00m[33m`numpy.distutils` is not available from [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                                     [33m"[39;49;00m[33mPython 3.12 onwards[39;49;00m[33m"[39;49;00m, name=[94mNone[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m attr [95min[39;49;00m __future_scalars__:[90m[39;49;00m
+            [90m# And future warnings for those that will change, but also give[39;49;00m[90m[39;49;00m
+            [90m# the AttributeError[39;49;00m[90m[39;49;00m
+            warnings.warn([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mIn the future `np.[39;49;00m[33m{[39;49;00mattr[33m}[39;49;00m[33m` will be defined as the [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33mcorresponding NumPy scalar.[39;49;00m[33m"[39;49;00m, [96mFutureWarning[39;49;00m, stacklevel=[94m2[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m attr [95min[39;49;00m __former_attrs__:[90m[39;49;00m
+>           [94mraise[39;49;00m [96mAttributeError[39;49;00m(__former_attrs__[attr], name=[94mNone[39;49;00m)[90m[39;49;00m
+[1m[31mE           AttributeError: module 'numpy' has no attribute 'int'.[0m
+[1m[31mE           `np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.[0m
+[1m[31mE           The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:[0m
+[1m[31mE               https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations[0m
+
+[1m[31m/usr/local/lib/python3.13/site-packages/numpy/__init__.py[0m:778: AttributeError
+[31m[1m______________________________________________________________ test_cinvariants_python_vs_cython _______________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_cinvariants_python_vs_cython[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that Cython cinvariants matches Python fallback implementation."""[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mpyknotid[39;49;00m[04m[96m.[39;49;00m[04m[96minvariants[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96minv[39;49;00m[90m[39;49;00m
+>       [94mimport[39;49;00m[90m [39;49;00m[04m[96mpyknotid[39;49;00m[04m[96m.[39;49;00m[04m[96mmake[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mmk[39;49;00m[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:116: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/usr/local/lib/python3.13/site-packages/pyknotid/make/__init__.py[0m:13: in <module>
+    [0m[94mfrom[39;49;00m[90m [39;49;00m[04m[96mpyknotid[39;49;00m[04m[96m.[39;49;00m[04m[96mmake[39;49;00m[04m[96m.[39;49;00m[04m[96mtorus[39;49;00m[90m [39;49;00m[94mimport[39;49;00m torus_knot, torus_link[90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    [0m[33m'''[39;49;00m
+    [33mTorus knots[39;49;00m
+    [33m===========[39;49;00m
+    [33m[39;49;00m
+    [33mFunctions for creating torus knots and links.[39;49;00m
+    [33m[39;49;00m
+    [33mAPI documentation[39;49;00m
+    [33m-----------------[39;49;00m
+    [33m'''[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+    [94mfrom[39;49;00m[90m [39;49;00m[04m[96m__future__[39;49;00m[90m [39;49;00m[94mimport[39;49;00m division[90m[39;49;00m
+    [90m[39;49;00m
+    [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mnp[39;49;00m[90m[39;49;00m
+>   [94mfrom[39;49;00m[90m [39;49;00m[04m[96mfractions[39;49;00m[90m [39;49;00m[94mimport[39;49;00m gcd[90m[39;49;00m
+[1m[31mE   ImportError: cannot import name 'gcd' from 'fractions' (/usr/local/lib/python3.13/fractions.py)[0m
+
+[1m[31m/usr/local/lib/python3.13/site-packages/pyknotid/make/torus.py[0m:14: ImportError
+[31m[1m______________________________________________________________________ test_example_usage ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_example_usage[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test example usage of pyknotid from readme as well as a variation"""[39;49;00m[90m[39;49;00m
+>       [94mimport[39;49;00m[90m [39;49;00m[04m[96mpyknotid[39;49;00m[04m[96m.[39;49;00m[04m[96mmake[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mmk[39;49;00m[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31m/usr/local/lib/python3.13/site-packages/pyknotid/make/__init__.py[0m:13: in <module>
+    [0m[94mfrom[39;49;00m[90m [39;49;00m[04m[96mpyknotid[39;49;00m[04m[96m.[39;49;00m[04m[96mmake[39;49;00m[04m[96m.[39;49;00m[04m[96mtorus[39;49;00m[90m [39;49;00m[94mimport[39;49;00m torus_knot, torus_link[90m[39;49;00m
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    [0m[33m'''[39;49;00m
+    [33mTorus knots[39;49;00m
+    [33m===========[39;49;00m
+    [33m[39;49;00m
+    [33mFunctions for creating torus knots and links.[39;49;00m
+    [33m[39;49;00m
+    [33mAPI documentation[39;49;00m
+    [33m-----------------[39;49;00m
+    [33m'''[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+    [94mfrom[39;49;00m[90m [39;49;00m[04m[96m__future__[39;49;00m[90m [39;49;00m[94mimport[39;49;00m division[90m[39;49;00m
+    [90m[39;49;00m
+    [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mnp[39;49;00m[90m[39;49;00m
+>   [94mfrom[39;49;00m[90m [39;49;00m[04m[96mfractions[39;49;00m[90m [39;49;00m[94mimport[39;49;00m gcd[90m[39;49;00m
+[1m[31mE   ImportError: cannot import name 'gcd' from 'fractions' (/usr/local/lib/python3.13/fractions.py)[0m
+
+[1m[31m/usr/local/lib/python3.13/site-packages/pyknotid/make/torus.py[0m:14: ImportError
+[31m[1m________________________________________________________________ test_pyknotid_repository_tests ________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_pyknotid_repository_tests[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Download and run the original pyknotid test suite."""[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m tempfile.TemporaryDirectory() [94mas[39;49;00m temp_dir:[90m[39;49;00m
+            git_cmd = [[90m[39;49;00m
+                [33m"[39;49;00m[33mgit[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mclone[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m--depth[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m1[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m--branch[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m0.5.3[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mhttps://github.com/SPOCKnots/pyknotid.git[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                temp_dir,[90m[39;49;00m
+            ][90m[39;49;00m
+            result = subprocess.run(git_cmd, capture_output=[94mTrue[39;49;00m, text=[94mTrue[39;49;00m)[90m[39;49;00m
+            tests_dir = os.path.join(temp_dir, [33m"[39;49;00m[33mtests[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Run pytest excluding the problematic test files[39;49;00m[90m[39;49;00m
+            pytest_cmd = [[90m[39;49;00m
+                [33m"[39;49;00m[33mpython[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33m-m[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                [33m"[39;49;00m[33mpytest[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                tests_dir,[90m[39;49;00m
+                [33m"[39;49;00m[33m--ignore[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                os.path.join(tests_dir, [33m"[39;49;00m[33mtest_random_curves.py[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                [33m"[39;49;00m[33m--ignore[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+                os.path.join(tests_dir, [33m"[39;49;00m[33mtest_catalogue.py[39;49;00m[33m"[39;49;00m),[90m[39;49;00m
+                [33m"[39;49;00m[33m-v[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            ][90m[39;49;00m
+    [90m[39;49;00m
+            original_cwd = os.getcwd()[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                os.chdir([33m"[39;49;00m[33m/app/pyknotid[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+                result = subprocess.run(pytest_cmd, capture_output=[94mTrue[39;49;00m, text=[94mTrue[39;49;00m)[90m[39;49;00m
+>               [94massert[39;49;00m result.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+                    [33mf[39;49;00m[33m"[39;49;00m[33mRepository tests failed with return code [39;49;00m[33m{[39;49;00mresult.returncode[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                )[90m[39;49;00m
+[1m[31mE               AssertionError: Repository tests failed with return code 1[0m
+[1m[31mE               assert 1 == 0[0m
+[1m[31mE                +  where 1 = CompletedProcess(args=['python', '-m', 'pytest', '/tmp/tmp8lti9_t6/tests', '--ignore', '/tmp/tmp8lti9_t6/tests/test_ra...============== 18 failed in 2.12s ======================================================================\n', stderr='').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:173: AssertionError
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_numpy_version[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_repo_cloned[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_pyknotid_core_import[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_chelpers_cython_extension[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_ccomplexity_cython_extension[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_cinvariants_cython_extension[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_chelpers[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_ccomplexity[0m - AttributeError: module 'numpy' has no attribute 'int'.
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_cinvariants_python_vs_cython[0m - ImportError: cannot import name 'gcd' from 'fractions' (/usr/local/lib/python3.13/fractions.py)
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_example_usage[0m - ImportError: cannot import name 'gcd' from 'fractions' (/usr/local/lib/python3.13/fractions.py)
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_pyknotid_repository_tests[0m - AssertionError: Repository tests failed with return code 1
+[31m================================================================= [31m[1m4 failed[0m, [32m7 passed[0m[31m in 8.12s[0m[31m ==================================================================[0m
+[?2004hroot@ae7846fa76fb:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@ae7846fa76fb:/app# 

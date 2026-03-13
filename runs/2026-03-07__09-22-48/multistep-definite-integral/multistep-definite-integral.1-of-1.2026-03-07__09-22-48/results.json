@@ -1,0 +1,21 @@
+{
+    "id": "51e20b28-3f09-4991-9db9-c5fb2ef7b669",
+    "trial_name": "multistep-definite-integral.1-of-1.2026-03-07__09-22-48",
+    "task_id": "multistep-definite-integral",
+    "instruction": "Use the sympy python library, \ncompute the definite integral of x**2 * e**x over the interval [0, 1], \nand return the result in simplified exact form (e.g., e - 1). \nSave the result to /app/output.txt and also print it to standard output.",
+    "is_resolved": true,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_output_file_exists": "passed",
+        "test_output_file_content": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/multistep-definite-integral/multistep-definite-integral.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T15:24:16.319730+00:00",
+    "trial_ended_at": "2026-03-07T15:33:18.785540+00:00",
+    "agent_started_at": "2026-03-07T15:24:23.368881+00:00",
+    "agent_ended_at": "2026-03-07T15:32:20.929832+00:00",
+    "test_started_at": "2026-03-07T15:32:20.995112+00:00",
+    "test_ended_at": "2026-03-07T15:33:05.894666+00:00"
+}

@@ -1,0 +1,233 @@
+[?2004hroot@95f88168e95c:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@95f88168e95c:/app# clear
+[?2004l[H[J[3J[?2004hroot@95f88168e95c:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+                        0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 51%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 51%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 83%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3.12[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠹[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠹[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠹[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠹[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠹[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 261ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 3.31s[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m[33mwarning[39m[0m[1m:[0m [1m`VIRTUAL_ENV=.tbench-testing` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 5 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                           [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_____________________________________________________________________ test_image_c_exists ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_image_c_exists[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the image.c source file exists.[39;49;00m
+    [33m[39;49;00m
+    [33m    Verifies that the agent successfully created an image.c file that will[39;49;00m
+    [33m    generate a path-traced image matching the provided reference.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        image_c_path = Path([33m"[39;49;00m[33m/app/image.c[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+>       [94massert[39;49;00m image_c_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mFile [39;49;00m[33m{[39;49;00mimage_c_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: File /app/image.c does not exist[0m
+[1m[31mE       assert False[0m
+[1m[31mE        +  where False = exists()[0m
+[1m[31mE        +    where exists = PosixPath('/app/image.c').exists[0m
+
+[1m[31m/tests/test_outputs.py[0m:16: AssertionError
+[31m[1m_____________________________________________________________________ test_image_compiles ______________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_image_compiles[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that image.c compiles successfully and meets size constraints.[39;49;00m
+    [33m[39;49;00m
+    [33m    This test verifies:[39;49;00m
+    [33m    1. The image.c file can be compiled with gcc without errors[39;49;00m
+    [33m    2. The compressed source code is under 2KB (efficiency constraint)[39;49;00m
+    [33m[39;49;00m
+    [33m    Note: The 2KB compressed size limit ensures the solution is concise[39;49;00m
+    [33m    and doesn't embed the image data directly.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        Path([33m"[39;49;00m[33m/app/image[39;49;00m[33m"[39;49;00m).unlink(missing_ok=[94mTrue[39;49;00m)[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mgcc[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-static[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-o[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/app/image[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/app/image.c[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-lm[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+>       [94massert[39;49;00m result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mCompilation failed: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Compilation failed: cc1: fatal error: /app/image.c: No such file or directory[0m
+[1m[31mE         compilation terminated.[0m
+[1m[31mE         [0m
+[1m[31mE       assert 1 == 0[0m
+[1m[31mE        +  where 1 = CompletedProcess(args=['gcc', '-static', '-o', '/app/image', '/app/image.c', '-lm'], returncode=1, stdout='', stderr='cc1: fatal error: /app/image.c: No such file or directory\ncompilation terminated.\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:35: AssertionError
+[31m[1m_________________________________________________________________________ test_no_deps _________________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_no_deps[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Test that the program has no external dependencies other than normal system ones.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mgcc[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-H[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/app/image.c[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-lm[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+>       [94massert[39;49;00m result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mCompilation failed: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Compilation failed: cc1: fatal error: /app/image.c: No such file or directory[0m
+[1m[31mE         compilation terminated.[0m
+[1m[31mE         [0m
+[1m[31mE       assert 1 == 0[0m
+[1m[31mE        +  where 1 = CompletedProcess(args=['gcc', '-H', '/app/image.c', '-lm'], returncode=1, stdout='', stderr='cc1: fatal error: /app/image.c: No such file or directory\ncompilation terminated.\n').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:50: AssertionError
+[31m[1m________________________________________________________________ test_runs_and_produces_output _________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_runs_and_produces_output[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the compiled program runs and produces output.[39;49;00m
+    [33m[39;49;00m
+    [33m    This test:[39;49;00m
+    [33m    1. Temporarily moves image.ppm to prevent the program from reading it[39;49;00m
+    [33m       (ensuring the solution generates the image algorithmically)[39;49;00m
+    [33m    2. Runs the compiled image program[39;49;00m
+    [33m    3. Restores image.ppm to its original location[39;49;00m
+    [33m    4. Verifies that reconstructed.ppm was created[39;49;00m
+    [33m[39;49;00m
+    [33m    The temporary renaming ensures the program cannot cheat by reading[39;49;00m
+    [33m    the original image file.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [90m# Run the program[39;49;00m[90m[39;49;00m
+        run_result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33msh[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-c[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mmkdir /jail; cp /app/image /jail; chroot /jail /image[39;49;00m[33m"[39;49;00m], capture_output=[94mTrue[39;49;00m, text=[94mTrue[39;49;00m, cwd=[33m"[39;49;00m[33m/app[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+>       [94massert[39;49;00m run_result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mProgram execution failed: [39;49;00m[33m{[39;49;00mrun_result.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: Program execution failed: cp: cannot stat '/app/image': No such file or directory[0m
+[1m[31mE         chroot: failed to run command ‘/image’: No such file or directory[0m
+[1m[31mE         [0m
+[1m[31mE       assert 127 == 0[0m
+[1m[31mE        +  where 127 = CompletedProcess(args=['sh', '-c', 'mkdir /jail; cp /app/image /jail; chroot /jail /image'], returncode=127, stdout=''...not stat '/app/image': No such file or directory\nchroot: failed to run command ‘/image’: No such file or directory\n").returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:71: AssertionError
+[31m[1m____________________________________________________________________ test_image_similarity _____________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_image_similarity[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that the generated image closely matches the reference.[39;49;00m
+    [33m[39;49;00m
+    [33m    This test computes the normalized L2 similarity (cosine similarity)[39;49;00m
+    [33m    between the original path-traced image and the reconstructed image.[39;49;00m
+    [33m[39;49;00m
+    [33m    The test requires at least 98% similarity, which ensures the solution[39;49;00m
+    [33m    accurately reproduces:[39;49;00m
+    [33m    - The scene geometry (spheres and planes)[39;49;00m
+    [33m    - The lighting and shading[39;49;00m
+    [33m    - The path tracing algorithm's stochastic sampling[39;49;00m
+    [33m[39;49;00m
+    [33m    This high threshold validates that the implementation correctly[39;49;00m
+    [33m    implements the path tracing algorithm with proper ray-sphere[39;49;00m
+    [33m    intersection, material properties, and Monte Carlo sampling.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mnumpy[39;49;00m[90m [39;49;00m[94mas[39;49;00m[90m [39;49;00m[04m[96mnp[39;49;00m[90m[39;49;00m
+        [94mfrom[39;49;00m[90m [39;49;00m[04m[96mPIL[39;49;00m[90m [39;49;00m[94mimport[39;49;00m Image[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Load images using Pillow[39;49;00m[90m[39;49;00m
+        original = Image.open([33m"[39;49;00m[33m/app/image.ppm[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+>       reconstructed = Image.open([33m"[39;49;00m[33m/jail/reconstructed.ppm[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+
+[1m[31m/tests/test_outputs.py[0m:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fp = '/jail/reconstructed.ppm', mode = 'r', formats = ['BMP', 'DIB', 'GIF', 'JPEG', 'PPM', 'PNG']
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mopen[39;49;00m([90m[39;49;00m
+        fp: StrOrBytesPath | IO[[96mbytes[39;49;00m],[90m[39;49;00m
+        mode: Literal[[33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m] = [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        formats: [96mlist[39;49;00m[[96mstr[39;49;00m] | [96mtuple[39;49;00m[[96mstr[39;49;00m, ...] | [94mNone[39;49;00m = [94mNone[39;49;00m,[90m[39;49;00m
+    ) -> ImageFile.ImageFile:[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Opens and identifies the given image file.[39;49;00m
+    [33m[39;49;00m
+    [33m    This is a lazy operation; this function identifies the file, but[39;49;00m
+    [33m    the file remains open and the actual image data is not read from[39;49;00m
+    [33m    the file until you try to process the data (or call the[39;49;00m
+    [33m    :py:meth:`~PIL.Image.Image.load` method).  See[39;49;00m
+    [33m    :py:func:`~PIL.Image.new`. See :ref:`file-handling`.[39;49;00m
+    [33m[39;49;00m
+    [33m    :param fp: A filename (string), os.PathLike object or a file object.[39;49;00m
+    [33m       The file object must implement ``file.read``,[39;49;00m
+    [33m       ``file.seek``, and ``file.tell`` methods,[39;49;00m
+    [33m       and be opened in binary mode. The file object will also seek to zero[39;49;00m
+    [33m       before reading.[39;49;00m
+    [33m    :param mode: The mode.  If given, this argument must be "r".[39;49;00m
+    [33m    :param formats: A list or tuple of formats to attempt to load the file in.[39;49;00m
+    [33m       This can be used to restrict the set of formats checked.[39;49;00m
+    [33m       Pass ``None`` to try all supported formats. You can print the set of[39;49;00m
+    [33m       available formats by running ``python3 -m PIL`` or using[39;49;00m
+    [33m       the :py:func:`PIL.features.pilinfo` function.[39;49;00m
+    [33m    :returns: An :py:class:`~PIL.Image.Image` object.[39;49;00m
+    [33m    :exception FileNotFoundError: If the file cannot be found.[39;49;00m
+    [33m    :exception PIL.UnidentifiedImageError: If the image cannot be opened and[39;49;00m
+    [33m       identified.[39;49;00m
+    [33m    :exception ValueError: If the ``mode`` is not "r", or if a ``StringIO``[39;49;00m
+    [33m       instance is used for ``fp``.[39;49;00m
+    [33m    :exception TypeError: If ``formats`` is not ``None``, a list or a tuple.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m mode != [33m"[39;49;00m[33mr[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+            msg = [33mf[39;49;00m[33m"[39;49;00m[33mbad mode [39;49;00m[33m{[39;49;00m[96mrepr[39;49;00m(mode)[33m}[39;49;00m[33m"[39;49;00m  [90m# type: ignore[unreachable][39;49;00m[90m[39;49;00m
+            [94mraise[39;49;00m [96mValueError[39;49;00m(msg)[90m[39;49;00m
+        [94melif[39;49;00m [96misinstance[39;49;00m(fp, io.StringIO):[90m[39;49;00m
+            msg = (  [90m# type: ignore[unreachable][39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33mStringIO cannot be used to open an image. [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                [33m"[39;49;00m[33mBinary data must be used instead.[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+            [94mraise[39;49;00m [96mValueError[39;49;00m(msg)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m formats [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            formats = ID[90m[39;49;00m
+        [94melif[39;49;00m [95mnot[39;49;00m [96misinstance[39;49;00m(formats, ([96mlist[39;49;00m, [96mtuple[39;49;00m)):[90m[39;49;00m
+            msg = [33m"[39;49;00m[33mformats must be a list or tuple[39;49;00m[33m"[39;49;00m  [90m# type: ignore[unreachable][39;49;00m[90m[39;49;00m
+            [94mraise[39;49;00m [96mTypeError[39;49;00m(msg)[90m[39;49;00m
+    [90m[39;49;00m
+        exclusive_fp = [94mFalse[39;49;00m[90m[39;49;00m
+        filename: [96mstr[39;49;00m | [96mbytes[39;49;00m = [33m"[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m is_path(fp):[90m[39;49;00m
+            filename = os.fspath(fp)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mif[39;49;00m filename:[90m[39;49;00m
+>           fp = builtins.open(filename, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE           FileNotFoundError: [Errno 2] No such file or directory: '/jail/reconstructed.ppm'[0m
+
+[1m[31m.venv/lib/python3.12/site-packages/PIL/Image.py[0m:3505: FileNotFoundError
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_image_c_exists[0m - AssertionError: File /app/image.c does not exist
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_image_compiles[0m - AssertionError: Compilation failed: cc1: fatal error: /app/image.c: No such file or directory
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_no_deps[0m - AssertionError: Compilation failed: cc1: fatal error: /app/image.c: No such file or directory
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_runs_and_produces_output[0m - AssertionError: Program execution failed: cp: cannot stat '/app/image': No such file or directory
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_image_similarity[0m - FileNotFoundError: [Errno 2] No such file or directory: '/jail/reconstructed.ppm'
+[31m====================================================================== [31m[1m5 failed[0m[31m in 0.77s[0m[31m =======================================================================[0m
+[?2004hroot@95f88168e95c:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@95f88168e95c:/app# 

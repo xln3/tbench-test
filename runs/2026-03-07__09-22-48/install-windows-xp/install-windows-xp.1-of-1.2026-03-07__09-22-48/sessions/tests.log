@@ -1,0 +1,935 @@
+[?2004hroot@681f208e7c2a:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@681f208e7c2a:/app# clear
+[?2004l[H[J[3J[?2004hroot@681f208e7c2a:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+                        0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 42%Reading package lists... 53%Reading package lists... 53%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 90%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 44%Reading package lists... 53%Reading package lists... 53%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcurl4t64
+The following NEW packages will be installed:
+  curl libcurl4t64
+0 upgraded, 2 newly installed, 0 to remove and 25 not upgraded.
+Need to get 568 kB of archives.
+After this operation, 1481 kB of additional disk space will be used.
+0% [Working]0% [Waiting for headers]                        Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.7 [342 kB]
+2% [1 libcurl4t64 14.2 kB/342 kB 4%]8% [1 libcurl4t64 57.6 kB/342 kB 17%]36% [1 libcurl4t64 254 kB/342 kB 74%]                                     58% [Working]58% [Waiting for headers]                         Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.7 [227 kB]
+59% [2 curl 5500 B/227 kB 2%]66% [2 curl 57.6 kB/227 kB 25%]                               100% [Working]              Fetched 568 kB in 3s (180 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcurl4t64:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 40849 files and directories currently installed.)
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_8.5.0-2ubuntu10.7_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.7) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.7) ...
+Setting up curl (8.5.0-2ubuntu10.7) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+downloading uv 0.10.9 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mpytest==9.0.2                                                                                                                                                 [0m[2K[37m⠹[0m [2mpytest==9.0.2                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==9.0.2                                                                                                                                                 [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠸[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠸[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠸[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠸[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 574ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[30m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[30m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m------[30m[2m------------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m------[30m[2m------------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m------[30m[2m------------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m------[30m[2m------------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[30m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m------[30m[2m------------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m----------------------[30m[2m--------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m------[30m[2m------------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m----------------------[30m[2m--------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m------------[30m[2m------------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[30m[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m------------[30m[2m------------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[30m[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[30m[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m------------[30m[2m------------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[30m[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m------------[30m[2m------------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[30m[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------------[30m[2m-----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m------------------------------[30m[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------------------[30m[2m-----[0m[0m 62.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------------------------[30m[2m-----[0m[0m 62.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m-------------------------[30m[2m-----[0m[0m 62.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m[30m[2m------------------------------[0m[0m     0 B/366.02 KiB
+[2mpygments            [0m [32m[30m[2m------------------------------[0m[0m 30.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m-----------------------------[30m[2m-[0m[0m 365.95 KiB/366.02 KiB
+[2mpygments            [0m [32m---------------[30m[2m---------------[0m[0m 605.72 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m---------------[30m[2m---------------[0m[0m 621.72 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 190ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==9.0.2                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==9.0.2                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 21ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==9.0.2[0m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mopencv-python==4.13.0.92                                                                                                                                      [0m[2K[37m⠹[0m [2mnumpy==2.4.2                                                                                                                                                  [0m[2K[37m⠹[0m [2mnumpy==2.4.2                                                                                                                                                  [0m[2K[37m⠹[0m [2mscikit-image==0.26.0                                                                                                                                          [0m[2K[37m⠸[0m [2mscikit-image==0.26.0                                                                                                                                          [0m[2K[37m⠸[0m [2mscipy==1.17.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mscipy==1.17.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mnetworkx==3.6.1                                                                                                                                               [0m[2K[37m⠼[0m [2mpillow==12.1.1                                                                                                                                                [0m[2K[37m⠼[0m [2mimageio==2.37.2                                                                                                                                               [0m[2K[37m⠼[0m [2mtifffile==2026.3.3                                                                                                                                            [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mlazy-loader==0.5                                                                                                                                              [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m10 packages[0m [2min 634ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/9)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/9)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m     0 B/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 16.00 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 32.00 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 48.00 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 61.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 77.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mimageio             [0m [32m[30m[2m------------------------------[0m[0m     0 B/310.20 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mimageio             [0m [32m[30m[2m------------------------------[0m[0m     0 B/310.20 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mimageio             [0m [32m[30m[2m------------------------------[0m[0m     0 B/310.20 KiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mimageio             [0m [32m[30m[2m------------------------------[0m[0m     0 B/310.20 KiB
+[2mnetworkx            [0m [32m[30m[2m------------------------------[0m[0m 16.00 KiB/1.97 MiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 93.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m     0 B/69.55 MiB                                                                                           [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m[30m[2m------------------------------[0m[0m     0 B/238.24 KiB
+[2mimageio             [0m [32m[30m[2m------------------------------[0m[0m     0 B/310.20 KiB
+[2mnetworkx            [0m [32m[30m[2m------------------------------[0m[0m 32.00 KiB/1.97 MiB
+[2mnumpy               [0m [32m[30m[2m------------------------------[0m[0m 189.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 32.00 KiB/69.55 MiB                                                                                         [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m-----------[30m[2m-------------------[0m[0m 93.86 KiB/238.24 KiB
+[2mimageio             [0m [32m---------------[30m[2m---------------[0m[0m 159.77 KiB/310.20 KiB
+[2mnetworkx            [0m [32m---[30m[2m---------------------------[0m[0m 206.49 KiB/1.97 MiB
+[2mpillow              [0m [32m[30m[2m------------------------------[0m[0m 93.42 KiB/6.72 MiB
+[2mnumpy               [0m [32m-[30m[2m-----------------------------[0m[0m 541.24 KiB/15.85 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 204.87 KiB/69.55 MiB                                                                                        [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m-----------------------[30m[2m-------[0m[0m 189.96 KiB/238.24 KiB
+[2mnetworkx            [0m [32m-----[30m[2m-------------------------[0m[0m 350.49 KiB/1.97 MiB
+[2mpillow              [0m [32m[30m[2m------------------------------[0m[0m 189.42 KiB/6.72 MiB
+[2mscikit-image        [0m [32m[30m[2m------------------------------[0m[0m 14.90 KiB/12.93 MiB
+[2mnumpy               [0m [32m-[30m[2m-----------------------------[0m[0m 701.24 KiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 78.88 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 364.49 KiB/69.55 MiB                                                                                        [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠙[0m [2mPreparing packages...[0m (0/9)
+[2mtifffile            [0m [32m-------------------------[30m[2m-----[0m[0m 205.96 KiB/238.24 KiB
+[2mnetworkx            [0m [32m-----[30m[2m-------------------------[0m[0m 350.49 KiB/1.97 MiB
+[2mpillow              [0m [32m[30m[2m------------------------------[0m[0m 205.42 KiB/6.72 MiB
+[2mscikit-image        [0m [32m[30m[2m------------------------------[0m[0m 14.90 KiB/12.93 MiB
+[2mnumpy               [0m [32m-[30m[2m-----------------------------[0m[0m 717.24 KiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 94.88 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 380.49 KiB/69.55 MiB                                                                                        [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠹[0m [2mPreparing packages...[0m (2/9)
+[2mnetworkx            [0m [32m-----[30m[2m-------------------------[0m[0m 382.49 KiB/1.97 MiB
+[2mpillow              [0m [32m-[30m[2m-----------------------------[0m[0m 236.92 KiB/6.72 MiB
+[2mscikit-image        [0m [32m[30m[2m------------------------------[0m[0m 46.90 KiB/12.93 MiB
+[2mnumpy               [0m [32m-[30m[2m-----------------------------[0m[0m 749.24 KiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 126.88 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 380.87 KiB/69.55 MiB                                                                                        [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠹[0m [2mPreparing packages...[0m (2/9)
+[2mnetworkx            [0m [32m-------[30m[2m-----------------------[0m[0m 503.21 KiB/1.97 MiB
+[2mpillow              [0m [32m-[30m[2m-----------------------------[0m[0m 349.42 KiB/6.72 MiB
+[2mscikit-image        [0m [32m[30m[2m------------------------------[0m[0m 174.90 KiB/12.93 MiB
+[2mnumpy               [0m [32m-[30m[2m-----------------------------[0m[0m 893.24 KiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 270.88 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 508.87 KiB/69.55 MiB                                                                                        [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠹[0m [2mPreparing packages...[0m (2/9)
+[2mnetworkx            [0m [32m---------[30m[2m---------------------[0m[0m 654.49 KiB/1.97 MiB
+[2mpillow              [0m [32m--[30m[2m----------------------------[0m[0m 509.42 KiB/6.72 MiB
+[2mscikit-image        [0m [32m[30m[2m------------------------------[0m[0m 334.90 KiB/12.93 MiB
+[2mnumpy               [0m [32m-[30m[2m-----------------------------[0m[0m 1.01 MiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 408.56 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 683.12 KiB/69.55 MiB                                                                                        [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠹[0m [2mPreparing packages...[0m (2/9)
+[2mnetworkx            [0m [32m-------------[30m[2m-----------------[0m[0m 878.49 KiB/1.97 MiB
+[2mpillow              [0m [32m---[30m[2m---------------------------[0m[0m 749.42 KiB/6.72 MiB
+[2mscikit-image        [0m [32m-[30m[2m-----------------------------[0m[0m 520.56 KiB/12.93 MiB
+[2mnumpy               [0m [32m--[30m[2m----------------------------[0m[0m 1.24 MiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 605.50 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 892.87 KiB/69.55 MiB                                                                                        [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠹[0m [2mPreparing packages...[0m (2/9)
+[2mnetworkx            [0m [32m---------------[30m[2m---------------[0m[0m 1022.49 KiB/1.97 MiB
+[2mpillow              [0m [32m---[30m[2m---------------------------[0m[0m 909.42 KiB/6.72 MiB
+[2mscikit-image        [0m [32m-[30m[2m-----------------------------[0m[0m 692.80 KiB/12.93 MiB
+[2mnumpy               [0m [32m--[30m[2m----------------------------[0m[0m 1.38 MiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 776.56 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 1.03 MiB/69.55 MiB                                                                                          [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠸[0m [2mPreparing packages...[0m (3/9)
+[2mnetworkx            [0m [32m-----------------[30m[2m-------------[0m[0m 1.17 MiB/1.97 MiB
+[2mpillow              [0m [32m----[30m[2m--------------------------[0m[0m 1.04 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-[30m[2m-----------------------------[0m[0m 856.56 KiB/12.93 MiB
+[2mnumpy               [0m [32m--[30m[2m----------------------------[0m[0m 1.51 MiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 952.56 KiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 1.19 MiB/69.55 MiB                                                                                          [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠸[0m [2mPreparing packages...[0m (3/9)
+[2mnetworkx            [0m [32m-------------------[30m[2m-----------[0m[0m 1.31 MiB/1.97 MiB
+[2mpillow              [0m [32m-----[30m[2m-------------------------[0m[0m 1.20 MiB/6.72 MiB
+[2mscikit-image        [0m [32m--[30m[2m----------------------------[0m[0m 1.00 MiB/12.93 MiB
+[2mnumpy               [0m [32m---[30m[2m---------------------------[0m[0m 1.68 MiB/15.85 MiB
+[2mscipy               [0m [32m[30m[2m------------------------------[0m[0m 1.06 MiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 1.37 MiB/69.55 MiB                                                                                          [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠸[0m [2mPreparing packages...[0m (3/9)
+[2mnetworkx            [0m [32m----------------------[30m[2m--------[0m[0m 1.50 MiB/1.97 MiB
+[2mpillow              [0m [32m------[30m[2m------------------------[0m[0m 1.39 MiB/6.72 MiB
+[2mscikit-image        [0m [32m--[30m[2m----------------------------[0m[0m 1.16 MiB/12.93 MiB
+[2mnumpy               [0m [32m---[30m[2m---------------------------[0m[0m 1.87 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 1.23 MiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 1.54 MiB/69.55 MiB                                                                                          [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠸[0m [2mPreparing packages...[0m (3/9)
+[2mnetworkx            [0m [32m------------------------[30m[2m------[0m[0m 1.62 MiB/1.97 MiB
+[2mpillow              [0m [32m------[30m[2m------------------------[0m[0m 1.53 MiB/6.72 MiB
+[2mscikit-image        [0m [32m---[30m[2m---------------------------[0m[0m 1.30 MiB/12.93 MiB
+[2mnumpy               [0m [32m---[30m[2m---------------------------[0m[0m 2.03 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 1.38 MiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 1.72 MiB/69.55 MiB                                                                                          [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠼[0m [2mPreparing packages...[0m (3/9)
+[2mnetworkx            [0m [32m---------------------------[30m[2m---[0m[0m 1.81 MiB/1.97 MiB
+[2mpillow              [0m [32m-------[30m[2m-----------------------[0m[0m 1.68 MiB/6.72 MiB
+[2mscikit-image        [0m [32m---[30m[2m---------------------------[0m[0m 1.45 MiB/12.93 MiB
+[2mnumpy               [0m [32m----[30m[2m--------------------------[0m[0m 2.19 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 1.52 MiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 1.87 MiB/69.55 MiB                                                                                          [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠼[0m [2mPreparing packages...[0m (3/9)
+[2mnetworkx            [0m [32m-----------------------------[30m[2m-[0m[0m 1.97 MiB/1.97 MiB
+[2mpillow              [0m [32m--------[30m[2m----------------------[0m[0m 1.86 MiB/6.72 MiB
+[2mscikit-image        [0m [32m---[30m[2m---------------------------[0m[0m 1.64 MiB/12.93 MiB
+[2mnumpy               [0m [32m----[30m[2m--------------------------[0m[0m 2.31 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 1.68 MiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 2.06 MiB/69.55 MiB                                                                                          [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠼[0m [2mPreparing packages...[0m (3/9)
+[2mpillow              [0m [32m--------[30m[2m----------------------[0m[0m 1.87 MiB/6.72 MiB
+[2mscikit-image        [0m [32m---[30m[2m---------------------------[0m[0m 1.65 MiB/12.93 MiB
+[2mnumpy               [0m [32m----[30m[2m--------------------------[0m[0m 2.33 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 1.70 MiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 2.07 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠼[0m [2mPreparing packages...[0m (3/9)
+[2mpillow              [0m [32m---------[30m[2m---------------------[0m[0m 2.06 MiB/6.72 MiB
+[2mscikit-image        [0m [32m----[30m[2m--------------------------[0m[0m 1.81 MiB/12.93 MiB
+[2mnumpy               [0m [32m----[30m[2m--------------------------[0m[0m 2.50 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 1.85 MiB/33.60 MiB
+[2mopencv-python       [0m [32m[30m[2m------------------------------[0m[0m 2.23 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠼[0m [2mPreparing packages...[0m (3/9)
+[2mpillow              [0m [32m---------[30m[2m---------------------[0m[0m 2.23 MiB/6.72 MiB
+[2mscikit-image        [0m [32m----[30m[2m--------------------------[0m[0m 2.00 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----[30m[2m-------------------------[0m[0m 2.72 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 2.05 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 2.42 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠴[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m----------[30m[2m--------------------[0m[0m 2.41 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-----[30m[2m-------------------------[0m[0m 2.20 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----[30m[2m-------------------------[0m[0m 2.92 MiB/15.85 MiB
+[2mscipy               [0m [32m-[30m[2m-----------------------------[0m[0m 2.23 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 2.64 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠴[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-----------[30m[2m-------------------[0m[0m 2.58 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-----[30m[2m-------------------------[0m[0m 2.37 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----[30m[2m-------------------------[0m[0m 3.12 MiB/15.85 MiB
+[2mscipy               [0m [32m--[30m[2m----------------------------[0m[0m 2.41 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 2.83 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠴[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m------------[30m[2m------------------[0m[0m 2.78 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-----[30m[2m-------------------------[0m[0m 2.52 MiB/12.93 MiB
+[2mnumpy               [0m [32m------[30m[2m------------------------[0m[0m 3.26 MiB/15.85 MiB
+[2mscipy               [0m [32m--[30m[2m----------------------------[0m[0m 2.59 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 3.02 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠴[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-------------[30m[2m-----------------[0m[0m 2.95 MiB/6.72 MiB
+[2mscikit-image        [0m [32m------[30m[2m------------------------[0m[0m 2.68 MiB/12.93 MiB
+[2mnumpy               [0m [32m------[30m[2m------------------------[0m[0m 3.45 MiB/15.85 MiB
+[2mscipy               [0m [32m--[30m[2m----------------------------[0m[0m 2.76 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 3.20 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠦[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-------------[30m[2m-----------------[0m[0m 3.09 MiB/6.72 MiB
+[2mscikit-image        [0m [32m------[30m[2m------------------------[0m[0m 2.88 MiB/12.93 MiB
+[2mnumpy               [0m [32m------[30m[2m------------------------[0m[0m 3.62 MiB/15.85 MiB
+[2mscipy               [0m [32m--[30m[2m----------------------------[0m[0m 2.96 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 3.37 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠦[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m--------------[30m[2m----------------[0m[0m 3.27 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-------[30m[2m-----------------------[0m[0m 3.05 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------[30m[2m-----------------------[0m[0m 3.81 MiB/15.85 MiB
+[2mscipy               [0m [32m--[30m[2m----------------------------[0m[0m 3.16 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 3.56 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠦[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m---------------[30m[2m---------------[0m[0m 3.50 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-------[30m[2m-----------------------[0m[0m 3.24 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------[30m[2m-----------------------[0m[0m 4.00 MiB/15.85 MiB
+[2mscipy               [0m [32m--[30m[2m----------------------------[0m[0m 3.32 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 3.75 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠦[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m----------------[30m[2m--------------[0m[0m 3.65 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-------[30m[2m-----------------------[0m[0m 3.43 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------[30m[2m-----------------------[0m[0m 4.18 MiB/15.85 MiB
+[2mscipy               [0m [32m---[30m[2m---------------------------[0m[0m 3.50 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 3.90 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠧[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-----------------[30m[2m-------------[0m[0m 3.81 MiB/6.72 MiB
+[2mscikit-image        [0m [32m--------[30m[2m----------------------[0m[0m 3.61 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------[30m[2m----------------------[0m[0m 4.35 MiB/15.85 MiB
+[2mscipy               [0m [32m---[30m[2m---------------------------[0m[0m 3.68 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 4.12 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠧[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-----------------[30m[2m-------------[0m[0m 4.01 MiB/6.72 MiB
+[2mscikit-image        [0m [32m--------[30m[2m----------------------[0m[0m 3.80 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------[30m[2m----------------------[0m[0m 4.55 MiB/15.85 MiB
+[2mscipy               [0m [32m---[30m[2m---------------------------[0m[0m 3.87 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 4.25 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠧[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m------------------[30m[2m------------[0m[0m 4.18 MiB/6.72 MiB
+[2mscikit-image        [0m [32m---------[30m[2m---------------------[0m[0m 3.94 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------[30m[2m----------------------[0m[0m 4.72 MiB/15.85 MiB
+[2mscipy               [0m [32m---[30m[2m---------------------------[0m[0m 4.06 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 4.47 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠇[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-------------------[30m[2m-----------[0m[0m 4.31 MiB/6.72 MiB
+[2mscikit-image        [0m [32m---------[30m[2m---------------------[0m[0m 4.08 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------[30m[2m----------------------[0m[0m 4.75 MiB/15.85 MiB
+[2mscipy               [0m [32m---[30m[2m---------------------------[0m[0m 4.09 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-[30m[2m-----------------------------[0m[0m 4.59 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠇[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-------------------[30m[2m-----------[0m[0m 4.37 MiB/6.72 MiB
+[2mscikit-image        [0m [32m---------[30m[2m---------------------[0m[0m 4.11 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------[30m[2m----------------------[0m[0m 4.75 MiB/15.85 MiB
+[2mscipy               [0m [32m---[30m[2m---------------------------[0m[0m 4.09 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 4.64 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠇[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m--------------------[30m[2m----------[0m[0m 4.60 MiB/6.72 MiB
+[2mscikit-image        [0m [32m----------[30m[2m--------------------[0m[0m 4.33 MiB/12.93 MiB
+[2mnumpy               [0m [32m---------[30m[2m---------------------[0m[0m 4.95 MiB/15.85 MiB
+[2mscipy               [0m [32m---[30m[2m---------------------------[0m[0m 4.17 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 4.84 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠇[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m---------------------[30m[2m---------[0m[0m 4.79 MiB/6.72 MiB
+[2mscikit-image        [0m [32m----------[30m[2m--------------------[0m[0m 4.51 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------[30m[2m--------------------[0m[0m 5.31 MiB/15.85 MiB
+[2mscipy               [0m [32m----[30m[2m--------------------------[0m[0m 4.67 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 5.02 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠇[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m----------------------[30m[2m--------[0m[0m 4.93 MiB/6.72 MiB
+[2mscikit-image        [0m [32m----------[30m[2m--------------------[0m[0m 4.68 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------[30m[2m--------------------[0m[0m 5.48 MiB/15.85 MiB
+[2mscipy               [0m [32m----[30m[2m--------------------------[0m[0m 4.82 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 5.17 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠋[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m----------------------[30m[2m--------[0m[0m 5.03 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-----------[30m[2m-------------------[0m[0m 4.81 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------[30m[2m--------------------[0m[0m 5.75 MiB/15.85 MiB
+[2mscipy               [0m [32m----[30m[2m--------------------------[0m[0m 5.02 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 5.39 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠋[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-----------------------[30m[2m-------[0m[0m 5.20 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-----------[30m[2m-------------------[0m[0m 4.98 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----------[30m[2m-------------------[0m[0m 5.91 MiB/15.85 MiB
+[2mscipy               [0m [32m----[30m[2m--------------------------[0m[0m 5.19 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 5.56 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠋[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-----------------------[30m[2m-------[0m[0m 5.37 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-----------[30m[2m-------------------[0m[0m 5.06 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----------[30m[2m-------------------[0m[0m 6.12 MiB/15.85 MiB
+[2mscipy               [0m [32m----[30m[2m--------------------------[0m[0m 5.42 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 5.75 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠋[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m------------------------[30m[2m------[0m[0m 5.57 MiB/6.72 MiB
+[2mscikit-image        [0m [32m------------[30m[2m------------------[0m[0m 5.27 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----------[30m[2m-------------------[0m[0m 6.26 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 5.61 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 5.94 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-------------------------[30m[2m-----[0m[0m 5.76 MiB/6.72 MiB
+[2mscikit-image        [0m [32m------------[30m[2m------------------[0m[0m 5.48 MiB/12.93 MiB
+[2mnumpy               [0m [32m------------[30m[2m------------------[0m[0m 6.44 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 5.83 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 6.15 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m--------------------------[30m[2m----[0m[0m 5.94 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-------------[30m[2m-----------------[0m[0m 5.66 MiB/12.93 MiB
+[2mnumpy               [0m [32m------------[30m[2m------------------[0m[0m 6.67 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 6.01 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 6.31 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m---------------------------[30m[2m---[0m[0m 6.11 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-------------[30m[2m-----------------[0m[0m 5.83 MiB/12.93 MiB
+[2mnumpy               [0m [32m------------[30m[2m------------------[0m[0m 6.84 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 6.18 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 6.47 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m----------------------------[30m[2m--[0m[0m 6.34 MiB/6.72 MiB
+[2mscikit-image        [0m [32m-------------[30m[2m-----------------[0m[0m 6.00 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------[30m[2m-----------------[0m[0m 7.07 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 6.31 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 6.64 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠹[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m-----------------------------[30m[2m-[0m[0m 6.54 MiB/6.72 MiB
+[2mscikit-image        [0m [32m--------------[30m[2m----------------[0m[0m 6.17 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------[30m[2m-----------------[0m[0m 7.23 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 6.48 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--[30m[2m----------------------------[0m[0m 6.80 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠹[0m [2mPreparing packages...[0m (4/9)
+[2mpillow              [0m [32m------------------------------[30m[2m[0m[0m 6.72 MiB/6.72 MiB
+[2mscikit-image        [0m [32m--------------[30m[2m----------------[0m[0m 6.38 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------[30m[2m-----------------[0m[0m 7.37 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 6.69 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 6.98 MiB/69.55 MiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠹[0m [2mPreparing packages...[0m (4/9)
+[2mscikit-image        [0m [32m--------------[30m[2m----------------[0m[0m 6.38 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------[30m[2m-----------------[0m[0m 7.39 MiB/15.85 MiB
+[2mscipy               [0m [32m-----[30m[2m-------------------------[0m[0m 6.70 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 7.00 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (4/9)
+[2mscikit-image        [0m [32m---------------[30m[2m---------------[0m[0m 6.62 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------------[30m[2m----------------[0m[0m 7.61 MiB/15.85 MiB
+[2mscipy               [0m [32m------[30m[2m------------------------[0m[0m 6.92 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 7.19 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (4/9)
+[2mscikit-image        [0m [32m---------------[30m[2m---------------[0m[0m 6.82 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------------[30m[2m----------------[0m[0m 7.83 MiB/15.85 MiB
+[2mscipy               [0m [32m------[30m[2m------------------------[0m[0m 7.14 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 7.45 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m----------------[30m[2m--------------[0m[0m 7.02 MiB/12.93 MiB
+[2mnumpy               [0m [32m---------------[30m[2m---------------[0m[0m 8.06 MiB/15.85 MiB
+[2mscipy               [0m [32m------[30m[2m------------------------[0m[0m 7.37 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 7.75 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-----------------[30m[2m-------------[0m[0m 7.42 MiB/12.93 MiB
+[2mnumpy               [0m [32m---------------[30m[2m---------------[0m[0m 8.22 MiB/15.85 MiB
+[2mscipy               [0m [32m------[30m[2m------------------------[0m[0m 7.50 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 7.97 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-----------------[30m[2m-------------[0m[0m 7.62 MiB/12.93 MiB
+[2mnumpy               [0m [32m---------------[30m[2m---------------[0m[0m 8.43 MiB/15.85 MiB
+[2mscipy               [0m [32m------[30m[2m------------------------[0m[0m 7.72 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 8.20 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠸[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m------------------[30m[2m------------[0m[0m 7.82 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------------[30m[2m--------------[0m[0m 8.68 MiB/15.85 MiB
+[2mscipy               [0m [32m-------[30m[2m-----------------------[0m[0m 7.94 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 8.42 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠼[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m------------------[30m[2m------------[0m[0m 8.02 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------------[30m[2m--------------[0m[0m 8.93 MiB/15.85 MiB
+[2mscipy               [0m [32m-------[30m[2m-----------------------[0m[0m 8.11 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 8.65 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠼[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-------------------[30m[2m-----------[0m[0m 8.28 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----------------[30m[2m-------------[0m[0m 9.13 MiB/15.85 MiB
+[2mscipy               [0m [32m-------[30m[2m-----------------------[0m[0m 8.33 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 8.91 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠼[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-------------------[30m[2m-----------[0m[0m 8.50 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----------------[30m[2m-------------[0m[0m 9.34 MiB/15.85 MiB
+[2mscipy               [0m [32m-------[30m[2m-----------------------[0m[0m 8.59 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---[30m[2m---------------------------[0m[0m 9.13 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠼[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m--------------------[30m[2m----------[0m[0m 8.76 MiB/12.93 MiB
+[2mnumpy               [0m [32m------------------[30m[2m------------[0m[0m 9.61 MiB/15.85 MiB
+[2mscipy               [0m [32m-------[30m[2m-----------------------[0m[0m 8.83 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 9.37 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠴[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m--------------------[30m[2m----------[0m[0m 8.99 MiB/12.93 MiB
+[2mnumpy               [0m [32m------------------[30m[2m------------[0m[0m 9.87 MiB/15.85 MiB
+[2mscipy               [0m [32m--------[30m[2m----------------------[0m[0m 9.07 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 9.59 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠴[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m---------------------[30m[2m---------[0m[0m 9.35 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------------[30m[2m-----------[0m[0m 10.06 MiB/15.85 MiB
+[2mscipy               [0m [32m--------[30m[2m----------------------[0m[0m 9.28 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 9.86 MiB/69.55 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠴[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m----------------------[30m[2m--------[0m[0m 9.56 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------------[30m[2m-----------[0m[0m 10.31 MiB/15.85 MiB
+[2mscipy               [0m [32m--------[30m[2m----------------------[0m[0m 9.54 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 10.06 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠴[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m----------------------[30m[2m--------[0m[0m 9.81 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------------[30m[2m-----------[0m[0m 10.50 MiB/15.85 MiB
+[2mscipy               [0m [32m--------[30m[2m----------------------[0m[0m 9.73 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 10.31 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠦[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-----------------------[30m[2m-------[0m[0m 10.03 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------------------[30m[2m----------[0m[0m 10.73 MiB/15.85 MiB
+[2mscipy               [0m [32m--------[30m[2m----------------------[0m[0m 9.94 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 10.53 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠦[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-----------------------[30m[2m-------[0m[0m 10.25 MiB/12.93 MiB
+[2mnumpy               [0m [32m--------------------[30m[2m----------[0m[0m 10.94 MiB/15.85 MiB
+[2mscipy               [0m [32m---------[30m[2m---------------------[0m[0m 10.12 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 10.76 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠦[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m------------------------[30m[2m------[0m[0m 10.52 MiB/12.93 MiB
+[2mnumpy               [0m [32m---------------------[30m[2m---------[0m[0m 11.19 MiB/15.85 MiB
+[2mscipy               [0m [32m---------[30m[2m---------------------[0m[0m 10.31 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 10.99 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠦[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m------------------------[30m[2m------[0m[0m 10.68 MiB/12.93 MiB
+[2mnumpy               [0m [32m---------------------[30m[2m---------[0m[0m 11.50 MiB/15.85 MiB
+[2mscipy               [0m [32m---------[30m[2m---------------------[0m[0m 10.51 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 11.19 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠧[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-------------------------[30m[2m-----[0m[0m 10.92 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------------------[30m[2m--------[0m[0m 11.73 MiB/15.85 MiB
+[2mscipy               [0m [32m---------[30m[2m---------------------[0m[0m 10.75 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----[30m[2m--------------------------[0m[0m 11.42 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠧[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-------------------------[30m[2m-----[0m[0m 11.09 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------------------[30m[2m--------[0m[0m 11.90 MiB/15.85 MiB
+[2mscipy               [0m [32m---------[30m[2m---------------------[0m[0m 10.94 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 11.73 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠧[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m--------------------------[30m[2m----[0m[0m 11.31 MiB/12.93 MiB
+[2mnumpy               [0m [32m----------------------[30m[2m--------[0m[0m 12.12 MiB/15.85 MiB
+[2mscipy               [0m [32m---------[30m[2m---------------------[0m[0m 11.16 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 11.93 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠧[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m--------------------------[30m[2m----[0m[0m 11.58 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----------------------[30m[2m-------[0m[0m 12.31 MiB/15.85 MiB
+[2mscipy               [0m [32m----------[30m[2m--------------------[0m[0m 11.39 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 12.19 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠇[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m---------------------------[30m[2m---[0m[0m 11.78 MiB/12.93 MiB
+[2mnumpy               [0m [32m-----------------------[30m[2m-------[0m[0m 12.54 MiB/15.85 MiB
+[2mscipy               [0m [32m----------[30m[2m--------------------[0m[0m 11.60 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 12.41 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠇[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m---------------------------[30m[2m---[0m[0m 12.00 MiB/12.93 MiB
+[2mnumpy               [0m [32m------------------------[30m[2m------[0m[0m 12.75 MiB/15.85 MiB
+[2mscipy               [0m [32m----------[30m[2m--------------------[0m[0m 11.81 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 12.62 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠇[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m----------------------------[30m[2m--[0m[0m 12.25 MiB/12.93 MiB
+[2mnumpy               [0m [32m------------------------[30m[2m------[0m[0m 13.00 MiB/15.85 MiB
+[2mscipy               [0m [32m----------[30m[2m--------------------[0m[0m 12.04 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 12.83 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠇[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m----------------------------[30m[2m--[0m[0m 12.50 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------------------[30m[2m-----[0m[0m 13.21 MiB/15.85 MiB
+[2mscipy               [0m [32m----------[30m[2m--------------------[0m[0m 12.29 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 13.09 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠋[0m [2mPreparing packages...[0m (5/9)
+[2mscikit-image        [0m [32m-----------------------------[30m[2m-[0m[0m 12.92 MiB/12.93 MiB
+[2mnumpy               [0m [32m-------------------------[30m[2m-----[0m[0m 13.37 MiB/15.85 MiB
+[2mscipy               [0m [32m-----------[30m[2m-------------------[0m[0m 12.43 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 13.33 MiB/69.55 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠋[0m [2mPreparing packages...[0m (5/9)
+[2mnumpy               [0m [32m-------------------------[30m[2m-----[0m[0m 13.37 MiB/15.85 MiB
+[2mscipy               [0m [32m-----------[30m[2m-------------------[0m[0m 12.43 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 13.45 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠋[0m [2mPreparing packages...[0m (5/9)
+[2mnumpy               [0m [32m-------------------------[30m[2m-----[0m[0m 13.59 MiB/15.85 MiB
+[2mscipy               [0m [32m-----------[30m[2m-------------------[0m[0m 12.72 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----[30m[2m-------------------------[0m[0m 13.77 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠋[0m [2mPreparing packages...[0m (5/9)
+[2mnumpy               [0m [32m--------------------------[30m[2m----[0m[0m 14.00 MiB/15.85 MiB
+[2mscipy               [0m [32m-----------[30m[2m-------------------[0m[0m 12.95 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 14.06 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠋[0m [2mPreparing packages...[0m (5/9)
+[2mnumpy               [0m [32m--------------------------[30m[2m----[0m[0m 14.25 MiB/15.85 MiB
+[2mscipy               [0m [32m-----------[30m[2m-------------------[0m[0m 13.24 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 14.37 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (6/9)
+[2mnumpy               [0m [32m---------------------------[30m[2m---[0m[0m 14.61 MiB/15.85 MiB
+[2mscipy               [0m [32m------------[30m[2m------------------[0m[0m 13.54 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 14.65 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (6/9)
+[2mnumpy               [0m [32m----------------------------[30m[2m--[0m[0m 14.81 MiB/15.85 MiB
+[2mscipy               [0m [32m------------[30m[2m------------------[0m[0m 13.95 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 15.02 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (6/9)
+[2mnumpy               [0m [32m----------------------------[30m[2m--[0m[0m 14.95 MiB/15.85 MiB
+[2mscipy               [0m [32m------------[30m[2m------------------[0m[0m 14.27 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 15.48 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (6/9)
+[2mnumpy               [0m [32m-----------------------------[30m[2m-[0m[0m 15.39 MiB/15.85 MiB
+[2mscipy               [0m [32m-------------[30m[2m-----------------[0m[0m 14.76 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 15.48 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (6/9)
+[2mnumpy               [0m [32m-----------------------------[30m[2m-[0m[0m 15.64 MiB/15.85 MiB
+[2mscipy               [0m [32m-------------[30m[2m-----------------[0m[0m 14.95 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 15.95 MiB/69.55 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (6/9)
+[2mscipy               [0m [32m-------------[30m[2m-----------------[0m[0m 15.17 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 16.15 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (6/9)
+[2mscipy               [0m [32m-------------[30m[2m-----------------[0m[0m 15.39 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------[30m[2m------------------------[0m[0m 16.15 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (6/9)
+[2mscipy               [0m [32m-------------[30m[2m-----------------[0m[0m 15.65 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------[30m[2m-----------------------[0m[0m 16.81 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (6/9)
+[2mscipy               [0m [32m--------------[30m[2m----------------[0m[0m 16.10 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------[30m[2m-----------------------[0m[0m 17.34 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m--------------[30m[2m----------------[0m[0m 16.78 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------[30m[2m-----------------------[0m[0m 17.64 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m---------------[30m[2m---------------[0m[0m 17.14 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------[30m[2m-----------------------[0m[0m 18.19 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m---------------[30m[2m---------------[0m[0m 17.45 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------[30m[2m----------------------[0m[0m 18.79 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------[30m[2m--------------[0m[0m 18.12 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------[30m[2m----------------------[0m[0m 18.98 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------[30m[2m--------------[0m[0m 18.45 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------[30m[2m----------------------[0m[0m 19.56 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------[30m[2m--------------[0m[0m 18.92 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------[30m[2m----------------------[0m[0m 20.00 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-----------------[30m[2m-------------[0m[0m 19.50 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------[30m[2m----------------------[0m[0m 20.33 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠼[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-----------------[30m[2m-------------[0m[0m 19.84 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---------[30m[2m---------------------[0m[0m 20.90 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m------------------[30m[2m------------[0m[0m 20.19 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---------[30m[2m---------------------[0m[0m 21.53 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m------------------[30m[2m------------[0m[0m 20.87 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---------[30m[2m---------------------[0m[0m 21.83 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-------------------[30m[2m-----------[0m[0m 21.33 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---------[30m[2m---------------------[0m[0m 22.25 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠴[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-------------------[30m[2m-----------[0m[0m 21.61 MiB/33.60 MiB
+[2mopencv-python       [0m [32m---------[30m[2m---------------------[0m[0m 22.92 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-------------------[30m[2m-----------[0m[0m 22.23 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----------[30m[2m--------------------[0m[0m 23.33 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m--------------------[30m[2m----------[0m[0m 22.92 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----------[30m[2m--------------------[0m[0m 23.64 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m--------------------[30m[2m----------[0m[0m 23.18 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----------[30m[2m--------------------[0m[0m 24.29 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠦[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m---------------------[30m[2m---------[0m[0m 23.59 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----------[30m[2m--------------------[0m[0m 24.89 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m---------------------[30m[2m---------[0m[0m 24.27 MiB/33.60 MiB
+[2mopencv-python       [0m [32m----------[30m[2m--------------------[0m[0m 25.14 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------------[30m[2m--------[0m[0m 24.86 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----------[30m[2m-------------------[0m[0m 25.65 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------------[30m[2m--------[0m[0m 25.17 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----------[30m[2m-------------------[0m[0m 26.33 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠧[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------------[30m[2m--------[0m[0m 25.62 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----------[30m[2m-------------------[0m[0m 26.84 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-----------------------[30m[2m-------[0m[0m 26.31 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----------[30m[2m-------------------[0m[0m 27.14 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-----------------------[30m[2m-------[0m[0m 26.65 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-----------[30m[2m-------------------[0m[0m 27.68 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m------------------------[30m[2m------[0m[0m 27.00 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------------[30m[2m------------------[0m[0m 28.26 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠇[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m------------------------[30m[2m------[0m[0m 27.68 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------------[30m[2m------------------[0m[0m 28.42 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-------------------------[30m[2m-----[0m[0m 28.03 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------------[30m[2m------------------[0m[0m 29.03 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-------------------------[30m[2m-----[0m[0m 28.43 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------------[30m[2m------------------[0m[0m 29.47 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-------------------------[30m[2m-----[0m[0m 29.03 MiB/33.60 MiB
+[2mopencv-python       [0m [32m------------[30m[2m------------------[0m[0m 30.05 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠋[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m--------------------------[30m[2m----[0m[0m 29.70 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------------[30m[2m-----------------[0m[0m 30.37 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m--------------------------[30m[2m----[0m[0m 30.03 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------------[30m[2m-----------------[0m[0m 31.05 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m---------------------------[30m[2m---[0m[0m 30.42 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------------[30m[2m-----------------[0m[0m 31.58 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m---------------------------[30m[2m---[0m[0m 31.12 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------------[30m[2m-----------------[0m[0m 31.81 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------------------[30m[2m--[0m[0m 31.51 MiB/33.60 MiB
+[2mopencv-python       [0m [32m-------------[30m[2m-----------------[0m[0m 32.40 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m----------------------------[30m[2m--[0m[0m 31.83 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------------[30m[2m----------------[0m[0m 33.06 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-----------------------------[30m[2m-[0m[0m 32.50 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------------[30m[2m----------------[0m[0m 33.26 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-----------------------------[30m[2m-[0m[0m 32.95 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------------[30m[2m----------------[0m[0m 33.75 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (7/9)
+[2mscipy               [0m [32m-----------------------------[30m[2m-[0m[0m 33.22 MiB/33.60 MiB
+[2mopencv-python       [0m [32m--------------[30m[2m----------------[0m[0m 34.43 MiB/69.55 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mopencv-python       [0m [32m--------------[30m[2m----------------[0m[0m 34.58 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mopencv-python       [0m [32m---------------[30m[2m---------------[0m[0m 34.95 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mopencv-python       [0m [32m---------------[30m[2m---------------[0m[0m 35.81 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mopencv-python       [0m [32m---------------[30m[2m---------------[0m[0m 36.48 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (7/9)
+[2mopencv-python       [0m [32m----------------[30m[2m--------------[0m[0m 37.20 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------[30m[2m--------------[0m[0m 38.04 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------[30m[2m--------------[0m[0m 38.87 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------[30m[2m-------------[0m[0m 39.70 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------[30m[2m-------------[0m[0m 40.45 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------[30m[2m-------------[0m[0m 41.31 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m------------------[30m[2m------------[0m[0m 42.01 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m------------------[30m[2m------------[0m[0m 42.89 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m------------------[30m[2m------------[0m[0m 43.55 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-------------------[30m[2m-----------[0m[0m 44.45 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-------------------[30m[2m-----------[0m[0m 45.17 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-------------------[30m[2m-----------[0m[0m 46.14 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m--------------------[30m[2m----------[0m[0m 46.76 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m--------------------[30m[2m----------[0m[0m 47.51 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m--------------------[30m[2m----------[0m[0m 48.40 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m---------------------[30m[2m---------[0m[0m 49.07 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠧[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m---------------------[30m[2m---------[0m[0m 50.03 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m---------------------[30m[2m---------[0m[0m 50.71 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------------[30m[2m--------[0m[0m 51.62 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------------[30m[2m--------[0m[0m 52.28 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠇[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------------[30m[2m--------[0m[0m 53.06 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------------[30m[2m-------[0m[0m 53.81 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------------[30m[2m-------[0m[0m 54.66 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------------[30m[2m-------[0m[0m 55.37 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠋[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m------------------------[30m[2m------[0m[0m 56.28 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m------------------------[30m[2m------[0m[0m 57.06 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m------------------------[30m[2m------[0m[0m 57.76 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-------------------------[30m[2m-----[0m[0m 58.58 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-------------------------[30m[2m-----[0m[0m 59.29 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-------------------------[30m[2m-----[0m[0m 60.15 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m--------------------------[30m[2m----[0m[0m 60.97 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m--------------------------[30m[2m----[0m[0m 61.82 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m--------------------------[30m[2m----[0m[0m 62.52 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m---------------------------[30m[2m---[0m[0m 63.26 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m---------------------------[30m[2m---[0m[0m 63.83 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m---------------------------[30m[2m---[0m[0m 64.36 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------------------[30m[2m--[0m[0m 65.36 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------------------[30m[2m--[0m[0m 66.06 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m----------------------------[30m[2m--[0m[0m 66.88 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------------------[30m[2m-[0m[0m 67.56 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------------------[30m[2m-[0m[0m 68.52 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (8/9)
+[2mopencv-python       [0m [32m-----------------------------[30m[2m-[0m[0m 69.20 MiB/69.55 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (8/9)                                                                                                                                   [2K[2mPrepared [1m9 packages[0m [2min 8.07s[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/9] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/9] [2mpillow==12.1.1                                                                                                                       [0m[2K██░░░░░░░░░░░░░░░░░░ [1/9] [2mpillow==12.1.1                                                                                                                       [0m[2K██░░░░░░░░░░░░░░░░░░ [1/9] [2mscikit-image==0.26.0                                                                                                                 [0m[2K████░░░░░░░░░░░░░░░░ [2/9] [2mscikit-image==0.26.0                                                                                                                 [0m[2K████░░░░░░░░░░░░░░░░ [2/9] [2mlazy-loader==0.5                                                                                                                     [0m[2K██████░░░░░░░░░░░░░░ [3/9] [2mlazy-loader==0.5                                                                                                                     [0m[2K██████░░░░░░░░░░░░░░ [3/9] [2mimageio==2.37.2                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [4/9] [2mimageio==2.37.2                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [4/9] [2mtifffile==2026.3.3                                                                                                                   [0m[2K███████████░░░░░░░░░ [5/9] [2mtifffile==2026.3.3                                                                                                                   [0m[2K███████████░░░░░░░░░ [5/9] [2mopencv-python==4.13.0.92                                                                                                             [0m[2K█████████████░░░░░░░ [6/9] [2mopencv-python==4.13.0.92                                                                                                             [0m[2K█████████████░░░░░░░ [6/9] [2mnetworkx==3.6.1                                                                                                                      [0m[2K███████████████░░░░░ [7/9] [2mnetworkx==3.6.1                                                                                                                      [0m[2K███████████████░░░░░ [7/9] [2mnumpy==2.4.2                                                                                                                         [0m[2K█████████████████░░░ [8/9] [2mnumpy==2.4.2                                                                                                                         [0m[2K█████████████████░░░ [8/9] [2mscipy==1.17.1                                                                                                                        [0m[2K████████████████████ [9/9] [2mscipy==1.17.1                                                                                                                        [0m[2K[2mInstalled [1m9 packages[0m [2min 59ms[0m[0m
+ [32m+[39m [1mimageio[0m[2m==2.37.2[0m
+ [32m+[39m [1mlazy-loader[0m[2m==0.5[0m
+ [32m+[39m [1mnetworkx[0m[2m==3.6.1[0m
+ [32m+[39m [1mnumpy[0m[2m==2.4.2[0m
+ [32m+[39m [1mopencv-python[0m[2m==4.13.0.92[0m
+ [32m+[39m [1mpillow[0m[2m==12.1.1[0m
+ [32m+[39m [1mscikit-image[0m[2m==0.26.0[0m
+ [32m+[39m [1mscipy[0m[2m==1.17.1[0m
+ [32m+[39m [1mtifffile[0m[2m==2026.3.3[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 11 items                                                                                                                                             [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                     [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m_____________________________________________________________ test_boot_sector_and_ntfs_formatting _____________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_boot_sector_and_ntfs_formatting[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test boot sector signature and NTFS formatting[39;49;00m
+    [33m    exactly like monitor-vm.sh check_disk_initialization()"""[39;49;00m[90m[39;49;00m
+        vhd_path = Path([33m"[39;49;00m[33m/app/isos/xp.img[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        [94massert[39;49;00m vhd_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mWindows XP VHD file [39;49;00m[33m{[39;49;00mvhd_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Check boot sector signature (read bytes directly)[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m [96mopen[39;49;00m(vhd_path, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            f.seek([94m510[39;49;00m)[90m[39;49;00m
+            signature = f.read([94m2[39;49;00m)[90m[39;49;00m
+        [94massert[39;49;00m signature == [33mb[39;49;00m[33m"[39;49;00m[33m\x55[39;49;00m[33m\xaa[39;49;00m[33m"[39;49;00m, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mInvalid boot sector signature: [39;49;00m[33m{[39;49;00msignature.hex()[33m}[39;49;00m[33m (expected 55aa)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Check NTFS partition (exactly like monitor-vm.sh line 39)[39;49;00m[90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            parted_result = subprocess.run([90m[39;49;00m
+                [[33m"[39;49;00m[33mparted[39;49;00m[33m"[39;49;00m, [96mstr[39;49;00m(vhd_path), [33m"[39;49;00m[33mprint[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+                timeout=[94m10[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Look for primary NTFS bootable partition (same grep pattern as monitor-vm.sh)[39;49;00m[90m[39;49;00m
+            ntfs_check = subprocess.run([90m[39;49;00m
+                [[33m"[39;49;00m[33mgrep[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-E[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mprimary.*ntfs.*boot[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+                [96minput[39;49;00m=parted_result.stdout,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+>           [94massert[39;49;00m ntfs_check.returncode == [94m0[39;49;00m, ([90m[39;49;00m
+                [33mf[39;49;00m[33m"[39;49;00m[33mNo bootable NTFS partition found. Parted output: [39;49;00m[33m{[39;49;00mparted_result.stdout[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: No bootable NTFS partition found. Parted output: Model:  (file)[0m
+[1m[31mE             Disk /app/isos/xp.img: 10.7GB[0m
+[1m[31mE             Sector size (logical/physical): 512B/512B[0m
+[1m[31mE             Partition Table: msdos[0m
+[1m[31mE             Disk Flags: [0m
+[1m[31mE             [0m
+[1m[31mE             Number  Start  End  Size  Type  File system  Flags[0m
+[1m[31mE             [0m
+[1m[31mE             [0m
+[1m[31mE           assert 1 == 0[0m
+[1m[31mE            +  where 1 = CompletedProcess(args=['grep', '-E', 'primary.*ntfs.*boot'], returncode=1, stdout='', stderr='').returncode[0m
+
+[1m[31m/tests/test_outputs.py[0m:73: AssertionError
+[31m[1m____________________________________________________________ test_login_screen_visual_verification _____________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_login_screen_visual_verification[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Test Windows XP interface against multiple reference screenshots.[39;49;00m
+    [33m    Passes if current screenshot matches any reference with ≥85% similarity.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mcv2[39;49;00m  [90m# type: ignore[39;49;00m[90m[39;49;00m
+        [94mfrom[39;49;00m[90m [39;49;00m[04m[96mskimage[39;49;00m[04m[96m.[39;49;00m[04m[96mmetrics[39;49;00m[90m [39;49;00m[94mimport[39;49;00m structural_similarity [94mas[39;49;00m ssim  [90m# type: ignore[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Take current screenshot[39;49;00m[90m[39;49;00m
+        subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mvncsnapshot[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-allowblank[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mlocalhost:1[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcurrent_screenshot.png[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            timeout=[94m15[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Load current screenshot[39;49;00m[90m[39;49;00m
+        current_img = cv2.imread([33m"[39;49;00m[33mcurrent_screenshot.png[39;49;00m[33m"[39;49;00m, cv2.IMREAD_GRAYSCALE)[90m[39;49;00m
+        current_img = cv2.resize(current_img, ([94m256[39;49;00m, [94m256[39;49;00m)) / [94m255.0[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Check against reference screenshots 1-6[39;49;00m[90m[39;49;00m
+        best_score = [94m0[39;49;00m[90m[39;49;00m
+        [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([94m1[39;49;00m, [94m7[39;49;00m):[90m[39;49;00m
+            ref_path = [33mf[39;49;00m[33m"[39;49;00m[33m../tests/reference_screenshot[39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m.png[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [94mif[39;49;00m os.path.exists(ref_path):[90m[39;49;00m
+                ref_img = cv2.imread(ref_path, cv2.IMREAD_GRAYSCALE)[90m[39;49;00m
+                ref_img = cv2.resize(ref_img, ([94m256[39;49;00m, [94m256[39;49;00m)) / [94m255.0[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+                score, _ = ssim(current_img, ref_img, data_range=[94m1.0[39;49;00m, full=[94mTrue[39;49;00m)[90m[39;49;00m
+                best_score = [96mmax[39;49;00m(best_score, score)[90m[39;49;00m
+    [90m[39;49;00m
+                [94mif[39;49;00m score >= [94m0.85[39;49;00m:[90m[39;49;00m
+                    [96mprint[39;49;00m([90m[39;49;00m
+                        [33mf[39;49;00m[33m"[39;49;00m[33m✅ Screenshot matched reference_screenshot[39;49;00m[33m{[39;49;00mi[33m}[39;49;00m[33m.png [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                        [33mf[39;49;00m[33m"[39;49;00m[33m([39;49;00m[33m{[39;49;00mscore[33m:[39;49;00m[33m.1%[39;49;00m[33m}[39;49;00m[33m similarity)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+                    )[90m[39;49;00m
+                    [94mreturn[39;49;00m  [90m# Pass immediately if any match found[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+>       [94massert[39;49;00m [94mFalse[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mNo reference screenshot matched ≥85% (best: [39;49;00m[33m{[39;49;00mbest_score[33m:[39;49;00m[33m.1%[39;49;00m[33m}[39;49;00m[33m)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE       AssertionError: No reference screenshot matched ≥85% (best: 29.8%)[0m
+[1m[31mE       assert False[0m
+
+[1m[31m/tests/test_outputs.py[0m:220: AssertionError
+[31m[1m_____________________________________________________ test_windows_xp_installation_filesystem_verification _____________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_windows_xp_installation_filesystem_verification[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Verify Windows XP installation by checking file existence and hashes.[39;49;00m
+    [33m    Passes if 50% of expected files exist with correct MD5 hashes.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mhashlib[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mtempfile[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        expected_file_hashes = {[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/Debug/PASSWD.LOG[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33md41d8cd98f00b204e9800998ecf8427e[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/0.log[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33md41d8cd98f00b204e9800998ecf8427e[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/system32/ntoskrnl.exe[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m0c89243c7c3ee199b96fcc16990e0679[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/system32/kernel32.dll[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mc24b983d211c34da8fcc1ac38477971d[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/system32/user32.dll[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mb26b135ff1b9f60c9388b4a7d16f600b[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/system32/gdi32.dll[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mb015b9134dad7e29e7d2d6b5f5c8c2fc[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/system32/shell32.dll[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m0cf50b1f45dab08430c1dbb79fe2ca5b[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/system32/advapi32.dll[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mbab489a5fe26f2d0c910cf7af7e4cf92[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mWINDOWS/explorer.exe[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m12896823fb95bfb3dc9b46bcaedc9923[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mntldr[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mc1b29b4e6eea9510610db2ec4d6db160[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mNTDETECT.COM[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33mb2de3452de03674c6cec68b8c8ce7c78[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+            [33m"[39;49;00m[33mProgram Files/Outlook Express/msimn.exe[39;49;00m[33m"[39;49;00m: [33m"[39;49;00m[33m1eeae496a51f017d04dd41322935d2b9[39;49;00m[33m"[39;49;00m,[90m[39;49;00m
+        }[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Kill QEMU if running[39;49;00m[90m[39;49;00m
+        qemu_result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mpgrep[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mqemu-system[39;49;00m[33m"[39;49;00m], capture_output=[94mTrue[39;49;00m, text=[94mTrue[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+        [94mif[39;49;00m qemu_result.returncode == [94m0[39;49;00m:[90m[39;49;00m
+            subprocess.run([[33m"[39;49;00m[33mkill[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-9[39;49;00m[33m"[39;49;00m, qemu_result.stdout.strip()], capture_output=[94mTrue[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        vhd_path = Path([33m"[39;49;00m[33m/app/isos/xp.img[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m tempfile.TemporaryDirectory() [94mas[39;49;00m temp_dir:[90m[39;49;00m
+            extract_dir = temp_dir + [33m"[39;49;00m[33m/xp_extract[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            os.makedirs(extract_dir)[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Extract VHD contents[39;49;00m[90m[39;49;00m
+            subprocess.run([90m[39;49;00m
+                [[33m"[39;49;00m[33m7z[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mx[39;49;00m[33m"[39;49;00m, [96mstr[39;49;00m(vhd_path), [33mf[39;49;00m[33m"[39;49;00m[33m-o[39;49;00m[33m{[39;49;00mextract_dir[33m}[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-r[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Case-insensitive file finder[39;49;00m[90m[39;49;00m
+            [94mdef[39;49;00m[90m [39;49;00m[92mfind_file[39;49;00m(base_path, relative_path):[90m[39;49;00m
+                current_path = Path(base_path)[90m[39;49;00m
+                [94mfor[39;49;00m part [95min[39;49;00m relative_path.split([33m"[39;49;00m[33m/[39;49;00m[33m"[39;49;00m):[90m[39;49;00m
+                    found = [94mFalse[39;49;00m[90m[39;49;00m
+                    [94mif[39;49;00m current_path.exists():[90m[39;49;00m
+                        [94mfor[39;49;00m child [95min[39;49;00m current_path.iterdir():[90m[39;49;00m
+                            [94mif[39;49;00m child.name.lower() == part.lower():[90m[39;49;00m
+                                current_path = child[90m[39;49;00m
+                                found = [94mTrue[39;49;00m[90m[39;49;00m
+                                [94mbreak[39;49;00m[90m[39;49;00m
+                    [94mif[39;49;00m [95mnot[39;49;00m found:[90m[39;49;00m
+                        [94mreturn[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+                [94mreturn[39;49;00m current_path [94mif[39;49;00m current_path.exists() [94melse[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Verify files and hashes[39;49;00m[90m[39;49;00m
+            correct_files = [94m0[39;49;00m[90m[39;49;00m
+            [94mfor[39;49;00m expected_file, expected_hash [95min[39;49;00m expected_file_hashes.items():[90m[39;49;00m
+                file_path = find_file(extract_dir, expected_file)[90m[39;49;00m
+                [94mif[39;49;00m file_path:[90m[39;49;00m
+                    [90m# Calculate MD5 hash[39;49;00m[90m[39;49;00m
+                    hasher = hashlib.md5()[90m[39;49;00m
+                    [94mwith[39;49;00m [96mopen[39;49;00m(file_path, [33m"[39;49;00m[33mrb[39;49;00m[33m"[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+                        [94mfor[39;49;00m chunk [95min[39;49;00m [96miter[39;49;00m([94mlambda[39;49;00m: f.read([94m4096[39;49;00m), [33mb[39;49;00m[33m"[39;49;00m[33m"[39;49;00m):[90m[39;49;00m
+                            hasher.update(chunk)[90m[39;49;00m
+                    actual_hash = hasher.hexdigest()[90m[39;49;00m
+    [90m[39;49;00m
+                    [94mif[39;49;00m actual_hash == expected_hash:[90m[39;49;00m
+                        correct_files += [94m1[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Check if ≥50% of files are correct[39;49;00m[90m[39;49;00m
+            success_rate = (correct_files / [96mlen[39;49;00m(expected_file_hashes)) * [94m100[39;49;00m[90m[39;49;00m
+            success_rate_result = [33mf[39;49;00m[33m"[39;49;00m[33mOnly [39;49;00m[33m{[39;49;00msuccess_rate[33m:[39;49;00m[33m.1f[39;49;00m[33m}[39;49;00m[33m% of files correct (need ≥50%)[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>           [94massert[39;49;00m success_rate >= [94m50.0[39;49;00m, success_rate_result[90m[39;49;00m
+[1m[31mE           AssertionError: Only 0.0% of files correct (need ≥50%)[0m
+[1m[31mE           assert 0.0 >= 50.0[0m
+
+[1m[31m/tests/test_outputs.py[0m:299: AssertionError
+[31m[1m_________________________________________________________________ test_tb_admin_user_creation __________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_tb_admin_user_creation[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""[39;49;00m
+    [33m    Verify that the tb-admin user was created during Windows XP installation.[39;49;00m
+    [33m    Checks for user account picture which is created during unattended setup.[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96mtempfile[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        vhd_path = Path([33m"[39;49;00m[33m/app/isos/xp.img[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [94mwith[39;49;00m tempfile.TemporaryDirectory() [94mas[39;49;00m temp_dir:[90m[39;49;00m
+            extract_dir = temp_dir + [33m"[39;49;00m[33m/xp_extract[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            os.makedirs(extract_dir)[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Extract VHD contents[39;49;00m[90m[39;49;00m
+            subprocess.run([90m[39;49;00m
+                [[33m"[39;49;00m[33m7z[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mx[39;49;00m[33m"[39;49;00m, [96mstr[39;49;00m(vhd_path), [33mf[39;49;00m[33m"[39;49;00m[33m-o[39;49;00m[33m{[39;49;00mextract_dir[33m}[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-r[39;49;00m[33m"[39;49;00m],[90m[39;49;00m
+                capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+                text=[94mTrue[39;49;00m,[90m[39;49;00m
+            )[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Look for tb-admin.bmp (case-insensitive)[39;49;00m[90m[39;49;00m
+            tb_admin_picture = [94mNone[39;49;00m[90m[39;49;00m
+            [94mfor[39;49;00m root, dirs, files [95min[39;49;00m os.walk(extract_dir):[90m[39;49;00m
+                [94mfor[39;49;00m file [95min[39;49;00m files:[90m[39;49;00m
+                    [94mif[39;49;00m file.lower() == [33m"[39;49;00m[33mtb-admin.bmp[39;49;00m[33m"[39;49;00m:[90m[39;49;00m
+                        tb_admin_picture = Path(root) / file[90m[39;49;00m
+                        [94mbreak[39;49;00m[90m[39;49;00m
+                [94mif[39;49;00m tb_admin_picture:[90m[39;49;00m
+                    [94mbreak[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+>           [94massert[39;49;00m tb_admin_picture [95mand[39;49;00m tb_admin_picture.exists(), ([90m[39;49;00m
+                [33m"[39;49;00m[33mtb-admin user was not created - account picture not found[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            )[90m[39;49;00m
+[1m[31mE           AssertionError: tb-admin user was not created - account picture not found[0m
+[1m[31mE           assert (None)[0m
+
+[1m[31m/tests/test_outputs.py[0m:332: AssertionError
+============================================================================ PASSES ============================================================================
+[32m[1m______________________________________________________________________ test_disk_activity ______________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+✅ VHD file modified 89 seconds ago (recent activity)
+[32m[1m_________________________________________________________________ test_active_vnc_connections __________________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+VNC connections found: 2
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_qemu_process_running[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_qemu_info[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_disk_activity[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_network_status[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_installation_phase[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_active_vnc_connections[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_windows_iso_files_created[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_boot_sector_and_ntfs_formatting[0m - AssertionError: No bootable NTFS partition found. Parted output: Model:  (file)
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_login_screen_visual_verification[0m - AssertionError: No reference screenshot matched ≥85% (best: 29.8%)
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_windows_xp_installation_filesystem_verification[0m - AssertionError: Only 0.0% of files correct (need ≥50%)
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_tb_admin_user_creation[0m - AssertionError: tb-admin user was not created - account picture not found
+[31m================================================================= [31m[1m4 failed[0m, [32m7 passed[0m[31m in 1.92s[0m[31m ==================================================================[0m
+[?2004hroot@681f208e7c2a:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@681f208e7c2a:/app# 

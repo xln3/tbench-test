@@ -1,0 +1,1472 @@
+Failed to load task vertex-solver: while scanning a simple key
+  in "<unicode string>", line 4, column 1:
+    The decision variable is a 40-di ... 
+    ^
+could not find expected ':'
+  in "<unicode string>", line 5, column 1:
+    A is a 6x40 matrix with entries  ... 
+    ^. Using fallback duration.
+Starting harness run
+Run ID: 2026-03-07__09-22-48
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/leelachess0-pytorch-conversion: Command '['docker', 'compose', '-p', 'leelachess0-pytorch-conversion-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/leelachess0-pytorch-conversion/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'leelachess0-pytorch-conversion-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/leelachess0-pytorch-conversion/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/build-pov-ray: Command '['docker', 'compose', '-p', 'build-pov-ray-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/build-pov-ray/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'build-pov-ray-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/build-pov-ray/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/port-compressor: Command '['docker', 'compose', '-p', 'port-compressor-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/port-compressor/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'port-compressor-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/port-compressor/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task fix-ocaml-gc.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 7200.0s for task add-benchmark-lm-eval-harness.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 2400.0s for task compile-compcert.
+Error parsing results for task compile-compcert: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/compile-compcert/compile-compcert.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task portfolio-optimization.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task regex-chess.
+Agent timed out after 3600.0s for task spinning-up-rl.
+Test command timed out after 600.0s for task regex-chess.
+Error cleaning up docker compose services: Command '['docker', 'compose', '-p', 'regex-chess-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/regex-chess/docker-compose.yaml', 'down']' returned non-zero exit status 1.
+Error parsing results for task regex-chess: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/regex-chess/regex-chess.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task bn-fit-modify.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task word2vec-from-scratch.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/circuit-fibsqrt: Command '['docker', 'compose', '-p', 'circuit-fibsqrt-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/circuit-fibsqrt/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'circuit-fibsqrt-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/circuit-fibsqrt/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task install-windows-3.11.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task train-fasttext.
+Test command timed out after 180.0s for task llm-spec-decoding.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/mahjong-winninghand: Command '['docker', 'compose', '-p', 'mahjong-winninghand-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/mahjong-winninghand/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'mahjong-winninghand-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/mahjong-winninghand/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task sql-injection-attack.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3600.0s for task winning-avg-corewars.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task hf-train-lora-adapter.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 3000.0s for task play-lord.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 2400.0s for task schemelike-metacircular-eval.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task parallelize-graph.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task stable-parallel-kmeans.
+Test command timed out after 600.0s for task stable-parallel-kmeans.
+Error parsing results for task stable-parallel-kmeans: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/stable-parallel-kmeans/stable-parallel-kmeans.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+Agent timed out after 1800.0s for task rstan-to-pystan.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task lean4-proof.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task mcmc-sampling-stan.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task protocol-analysis-rs.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 2000.0s for task play-zork.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 2000.0s for task play-zork-easy.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task vul-flink.
+Test command timed out after 240.0s for task mteb-retrieve.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task llm-inference-batching-scheduler.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/hdfs-deployment: Command '['docker', 'compose', '-p', 'hdfs-deployment-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/hdfs-deployment/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'hdfs-deployment-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/hdfs-deployment/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/spring-messaging-vul: Command '['docker', 'compose', '-p', 'spring-messaging-vul-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/spring-messaging-vul/docker-compose.yaml', 'up', '-d']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 128, in start
+    self._run_docker_compose_command(["up", "-d"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'spring-messaging-vul-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/spring-messaging-vul/docker-compose.yaml', 'up', '-d']' returned non-zero exit status 1.
+Agent timed out after 1800.0s for task make-mips-interpreter.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task path-tracing.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/dna-insert: Command '['docker', 'compose', '-p', 'dna-insert-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/dna-insert/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'dna-insert-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/dna-insert/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task feal-differential-cryptanalysis.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task extract-moves-from-video.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task feal-linear-cryptanalysis.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task protein-assembly.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task query-optimize.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1800.0s for task mailman.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/causal-inference-r: Command '['docker', 'compose', '-p', 'causal-inference-r-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/causal-inference-r/docker-compose.yaml', 'up', '-d']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 128, in start
+    self._run_docker_compose_command(["up", "-d"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'causal-inference-r-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/causal-inference-r/docker-compose.yaml', 'up', '-d']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1500.0s for task magsac-install.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1000.0s for task swe-bench-astropy-1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1000.0s for task conda-env-conflict-resolution.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/sudo-llvm-ir: Command '['docker', 'compose', '-p', 'sudo-llvm-ir-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/sudo-llvm-ir/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'sudo-llvm-ir-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/sudo-llvm-ir/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1200.0s for task large-scale-text-editing.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/train-bpe-tokenizer: Command '['docker', 'compose', '-p', 'train-bpe-tokenizer-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/train-bpe-tokenizer/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'train-bpe-tokenizer-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/train-bpe-tokenizer/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task movie-helper.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1200.0s for task interactive-maze-game.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1200.0s for task code-from-image.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/financial-document-processor: Command '['docker', 'compose', '-p', 'financial-document-processor-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/financial-document-processor/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'financial-document-processor-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/financial-document-processor/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1200.0s for task debug-long-program.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1200.0s for task catch-me-if-you-can.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1200.0s for task break-filter-js-from-html.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1200.0s for task solve-maze-challenge.
+Test command timed out after 180.0s for task solve-maze-challenge.
+Error parsing results for task solve-maze-challenge: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/solve-maze-challenge/solve-maze-challenge.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1000.0s for task swe-bench-astropy-2.
+Agent timed out after 900.0s for task torch-pipeline-parallelism.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task neuron-to-jaxley-conversion.
+Agent timed out after 900.0s for task matlab-python-conversion.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task adaptive-rejection-sampler.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task filter-js-from-html.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task crack-7z-hash.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1000.0s for task swe-bench-fsspec.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 1000.0s for task run-pdp11-code.
+Agent timed out after 900.0s for task download-youtube.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task bank-trans-filter.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/security-celery-redis-rce: Command '['docker', 'compose', '-p', 'security-celery-redis-rce-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/security-celery-redis-rce/docker-compose.yaml', 'up', '-d']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 128, in start
+    self._run_docker_compose_command(["up", "-d"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'security-celery-redis-rce-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/security-celery-redis-rce/docker-compose.yaml', 'up', '-d']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task weighted-max-sat-solver.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task fix-code-vulnerability.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task decommissioning-service-with-sensitive-data.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task cpp-compatibility.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task solve-sudoku.
+Error parsing results for task solve-sudoku: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/solve-sudoku/solve-sudoku.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task chess-best-move.
+Agent timed out after 900.0s for task postgres-csv-clean.
+Test command timed out after 180.0s for task mlflow-register.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/tree-directory-parser: Command '['docker', 'compose', '-p', 'tree-directory-parser-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/tree-directory-parser/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'tree-directory-parser-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/tree-directory-parser/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/sqlite-with-gcov: Command '['docker', 'compose', '-p', 'sqlite-with-gcov-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/sqlite-with-gcov/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'sqlite-with-gcov-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/sqlite-with-gcov/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task parallel-particle-simulator.
+Agent timed out after 900.0s for task grid-pattern-transform.
+Test command timed out after 180.0s for task png-generation.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/fix-git: Command '['docker', 'compose', '-p', 'fix-git-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/fix-git/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'fix-git-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/fix-git/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/password-recovery: Command '['docker', 'compose', '-p', 'password-recovery-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/password-recovery/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'password-recovery-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/password-recovery/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/implement-eigenvectors-from-eigenvalues-research-paper: Command '['docker', 'compose', '-p', 'implement-eigenvectors-from-eigenvalues-research-paper-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/implement-eigenvectors-from-eigenvalues-research-paper/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'implement-eigenvectors-from-eigenvalues-research-paper-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/implement-eigenvectors-from-eigenvalues-research-paper/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task deterministic-tarball.
+Error parsing results for task qemu-alpine-ssh: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/qemu-alpine-ssh/qemu-alpine-ssh.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task polyglot-rust-c.
+Agent timed out after 900.0s for task build-cython-ext.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task get-bitcoin-nodes.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task cron-broken-network.
+Error parsing results for task cron-broken-network: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/cron-broken-network/cron-broken-network.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task hf-model-inference.
+Agent timed out after 900.0s for task write-compressor.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task cancel-async-tasks.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task cartpole-rl-training.
+Test command timed out after 180.0s for task cartpole-rl-training.
+Error parsing results for task cartpole-rl-training: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/cartpole-rl-training/cartpole-rl-training.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task vulnerable-secret.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task pypi-server.
+Error parsing results for task pypi-server: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/pypi-server/pypi-server.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task privilege-escalation.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task install-klee-minimal.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task broken-networking.
+Test command timed out after 180.0s for task broken-networking.
+Error parsing results for task broken-networking: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/broken-networking/broken-networking.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+Agent timed out after 900.0s for task build-stp.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task polyglot-c-py.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task fibonacci-server.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task audio-synth-stft-peaks.
+Test command timed out after 180.0s for task build-initramfs-qemu.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task setup-custom-dev-env.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task pytorch-model-recovery.
+Test command timed out after 180.0s for task pytorch-model-recovery.
+Error parsing results for task pytorch-model-recovery: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/pytorch-model-recovery/pytorch-model-recovery.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+Agent timed out after 900.0s for task rare-mineral-allocation.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/pandas-etl: Command '['docker', 'compose', '-p', 'pandas-etl-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/pandas-etl/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'pandas-etl-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/pandas-etl/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/merge-diff-arc-agi-task: Command '['docker', 'compose', '-p', 'merge-diff-arc-agi-task-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/merge-diff-arc-agi-task/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'merge-diff-arc-agi-task-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/merge-diff-arc-agi-task/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/cobol-modernization: Command '['docker', 'compose', '-p', 'cobol-modernization-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/cobol-modernization/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'cobol-modernization-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/cobol-modernization/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/npm-conflict-resolution: Command '['docker', 'compose', '-p', 'npm-conflict-resolution-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/npm-conflict-resolution/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'npm-conflict-resolution-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/npm-conflict-resolution/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/model-extraction-relu-logits: Command '['docker', 'compose', '-p', 'model-extraction-relu-logits-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/model-extraction-relu-logits/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'model-extraction-relu-logits-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/model-extraction-relu-logits/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task jupyter-notebook-server.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task security-vulhub-minio.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/qemu-startup: Command '['docker', 'compose', '-p', 'qemu-startup-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/qemu-startup/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'qemu-startup-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/qemu-startup/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task solana-data.
+Test command timed out after 180.0s for task pytorch-model-cli.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task jq-data-processing.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task sanitize-git-repo.
+Agent timed out after 900.0s for task vul-flask.
+Agent timed out after 900.0s for task gcc-compiler-optimization.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task kv-store-grpc.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/extract-elf: Command '['docker', 'compose', '-p', 'extract-elf-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/extract-elf/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'extract-elf-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/extract-elf/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task git-multibranch.
+Agent timed out after 360.0s for task amuse-install.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 750.0s for task overfull-hbox.
+Test command timed out after 60.0s for task overfull-hbox.
+Error parsing results for task overfull-hbox: No short test summary info found in the provided content.. It's possible that the tests failed to run. Inspect /mnt/data1/workspace/xln/PaperAgent/tbench-test/runs/2026-03-07__09-22-48/overfull-hbox/overfull-hbox.1-of-1.2026-03-07__09-22-48/panes/post-test.txt for more information.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task mixed-integer-programming.
+Running tasks (223/240, Accuracy: 24.66%) - Last: mixed-integer-programmin…  9… 
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task html-finance-verify.
+Agent timed out after 360.0s for task hydra-debug-slurm-mode.
+Harness execution failed for /mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/classifier-debug: Command '['docker', 'compose', '-p', 'classifier-debug-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/classifier-debug/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 1011, in _execute_single_trial
+    trial_results = self._run_trial(trial_handler)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harness.py", line 717, in _run_trial
+    with spin_up_terminal(
+         ~~~~~~~~~~~~~~~~^
+        client_container_name=trial_handler.client_container_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        disable_recording=trial_handler.task.disable_asciinema,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as terminal:
+    ^
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 176, in spin_up_terminal
+    terminal.start()
+    ~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/terminal.py", line 102, in start
+    self.container = self._compose_manager.start()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 126, in start
+    self._run_docker_compose_command(["build"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/terminal/docker_compose_manager.py", line 101, in _run_docker_compose_command
+    result = subprocess.run(
+        full_command,
+    ...<3 lines>...
+        text=True,
+    )
+  File "/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['docker', 'compose', '-p', 'classifier-debug-1-of-1-2026-03-07__09-22-48', '-f', '/mnt/data1/workspace/xln/t-bench/terminal-bench/tasks/classifier-debug/docker-compose.yaml', 'build']' returned non-zero exit status 1.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task largest-eigenval.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task tune-mjcf.
+/home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3.13/asyncio/events.py:89: RuntimeWarning: The executor did not finishing joining its threads within 300 seconds.
+  self._context.run(self._callback, *self._args)
+Agent timed out after 900.0s for task find-restaurant.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/cli/tb/runs.p │
+│ y:402 in create                                                              │
+│                                                                              │
+│   399 │   │   global_test_timeout_sec=global_test_timeout_sec,               │
+│   400 │   )                                                                  │
+│   401 │                                                                      │
+│ ❱ 402 │   results = harness.run()                                            │
+│   403 │   _print_rich_results(results, harness._results_output_path)         │
+│   404                                                                        │
+│   405                                                                        │
+│                                                                              │
+│ /mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harne │
+│ ss.py:1240 in run                                                            │
+│                                                                              │
+│   1237 │   │   │   self._write_run_metadata()                                │
+│   1238 │   │   │   self._create_run_lock()                                   │
+│   1239 │   │                                                                 │
+│ ❱ 1240 │   │   results = self._execute_tasks()                               │
+│   1241 │   │                                                                 │
+│   1242 │   │   # Only update metadata on end if not resuming                 │
+│   1243 │   │   if not self._is_resuming:                                     │
+│                                                                              │
+│ /mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harne │
+│ ss.py:1160 in _execute_tasks                                                 │
+│                                                                              │
+│   1157 │   │   │   │   │   )                                                 │
+│   1158 │   │   │   │   │                                                     │
+│   1159 │   │   │   │   │   for future in as_completed(future_to_task):       │
+│ ❱ 1160 │   │   │   │   │   │   trial_results = future.result()               │
+│   1161 │   │   │   │   │   │                                                 │
+│   1162 │   │   │   │   │   │   # Check for duplicates before adding          │
+│   1163 │   │   │   │   │   │   trial_key = (trial_results.task_id, trial_res │
+│                                                                              │
+│ /home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3 │
+│ .13/concurrent/futures/_base.py:449 in result                                │
+│                                                                              │
+│   446 │   │   │   │   if self._state in [CANCELLED, CANCELLED_AND_NOTIFIED]: │
+│   447 │   │   │   │   │   raise CancelledError()                             │
+│   448 │   │   │   │   elif self._state == FINISHED:                          │
+│ ❱ 449 │   │   │   │   │   return self.__get_result()                         │
+│   450 │   │   │   │                                                          │
+│   451 │   │   │   │   self._condition.wait(timeout)                          │
+│   452                                                                        │
+│                                                                              │
+│ /home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3 │
+│ .13/concurrent/futures/_base.py:401 in __get_result                          │
+│                                                                              │
+│   398 │   def __get_result(self):                                            │
+│   399 │   │   if self._exception is not None:                                │
+│   400 │   │   │   try:                                                       │
+│ ❱ 401 │   │   │   │   raise self._exception                                  │
+│   402 │   │   │   finally:                                                   │
+│   403 │   │   │   │   # Break a reference cycle with the exception in self._ │
+│   404 │   │   │   │   self = None                                            │
+│                                                                              │
+│ /home/xln/.local/share/uv/python/cpython-3.13.9-linux-x86_64-gnu/lib/python3 │
+│ .13/concurrent/futures/thread.py:59 in run                                   │
+│                                                                              │
+│    56 │   │   │   return                                                     │
+│    57 │   │                                                                  │
+│    58 │   │   try:                                                           │
+│ ❱  59 │   │   │   result = self.fn(*self.args, **self.kwargs)                │
+│    60 │   │   except BaseException as exc:                                   │
+│    61 │   │   │   self.future.set_exception(exc)                             │
+│    62 │   │   │   # Break a reference cycle with the exception 'exc'         │
+│                                                                              │
+│ /mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/harness/harne │
+│ ss.py:1004 in _execute_single_trial                                          │
+│                                                                              │
+│   1001 │   │   Returns:                                                      │
+│   1002 │   │   │   TrialResults: The results of the trial execution          │
+│   1003 │   │   """                                                           │
+│ ❱ 1004 │   │   trial_handler = TrialHandler(                                 │
+│   1005 │   │   │   trial_name=trial_name,                                    │
+│   1006 │   │   │   input_path=task_path,                                     │
+│   1007 │   │   │   output_path=self._run_path,                               │
+│                                                                              │
+│ /mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/handlers/tria │
+│ l_handler.py:249 in __init__                                                 │
+│                                                                              │
+│   246 │   │                                                                  │
+│   247 │   │   self._logger = logger.getChild(__name__)                       │
+│   248 │   │   self.task_paths = TaskPaths(input_path)                        │
+│ ❱ 249 │   │   self.task = Task.from_yaml(self.task_paths.task_config_path)   │
+│   250 │   │   self.parser = ParserFactory.get_parser(self.task.parser_name)  │
+│   251 │   │                                                                  │
+│   252 │   │   if output_path is not None:                                    │
+│                                                                              │
+│ /mnt/data1/workspace/xln/t-bench/terminal-bench/terminal_bench/handlers/tria │
+│ l_handler.py:100 in from_yaml                                                │
+│                                                                              │
+│    97 │                                                                      │
+│    98 │   @classmethod                                                       │
+│    99 │   def from_yaml(cls, path: Path) -> "Task":                          │
+│ ❱ 100 │   │   data = yaml.safe_load(path.read_text())                        │
+│   101 │   │   try:                                                           │
+│   102 │   │   │   return cls.model_validate(data)                            │
+│   103 │   │   except:                                                        │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/__init__.py:125 in safe_load                                     │
+│                                                                              │
+│   122 │   Resolve only basic YAML tags. This is known                        │
+│   123 │   to be safe for untrusted input.                                    │
+│   124 │   """                                                                │
+│ ❱ 125 │   return load(stream, SafeLoader)                                    │
+│   126                                                                        │
+│   127 def safe_load_all(stream):                                             │
+│   128 │   """                                                                │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/__init__.py:81 in load                                           │
+│                                                                              │
+│    78 │   """                                                                │
+│    79 │   loader = Loader(stream)                                            │
+│    80 │   try:                                                               │
+│ ❱  81 │   │   return loader.get_single_data()                                │
+│    82 │   finally:                                                           │
+│    83 │   │   loader.dispose()                                               │
+│    84                                                                        │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/constructor.py:49 in get_single_data                             │
+│                                                                              │
+│    46 │                                                                      │
+│    47 │   def get_single_data(self):                                         │
+│    48 │   │   # Ensure that the stream contains a single document and constr │
+│ ❱  49 │   │   node = self.get_single_node()                                  │
+│    50 │   │   if node is not None:                                           │
+│    51 │   │   │   return self.construct_document(node)                       │
+│    52 │   │   return None                                                    │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/composer.py:36 in get_single_node                                │
+│                                                                              │
+│    33 │   │   # Compose a document if the stream is not empty.               │
+│    34 │   │   document = None                                                │
+│    35 │   │   if not self.check_event(StreamEndEvent):                       │
+│ ❱  36 │   │   │   document = self.compose_document()                         │
+│    37 │   │                                                                  │
+│    38 │   │   # Ensure that the stream contains no more documents.           │
+│    39 │   │   if not self.check_event(StreamEndEvent):                       │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/composer.py:55 in compose_document                               │
+│                                                                              │
+│    52 │   │   self.get_event()                                               │
+│    53 │   │                                                                  │
+│    54 │   │   # Compose the root node.                                       │
+│ ❱  55 │   │   node = self.compose_node(None, None)                           │
+│    56 │   │                                                                  │
+│    57 │   │   # Drop the DOCUMENT-END event.                                 │
+│    58 │   │   self.get_event()                                               │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/composer.py:84 in compose_node                                   │
+│                                                                              │
+│    81 │   │   elif self.check_event(SequenceStartEvent):                     │
+│    82 │   │   │   node = self.compose_sequence_node(anchor)                  │
+│    83 │   │   elif self.check_event(MappingStartEvent):                      │
+│ ❱  84 │   │   │   node = self.compose_mapping_node(anchor)                   │
+│    85 │   │   self.ascend_resolver()                                         │
+│    86 │   │   return node                                                    │
+│    87                                                                        │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/composer.py:133 in compose_mapping_node                          │
+│                                                                              │
+│   130 │   │   │   #if item_key in node.value:                                │
+│   131 │   │   │   #    raise ComposerError("while composing a mapping", star │
+│   132 │   │   │   #            "found duplicate key", key_event.start_mark)  │
+│ ❱ 133 │   │   │   item_value = self.compose_node(node, item_key)             │
+│   134 │   │   │   #node.value[item_key] = item_value                         │
+│   135 │   │   │   node.value.append((item_key, item_value))                  │
+│   136 │   │   end_event = self.get_event()                                   │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/composer.py:64 in compose_node                                   │
+│                                                                              │
+│    61 │   │   return node                                                    │
+│    62 │                                                                      │
+│    63 │   def compose_node(self, parent, index):                             │
+│ ❱  64 │   │   if self.check_event(AliasEvent):                               │
+│    65 │   │   │   event = self.get_event()                                   │
+│    66 │   │   │   anchor = event.anchor                                      │
+│    67 │   │   │   if anchor not in self.anchors:                             │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/parser.py:98 in check_event                                      │
+│                                                                              │
+│    95 │   │   # Check the type of the next event.                            │
+│    96 │   │   if self.current_event is None:                                 │
+│    97 │   │   │   if self.state:                                             │
+│ ❱  98 │   │   │   │   self.current_event = self.state()                      │
+│    99 │   │   if self.current_event is not None:                             │
+│   100 │   │   │   if not choices:                                            │
+│   101 │   │   │   │   return True                                            │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/parser.py:449 in parse_block_mapping_value                       │
+│                                                                              │
+│   446 │   def parse_block_mapping_value(self):                               │
+│   447 │   │   if self.check_token(ValueToken):                               │
+│   448 │   │   │   token = self.get_token()                                   │
+│ ❱ 449 │   │   │   if not self.check_token(KeyToken, ValueToken, BlockEndToke │
+│   450 │   │   │   │   self.states.append(self.parse_block_mapping_key)       │
+│   451 │   │   │   │   return self.parse_block_node_or_indentless_sequence()  │
+│   452 │   │   │   else:                                                      │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/scanner.py:115 in check_token                                    │
+│                                                                              │
+│    112 │                                                                     │
+│    113 │   def check_token(self, *choices):                                  │
+│    114 │   │   # Check if the next token is one of the given types.          │
+│ ❱  115 │   │   while self.need_more_tokens():                                │
+│    116 │   │   │   self.fetch_more_tokens()                                  │
+│    117 │   │   if self.tokens:                                               │
+│    118 │   │   │   if not choices:                                           │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/scanner.py:152 in need_more_tokens                               │
+│                                                                              │
+│    149 │   │   │   return True                                               │
+│    150 │   │   # The current token may be a potential simple key, so we      │
+│    151 │   │   # need to look further.                                       │
+│ ❱  152 │   │   self.stale_possible_simple_keys()                             │
+│    153 │   │   if self.next_possible_simple_key() == self.tokens_taken:      │
+│    154 │   │   │   return True                                               │
+│    155                                                                       │
+│                                                                              │
+│ /mnt/data1/workspace/xln/PaperAgent/tbench-test/.venv/lib/python3.13/site-pa │
+│ ckages/yaml/scanner.py:291 in stale_possible_simple_keys                     │
+│                                                                              │
+│    288 │   │   │   if key.line != self.line  \                               │
+│    289 │   │   │   │   │   or self.index-key.index > 1024:                   │
+│    290 │   │   │   │   if key.required:                                      │
+│ ❱  291 │   │   │   │   │   raise ScannerError("while scanning a simple key", │
+│    292 │   │   │   │   │   │   │   "could not find expected ':'", self.get_m │
+│    293 │   │   │   │   del self.possible_simple_keys[level]                  │
+│    294                                                                       │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ScannerError: while scanning a simple key
+  in "<unicode string>", line 4, column 1:
+    The decision variable is a 40-di ... 
+    ^
+could not find expected ':'
+  in "<unicode string>", line 5, column 1:
+    A is a 6x40 matrix with entries  ... 
+    ^

@@ -1,0 +1,128 @@
+[?2004hroot@99da18c3f518:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@99da18c3f518:/app# clear
+[?2004l[H[J[3J[?2004hroot@99da18c3f518:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@99da18c3f518:/app# panda --prompt 'I have a database in WAL (Write-Ahead Logging) mode in /app/. 
+[?2004l[?2004h> However, the WAL file appears to be corrupted or encrypted. When you try to 
+[?2004l[?2004h> access the database, SQLite may only show the base data (5 records) instead 
+[?2004l[?2004h> of all 11 records that should be there.
+[?2004l[?2004h> 
+[?2004l[?2004h> Your task is to:
+[?2004l[?2004h> 1. Fix the WAL file so SQLite can read it
+[?2004l[?2004h> 2. Extract ALL data from the database (including WAL changes)
+[?2004l[?2004h> 3. Create a JSON file in /app/recovered.json
+[?2004l[?2004h> 
+[?2004l[?2004h> The output should have the format:
+[?2004l[?2004h> [{"id": 1, "name": "item1", "value": X}, {"id": 2, "name": "item2", "value": Y}, ...] 
+[?2004l[?2004h> sorted by id. You should recover all 11 records total. You'"'"'ll be tested on the specific
+[?2004l[?2004h> data in the JSON file.
+[?2004l[?2004h> '; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Glob]
+[Read]
+[Read]
+[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Glob]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Read]
+[Bash]
+[Bash]
+[Bash]
+< function=Bash>
+<parameter=command>
+cd /app && sqlite3 main.db "PRAGMA journal_mode = DELETE;"
+</parameter>
+<parameter=description>
+Switch to DELETE mode
+</parameter>
+</function>
+</tool_call>
+[?2004hroot@99da18c3f518:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@99da18c3f518:/app# 

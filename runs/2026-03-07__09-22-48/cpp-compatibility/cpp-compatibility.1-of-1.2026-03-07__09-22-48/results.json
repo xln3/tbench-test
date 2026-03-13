@@ -1,0 +1,21 @@
+{
+    "id": "e580bc0b-ff97-4298-bfcd-e9a2372efc80",
+    "trial_name": "cpp-compatibility.1-of-1.2026-03-07__09-22-48",
+    "task_id": "cpp-compatibility",
+    "instruction": "One of my template function (located in /app/sum_array.h) cannot be used by my C++11 projects.\nCan you edit the /app/sum_array.h to downgrade the implementation such that it is compatible with C++11 projects while keeping the same interface.",
+    "is_resolved": false,
+    "failure_mode": "agent_timeout",
+    "parser_results": {
+        "test_file_exist": "passed",
+        "test_compile": "failed"
+    },
+    "recording_path": "2026-03-07__09-22-48/cpp-compatibility/cpp-compatibility.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T14:12:25.595998+00:00",
+    "trial_ended_at": "2026-03-07T14:35:41.267356+00:00",
+    "agent_started_at": "2026-03-07T14:14:45.697506+00:00",
+    "agent_ended_at": "2026-03-07T14:34:45.900296+00:00",
+    "test_started_at": "2026-03-07T14:34:49.366099+00:00",
+    "test_ended_at": "2026-03-07T14:35:27.087029+00:00"
+}

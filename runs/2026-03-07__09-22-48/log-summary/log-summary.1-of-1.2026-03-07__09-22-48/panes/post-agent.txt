@@ -1,0 +1,40 @@
+root@0137a3fbec1c:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@0137a3fbec1c:/app# panda --prompt 'In `/app/logs` there are multiple `.log` files from different services. Your task is to scan all `.log` files and count
+how many lines contain "ERROR", "WARNING", and "INFO".
+>
+> Output your results to `/app/summary.csv` with the following structure:
+> severity,count
+> ERROR,<total number of ERROR lines across all files>
+> WARNING,<total number of WARNING lines across all files>
+> INFO,<total number of INFO lines across all files>
+>
+> The output should be a valid CSV file with exactly four lines in total (one header line and one line for each severity level).'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Glob]
+[Bash]
+[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+[Write]
+[TodoWrite]
+[Read]
+✅ Task completed successfully!
+
+**Summary:**
+- Found 3 log files in `/app/logs` (db.log, app1.log, app2.log)
+- Counted severity lines across all files:
+  - **ERROR**: 4 lines
+  - **WARNING**: 3 lines
+  - **INFO**: 8 lines
+- Results written to `/app/summary.csv` with proper CSV format (4 lines total: 1 header + 3 data rows)
+root@0137a3fbec1c:/app#
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+[?2004hroot@2e41c1cb5a80:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@2e41c1cb5a80:/app# clear
+[?2004l[H[J[3J[?2004hroot@2e41c1cb5a80:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]0% [Waiting for headers] [Waiting for headers]                                              Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+                                              0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+                        0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+0% [3 InRelease 12.7 kB/126 kB 10%]0% [3 InRelease 57.6 kB/126 kB 46%]                                   0% [Waiting for headers]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]21% [Waiting for headers]                         Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+21% [5 Packages 5551 B/2284 kB 0%]22% [5 Packages 57.7 kB/2284 kB 3%]26% [5 Packages 260 kB/2284 kB 11%]43% [5 Packages 1218 kB/2284 kB 53%]                                    62% [Waiting for headers]62% [5 Packages store 0 B] [Waiting for headers]                                                63% [Waiting for headers]                         Get:6 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+63% [6 Packages 14.2 kB/2025 kB 1%]64% [6 Packages 53.2 kB/2025 kB 3%]                                                                                                                 383 kB/s 5s67% [6 Packages 252 kB/2025 kB 12%]                                                                                                                 383 kB/s 4s84% [6 Packages 1161 kB/2025 kB 57%]                                                                                                                383 kB/s 2s99% [Working]                                                                                                                                       383 kB/s 0s99% [6 Packages store 0 B]                                                                                                                          383 kB/s 0s100% [Working]                                                                                                                                      383 kB/s 0s                                                                                                                                                               Fetched 4435 kB in 8s (569 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 33%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 67%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 33%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 67%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 80%Building dependency tree... Done
+Reading state information... 0% Reading state information... 2%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 40 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠸[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠴[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠴[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠴[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠴[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠴[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠴[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m5 packages[0m [2min 943ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 16.00 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mpygments            [0m [32m[2m------------------------------[0m[0m     0 B/1.17 MiB                                                                                            [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpackaging           [0m [32m--------------[2m----------------[0m[0m 32.00 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/356.91 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpytest              [0m [32m-----------------------[2m-------[0m[0m 270.80 KiB/356.91 KiB
+[2mpygments            [0m [32m------[2m------------------------[0m[0m 205.32 KiB/1.17 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/5)
+[2mpygments            [0m [32m---------[2m---------------------[0m[0m 333.32 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 365.32 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)
+[2mpygments            [0m [32m----------------[2m--------------[0m[0m 605.32 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)
+[2mpygments            [0m [32m----------------[2m--------------[0m[0m 621.32 KiB/1.17 MiB                                                                                         [1A[2K[1B[2K[1A[37m⠹[0m [2mPreparing packages...[0m (4/5)                                                                                                                                   [2K[2mPrepared [1m5 packages[0m [2min 335ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2miniconfig==2.3.0                                                                                                                     [0m[2K████░░░░░░░░░░░░░░░░ [1/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpackaging==26.0                                                                                                                      [0m[2K████████░░░░░░░░░░░░ [2/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████████░░░░░░░░ [3/5] [2mpluggy==1.6.0                                                                                                                        [0m[2K████████████░░░░░░░░ [3/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpytest==8.4.1                                                                                                                        [0m[2K████████████████░░░░ [4/5] [2mpygments==2.19.2                                                                                                                     [0m[2K████████████████████ [5/5] [2mpygments==2.19.2                                                                                                                     [0m[2K[2mInstalled [1m5 packages[0m [2min 174ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 6 items                                                                                                                                              [0m
+
+../tests/test_outputs.py [32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[31m                                                                                                                          [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m__________________________________________________________________ test_outputs_match_exactly __________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_outputs_match_exactly[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Asserts the optimized query output matches the golden query EXACTLY:[39;49;00m
+    [33m    - same column names (case and order)[39;49;00m
+    [33m    - same number of rows[39;49;00m
+    [33m    - same row values in the same order[39;49;00m
+    [33m    """[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m DB_PATH.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mDB not found at [39;49;00m[33m{[39;49;00mDB_PATH[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m GOLDEN_SQL_PATH.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mGolden SQL not found at [39;49;00m[33m{[39;49;00mGOLDEN_SQL_PATH[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m SOL_SQL_PATH.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mSolution SQL not found at [39;49;00m[33m{[39;49;00mSOL_SQL_PATH[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        q_golden = _read_sql(GOLDEN_SQL_PATH)[90m[39;49;00m
+        q_sol = _read_sql(SOL_SQL_PATH)[90m[39;49;00m
+    [90m[39;49;00m
+        cols_g, rows_g = _execute_get_columns_and_rows(DB_PATH, q_golden)[90m[39;49;00m
+        cols_s, rows_s = _execute_get_columns_and_rows(DB_PATH, q_sol)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Column names must match exactly (including case) and order[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m cols_g == cols_s, ([90m[39;49;00m
+            [33mf[39;49;00m[33m"[39;49;00m[33mColumn names/order differ.[39;49;00m[33m\n[39;49;00m[33mGolden:  [39;49;00m[33m{[39;49;00mcols_g[33m}[39;49;00m[33m\n[39;49;00m[33mSolution:[39;49;00m[33m{[39;49;00mcols_s[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: Column names/order differ.[0m
+[1m[31mE         Golden:  ('word_id', 'word', 'total_synsets', 'total_senses', 'distinct_domains', 'distinct_posids', 'top_synsetid', 'top_synset_sense_count')[0m
+[1m[31mE         Solution:('word_id', 'word', 'total_synsets', 'total_senses', 'distinct_domains', 'distinct_posids', 'top_synsetid', 'synset_sense_count')[0m
+[1m[31mE       assert ('word_id', '..._posids', ...) == ('word_id', '..._posids', ...)[0m
+[1m[31mE         [0m
+[1m[31mE         At index 7 diff: [0m[33m'[39;49;00m[33mtop_synset_sense_count[39;49;00m[33m'[39;49;00m[90m[39;49;00m != [0m[33m'[39;49;00m[33msynset_sense_count[39;49;00m[33m'[39;49;00m[90m[39;49;00m[0m
+[1m[31mE         Use -v to get more diff[0m
+
+[1m[31m/tests/test_outputs.py[0m:165: AssertionError
+============================================================================ PASSES ============================================================================
+[32m[1m___________________________________________________________ test_compare_golden_vs_solution_runtime ____________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Running iteration 0 of 5
+{'iterations': 5, 'golden': {'median_s': 0.8459162563085556, 'min_s': 0.8347112443298101, 'max_s': 0.9278030171990395}, 'solution': {'median_s': 0.8544302880764008, 'min_s': 0.8480912111699581, 'max_s': 1.2187259178608656}, 'speedup_solution_vs_golden': 0.9900354284174394}
+[32m[1m___________________________________________________________ test_solution_contains_single_sql_query ____________________________________________________________[0m
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+✓ Solution file contains exactly one valid SQL SELECT statement
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_compare_golden_vs_my_sql_query_correctness[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_check_for_db_modifications[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_compare_golden_vs_solution_runtime[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_solution_contains_single_sql_query[0m
+[32mPASSED[0m ../tests/test_outputs.py::[1mtest_solution_is_small[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_outputs_match_exactly[0m - AssertionError: Column names/order differ.
+[31m=========================================================== [31m[1m1 failed[0m, [32m5 passed[0m[31m in 593.96s (0:09:53)[0m[31m ============================================================[0m
+[?2004hroot@2e41c1cb5a80:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@2e41c1cb5a80:/app# 

@@ -1,0 +1,44 @@
+root@2926e2f5485c:/taichi-dev/taichi# asciinema rec --stdin /logs/agent.cast
+asciinema: recording asciicast to /logs/agent.cast
+asciinema: press <ctrl-d> or type "exit" when you're done
+root@2926e2f5485c:/taichi-dev/taichi# clear
+root@2926e2f5485c:/taichi-dev/taichi#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

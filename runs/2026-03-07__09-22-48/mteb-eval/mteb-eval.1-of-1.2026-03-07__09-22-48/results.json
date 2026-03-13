@@ -1,0 +1,21 @@
+{
+    "id": "e2b3a759-d0c5-4c13-8a6e-9d4bc0ac5df1",
+    "trial_name": "mteb-eval.1-of-1.2026-03-07__09-22-48",
+    "task_id": "mteb-eval",
+    "instruction": "Evaluate an embedding model from huggingface on STS12 with mteb such that it achieves a cosine_spearman score of > 0.7. Use the default huggingface cache directory to store the model (~/.cache/huggingface). The result file should follow the default MTEB format i.e. `results/{{hf model org}__{hf model name}}/{model commit id}/{task name}.json`.",
+    "is_resolved": true,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_model_downloaded": "passed",
+        "test_mteb_performance": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/mteb-eval/mteb-eval.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T09:19:19.962411+00:00",
+    "trial_ended_at": "2026-03-07T09:47:38.761024+00:00",
+    "agent_started_at": "2026-03-07T09:29:38.501886+00:00",
+    "agent_ended_at": "2026-03-07T09:46:53.686174+00:00",
+    "test_started_at": "2026-03-07T09:46:57.138424+00:00",
+    "test_ended_at": "2026-03-07T09:47:07.841992+00:00"
+}

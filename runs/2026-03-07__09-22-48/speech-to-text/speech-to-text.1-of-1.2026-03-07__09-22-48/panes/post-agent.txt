@@ -1,0 +1,40 @@
+root@a4aaca81b41d:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@a4aaca81b41d:/app# panda --prompt 'You need to transcribe speech to text.
+>
+> Here is an audio file /app/audio.mp3
+>
+> Your task is to recognize the content in the audio file and transcribe it to text.
+> You need to save the recognized text in the /app/output.txt file.
+>   - demonstration of the format of /app/output.txt: cool, this is a good task.
+>
+> Hint:
+>   - you can use any tools or open-source models on GitHub \
+>   but you need to set up by yourself.
+>   - you only have CPUs.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Task]
+[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+[Bash]
+[TodoWrite]
+[Read]
+The speech-to-text transcription has been completed successfully! The content from `/app/audio.mp3` has been recognized and saved to `/app/output.txt`.
+
+**Transcribed text:** "Hello, this is Terminal Bench. How can I help you?"
+
+The task is complete. 🎉
+root@a4aaca81b41d:/app#
+
+
+
+
+
+
+
+
+
+

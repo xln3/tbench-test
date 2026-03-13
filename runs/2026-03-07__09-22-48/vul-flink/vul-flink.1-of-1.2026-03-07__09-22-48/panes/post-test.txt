@@ -1,0 +1,98 @@
+root@4e2e93384eec:/app# bash /tests/run-tests.sh; tmux wait -S done
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1260 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1895 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [3300 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.8 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [3486 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2025 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [2284 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [34.6 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.5 kB]
+Fetched 36.6 MB in 17s (2135 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 34 not upgraded.
+/tests/run-tests.sh: line 12: /opt/flink/flink-dist/target/flink-1.11.2-bin/flink-1.11.2/bin/start-cluster.sh: No such file or directory
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.12.3 environment at: .tbench-testing
+Resolved 5 packages in 758ms
+Prepared 5 packages in 218ms
+Installed 5 packages in 21ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+collected 1 item
+
+../tests/test_outputs.py F                                                                                                                               [100%]
+
+=========================================================================== FAILURES ===========================================================================
+_____________________________________________________________ test_upload_and_verify_success_file ______________________________________________________________
+
+    def test_upload_and_verify_success_file():
+        # First verify Flink REST is working
+>       _wait_for_flink_rest()
+
+/tests/test_outputs.py:88:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+max_retries = 60, retry_delay_sec = 1.0
+
+    def _wait_for_flink_rest(max_retries: int = 60, retry_delay_sec: float = 1.0) -> None:
+        """Verify Flink REST is reachable before proceeding."""
+        last_status = None
+        last_error = None
+        for _ in range(max_retries):
+            try:
+                conn = http.client.HTTPConnection("localhost", 8081, timeout=5)
+                conn.request("GET", "/jars")
+                resp = conn.getresponse()
+                last_status = resp.status
+                _ = resp.read()
+                conn.close()
+                if 200 <= last_status < 300:
+                    return
+            except (ConnectionRefusedError, TimeoutError, socket.timeout, OSError) as exc:
+                last_error = exc
+            time.sleep(retry_delay_sec)
+
+        if last_error is not None:
+            msg = f"Flink REST not reachable on localhost:8081; last error: {last_error}"
+>           raise AssertionError(msg)
+E           AssertionError: Flink REST not reachable on localhost:8081; last error: [Errno 111] Connection refused
+
+/tests/test_outputs.py:33: AssertionError
+=================================================================== short test summary info ====================================================================
+FAILED ../tests/test_outputs.py::test_upload_and_verify_success_file - AssertionError: Flink REST not reachable on localhost:8081; last error: [Errno 111] Conne
+ction refused
+================================================================= 1 failed in 60.21s (0:01:00) =================================================================
+root@4e2e93384eec:/app#

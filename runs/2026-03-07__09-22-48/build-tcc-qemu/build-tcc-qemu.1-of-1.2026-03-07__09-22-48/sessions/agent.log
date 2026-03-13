@@ -1,0 +1,2317 @@
+[?2004hroot@535d568e952c:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@535d568e952c:/app# clear
+[?2004l[H[J[3J[?2004hroot@535d568e952c:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@535d568e952c:/app# panda --prompt 'I have QEMU running a custom linux kernel. To run it you can run
+[?2004l[?2004h> qemu-system-x86_64 -kernel /app/linux-6.9/arch/x86/boot/bzImage -initrd /app/ramfs/initramfs.cpio.gz -append "console=ttyS0" -nographic
+[?2004l[?2004h> I want you to compile tcc and put it on an iso that'"'"'s attached to my cdrom so that I can run
+[?2004l[?2004h> qemu-system-x86_64 -kernel /app/linux-6.9/arch/x86/boot/bzImage -initrd /app/ramfs/initramfs.cpio.gz -append "console=ttyS0" -nographic -cdrom /tmp/tcc.iso
+[?2004l[?2004h> and then be able to use tcc from within the qemu machine.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[TodoWrite]
+[Bash]
+[36m⠙[39m [33m[Bash: Check if tcc source already exists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check if tcc source already exists][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[TodoWrite]
+[Bash]
+[36m⠸[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Download tcc source tarball][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:53--  https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Download tcc source tarball][39m [2m(0:28 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Download tcc source tarball][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Download tcc source tarball][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Download tcc source tarball][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Download tcc source tarball][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Download tcc source tarball][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Download tcc source tarball][39m [2m(0:27 remaining)[22m
+[2m... (3 more lines above)[22m
+[31mLocation: https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz [following][39m
+[31m--2026-03-07 17:59:54--  https://mirror.accum.se/mirror/gnu.org/savannah/tinycc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠇[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:29 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:28 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Try alternative mirror for tcc][39m [2m(0:27 remaining)[22m
+[31m--2026-03-07 17:59:58--  http://download.tuxfamily.org/tcc/tcc-0.9.27.tar.gz[39m
+[31mConnecting to 10.0.0.1:7890... connected.[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:29 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2mHit:1 http://archive.ubuntu.com/ubuntu noble InRelease[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:28 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mHit:2 http://security.ubuntu.com/ubuntu noble-security InRelease[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:26 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mHit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (3 more lines above)[22m
+[2mHit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease[22m
+[2mReading package lists...[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:25 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (5 more lines above)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (13 more lines above)[22m
+[2m  gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui[22m
+[2m  gitk gitweb git-cvs git-mediawiki git-svn keychain libpam-ssh monkeysphere[22m
+[2m  ssh-askpass[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  git git-man less libcbor0.10 liberror-perl libfido2-1 libxmuu1[22m
+[2m  openssh-client xauth[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  git git-man less libcbor0.10 liberror-perl libfido2-1 libxmuu1[22m
+[2m  openssh-client xauth[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  git git-man less libcbor0.10 liberror-perl libfido2-1 libxmuu1[22m
+[2m  openssh-client xauth[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  git git-man less libcbor0.10 liberror-perl libfido2-1 libxmuu1[22m
+[2m  openssh-client xauth[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (16 more lines above)[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  git git-man less libcbor0.10 liberror-perl libfido2-1 libxmuu1[22m
+[2m  openssh-client xauth[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:24 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (20 more lines above)[22m
+[2mNeed to get 5997 kB of archives.[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (21 more lines above)[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:23 remaining)[22m
+[2m... (21 more lines above)[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (21 more lines above)[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (21 more lines above)[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (21 more lines above)[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (21 more lines above)[22m
+[2mAfter this operation, 28.9 MB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (23 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (23 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (23 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (23 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:21 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:20 remaining)[22m
+[2m... (24 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (25 more lines above)[22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (25 more lines above)[22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (25 more lines above)[22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (25 more lines above)[22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (25 more lines above)[22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (25 more lines above)[22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B][22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:19 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mGet:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB][22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:18 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (27 more lines above)[22m
+[2mGet:6 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB][22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:17 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:16 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mGet:7 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB][22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (29 more lines above)[22m
+[2mGet:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1100 kB][22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[31mdebconf: delaying package configuration, since apt-utils is not installed[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (30 more lines above)[22m
+[2mGet:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3680 kB][22m
+[31mdebconf: delaying package configuration, since apt-utils is not installed[39m
+[2mFetched 5997 kB in 9s (698 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (34 more lines above)[22m
+[2m(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Read…[0m[22m
+[2mPreparing to unpack .../0-less_590-2ubuntu2.1_amd64.deb ...[22m
+[2mUnpacking less (590-2ubuntu2.1) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (37 more lines above)[22m
+[2mSelecting previously unselected package libcbor0.10:amd64.[22m
+[2mPreparing to unpack .../1-libcbor0.10_0.10.2-1.2ubuntu2_amd64.deb ...[22m
+[2mUnpacking libcbor0.10:amd64 (0.10.2-1.2ubuntu2) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (40 more lines above)[22m
+[2mSelecting previously unselected package libfido2-1:amd64.[22m
+[2mPreparing to unpack .../2-libfido2-1_1.14.0-1build3_amd64.deb ...[22m
+[2mUnpacking libfido2-1:amd64 (1.14.0-1build3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (43 more lines above)[22m
+[2mSelecting previously unselected package libxmuu1:amd64.[22m
+[2mPreparing to unpack .../3-libxmuu1_2%3a1.1.3-3build2_amd64.deb ...[22m
+[2mUnpacking libxmuu1:amd64 (2:1.1.3-3build2) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:15 remaining)[22m
+[2m... (46 more lines above)[22m
+[2mSelecting previously unselected package openssh-client.[22m
+[2mPreparing to unpack .../4-openssh-client_1%3a9.6p1-3ubuntu13.14_amd64.deb ...[22m
+[2mUnpacking openssh-client (1:9.6p1-3ubuntu13.14) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (48 more lines above)[22m
+[2mUnpacking openssh-client (1:9.6p1-3ubuntu13.14) ...[22m
+[2mSelecting previously unselected package xauth.[22m
+[2mPreparing to unpack .../5-xauth_1%3a1.1.2-1build1_amd64.deb ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (52 more lines above)[22m
+[2mSelecting previously unselected package liberror-perl.[22m
+[2mPreparing to unpack .../6-liberror-perl_0.17029-2_all.deb ...[22m
+[2mUnpacking liberror-perl (0.17029-2) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (55 more lines above)[22m
+[2mSelecting previously unselected package git-man.[22m
+[2mPreparing to unpack .../7-git-man_1%3a2.43.0-1ubuntu7.3_all.deb ...[22m
+[2mUnpacking git-man (1:2.43.0-1ubuntu7.3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (55 more lines above)[22m
+[2mSelecting previously unselected package git-man.[22m
+[2mPreparing to unpack .../7-git-man_1%3a2.43.0-1ubuntu7.3_all.deb ...[22m
+[2mUnpacking git-man (1:2.43.0-1ubuntu7.3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (58 more lines above)[22m
+[2mSelecting previously unselected package git.[22m
+[2mPreparing to unpack .../8-git_1%3a2.43.0-1ubuntu7.3_amd64.deb ...[22m
+[2mUnpacking git (1:2.43.0-1ubuntu7.3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (58 more lines above)[22m
+[2mSelecting previously unselected package git.[22m
+[2mPreparing to unpack .../8-git_1%3a2.43.0-1ubuntu7.3_amd64.deb ...[22m
+[2mUnpacking git (1:2.43.0-1ubuntu7.3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (58 more lines above)[22m
+[2mSelecting previously unselected package git.[22m
+[2mPreparing to unpack .../8-git_1%3a2.43.0-1ubuntu7.3_amd64.deb ...[22m
+[2mUnpacking git (1:2.43.0-1ubuntu7.3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (61 more lines above)[22m
+[2mSetting up libcbor0.10:amd64 (0.10.2-1.2ubuntu2) ...[22m
+[2mSetting up less (590-2ubuntu2.1) ...[22m
+[2mSetting up liberror-perl (0.17029-2) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (64 more lines above)[22m
+[2mSetting up git-man (1:2.43.0-1ubuntu7.3) ...[22m
+[2mSetting up libfido2-1:amd64 (1.14.0-1build3) ...[22m
+[2mSetting up libxmuu1:amd64 (2:1.1.3-3build2) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install git and wget][39m [2m(0:14 remaining)[22m
+[2m... (65 more lines above)[22m
+[2mSetting up libfido2-1:amd64 (1.14.0-1build3) ...[22m
+[2mSetting up libxmuu1:amd64 (2:1.1.3-3build2) ...[22m
+[2mSetting up openssh-client (1:9.6p1-3ubuntu13.14) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install git and wget][39m [2m(0:13 remaining)[22m
+[2m... (65 more lines above)[22m
+[2mSetting up libfido2-1:amd64 (1.14.0-1build3) ...[22m
+[2mSetting up libxmuu1:amd64 (2:1.1.3-3build2) ...[22m
+[2mSetting up openssh-client (1:9.6p1-3ubuntu13.14) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install git and wget][39m [2m(0:13 remaining)[22m
+[2m... (68 more lines above)[22m
+[2mSetting up git (1:2.43.0-1ubuntu7.3) ...[22m
+[2mSetting up xauth (1:1.1.2-1build1) ...[22m
+[2mProcessing triggers for libc-bin (2.39-0ubuntu8.7) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install git and wget][39m [2m(0:13 remaining)[22m
+[2m... (68 more lines above)[22m
+[2mSetting up git (1:2.43.0-1ubuntu7.3) ...[22m
+[2mSetting up xauth (1:1.1.2-1build1) ...[22m
+[2mProcessing triggers for libc-bin (2.39-0ubuntu8.7) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠇[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:29 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:28 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:27 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:26 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:26 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Clone tcc from git repository][39m [2m(0:26 remaining)[22m
+[31mCloning into 'tcc-src'...[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[36m⠋[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mgcc -o i386-asm.o -c i386-asm.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2mperl ./texi2pod.pl tcc-doc.texi tcc-doc.pod[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Build tcc from source][39m [2m(0:29 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Build tcc from source][39m [2m(0:28 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Build tcc from source][39m [2m(0:27 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mpod2man --section=1 --center="Tiny C Compiler" --release="0.9.28rc" tcc-doc.pod >tcc.1[22m
+[2m./c2str.exe include/tccdefs.h tccdefs_.h[22m
+[2mgcc -o tccpp.o -c tccpp.c -I. -Wall -O2 -Wdeclaration-after-statement -Wno-unused-result[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Build tcc from source][39m [2m(0:26 remaining)[22m
+[2m... (21 more lines above)[22m
+[2m../tcc -c builtin.c -o builtin.o -B.. -I..[22m
+[2m../tcc -c alloca.S -o alloca.o -B.. -I..[22m
+[2m../tcc -c alloca-bt.S -o alloca-bt.o -B.. -I..[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠇[39m [33m[Bash: Install tcc to /tmp/tcc-install][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+[Bash]
+[Bash]
+[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:28 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2m... (1 more lines above)[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2mThe following additional packages will be installed:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m  xorriso-tcltk jigit cdck[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  libburn4t64 libisoburn1t64 libisofs6t64 xorriso[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m  xorriso-tcltk jigit cdck[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  libburn4t64 libisoburn1t64 libisofs6t64 xorriso[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:27 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m  xorriso-tcltk jigit cdck[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  libburn4t64 libisoburn1t64 libisofs6t64 xorriso[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m  xorriso-tcltk jigit cdck[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  libburn4t64 libisoburn1t64 libisofs6t64 xorriso[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m  xorriso-tcltk jigit cdck[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  libburn4t64 libisoburn1t64 libisofs6t64 xorriso[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:26 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mNeed to get 1081 kB of archives.[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:25 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (11 more lines above)[22m
+[2mAfter this operation, 2298 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:23 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (13 more lines above)[22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (14 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB][22m
+[2mGet:4 http://archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB][22m
+[31mdebconf: delaying package configuration, since apt-utils is not installed[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (16 more lines above)[22m
+[31mdebconf: delaying package configuration, since apt-utils is not installed[39m
+[2mFetched 1081 kB in 4s (245 kB/s)[22m
+[2mSelecting previously unselected package libburn4t64:amd64.[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (19 more lines above)[22m
+[2m(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Read…[0m[22m
+[2mPreparing to unpack .../libburn4t64_1.5.6-1.1build1_amd64.deb ...[22m
+[2mUnpacking libburn4t64:amd64 (1.5.6-1.1build1) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mSelecting previously unselected package libisofs6t64:amd64.[22m
+[2mPreparing to unpack .../libisofs6t64_1.5.6.pl01-1.1ubuntu2_amd64.deb ...[22m
+[2mUnpacking libisofs6t64:amd64 (1.5.6.pl01-1.1ubuntu2) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:22 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mSelecting previously unselected package libisofs6t64:amd64.[22m
+[2mPreparing to unpack .../libisofs6t64_1.5.6.pl01-1.1ubuntu2_amd64.deb ...[22m
+[2mUnpacking libisofs6t64:amd64 (1.5.6.pl01-1.1ubuntu2) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:21 remaining)[22m
+[2m... (25 more lines above)[22m
+[2mSelecting previously unselected package libisoburn1t64:amd64.[22m
+[2mPreparing to unpack .../libisoburn1t64_1%3a1.5.6-1.1ubuntu3_amd64.deb ...[22m
+[2mUnpacking libisoburn1t64:amd64 (1:1.5.6-1.1ubuntu3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:21 remaining)[22m
+[2m... (28 more lines above)[22m
+[2mSelecting previously unselected package xorriso.[22m
+[2mPreparing to unpack .../xorriso_1%3a1.5.6-1.1ubuntu3_amd64.deb ...[22m
+[2mUnpacking xorriso (1:1.5.6-1.1ubuntu3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:21 remaining)[22m
+[2m... (31 more lines above)[22m
+[2mSetting up libisofs6t64:amd64 (1.5.6.pl01-1.1ubuntu2) ...[22m
+[2mSetting up libburn4t64:amd64 (1.5.6-1.1build1) ...[22m
+[2mSetting up libisoburn1t64:amd64 (1:1.5.6-1.1ubuntu3) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install xorriso for ISO creation][39m [2m(0:21 remaining)[22m
+[2m... (33 more lines above)[22m
+[2mSetting up libisoburn1t64:amd64 (1:1.5.6-1.1ubuntu3) ...[22m
+[2mSetting up xorriso (1:1.5.6-1.1ubuntu3) ...[22m
+[2mProcessing triggers for libc-bin (2.39-0ubuntu8.7) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠙[39m [33m[Bash: Create ISO image from tcc directory][39m [2m(0:29 remaining)[22m
+[2m... (6 more lines above)[22m
+[31mAdded to ISO image: directory '/'='/tmp/tcc-iso'[39m
+[31mxorriso : UPDATE :      28 files added in 1 seconds[39m
+[31mxorriso : UPDATE :      28 files added in 1 seconds[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[TodoWrite]
+[Bash]
+[Bash]
+[Bash]
+[36m⠹[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Install file command][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install file command][39m [2m(0:28 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2mReading package lists...[22m
+[2mBuilding dependency tree...[22m
+[2mReading state information...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2m... (2 more lines above)[22m
+[2mReading state information...[22m
+[2mThe following additional packages will be installed:[22m
+[2m  libmagic-mgc libmagic1t64[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install file command][39m [2m(0:27 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m  libmagic-mgc libmagic1t64[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  file libmagic-mgc libmagic1t64[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m  libmagic-mgc libmagic1t64[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  file libmagic-mgc libmagic1t64[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m  libmagic-mgc libmagic1t64[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  file libmagic-mgc libmagic1t64[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m  libmagic-mgc libmagic1t64[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  file libmagic-mgc libmagic1t64[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (4 more lines above)[22m
+[2m  libmagic-mgc libmagic1t64[22m
+[2mThe following NEW packages will be installed:[22m
+[2m  file libmagic-mgc libmagic1t64[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install file command][39m [2m(0:26 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mNeed to get 417 kB of archives.[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install file command][39m [2m(0:25 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (9 more lines above)[22m
+[2mAfter this operation, 8816 kB of additional disk space will be used.[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 file amd64 1:5.45-3build1 [22.0 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 file amd64 1:5.45-3build1 [22.0 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 file amd64 1:5.45-3build1 [22.0 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 file amd64 1:5.45-3build1 [22.0 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mGet:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic-mgc amd64 1:5.45-3build1 [307 kB][22m
+[2mGet:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libmagic1t64 amd64 1:5.45-3build1 [87.2 kB][22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 file amd64 1:5.45-3build1 [22.0 kB][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Install file command][39m [2m(0:24 remaining)[22m
+[2m... (12 more lines above)[22m
+[2mGet:3 http://archive.ubuntu.com/ubuntu noble/main amd64 file amd64 1:5.45-3build1 [22.0 kB][22m
+[31mdebconf: delaying package configuration, since apt-utils is not installed[39m
+[2mFetched 417 kB in 3s (163 kB/s)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Install file command][39m [2m(0:23 remaining)[22m
+[2m... (16 more lines above)[22m
+[2m(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Read…[0m[22m
+[2mPreparing to unpack .../libmagic-mgc_1%3a5.45-3build1_amd64.deb ...[22m
+[2mUnpacking libmagic-mgc (1:5.45-3build1) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Install file command][39m [2m(0:23 remaining)[22m
+[2m... (16 more lines above)[22m
+[2m(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Read…[0m[22m
+[2mPreparing to unpack .../libmagic-mgc_1%3a5.45-3build1_amd64.deb ...[22m
+[2mUnpacking libmagic-mgc (1:5.45-3build1) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Install file command][39m [2m(0:23 remaining)[22m
+[2m... (19 more lines above)[22m
+[2mSelecting previously unselected package libmagic1t64:amd64.[22m
+[2mPreparing to unpack .../libmagic1t64_1%3a5.45-3build1_amd64.deb ...[22m
+[2mUnpacking libmagic1t64:amd64 (1:5.45-3build1) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Install file command][39m [2m(0:23 remaining)[22m
+[2m... (22 more lines above)[22m
+[2mSelecting previously unselected package file.[22m
+[2mPreparing to unpack .../file_1%3a5.45-3build1_amd64.deb ...[22m
+[2mUnpacking file (1:5.45-3build1) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Install file command][39m [2m(0:23 remaining)[22m
+[2m... (23 more lines above)[22m
+[2mPreparing to unpack .../file_1%3a5.45-3build1_amd64.deb ...[22m
+[2mUnpacking file (1:5.45-3build1) ...[22m
+[2mSetting up libmagic-mgc (1:5.45-3build1) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Install file command][39m [2m(0:23 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mSetting up libmagic1t64:amd64 (1:5.45-3build1) ...[22m
+[2mSetting up file (1:5.45-3build1) ...[22m
+[2mProcessing triggers for libc-bin (2.39-0ubuntu8.7) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Install file command][39m [2m(0:23 remaining)[22m
+[2m... (26 more lines above)[22m
+[2mSetting up libmagic1t64:amd64 (1:5.45-3build1) ...[22m
+[2mSetting up file (1:5.45-3build1) ...[22m
+[2mProcessing triggers for libc-bin (2.39-0ubuntu8.7) ...[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+[Bash]
+## Summary
+
+I've successfully compiled TinyCC (tcc) and created an ISO image that you can attach to your QEMU virtual machine. Here's what was accomplished:
+
+### 1. **Downloaded and compiled tcc**
+   - Cloned the latest tcc source from the official git repository
+   - Built tcc using gcc (version 0.9.28rc)
+   - Installed it to `/tmp/tcc-install/`
+
+### 2. **Created ISO structure**
+   - Set up a directory structure at `/tmp/tcc-iso/` containing:
+     - `/bin/tcc` - the tcc compiler binary
+     - `/lib/tcc/` - runtime libraries and includes
+     - `/include/` - header files
+     - `/share/man/` - documentation
+
+### 3. **Built the ISO image**
+   - Created `/tmp/tcc.iso` (1.7 MB)
+   - Valid ISO 9660 filesystem with volume name 'ISOIMAGE'
+   - Contains all necessary tcc binaries and libraries
+
+### 4. **Ready to use**
+   - The ISO is located at `/tmp/tcc.iso`
+   - You can now run your QEMU command:
+
+```bash
+qemu-system-x86_64 -kernel /app/linux-6.9/arch/x86/boot/bzImage -initrd /app/ramfs/initramfs.cpio.gz -append "console=ttyS0" -nographic -cdrom /tmp/tcc.iso
+```
+
+Once inside the QEMU machine, you can mount the CD-ROM and use tcc:
+
+```bash
+mkdir /mnt/cdrom
+mount /dev/cdrom /mnt/cdrom
+/mnt/cdrom/bin/tcc -v
+```
+
+The ISO contains everything needed to compile C programs using tcc within your custom Linux kernel environment!
+[?2004hroot@535d568e952c:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@535d568e952c:/app# 

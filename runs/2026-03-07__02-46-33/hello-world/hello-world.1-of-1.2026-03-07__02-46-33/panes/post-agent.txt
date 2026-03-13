@@ -1,0 +1,40 @@
+root@01e51c31654d:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@01e51c31654d:/app# panda --prompt 'Create a file called /app/hello.txt. Write "Hello, world!" to it.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Write]
+Done! I've created `/app/hello.txt` with the content "Hello, world!".
+[Read]
+Done! I've created `/app/hello.txt` and verified its contents. The file contains exactly "Hello, world!" as requested.
+root@01e51c31654d:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

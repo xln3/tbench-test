@@ -1,0 +1,153 @@
+root@660fe443d3d3:/app# bash /tests/run-tests.sh; tmux wait -S done
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 publicsuffix
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  curl libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 publicsuffix
+0 upgraded, 12 newly installed, 0 to remove and 39 not upgraded.
+Need to get 1564 kB of archives.
+After this operation, 3748 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg-10 [20.3 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 libsasl2-2 amd64 2.1.28+dfsg-10 [59.7 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-5 [183 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+Get:5 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+Get:6 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+Get:7 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+Get:8 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+Get:9 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+Get:10 http://deb.debian.org/debian bookworm/main amd64 libldap-common all 2.5.13+dfsg-5 [29.3 kB]
+Get:11 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules amd64 2.1.28+dfsg-10 [66.6 kB]
+Get:12 http://deb.debian.org/debian bookworm/main amd64 publicsuffix all 20230209.2326-1 [126 kB]
+Fetched 1564 kB in 2s (908 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libsasl2-modules-db:amd64.
+(Reading database ... 13242 files and directories currently installed.)
+Preparing to unpack .../00-libsasl2-modules-db_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../01-libsasl2-2_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../02-libldap-2.5-0_2.5.13+dfsg-5_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../03-libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../04-libpsl5_0.21.2-1_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.2-1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../05-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../06-libssh2-1_1.10.0-3+b1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../07-libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../08-curl_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u14) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../09-libldap-common_2.5.13+dfsg-5_all.deb ...
+Unpacking libldap-common (2.5.13+dfsg-5) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../10-libsasl2-modules_2.1.28+dfsg-10_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../11-publicsuffix_20230209.2326-1_all.deb ...
+Unpacking publicsuffix (20230209.2326-1) ...
+Setting up libpsl5:amd64 (0.21.2-1) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Setting up libldap-common (2.5.13+dfsg-5) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+Setting up publicsuffix (20230209.2326-1) ...
+Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up curl (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: /usr/local/bin/python
+Creating virtual environment at: .tbench-testing
+Activate with: source .tbench-testing/bin/activate
+Using Python 3.13.1 environment at: .tbench-testing
+Resolved 5 packages in 635ms
+Prepared 5 packages in 185ms
+Installed 5 packages in 18ms
+ + iniconfig==2.3.0
+ + packaging==26.0
+ + pluggy==1.6.0
+ + pygments==2.19.2
+ + pytest==8.4.1
+===================================================================== test session starts ======================================================================
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0 -- /app/.tbench-testing/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+collected 1 item
+
+../tests/test_outputs.py::test_attack FAILED                                                                                                             [100%]
+
+=========================================================================== FAILURES ===========================================================================
+_________________________________________________________________________ test_attack __________________________________________________________________________
+
+    def test_attack():
+        """
+        Test that the linear cryptanalysis attack correctly decrypts all ciphertexts.
+
+        This test verifies that:
+        1. The attack successfully performs linear cryptanalysis on FEAL cipher
+        2. All ciphertexts from ciphertexts.txt are correctly decrypted
+        3. The resulting plaintexts match the expected decrypted values
+
+        The test checks that each of the 100 expected plaintext values
+        (representing the decrypted results of the ciphertexts) appears
+        in the generated plaintexts.txt file, confirming successful
+        key recovery and decryption through linear cryptanalysis.
+        """
+        data = open("/app/plaintexts.txt").read()
+        for c in soln.split():
+>           assert c in data
+E           AssertionError: assert '1050628112036199672' in '9898663263359686056\n13683862062260152874\n17683229563807792899\n16657263748157227888\n100254685445
+59693474\n8666296045063847869\n5021351496645425661\n1834352881518798490\n6759671285668538027\n6070298848770285387\n8593917571168212345\n1445422310473910483\n106
+99421934448127678\n8501796707391647792\n3175876781057850474\n17480391260064645993\n416208125131187250\n15453409907389722830\n11945257763538880337\n5233635430399
+73628\n16585327664743322562\n531060357531736314\n14857168496224520353\n4934677238199476973\n11712885844259151296\n15084006312076691175\n4700794796468352970\n398
+683035806756011\n7796623565401180772\n18429402429943275793\n11213595731423328151\n14093442144859666833\n6946848541697032028\n5271960348482487312\n77371728135502
+8886\n13621597445943250838\n2242529360398106814\n3237056054004144760\n17636565593439760154\n16365491782325520746\n4567088207521320777\n3430439748798194621\n1335
+8648996656498951\n10107493021416007406\n12846817650424675977\n3044067066958113911\n9523753522715440972\n2349062618858896469\n8611894097991939128\n50446788362694
+40060\n1894653982648527271\n6413718320001439787\n17774092103237426629\n14181582916750455390\n7543417989247809108\n11687467992600847329\n6541055387013248856\n374
+0979695821200799\n8302513143117541763\n3255432947327502755\n8461997974977693842\n7314195968396394156\n12688309016051293028\n10128220816369412184\n51174432160418
+48779\n5505103357893080263\n3776794264350163558\n13988667778656782896\n1439553954534427831\n17778014282091550507\n127972516043679799\n17190532924853810389\n9068
+647725269480941\n4034408922165920545\n9171497542451878161\n16982950160853198058\n4246452759119025510\n11949672499816025803\n3180792667854224982\n177569910354618
+80201\n5968318190115986450\n5278532298737928671\n336770834292794520\n835190081866466399\n11729086990317353479\n6726561642884726778\n10887975073519066803\n320999
+8466753545069\n3802920573691216220\n5135474732108187630\n15872165640348164065\n5509996947444327803\n10498144266599310284\n14571229730967023030\n9285261047906334
+161\n1057980002400556008\n261982978102364934\n94725670542904956\n4384421231630977420\n13982159922776300813\n'
+
+/tests/test_outputs.py:122: AssertionError
+=================================================================== short test summary info ====================================================================
+FAILED ../tests/test_outputs.py::test_attack - AssertionError: assert '1050628112036199672' in '9898663263359686056\n13683862062260152874\n17683229563807792899\
+n16657263748157227888\n1002546854455969347...
+====================================================================== 1 failed in 0.06s =======================================================================
+root@660fe443d3d3:/app#

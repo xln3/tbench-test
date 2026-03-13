@@ -1,0 +1,178 @@
+[?2004hroot@733d8615b2ef:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@733d8615b2ef:/app# clear
+[?2004l[H[J[3J[?2004hroot@733d8615b2ef:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+                                              0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 51%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 52%Reading package lists... 53%Reading package lists... 53%Reading package lists... 54%Reading package lists... 54%Reading package lists... 55%Reading package lists... 55%Reading package lists... 61%Reading package lists... 61%Reading package lists... 68%Reading package lists... 68%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 85%Reading package lists... 85%Reading package lists... 89%Reading package lists... 89%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 90%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+curl is already the newest version (8.5.0-2ubuntu10.7).
+0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+Using CPython 3.12.3 interpreter at: [36m/usr/bin/python3[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.12.3 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.3.4                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.3.4                                                                                                                                                 [0m[2K[37m⠼[0m [2mpytest==8.3.4                                                                                                                                                 [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m4 packages[0m [2min 688ms[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB                                                                                            [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB                                                                                           [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m[2m------------------------------[0m[0m     0 B/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/335.04 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m[2m------------------------------[0m[0m     0 B/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/335.04 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/335.04 KiB                                                                                          [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/335.04 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/335.04 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/335.04 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/335.04 KiB                                                                                        [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/335.04 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpluggy              [0m [32m------------------------------[2m[0m[0m 20.06 KiB/20.06 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/335.04 KiB                                                                                        [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/335.04 KiB                                                                                        [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 79.46 KiB/335.04 KiB                                                                                        [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)
+[2mpytest              [0m [32m---------[2m---------------------[0m[0m 95.46 KiB/335.04 KiB                                                                                        [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/4)                                                                                                                                   [2K[2mPrepared [1m4 packages[0m [2min 115ms[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/4] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/4] [2mpluggy==1.6.0                                                                                                                        [0m[2K█████░░░░░░░░░░░░░░░ [1/4] [2mpluggy==1.6.0                                                                                                                        [0m[2K█████░░░░░░░░░░░░░░░ [1/4] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████████░░░░░░░░░░ [2/4] [2miniconfig==2.3.0                                                                                                                     [0m[2K██████████░░░░░░░░░░ [2/4] [2mpackaging==26.0                                                                                                                      [0m[2K███████████████░░░░░ [3/4] [2mpackaging==26.0                                                                                                                      [0m[2K███████████████░░░░░ [3/4] [2mpytest==8.3.4                                                                                                                        [0m[2K████████████████████ [4/4] [2mpytest==8.3.4                                                                                                                        [0m[2K[2mInstalled [1m4 packages[0m [2min 14ms[0m[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpytest[0m[2m==8.3.4[0m
+Test dependencies installed successfully
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.12.3, pytest-8.3.4, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollected 6 items                                                                                                                                              [0m
+
+test_outputs.py [32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31m                                                                                                                                   [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m___________________________________________________________________ test_output_files_exist ____________________________________________________________________[0m
+
+    def test_output_files_exist():
+        """Test that all required output CSV files exist."""
+        required_files = [
+            "/app/alpha_est.csv",
+            "/app/sigma_est.csv",
+            "/app/rho_est.csv",
+            "/app/beta_est.csv",
+        ]
+    
+        for file_path in required_files:
+>           assert os.path.exists(file_path), f"Required output file not found: {file_path}"
+[1m[31mE           AssertionError: Required output file not found: /app/alpha_est.csv[0m
+[1m[31mE           assert False[0m
+[1m[31mE            +  where False = <function exists at 0x7fc1cc88b600>('/app/alpha_est.csv')[0m
+[1m[31mE            +    where <function exists at 0x7fc1cc88b600> = <module 'posixpath' (frozen)>.exists[0m
+[1m[31mE            +      where <module 'posixpath' (frozen)> = os.path[0m
+
+[1m[31mtest_outputs.py[0m:56: AssertionError
+[31m[1m________________________________________________________________ test_alpha_estimation_accuracy ________________________________________________________________[0m
+
+    def test_alpha_estimation_accuracy():
+        """Test that alpha posterior mean is within expected range [1.08, 1.1]."""
+        file_path = "/app/alpha_est.csv"
+        if not os.path.exists(file_path):
+>           assert False, f"alpha estimation file not found: {file_path}"
+[1m[31mE           AssertionError: alpha estimation file not found: /app/alpha_est.csv[0m
+[1m[31mE           assert False[0m
+
+[1m[31mtest_outputs.py[0m:72: AssertionError
+[31m[1m________________________________________________________________ test_sigma_estimation_accuracy ________________________________________________________________[0m
+
+    def test_sigma_estimation_accuracy():
+        """Test that sigma posterior mean is within expected range [0.133, 0.136]."""
+        file_path = "/app/sigma_est.csv"
+        if not os.path.exists(file_path):
+>           assert False, f"sigma estimation file not found: {file_path}"
+[1m[31mE           AssertionError: sigma estimation file not found: /app/sigma_est.csv[0m
+[1m[31mE           assert False[0m
+
+[1m[31mtest_outputs.py[0m:97: AssertionError
+[31m[1m_________________________________________________________________ test_rho_estimation_accuracy _________________________________________________________________[0m
+
+    def test_rho_estimation_accuracy():
+        """Test that rho posterior means are within expected ranges."""
+        file_path = "/app/rho_est.csv"
+        if not os.path.exists(file_path):
+>           assert False, f"rho estimation file not found: {file_path}"
+[1m[31mE           AssertionError: rho estimation file not found: /app/rho_est.csv[0m
+[1m[31mE           assert False[0m
+
+[1m[31mtest_outputs.py[0m:122: AssertionError
+[31m[1m________________________________________________________________ test_beta_estimation_accuracy _________________________________________________________________[0m
+
+    def test_beta_estimation_accuracy():
+        """Test that beta posterior means are within expected ranges."""
+        file_path = "/app/beta_est.csv"
+        if not os.path.exists(file_path):
+>           assert False, f"beta estimation file not found: {file_path}"
+[1m[31mE           AssertionError: beta estimation file not found: /app/beta_est.csv[0m
+[1m[31mE           assert False[0m
+
+[1m[31mtest_outputs.py[0m:154: AssertionError
+============================================================================ PASSES ============================================================================
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[32mPASSED[0m test_outputs.py::[1mtest_r_rstan_not_installed[0m
+[31mFAILED[0m test_outputs.py::[1mtest_output_files_exist[0m - AssertionError: Required output file not found: /app/alpha_est.csv
+[31mFAILED[0m test_outputs.py::[1mtest_alpha_estimation_accuracy[0m - AssertionError: alpha estimation file not found: /app/alpha_est.csv
+[31mFAILED[0m test_outputs.py::[1mtest_sigma_estimation_accuracy[0m - AssertionError: sigma estimation file not found: /app/sigma_est.csv
+[31mFAILED[0m test_outputs.py::[1mtest_rho_estimation_accuracy[0m - AssertionError: rho estimation file not found: /app/rho_est.csv
+[31mFAILED[0m test_outputs.py::[1mtest_beta_estimation_accuracy[0m - AssertionError: beta estimation file not found: /app/beta_est.csv
+[31m================================================================= [31m[1m5 failed[0m, [32m1 passed[0m[31m in 0.06s[0m[31m ==================================================================[0m
+[?2004hroot@733d8615b2ef:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@733d8615b2ef:/app# 

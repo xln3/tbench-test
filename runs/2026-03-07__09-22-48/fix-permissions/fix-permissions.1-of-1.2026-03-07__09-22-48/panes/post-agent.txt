@@ -1,0 +1,40 @@
+root@e1b630f13791:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+root@e1b630f13791:/app# panda --prompt 'A script called '"'"'/app/process_data.sh'"'"' won'"'"'t run. Figure out what'"'"'s wrong and fix it so the script can r
+un successfully.'; tmux wait -S done
+Downloading https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Bash]
+[Bash]
+[Bash]
+[Bash]
+[TodoWrite]
+The script is now fully functional and can be executed normally.
+root@e1b630f13791:/app#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

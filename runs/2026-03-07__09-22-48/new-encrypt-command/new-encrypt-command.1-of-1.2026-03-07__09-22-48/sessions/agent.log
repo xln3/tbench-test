@@ -1,0 +1,22 @@
+[?2004hroot@98c30f804b13:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@98c30f804b13:/app# clear
+[?2004l[H[J[3J[?2004hroot@98c30f804b13:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@98c30f804b13:/app# panda --prompt 'Please help me encrypt all the files I have in the /app/data/ folder using rencrypt which i'"'"'ve just installed.
+[?2004l[?2004h> 
+[?2004l[?2004h> I want to use the most secure encryption that it provides and the output should go into a /app/encrypted_data/ directory where the basenames are the same.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Bash]
+[36m⠙[39m [33m[Bash: Check rencrypt help to understand available options and encryption methods][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check rencrypt help to understand available options and encryption methods][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Bash]
+Error: OpenAI API error: 503 Service Unavailable
+upstream connect error or disconnect/reset before headers. reset reason: connection termination
+[?2004hroot@98c30f804b13:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@98c30f804b13:/app# 

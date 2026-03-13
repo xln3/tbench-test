@@ -1,0 +1,21 @@
+{
+    "id": "fd90f790-11f2-4ea1-b61c-22e55a36959f",
+    "trial_name": "speech-to-text.1-of-1.2026-03-07__09-22-48",
+    "task_id": "speech-to-text",
+    "instruction": "You need to transcribe speech to text.\n\nHere is an audio file /app/audio.mp3\n\nYour task is to recognize the content in the audio file and transcribe it to text.\nYou need to save the recognized text in the /app/output.txt file.\n  - demonstration of the format of /app/output.txt: cool, this is a good task.\n\nHint:\n  - you can use any tools or open-source models on GitHub \\\n  but you need to set up by yourself.\n  - you only have CPUs.",
+    "is_resolved": true,
+    "failure_mode": "unset",
+    "parser_results": {
+        "test_output_txt_exists": "passed",
+        "test_output_txt_content": "passed"
+    },
+    "recording_path": "2026-03-07__09-22-48/speech-to-text/speech-to-text.1-of-1.2026-03-07__09-22-48/sessions/agent.cast",
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "trial_started_at": "2026-03-07T06:28:20.988092+00:00",
+    "trial_ended_at": "2026-03-07T06:34:41.494111+00:00",
+    "agent_started_at": "2026-03-07T06:29:12.077054+00:00",
+    "agent_ended_at": "2026-03-07T06:34:15.792268+00:00",
+    "test_started_at": "2026-03-07T06:34:19.277381+00:00",
+    "test_ended_at": "2026-03-07T06:34:27.628766+00:00"
+}

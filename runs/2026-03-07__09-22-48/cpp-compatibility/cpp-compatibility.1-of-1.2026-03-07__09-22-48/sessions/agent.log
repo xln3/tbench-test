@@ -1,0 +1,10 @@
+[?2004hroot@54e7d2e81861:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@54e7d2e81861:/app# clear
+[?2004l[H[J[3J[?2004hroot@54e7d2e81861:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@54e7d2e81861:/app# panda --prompt 'One of my template function (located in /app/sum_array.h) cannot be used by my C++11 projects.
+[?2004l[?2004h> Can you edit the /app/sum_array.h to downgrade the implementation such that it is compatible with C++11 projects while keeping the same interface.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Read]
+[Edit]

@@ -1,0 +1,497 @@
+[?2004hroot@30f5cd3bf68b:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@30f5cd3bf68b:/app# clear
+[?2004l[H[J[3J[?2004hroot@30f5cd3bf68b:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+0% [1 InRelease 4096 B/151 kB 3%]                                 0% [Working]0% [Waiting for headers]                        Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+0% [2 InRelease 15.7 kB/55.4 kB 28%]                                    0% [Working]0% [Waiting for headers]                        Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+0% [3 InRelease 4096 B/48.0 kB 9%]                                  0% [Working]16% [Waiting for headers]                         Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+16% [4 Packages 5776 B/8792 kB 0%]50% [4 Packages 4034 kB/8792 kB 46%]                                    91% [Working]91% [4 Packages store 0 B] [Waiting for headers]                                                Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+91% [4 Packages store 0 B] [5 Packages 6924 B/6924 B 100%]                                                          91% [4 Packages store 0 B]                          Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [293 kB]
+91% [4 Packages store 0 B] [6 Packages 0 B/293 kB 0%]                                                     93% [4 Packages store 0 B]93% [4 Packages store 0 B]93% [4 Packages store 0 B]                          96% [Working]96% [5 Packages store 0 B]                          98% [Working]98% [6 Packages store 0 B]                          100% [Working]              Fetched 9346 kB in 3s (2809 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 83%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcurl4 libnghttp2-14 librtmp1 libssh2-1
+The following NEW packages will be installed:
+  curl libcurl4 libnghttp2-14 librtmp1 libssh2-1
+0 upgraded, 5 newly installed, 0 to remove and 37 not upgraded.
+Need to get 1020 kB of archives.
+After this operation, 2101 kB of additional disk space will be used.
+0% [Working]            Get:1 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+2% [1 libnghttp2-14 28.2 kB/73.0 kB 39%]                                        10% [Working]             Get:2 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+13% [2 librtmp1 42.6 kB/60.8 kB 70%]                                    18% [Working]18% [Waiting for headers]                         Get:3 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+18% [3 libssh2-1 0 B/179 kB 0%]                               37% [Working]             Get:4 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+38% [4 libcurl4 17.3 kB/392 kB 4%]                                  71% [Working]             Get:5 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+71% [5 curl 0 B/316 kB 0%]                          100% [Working]              Fetched 1020 kB in 1s (742 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libnghttp2-14:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23567 files and directories currently installed.)
+Preparing to unpack .../libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../libssh2-1_1.10.0-3+b1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.88.1-10+deb12u14_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u14) ...
+Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+Setting up curl (7.88.1-10+deb12u14) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+downloading uv 0.7.13 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Using CPython 3.13.1 interpreter at: [36m/usr/local/bin/python[39m
+Creating virtual environment at: [36m.tbench-testing[39m
+Activate with: [32msource .tbench-testing/bin/activate[39m
+[2mUsing Python 3.13.1 environment at: .tbench-testing[0m
+[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠋[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠙[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mResolving dependencies...                                                                                                                                     [0m[2K[37m⠹[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mpytest==8.4.1                                                                                                                                                 [0m[2K[37m⠸[0m [2mselenium==4.35.0                                                                                                                                              [0m[2K[37m⠸[0m [2mbeautifulsoup4==4.13.5                                                                                                                                        [0m[2K[37m⠸[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2miniconfig==2.3.0                                                                                                                                              [0m[2K[37m⠼[0m [2mpackaging==26.0                                                                                                                                               [0m[2K[37m⠼[0m [2mpluggy==1.6.0                                                                                                                                                 [0m[2K[37m⠼[0m [2mpygments==2.19.2                                                                                                                                              [0m[2K[37m⠼[0m [2murllib3==2.6.3                                                                                                                                                [0m[2K[37m⠼[0m [2murllib3==2.6.3                                                                                                                                                [0m[2K[37m⠼[0m [2mtrio==0.30.0                                                                                                                                                  [0m[2K[37m⠼[0m [2mtrio-websocket==0.12.2                                                                                                                                        [0m[2K[37m⠼[0m [2mcertifi==2026.2.25                                                                                                                                            [0m[2K[37m⠼[0m [2mtyping-extensions==4.14.1                                                                                                                                     [0m[2K[37m⠼[0m [2mwebsocket-client==1.8.0                                                                                                                                       [0m[2K[37m⠼[0m [2msoupsieve==2.8.3                                                                                                                                              [0m[2K[37m⠴[0m [2msoupsieve==2.8.3                                                                                                                                              [0m[2K[37m⠴[0m [2mpysocks==1.7.1                                                                                                                                                [0m[2K[37m⠴[0m [2mattrs==25.4.0                                                                                                                                                 [0m[2K[37m⠴[0m [2msortedcontainers==2.4.0                                                                                                                                       [0m[2K[37m⠴[0m [2midna==3.11                                                                                                                                                    [0m[2K[37m⠴[0m [2moutcome==1.3.0.post0                                                                                                                                          [0m[2K[37m⠴[0m [2msniffio==1.3.1                                                                                                                                                [0m[2K[37m⠴[0m [2mwsproto==1.3.2                                                                                                                                                [0m[2K[37m⠦[0m [2mwsproto==1.3.2                                                                                                                                                [0m[2K[37m⠦[0m [2mh11==0.16.0                                                                                                                                                   [0m[2K[37m⠦[0m [2m                                                                                                                                                              [0m[2K[2mResolved [1m22 packages[0m [2min 1.17s[0m[0m
+[37m⠋[0m [2mPreparing packages...[0m (0/0)                                                                                                                                   [2K[37m⠋[0m [2mPreparing packages...[0m (0/22)                                                                                                                                  [2K[37m⠙[0m [2mPreparing packages...[0m (0/22)                                                                                                                                  [2K[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mwebsocket-client    [0m [32m[2m------------------------------[0m[0m     0 B/57.45 KiB                                                                                           [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [1A[2K[1B[2K[1A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msortedcontainers    [0m [32m[2m------------------------------[0m[0m     0 B/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msniffio             [0m [32m[2m------------------------------[0m[0m     0 B/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msniffio             [0m [32m[2m------------------------------[0m[0m     0 B/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msniffio             [0m [32m[2m------------------------------[0m[0m     0 B/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msniffio             [0m [32m[2m------------------------------[0m[0m     0 B/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2msniffio             [0m [32m[2m------------------------------[0m[0m     0 B/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m[2m------------------------------[0m[0m     0 B/7.31 KiB
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2miniconfig           [0m [32m------------------------------[2m[0m[0m 7.31 KiB/7.31 KiB
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mwebsocket-client    [0m [32m--------[2m----------------------[0m[0m 14.87 KiB/57.45 KiB
+[2murllib3             [0m [32m[2m------------------------------[0m[0m     0 B/128.50 KiB                                                                                          [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msniffio             [0m [32m------------------------------[2m[0m[0m 10.00 KiB/10.00 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2msortedcontainers    [0m [32m----------------[2m--------------[0m[0m 14.82 KiB/28.88 KiB
+[2mtyping-extensions   [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/42.88 KiB
+[2mwebsocket-client    [0m [32m-----------------[2m-------------[0m[0m 30.87 KiB/57.45 KiB
+[2mattrs               [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2midna                [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2murllib3             [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB                                                                                        [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2msortedcontainers    [0m [32m------------------------------[2m[0m[0m 28.88 KiB/28.88 KiB
+[2mtyping-extensions   [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/42.88 KiB
+[2mwebsocket-client    [0m [32m-----------------[2m-------------[0m[0m 30.87 KiB/57.45 KiB
+[2mattrs               [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2midna                [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2murllib3             [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB                                                                                        [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2moutcome             [0m [32m-------------[2m-----------------[0m[0m 4.23 KiB/10.44 KiB
+[2mpysocks             [0m [32m----------------------------[2m--[0m[0m 14.84 KiB/16.33 KiB
+[2mpluggy              [0m [32m-----------------------[2m-------[0m[0m 14.88 KiB/20.06 KiB
+[2mwsproto             [0m [32m-------------------[2m-----------[0m[0m 14.85 KiB/23.83 KiB
+[2msoupsieve           [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mh11                 [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m-----------[2m-------------------[0m[0m 14.87 KiB/42.88 KiB
+[2mwebsocket-client    [0m [32m-------------------------[2m-----[0m[0m 46.87 KiB/57.45 KiB
+[2mattrs               [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/66.03 KiB
+[2midna                [0m [32m-------[2m-----------------------[0m[0m 14.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----[2m-------------------------[0m[0m 14.87 KiB/102.65 KiB
+[2murllib3             [0m [32m----[2m--------------------------[0m[0m 14.88 KiB/128.50 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mtrio                [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/487.49 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB                                                                                          [16A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[16A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2moutcome             [0m [32m------------------------------[2m[0m[0m 10.44 KiB/10.44 KiB
+[2mpysocks             [0m [32m----------------------------[2m--[0m[0m 14.84 KiB/16.33 KiB
+[2mtrio-websocket      [0m [32m----------------------[2m--------[0m[0m 14.90 KiB/20.72 KiB
+[2mwsproto             [0m [32m-------------------[2m-----------[0m[0m 14.85 KiB/23.83 KiB
+[2msoupsieve           [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mh11                 [0m [32m-------------[2m-----------------[0m[0m 15.79 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/42.88 KiB
+[2mwebsocket-client    [0m [32m------------------------------[2m[0m[0m 57.45 KiB/57.45 KiB
+[2mattrs               [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/66.03 KiB
+[2midna                [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m-------[2m-----------------------[0m[0m 14.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----[2m-------------------------[0m[0m 14.87 KiB/102.65 KiB
+[2murllib3             [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mtrio                [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/487.49 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/9.16 MiB                                                                                          [18A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[18A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mpysocks             [0m [32m------------------------------[2m[0m[0m 16.33 KiB/16.33 KiB
+[2mtrio-websocket      [0m [32m----------------------[2m--------[0m[0m 14.90 KiB/20.72 KiB
+[2mwsproto             [0m [32m------------------------------[2m[0m[0m 23.83 KiB/23.83 KiB
+[2msoupsieve           [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mh11                 [0m [32m-------------[2m-----------------[0m[0m 15.79 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/42.88 KiB
+[2mwebsocket-client    [0m [32m------------------------------[2m[0m[0m 57.45 KiB/57.45 KiB
+[2mattrs               [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/66.03 KiB
+[2midna                [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----[2m-------------------------[0m[0m 14.87 KiB/102.65 KiB
+[2murllib3             [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mtrio                [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/487.49 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/9.16 MiB                                                                                          [17A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[17A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mtrio-websocket      [0m [32m----------------------[2m--------[0m[0m 14.90 KiB/20.72 KiB
+[2mwsproto             [0m [32m------------------------------[2m[0m[0m 23.83 KiB/23.83 KiB
+[2msoupsieve           [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mh11                 [0m [32m-------------[2m-----------------[0m[0m 15.79 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/42.88 KiB
+[2mwebsocket-client    [0m [32m------------------------------[2m[0m[0m 57.45 KiB/57.45 KiB
+[2mattrs               [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/66.03 KiB
+[2midna                [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----[2m-------------------------[0m[0m 14.87 KiB/102.65 KiB
+[2murllib3             [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mtrio                [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/487.49 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/9.16 MiB                                                                                          [16A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[16A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mtrio-websocket      [0m [32m----------------------[2m--------[0m[0m 14.90 KiB/20.72 KiB
+[2mwsproto             [0m [32m------------------------------[2m[0m[0m 23.83 KiB/23.83 KiB
+[2msoupsieve           [0m [32m-------------[2m-----------------[0m[0m 14.88 KiB/36.15 KiB
+[2mh11                 [0m [32m-------------[2m-----------------[0m[0m 15.79 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/42.88 KiB
+[2mattrs               [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/66.03 KiB
+[2midna                [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----[2m-------------------------[0m[0m 14.87 KiB/102.65 KiB
+[2murllib3             [0m [32m--------[2m----------------------[0m[0m 30.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mtrio                [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/487.49 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 14.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/9.16 MiB                                                                                          [15A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[15A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mtrio-websocket      [0m [32m----------------------[2m--------[0m[0m 14.90 KiB/20.72 KiB
+[2msoupsieve           [0m [32m--------------------------[2m----[0m[0m 30.88 KiB/36.15 KiB
+[2mh11                 [0m [32m-------------[2m-----------------[0m[0m 15.79 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m----------------------[2m--------[0m[0m 30.87 KiB/42.88 KiB
+[2mattrs               [0m [32m---------------[2m---------------[0m[0m 30.88 KiB/66.03 KiB
+[2midna                [0m [32m--------------[2m----------------[0m[0m 30.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m-------------[2m-----------------[0m[0m 30.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m----------[2m--------------------[0m[0m 30.87 KiB/102.65 KiB
+[2murllib3             [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m---[2m---------------------------[0m[0m 14.88 KiB/150.08 KiB
+[2mpytest              [0m [32m[2m------------------------------[0m[0m     0 B/356.91 KiB
+[2mtrio                [0m [32m--[2m----------------------------[0m[0m 30.88 KiB/487.49 KiB
+[2mpygments            [0m [32m-[2m-----------------------------[0m[0m 30.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 14.91 KiB/9.16 MiB                                                                                          [14A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[14A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2msoupsieve           [0m [32m------------------------------[2m[0m[0m 36.15 KiB/36.15 KiB
+[2mh11                 [0m [32m---------------------------[2m---[0m[0m 31.79 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m--------------------------[2m----[0m[0m 36.27 KiB/42.88 KiB
+[2mattrs               [0m [32m----------------------[2m--------[0m[0m 46.88 KiB/66.03 KiB
+[2midna                [0m [32m---------------------[2m---------[0m[0m 46.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m------------[2m------------------[0m[0m 40.94 KiB/102.65 KiB
+[2murllib3             [0m [32m-----------[2m-------------------[0m[0m 46.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB
+[2mtrio                [0m [32m---[2m---------------------------[0m[0m 46.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 30.91 KiB/9.16 MiB                                                                                          [13A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[13A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mh11                 [0m [32m---------------------------[2m---[0m[0m 31.79 KiB/36.64 KiB
+[2mtyping-extensions   [0m [32m------------------------------[2m[0m[0m 42.88 KiB/42.88 KiB
+[2mattrs               [0m [32m----------------------[2m--------[0m[0m 46.88 KiB/66.03 KiB
+[2midna                [0m [32m----------------------------[2m--[0m[0m 62.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m------------[2m------------------[0m[0m 40.94 KiB/102.65 KiB
+[2murllib3             [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2mpytest              [0m [32m--[2m----------------------------[0m[0m 16.00 KiB/356.91 KiB
+[2mtrio                [0m [32m---[2m---------------------------[0m[0m 46.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 30.91 KiB/9.16 MiB                                                                                          [12A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[12A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mh11                 [0m [32m---------------------------[2m---[0m[0m 31.79 KiB/36.64 KiB
+[2mattrs               [0m [32m-----------------------------[2m-[0m[0m 62.88 KiB/66.03 KiB
+[2midna                [0m [32m----------------------------[2m--[0m[0m 62.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m------------[2m------------------[0m[0m 40.94 KiB/102.65 KiB
+[2murllib3             [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m-------[2m-----------------------[0m[0m 30.88 KiB/150.08 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mtrio                [0m [32m---[2m---------------------------[0m[0m 46.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 30.91 KiB/9.16 MiB                                                                                          [11A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[11A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mattrs               [0m [32m-----------------------------[2m-[0m[0m 62.88 KiB/66.03 KiB
+[2midna                [0m [32m----------------------------[2m--[0m[0m 62.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m--------------------[2m----------[0m[0m 46.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m------------[2m------------------[0m[0m 40.94 KiB/102.65 KiB
+[2murllib3             [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------[2m--------------------[0m[0m 46.04 KiB/150.08 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mtrio                [0m [32m---[2m---------------------------[0m[0m 46.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 46.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 46.91 KiB/9.16 MiB                                                                                          [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mattrs               [0m [32m-----------------------------[2m-[0m[0m 62.88 KiB/66.03 KiB
+[2midna                [0m [32m----------------------------[2m--[0m[0m 62.85 KiB/69.34 KiB
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----------------[2m-------------[0m[0m 56.94 KiB/102.65 KiB
+[2murllib3             [0m [32m---------------[2m---------------[0m[0m 62.88 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------[2m--------------------[0m[0m 46.04 KiB/150.08 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mtrio                [0m [32m----[2m--------------------------[0m[0m 62.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 46.91 KiB/9.16 MiB                                                                                          [10A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[10A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2midna                [0m [32m------------------------------[2m[0m[0m 69.34 KiB/69.34 KiB
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----------------[2m-------------[0m[0m 56.94 KiB/102.65 KiB
+[2murllib3             [0m [32m------------------[2m------------[0m[0m 76.77 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------[2m--------------------[0m[0m 46.04 KiB/150.08 KiB
+[2mpytest              [0m [32m---[2m---------------------------[0m[0m 32.00 KiB/356.91 KiB
+[2mtrio                [0m [32m----[2m--------------------------[0m[0m 62.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 46.91 KiB/9.16 MiB                                                                                          [9A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[9A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mpackaging           [0m [32m--------------------------[2m----[0m[0m 62.88 KiB/72.62 KiB
+[2mbeautifulsoup4      [0m [32m-----------------[2m-------------[0m[0m 56.94 KiB/102.65 KiB
+[2murllib3             [0m [32m------------------[2m------------[0m[0m 76.77 KiB/128.50 KiB
+[2mcertifi             [0m [32m-----------[2m-------------------[0m[0m 54.38 KiB/150.08 KiB
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/356.91 KiB
+[2mtrio                [0m [32m----[2m--------------------------[0m[0m 62.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 62.88 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/9.16 MiB                                                                                          [8A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[8A[37m⠙[0m [2mPreparing packages...[0m (0/22)
+[2mbeautifulsoup4      [0m [32m-----------------[2m-------------[0m[0m 56.94 KiB/102.65 KiB
+[2murllib3             [0m [32m------------------[2m------------[0m[0m 76.77 KiB/128.50 KiB
+[2mcertifi             [0m [32m-----------[2m-------------------[0m[0m 54.38 KiB/150.08 KiB
+[2mpytest              [0m [32m-----[2m-------------------------[0m[0m 48.00 KiB/356.91 KiB
+[2mtrio                [0m [32m----[2m--------------------------[0m[0m 62.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--[2m----------------------------[0m[0m 77.54 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 62.91 KiB/9.16 MiB                                                                                          [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mbeautifulsoup4      [0m [32m------------------------[2m------[0m[0m 78.87 KiB/102.65 KiB
+[2murllib3             [0m [32m--------------------------[2m----[0m[0m 108.77 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------------[2m--------------[0m[0m 76.54 KiB/150.08 KiB
+[2mpytest              [0m [32m------[2m------------------------[0m[0m 60.08 KiB/356.91 KiB
+[2mtrio                [0m [32m------[2m------------------------[0m[0m 94.88 KiB/487.49 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 93.54 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 78.91 KiB/9.16 MiB                                                                                          [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mbeautifulsoup4      [0m [32m----------------------------[2m--[0m[0m 94.87 KiB/102.65 KiB
+[2murllib3             [0m [32m--------------------------[2m----[0m[0m 108.77 KiB/128.50 KiB
+[2mcertifi             [0m [32m----------------[2m--------------[0m[0m 76.54 KiB/150.08 KiB
+[2mpytest              [0m [32m-------[2m-----------------------[0m[0m 76.08 KiB/356.91 KiB
+[2mtrio                [0m [32m------[2m------------------------[0m[0m 94.88 KiB/487.49 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 93.54 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 94.91 KiB/9.16 MiB                                                                                          [7A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[7A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mbeautifulsoup4      [0m [32m------------------------------[2m[0m[0m 102.65 KiB/102.65 KiB
+[2mcertifi             [0m [32m----------------[2m--------------[0m[0m 76.54 KiB/150.08 KiB
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 92.08 KiB/356.91 KiB
+[2mtrio                [0m [32m-------[2m-----------------------[0m[0m 110.88 KiB/487.49 KiB
+[2mpygments            [0m [32m---[2m---------------------------[0m[0m 108.72 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 110.91 KiB/9.16 MiB                                                                                         [6A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[6A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mcertifi             [0m [32m----------------[2m--------------[0m[0m 76.54 KiB/150.08 KiB
+[2mpytest              [0m [32m--------[2m----------------------[0m[0m 92.08 KiB/356.91 KiB
+[2mtrio                [0m [32m-------[2m-----------------------[0m[0m 110.88 KiB/487.49 KiB
+[2mpygments            [0m [32m----[2m--------------------------[0m[0m 124.72 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 110.91 KiB/9.16 MiB                                                                                         [5A[2K[1B[2K[1B[2K[1B[2K[1B[2K[1B[2K[5A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mpytest              [0m [32m--------------[2m----------------[0m[0m 156.08 KiB/356.91 KiB
+[2mtrio                [0m [32m----------[2m--------------------[0m[0m 158.88 KiB/487.49 KiB
+[2mpygments            [0m [32m-----[2m-------------------------[0m[0m 173.54 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 165.26 KiB/9.16 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mpytest              [0m [32m-----------------------[2m-------[0m[0m 268.08 KiB/356.91 KiB
+[2mtrio                [0m [32m-------------------[2m-----------[0m[0m 302.88 KiB/487.49 KiB
+[2mpygments            [0m [32m--------[2m----------------------[0m[0m 301.54 KiB/1.17 MiB
+[2mselenium            [0m [32m-[2m-----------------------------[0m[0m 268.26 KiB/9.16 MiB                                                                                         [4A[2K[1B[2K[1B[2K[1B[2K[1B[2K[4A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mtrio                [0m [32m------------------------[2m------[0m[0m 382.88 KiB/487.49 KiB
+[2mpygments            [0m [32m----------[2m--------------------[0m[0m 373.86 KiB/1.17 MiB
+[2mselenium            [0m [32m--[2m----------------------------[0m[0m 332.26 KiB/9.16 MiB                                                                                         [3A[2K[1B[2K[1B[2K[1B[2K[3A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mpygments            [0m [32m------------[2m------------------[0m[0m 477.54 KiB/1.17 MiB
+[2mselenium            [0m [32m--[2m----------------------------[0m[0m 492.26 KiB/9.16 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠹[0m [2mPreparing packages...[0m (15/22)
+[2mpygments            [0m [32m----------------[2m--------------[0m[0m 621.54 KiB/1.17 MiB
+[2mselenium            [0m [32m---[2m---------------------------[0m[0m 636.26 KiB/9.16 MiB                                                                                         [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (20/22)
+[2mpygments            [0m [32m---------------------------[2m---[0m[0m 1.01 MiB/1.17 MiB
+[2mselenium            [0m [32m----[2m--------------------------[0m[0m 1.07 MiB/9.16 MiB                                                                                           [2A[2K[1B[2K[1B[2K[2A[37m⠸[0m [2mPreparing packages...[0m (20/22)
+[2mselenium            [0m [32m-----[2m-------------------------[0m[0m 1.29 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (20/22)
+[2mselenium            [0m [32m-------[2m-----------------------[0m[0m 1.93 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠸[0m [2mPreparing packages...[0m (20/22)
+[2mselenium            [0m [32m---------[2m---------------------[0m[0m 2.68 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m----------[2m--------------------[0m[0m 2.84 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m----------[2m--------------------[0m[0m 2.86 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m-----------[2m-------------------[0m[0m 3.26 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m---------------[2m---------------[0m[0m 4.31 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m----------------[2m--------------[0m[0m 4.78 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠼[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m-------------------[2m-----------[0m[0m 5.61 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m---------------------[2m---------[0m[0m 6.20 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠴[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m------------------------[2m------[0m[0m 7.19 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m-------------------------[2m-----[0m[0m 7.36 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m-------------------------[2m-----[0m[0m 7.39 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m---------------------------[2m---[0m[0m 8.06 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m-----------------------------[2m-[0m[0m 8.81 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (21/22)
+[2mselenium            [0m [32m------------------------------[2m[0m[0m 9.16 MiB/9.16 MiB                                                                                           [1A[2K[1B[2K[1A[37m⠦[0m [2mPreparing packages...[0m (21/22)                                                                                                                                 [2K[2mPrepared [1m22 packages[0m [2min 1.15s[0m[0m
+░░░░░░░░░░░░░░░░░░░░ [0/0] [2mInstalling wheels...                                                                                                                 [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/22] [2mInstalling wheels...                                                                                                                [0m[2K░░░░░░░░░░░░░░░░░░░░ [0/22] [2msniffio==1.3.1                                                                                                                      [0m[2K░░░░░░░░░░░░░░░░░░░░ [1/22] [2msniffio==1.3.1                                                                                                                      [0m[2K░░░░░░░░░░░░░░░░░░░░ [1/22] [2mtrio-websocket==0.12.2                                                                                                              [0m[2K█░░░░░░░░░░░░░░░░░░░ [2/22] [2mtrio-websocket==0.12.2                                                                                                              [0m[2K█░░░░░░░░░░░░░░░░░░░ [2/22] [2miniconfig==2.3.0                                                                                                                    [0m[2K██░░░░░░░░░░░░░░░░░░ [3/22] [2miniconfig==2.3.0                                                                                                                    [0m[2K██░░░░░░░░░░░░░░░░░░ [3/22] [2mcertifi==2026.2.25                                                                                                                  [0m[2K███░░░░░░░░░░░░░░░░░ [4/22] [2mcertifi==2026.2.25                                                                                                                  [0m[2K███░░░░░░░░░░░░░░░░░ [4/22] [2midna==3.11                                                                                                                          [0m[2K████░░░░░░░░░░░░░░░░ [5/22] [2midna==3.11                                                                                                                          [0m[2K████░░░░░░░░░░░░░░░░ [5/22] [2mpackaging==26.0                                                                                                                     [0m[2K█████░░░░░░░░░░░░░░░ [6/22] [2mpackaging==26.0                                                                                                                     [0m[2K█████░░░░░░░░░░░░░░░ [6/22] [2moutcome==1.3.0.post0                                                                                                                [0m[2K██████░░░░░░░░░░░░░░ [7/22] [2moutcome==1.3.0.post0                                                                                                                [0m[2K██████░░░░░░░░░░░░░░ [7/22] [2mpluggy==1.6.0                                                                                                                       [0m[2K███████░░░░░░░░░░░░░ [8/22] [2mpluggy==1.6.0                                                                                                                       [0m[2K███████░░░░░░░░░░░░░ [8/22] [2mh11==0.16.0                                                                                                                         [0m[2K████████░░░░░░░░░░░░ [9/22] [2mh11==0.16.0                                                                                                                         [0m[2K[2mInstalled [1m22 packages[0m [2min 38ms[0m[0m
+ [32m+[39m [1mattrs[0m[2m==25.4.0[0m
+ [32m+[39m [1mbeautifulsoup4[0m[2m==4.13.5[0m
+ [32m+[39m [1mcertifi[0m[2m==2026.2.25[0m
+ [32m+[39m [1mh11[0m[2m==0.16.0[0m
+ [32m+[39m [1midna[0m[2m==3.11[0m
+ [32m+[39m [1miniconfig[0m[2m==2.3.0[0m
+ [32m+[39m [1moutcome[0m[2m==1.3.0.post0[0m
+ [32m+[39m [1mpackaging[0m[2m==26.0[0m
+ [32m+[39m [1mpluggy[0m[2m==1.6.0[0m
+ [32m+[39m [1mpygments[0m[2m==2.19.2[0m
+ [32m+[39m [1mpysocks[0m[2m==1.7.1[0m
+ [32m+[39m [1mpytest[0m[2m==8.4.1[0m
+ [32m+[39m [1mselenium[0m[2m==4.35.0[0m
+ [32m+[39m [1msniffio[0m[2m==1.3.1[0m
+ [32m+[39m [1msortedcontainers[0m[2m==2.4.0[0m
+ [32m+[39m [1msoupsieve[0m[2m==2.8.3[0m
+ [32m+[39m [1mtrio[0m[2m==0.30.0[0m
+ [32m+[39m [1mtrio-websocket[0m[2m==0.12.2[0m
+ [32m+[39m [1mtyping-extensions[0m[2m==4.14.1[0m
+ [32m+[39m [1murllib3[0m[2m==2.6.3[0m
+ [32m+[39m [1mwebsocket-client[0m[2m==1.8.0[0m
+ [32m+[39m [1mwsproto[0m[2m==1.3.2[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+[1mcollecting ... [0m[1mcollecting 1 item                                                                                                                                              [0m[1mcollected 1 item                                                                                                                                               [0m
+
+../tests/test_outputs.py [31mF[0m[31m                                                                                                                               [100%][0m
+
+=========================================================================== FAILURES ===========================================================================
+[31m[1m________________________________________________________________ test_out_html_bypasses_filter _________________________________________________________________[0m
+
+    [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_out_html_bypasses_filter[39;49;00m():[90m[39;49;00m
+    [90m    [39;49;00m[33m"""Test that out.html still triggers an alert after being filtered."""[39;49;00m[90m[39;49;00m
+        [94mimport[39;49;00m[90m [39;49;00m[04m[96msubprocess[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        out_path = Path([33m"[39;49;00m[33m/app/out.html[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# First check the file exists[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m out_path.exists(), [33mf[39;49;00m[33m"[39;49;00m[33mFile [39;49;00m[33m{[39;49;00mout_path[33m}[39;49;00m[33m does not exist[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Create a temporary copy of the file to filter[39;49;00m[90m[39;49;00m
+        [94mwith[39;49;00m tempfile.NamedTemporaryFile(mode=[33m"[39;49;00m[33mw[39;49;00m[33m"[39;49;00m, suffix=[33m"[39;49;00m[33m.html[39;49;00m[33m"[39;49;00m, delete=[94mFalse[39;49;00m) [94mas[39;49;00m f:[90m[39;49;00m
+            [90m# Copy the original content to temp file[39;49;00m[90m[39;49;00m
+            f.write(out_path.read_text())[90m[39;49;00m
+            filtered_path = Path(f.name)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Apply the filter using command-line interface (modifies file in-place)[39;49;00m[90m[39;49;00m
+        result = subprocess.run([90m[39;49;00m
+            [[33m"[39;49;00m[33mpython[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/tests/filter.py[39;49;00m[33m"[39;49;00m, [96mstr[39;49;00m(filtered_path)],[90m[39;49;00m
+            capture_output=[94mTrue[39;49;00m,[90m[39;49;00m
+            text=[94mTrue[39;49;00m,[90m[39;49;00m
+        )[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Check if filter ran successfully[39;49;00m[90m[39;49;00m
+        [94massert[39;49;00m result.returncode == [94m0[39;49;00m, [33mf[39;49;00m[33m"[39;49;00m[33mFilter failed with error: [39;49;00m[33m{[39;49;00mresult.stderr[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Setup Chrome options for headless mode[39;49;00m[90m[39;49;00m
+        chrome_options = Options()[90m[39;49;00m
+        chrome_options.add_argument([33m"[39;49;00m[33m--headless[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        chrome_options.add_argument([33m"[39;49;00m[33m--no-sandbox[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        chrome_options.add_argument([33m"[39;49;00m[33m--disable-dev-shm-usage[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        chrome_options.add_argument([33m"[39;49;00m[33m--disable-gpu[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+        chrome_options.add_argument([33m"[39;49;00m[33m--window-size=1920,1080[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Use Chromium as Chrome[39;49;00m[90m[39;49;00m
+        chrome_options.binary_location = [33m"[39;49;00m[33m/usr/bin/chromium[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Initialize the Chrome driver with explicit service[39;49;00m[90m[39;49;00m
+        driver = [94mNone[39;49;00m[90m[39;49;00m
+        alert_detected = [94mFalse[39;49;00m[90m[39;49;00m
+        alert_text = [94mNone[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mtry[39;49;00m:[90m[39;49;00m
+            service = Service(executable_path=[33m"[39;49;00m[33m/usr/bin/chromedriver[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+            driver = webdriver.Chrome(service=service, options=chrome_options)[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Load the FILTERED HTML file (already filtered in-place)[39;49;00m[90m[39;49;00m
+            file_url = [33mf[39;49;00m[33m"[39;49;00m[33mfile://[39;49;00m[33m{[39;49;00mfiltered_path.absolute()[33m}[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            driver.get(file_url)[90m[39;49;00m
+    [90m[39;49;00m
+            [90m# Wait for potential alert (5 second timeout)[39;49;00m[90m[39;49;00m
+            [94mtry[39;49;00m:[90m[39;49;00m
+                WebDriverWait(driver, [94m5[39;49;00m).until(EC.alert_is_present())[90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Switch to alert and get text[39;49;00m[90m[39;49;00m
+                alert = driver.switch_to.alert[90m[39;49;00m
+                alert_text = alert.text[90m[39;49;00m
+    [90m[39;49;00m
+                [90m# Accept the alert to close it[39;49;00m[90m[39;49;00m
+                alert.accept()[90m[39;49;00m
+    [90m[39;49;00m
+                alert_detected = [94mTrue[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+            [94mexcept[39;49;00m TimeoutException:[90m[39;49;00m
+                [90m# No alert appeared within timeout[39;49;00m[90m[39;49;00m
+                alert_detected = [94mFalse[39;49;00m[90m[39;49;00m
+    [90m[39;49;00m
+        [94mfinally[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m driver:[90m[39;49;00m
+                driver.quit()[90m[39;49;00m
+            [90m# Clean up temp file[39;49;00m[90m[39;49;00m
+            filtered_path.unlink(missing_ok=[94mTrue[39;49;00m)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Assert that an alert was detected even after filtering[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m alert_detected, ([90m[39;49;00m
+            [33m"[39;49;00m[33mNo alert detected after filtering. The XSS bypass failed. [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [33m"[39;49;00m[33mThe filter successfully removed the JavaScript. [39;49;00m[33m"[39;49;00m[90m[39;49;00m
+            [33m"[39;49;00m[33mThe HTML needs to be crafted to bypass the filter.[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+        )[90m[39;49;00m
+[1m[31mE       AssertionError: No alert detected after filtering. The XSS bypass failed. The filter successfully removed the JavaScript. The HTML needs to be crafted to bypass the filter.[0m
+[1m[31mE       assert False[0m
+
+[1m[31m/tests/test_outputs.py[0m:91: AssertionError
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mFAILED[0m ../tests/test_outputs.py::[1mtest_out_html_bypasses_filter[0m - AssertionError: No alert detected after filtering. The XSS bypass failed. The filter successfully removed the JavaScript. The HTML needs to be crafted to b...
+[31m====================================================================== [31m[1m1 failed[0m[31m in 7.06s[0m[31m =======================================================================[0m
+[?2004hroot@30f5cd3bf68b:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@30f5cd3bf68b:/app# 

@@ -1,0 +1,55 @@
+[?2004hroot@8cc3d7fe6b06:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@8cc3d7fe6b06:/app# clear
+[?2004l[H[J[3J[?2004hroot@8cc3d7fe6b06:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004lCollecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=20 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (26.0)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.13/site-packages (from pytest==8.4.1) (2.19.2)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Installing collected packages: pluggy, iniconfig, pytest
+[?25l[2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m2/3[0m [pytest][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m2/3[0m [pytest][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m2/3[0m [pytest][2K   [38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3/3[0m [pytest]
+[?25h[1A[2KSuccessfully installed iniconfig-2.3.0 pluggy-1.6.0 pytest-8.4.1
+[33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.[0m[33m
+[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m25.2[0m[39;49m -> [0m[32;49m26.0.1[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
+[1m===================================================================== test session starts ======================================================================[0m
+platform linux -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /tests
+plugins: anyio-4.12.1
+[1mcollecting ... [0m[1mcollecting 0 items / 1 error                                                                                                                                   [0m[1mcollected 0 items / 1 error                                                                                                                                    [0m
+
+============================================================================ ERRORS ============================================================================
+[31m[1m_______________________________________________________________ ERROR collecting test_outputs.py _______________________________________________________________[0m
+[1m[31m/tests/test_outputs.py[0m:13: in <module>
+    [0m[94mfrom[39;49;00m[90m [39;49;00m[04m[96mlm_eval[39;49;00m[04m[96m.[39;49;00m[04m[96mevaluator[39;49;00m[90m [39;49;00m[94mimport[39;49;00m simple_evaluate[90m[39;49;00m
+[1m[31mlm-evaluation-harness/lm_eval/evaluator.py[0m:16: in <module>
+    [0m[94mimport[39;49;00m[90m [39;49;00m[04m[96mlm_eval[39;49;00m[04m[96m.[39;49;00m[04m[96mmodels[39;49;00m[90m[39;49;00m
+[1m[31mlm-evaluation-harness/lm_eval/models/__init__.py[0m:1: in <module>
+    [0m[94mfrom[39;49;00m[90m [39;49;00m[04m[96m.[39;49;00m[90m [39;49;00m[94mimport[39;49;00m ([90m[39;49;00m
+[1m[31mlm-evaluation-harness/lm_eval/models/hf_vlms.py[0m:32: in <module>
+    [0m[94mclass[39;49;00m[90m [39;49;00m[04m[92mHFMultimodalLM[39;49;00m(HFLM):[90m[39;49;00m
+[1m[31mlm-evaluation-harness/lm_eval/models/hf_vlms.py[0m:37: in HFMultimodalLM
+    [0mAUTO_MODEL_CLASS = transformers.AutoModelForVision2Seq[90m[39;49;00m
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.13/site-packages/transformers/utils/import_utils.py[0m:2281: in __getattr__
+    [0m[94mraise[39;49;00m [96mAttributeError[39;49;00m([33mf[39;49;00m[33m"[39;49;00m[33mmodule [39;49;00m[33m{[39;49;00m[96mself[39;49;00m.[91m__name__[39;49;00m[33m}[39;49;00m[33m has no attribute [39;49;00m[33m{[39;49;00mname[33m}[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   AttributeError: module transformers has no attribute AutoModelForVision2Seq[0m
+[36m[1m=================================================================== short test summary info ====================================================================[0m
+[31mERROR[0m ../tests/test_outputs.py - AttributeError: module transformers has no attribute AutoModelForVision2Seq
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[31m====================================================================== [31m[1m1 error[0m[31m in 10.66s[0m[31m =======================================================================[0m
+[?2004hroot@8cc3d7fe6b06:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@8cc3d7fe6b06:/app# 

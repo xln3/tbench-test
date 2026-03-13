@@ -1,0 +1,1520 @@
+[?2004hroot@f8962263a476:/app# asciinema rec --stdin /logs/agent.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@f8962263a476:/app# clear
+[?2004l[H[J[3J[?2004hroot@f8962263a476:/app# source /installed-agent/setup-env.sh; tmux wait -S done
+[?2004l[?2004hroot@f8962263a476:/app# panda --prompt 'You are working on a data analysis project that processes customer
+[?2004l[?2004h> transaction data. The project'"'"'s test suite is failing with the following error:
+[?2004l[?2004h> 
+[?2004l[?2004h> Input:
+[?2004l[?2004h> python -m src.data_processor
+[?2004l[?2004h> 
+[?2004l[?2004h> Output:
+[?2004l[?2004h> TypeError: read_csv() got an unexpected keyword argument '"'"'dtype_backend'"'"'
+[?2004l[?2004h> 
+[?2004l[?2004h> Please fix the system-wide environment to support the features used in the code.'; tmux wait -S done
+[?2004l[32mDownloading[39m https://github.com/denodrivers/sqlite3/releases/download/0.12.0/libsqlite3.so
+[Glob]
+[Read]
+[Read]
+[Bash]
+[36m⠙[39m [33m[Bash: Check current pandas version][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Check current pandas version][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Check current pandas version][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Check current pandas version][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Check current pandas version][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Check current pandas version][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Check current pandas version][39m [2m(0:29 remaining)[22m
+[2m1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[Glob]
+[Glob]
+[Glob]
+[Bash]
+[Bash]
+[TodoWrite]
+[Bash]
+[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:28 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:27 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:26 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:25 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:24 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:23 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:22 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:21 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:20 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:19 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:18 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:17 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 1.8 MB/s eta 0:00:00[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 1.8 MB/s eta 0:00:00[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2mCollecting pandas>=2.0.0[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 1.8 MB/s eta 0:00:00[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 1.8 MB/s eta 0:00:00[22m
+[2mCollecting tzdata>=2022.1[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 1.8 MB/s eta 0:00:00[22m
+[2mCollecting tzdata>=2022.1[22m
+[2m  Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2m... (2 more lines above)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 1.8 MB/s eta 0:00:00[22m
+[2mCollecting tzdata>=2022.1[22m
+[2m  Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mRequirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2.9.0.post0)[22m
+[2mRequirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2026.1.post1)[22m
+[2mRequirement already satisfied: six>=1.5 in /usr/local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=2.0.0) (1.17.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mRequirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2.9.0.post0)[22m
+[2mRequirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2026.1.post1)[22m
+[2mRequirement already satisfied: six>=1.5 in /usr/local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=2.0.0) (1.17.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2m... (7 more lines above)[22m
+[2mRequirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2.9.0.post0)[22m
+[2mRequirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2026.1.post1)[22m
+[2mRequirement already satisfied: six>=1.5 in /usr/local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=2.0.0) (1.17.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:16 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mRequirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2026.1.post1)[22m
+[2mRequirement already satisfied: six>=1.5 in /usr/local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=2.0.0) (1.17.0)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mRequirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2026.1.post1)[22m
+[2mRequirement already satisfied: six>=1.5 in /usr/local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=2.0.0) (1.17.0)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (8 more lines above)[22m
+[2mRequirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.8/site-packages (from pandas>=2.0.0) (2026.1.post1)[22m
+[2mRequirement already satisfied: six>=1.5 in /usr/local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=2.0.0) (1.17.0)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (10 more lines above)[22m
+[2mInstalling collected packages: tzdata, pandas[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (11 more lines above)[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:15 remaining)[22m
+[2m... (11 more lines above)[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (11 more lines above)[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (11 more lines above)[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (11 more lines above)[22m
+[2m  Attempting uninstall: pandas[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:14 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:13 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:12 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:11 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:10 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:09 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:09 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:09 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:09 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:09 remaining)[22m
+[2m... (12 more lines above)[22m
+[2m    Found existing installation: pandas 1.3.0[22m
+[2m    Uninstalling pandas-1.3.0:[22m
+[2m      Successfully uninstalled pandas-1.3.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pandas to version 2.0.0 or higher][39m [2m(0:09 remaining)[22m
+[2m... (17 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 23.0.1 -> 25.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[TodoWrite]
+[Bash]
+[36m⠙[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2mRequirement already satisfied: pyarrow in /usr/local/lib/python3.8/site-packages (6.0.0)[22m
+[2mRequirement already satisfied: numpy>=1.16.6 in /usr/local/lib/python3.8/site-packages (from pyarrow) (1.21.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2mRequirement already satisfied: pyarrow in /usr/local/lib/python3.8/site-packages (6.0.0)[22m
+[2mRequirement already satisfied: numpy>=1.16.6 in /usr/local/lib/python3.8/site-packages (from pyarrow) (1.21.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Install pyarrow for dtype_backend support][39m [2m(0:29 remaining)[22m
+[2m... (3 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 23.0.1 -> 25.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[TodoWrite]
+[Bash]
+[36m⠏[39m [33m[Bash: Run the data processor to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Run the data processor to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Run the data processor to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run the data processor to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run the data processor to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run the data processor to verify the fix][39m [2m(0:29 remaining)[22m
+[2m... (23 more lines above)[22m
+[2m0   1  John   10.5   True[22m
+[2m1   2  Jane   20.3  False[22m
+[2m2   3   NaN   30.1    NaN[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:28 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:27 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:26 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:25 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:24 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:23 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:22 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2mCollecting pyarrow>=7.0.0[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.0/40.0 MB 7.6 MB/s eta 0:00:00[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.0/40.0 MB 7.6 MB/s eta 0:00:00[22m
+[2mRequirement already satisfied: numpy>=1.16.6 in /usr/local/lib/python3.8/site-packages (from pyarrow>=7.0.0) (1.21.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2m... (1 more lines above)[22m
+[2m  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)[22m
+[2m     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.0/40.0 MB 7.6 MB/s eta 0:00:00[22m
+[2mRequirement already satisfied: numpy>=1.16.6 in /usr/local/lib/python3.8/site-packages (from pyarrow>=7.0.0) (1.21.0)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2m... (4 more lines above)[22m
+[2mInstalling collected packages: pyarrow[22m
+[2m  Attempting uninstall: pyarrow[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2m... (5 more lines above)[22m
+[2m  Attempting uninstall: pyarrow[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2m... (5 more lines above)[22m
+[2m  Attempting uninstall: pyarrow[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2m... (5 more lines above)[22m
+[2m  Attempting uninstall: pyarrow[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:21 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠙[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠹[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:20 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠸[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠼[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠴[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠦[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠧[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠇[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (6 more lines above)[22m
+[2m    Found existing installation: pyarrow 6.0.0[22m
+[2m    Uninstalling pyarrow-6.0.0:[22m
+[2m      Successfully uninstalled pyarrow-6.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠏[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (11 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 23.0.1 -> 25.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[36m⠋[39m [33m[Bash: Upgrade pyarrow to version 7.0.0 or newer][39m [2m(0:19 remaining)[22m
+[2m... (11 more lines above)[22m
+[31m[39m
+[31m[notice] A new release of pip is available: 23.0.1 -> 25.0.1[39m
+[31m[notice] To update, run: pip install --upgrade pip[39m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠙[39m [33m[Bash: Run the data processor again to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Run the data processor again to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Run the data processor again to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Run the data processor again to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠴[39m [33m[Bash: Run the data processor again to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Run the data processor again to verify the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Run the data processor again to verify the fix][39m [2m(0:29 remaining)[22m
+[2m... (9 more lines above)[22m
+[2m4               5          102  ...        2023-05-15      2023-05-15[22m
+[2m[22m
+[2m[5 rows x 8 columns][22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[A[2K[A[2K[TodoWrite]
+[Bash]
+[36m⠇[39m [33m[Bash: Verify installed versions][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Verify installed versions][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Verify installed versions][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Verify installed versions][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Verify installed versions][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠸[39m [33m[Bash: Verify installed versions][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠼[39m [33m[Bash: Verify installed versions][39m [2m(0:29 remaining)[22m
+[2mpandas version: 2.0.3[22m
+[2mpyarrow version: 17.0.0[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[A[2K[A[2K[Bash]
+[36m⠴[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠦[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠧[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠇[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠏[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠋[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠙[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[36m⠹[39m [33m[Bash: Final verification of the fix][39m [2m(0:29 remaining)[22m
+[2m(esc interrupt | ctrl+o expand)[22m
+[A[2K[A[2K[Write]
+<function=Bash>
+<parameter=command>
+python -m src.data_processor > /tmp/test_output.log 2>&1 && echo "SUCCESS: Script executed without errors" || echo "FAILED"
+</parameter>
+<parameter=description>
+Final success verification
+</parameter>
+</function>
+</tool_call>
+[?2004hroot@f8962263a476:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/agent.cast[0m
+[?2004hroot@f8962263a476:/app# 

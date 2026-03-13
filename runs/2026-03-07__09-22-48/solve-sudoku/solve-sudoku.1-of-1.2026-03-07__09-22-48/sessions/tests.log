@@ -1,0 +1,21 @@
+[?2004hroot@05c3416220fa:/app# asciinema rec --stdin /logs/tests.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/tests.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@05c3416220fa:/app# clear
+[?2004l[H[J[3J[?2004hroot@05c3416220fa:/app# bash /tests/run-tests.sh; tmux wait -S done
+[?2004l0% [Working]            Hit:1 http://deb.debian.org/debian bookworm InRelease
+0% [Working]            Hit:2 http://deb.debian.org/debian bookworm-updates InRelease
+0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://deb.debian.org/debian-security bookworm-security InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+E: dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem. 
+/tests/run-tests.sh: line 13: curl: command not found
+/tests/run-tests.sh: line 15: /root/.local/bin/env: No such file or directory
+/tests/run-tests.sh: line 23: uv: command not found
+/tests/run-tests.sh: line 25: .tbench-testing/bin/activate: No such file or directory
+/tests/run-tests.sh: line 26: uv: command not found
+/tests/run-tests.sh: line 31: uv: command not found
+[?2004hroot@05c3416220fa:/app# [?2004l
+exit
+[0;32masciinema: recording finished[0m
+[0;32masciinema: asciicast saved to /logs/tests.cast[0m
+[?2004hroot@05c3416220fa:/app# 
